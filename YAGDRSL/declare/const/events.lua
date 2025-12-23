@@ -1,0 +1,13 @@
+-- Values corresponding to events as a spell flows through GearSwap.
+EVENT_PRECAST = "precast"
+EVENT_MIDCAST = "midcast"
+EVENT_MIDCAST_PET = "pet_midcast"
+EVENT_AFTERCAST = "aftercast"
+EVENT_AFTERCAST_PET = "pet_aftercast"
+EVENT_STATUS_CHANGE = "status_change"
+EVENT_FORCED_UPDATE = "ForceStatusUpdate"
+
+EVENT_PRECAST_DEMO = "DEMO_precast"
+EVENT_MIDCAST_DEMO = "DEMO_midcast"
+EVENT_MIDCAST_PET_DEMO = "DEMO_pet_midcast"
+EVENT_STATUS_CHANGE_DEMO = "DEMO_status_change"
