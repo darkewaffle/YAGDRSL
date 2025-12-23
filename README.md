@@ -18,3 +18,4 @@
 - Event Hooks
 - Gearset Table Structure
 - Gearset Paths for Actions
+- Intentions, Gotchas and Limitations
