@@ -290,6 +290,22 @@
 		}
 
 --
+-- PRECAST WS OVERRIDES
+--
+
+	overrides.precast.ws["Vagary"] = set_combine(collections.Malignance,
+		{
+			ammo="Coiste Bodhar",
+			neck="Lissome Necklace",
+			ear1="Brutal Earring",
+			ear2="Sherida Earring",
+			ring1="Epona's Ring",
+			ring2="Lehko's Ring",
+			back="Null Shawl",
+			waist="Sailfi Belt +1"
+		})
+
+--
 -- PRECAST MAGIC SETS
 --
 	InsertGearSet(sets.precast.magic, templates.fastcast)
