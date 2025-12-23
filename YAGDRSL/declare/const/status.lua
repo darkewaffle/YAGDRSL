@@ -5,7 +5,6 @@ STATUS_IDLE = "idle"
 STATUS_MOUNT = "mount"
 STATUS_RESTING = "resting"
 
-STATE_ACTION_IN_PROGRESS = false
 STATE_STATIONARY = "player_stationary"
 STATE_MOVING = "player_moving"
 STATE_PLAYER_FACING_TARGET_FACE = "player_facing_target_face"

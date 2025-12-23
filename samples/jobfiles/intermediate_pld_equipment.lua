@@ -1,5 +1,5 @@
 --
--- CUSTOMIZATONS
+-- CUSTOMIZATIONS
 --
 	capes = {}
 	capes.FCSIRD = { name="Rudianos's Mantle", augments={'HP+60','"Fast Cast"+10','Spell interruption rate down-10%',}}

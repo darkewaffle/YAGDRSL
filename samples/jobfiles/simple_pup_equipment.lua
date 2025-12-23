@@ -1,5 +1,5 @@
 --
--- CUSTOMIZATONS
+-- CUSTOMIZATIONS
 --
 	gear.PetLegs = {name="Taeon Tights", augments={'Pet: Attack+20 Pet: Rng.Atk.+20','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}}
 --
@@ -20,9 +20,9 @@
 
 --
 -- PRECAST WS SETS
--- 
+--
 
-	InsertGearSet(sets.precast.ws, set_combine(collections.Mpaca,
+	sets.precast.ws = set_combine(collections.Mpaca,
 		{
 			neck="Fotia Gorget",
 			ear1="Sroda Earring",
@@ -30,7 +30,7 @@
 			ring1="Epona's Ring",
 			back="Null Shawl",
 			waist="Fotia Belt"
-		}))
+		})
 
 --
 -- PRECAST MAGIC SETS
@@ -102,14 +102,6 @@
 			waist="Null Belt",
 			feet="Mpaca's Boots"
 		}
-
---
--- ENGAGED DEFENSE MODS
---
-
---
--- ENGAGED OVERRIDES
---
 
 --
 -- IDLE & RESTING SETS

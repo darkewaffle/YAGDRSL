@@ -12,7 +12,6 @@ _G[YAG_SETTINGS] = {}
 -- It is not read for any library operation.
 _G[YAG_SETTINGS][SETTINGS_DEFAULT] =
 {
-	LockWeapons = false,
 	ApplyKeybindScripts = false,
 	UnbindMainJobScript = "",
 	UnbindSubJobScript = "",

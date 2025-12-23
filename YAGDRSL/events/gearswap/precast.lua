@@ -35,9 +35,6 @@ function precast(spell, position)
 		return
 	end
 
-	-- This is a global boolean value that indicates if there is an action currently underway. True when precast has been confirmed and set to false when aftercast begins.
-	STATE_ACTION_IN_PROGRESS = true
-
 	local DelayAmount = 0
 	DelayAmount = PrecastDelay(SpellAttributes)
 	if DelayAmount > 0 then
@@ -100,11 +97,11 @@ function PrecastTerminate(SpellAttributes)
 
 	if _G[YAG_SETTINGS]["AutomaticPrecastTermination"] == true then
 
-		if STATE_ACTION_IN_PROGRESS then
-			TerminateSpell = true
-			TerminateReason = "Another action is already in progress."
-			return TerminateSpell, TerminateReason
-		end
+	--	if STATE_ACTION_IN_PROGRESS then
+	--		TerminateSpell = true
+	--		TerminateReason = "Another action is already in progress."
+	--		return TerminateSpell, TerminateReason
+	--	end
 
 		if SpellAttributes["Category"] == CATEGORY_WS then
 			TerminateSpell = TerminateSpell or GetCharacterTP() < 1000

@@ -19,8 +19,6 @@ end
 
 -- Isolated into function so that it can be re-used in pet_aftercast.
 function AfterCastContainer(EventName)
-	-- This is a global boolean value that indicates if there is an action currently underway. True when precast has been confirmed and set to false when aftercast begins.
-	STATE_ACTION_IN_PROGRESS = false
 
 	local CharacterStatus = GetCharacterStatus()
 	ChatDebug(EventName .. ", CharacterStatus =", CharacterStatus)

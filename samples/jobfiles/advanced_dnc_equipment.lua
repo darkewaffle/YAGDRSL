@@ -1,5 +1,5 @@
 --
--- CUSTOMIZATONS
+-- CUSTOMIZATIONS
 --
 	capes = {}
 	capes.wsd = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%'}}
@@ -152,13 +152,6 @@
 	sets.precast.ja["Fan Dance"] =
 		{
 			hands="Horos Bangles +1"
-		}
-
-	sets.precast.ja["Healing Waltz"] =
-		{
-			head="Anwig Salade",
-			body="Maxixi Casaque +4",
-			legs="Dashing Subligar"
 		}
 
 	sets.precast.ja["No Foot Rise"] =

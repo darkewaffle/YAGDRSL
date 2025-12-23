@@ -17,7 +17,6 @@
 
 
 	ConfigureDefensePriority("End   DefPriority", true, "end")
-	--CreateOverride("ShEnd Override", true, "~end", "BossTank", "Vagary")
 
 	SetModOrderPrecastMagicDefense("Preserve HP")
 
