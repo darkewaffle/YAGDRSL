@@ -2,82 +2,101 @@
 - Table Name (sets, mods, overrides)
 - Character Status (engaged, idle, resting)
 - Zone Class (field, town)
-
-## sets.engaged
-## sets.idle.field
-## sets.idle.town
-## sets.resting
-
+```
+sets.engaged
+sets.idle.field
+sets.idle.town
+sets.resting
+```
 
 # Action Paths
-## All action paths begin with the same three elements. Each group will detail the elements unique to them.
-## Additionally all found action paths will be searched using the name of the spell, ability or item.
+All action paths begin with the same three elements. Each group will detail the elements unique to them. Additionally all found action paths will be searched using the name of the spell, ability or item.
 - Table Name (sets, mods, overrides)
 - Event (precast, midcast)
 - Category (ja, ra, magic, ws)
 
 
 ## Items
-### sets.precast.item
-### sets.midcast.item
-
+```
+sets.precast.item
+sets.midcast.item
+```
 
 ## Job Abilities
-### ex: sets.precast.ja.maneuver
-### ex: sets.precast.ja.waltz.cure
 - Parent Group (corsairshot, maneuver, samba, waltz, etc.)
 - Child Group (waltz.cure)
+```
+sets.precast.ja.maneuver
+sets.precast.ja.waltz.cure
+```
 
 ### Bloodpact Rage
-#### ex: sets.precast.bloodpact.rage
-#### ex: sets.midcast.bloodpact.rage.magical
 - Parent Group (bloodpact)
 - Child Group (rage)
 - Damage Type (hybrid, magical, physical)
+```
+sets.precast.bloodpact.rage
+sets.midcast.bloodpact.rage.magical
+```
 
 ### Bloodpact Ward
-#### ex: sets.precast.bloodpact.ward.friend
-#### ex: sets.midcast.bloodpact.ward.enemy
 - Parent Group (bloodpact)
 - Child Group (ward)
 - Target Type (friend, enemy)
+```
+sets.precast.bloodpact.ward.friend
+sets.midcast.bloodpact.ward.enemy
+```
 
 ### Ready
-#### ex: sets.precast.ready
-#### ex: sets.midcast.ready.physical
 - Parent Group (ready)
 - Damage Type (hybrid, magical, physical)
+```
+sets.precast.ready
+sets.midcast.ready.physical
+```
 
 
 ## Magic
-### ex: sets.precast.magic
-### ex: sets.midcast.magic.healing.cure
--- Skill (enfeebling, healing, etc.)
--- Parent Group (absorb, cure, paralyze, etc.)
+- Skill (enfeebling, healing, etc.)
+- Parent Group (absorb, cure, paralyze, etc.)
+```
+sets.precast.magic
+sets.midcast.magic.healing.cure
+```
 
 ### Blue Magic
-#### ex: sets.midcast.magic.blue.enfeebling
-#### ex: sets.midcast.magic.blue.physical
--- Skill (blue)
--- Parent Group (cure, enfeebling, enhancing, physical, magical)
+- Skill (blue)
+- Parent Group (cure, enfeebling, enhancing, physical, magical)
+```
+sets.midcast.magic.blue.enfeebling
+sets.midcast.magic.blue.physical
+```
 
 ### Singing
-#### ex: sets.midcast.magic.singing
-#### ex: sets.midcast.magic.singing.friend.minne
-#### ex: sets.midcast.magic.singing.enemy.lullaby
--- Skill (singing)
--- Target Type (friend, enemy)
--- Parent Group (ballad, lullaby, mambo, etc.)
+- Skill (singing)
+- Target Type (friend, enemy)
+- Parent Group (ballad, lullaby, mambo, etc.)
+```
+sets.midcast.magic.singing
+sets.midcast.magic.singing.friend.minne
+sets.midcast.magic.singing.enemy.lullaby
+```
 
 
 ## Ranged Attack
-### sets.precast.ra
-### sets.midcast.ra
--- No additional elements.
+- No additional elements.
+```
+sets.precast.ra
+sets.midcast.ra
+```
+
 
 
 ## Weaponskills
-### ex: sets.precast.ws.melee.physical
-### ex: sets.precast.ws.distant.magical
 - Range (melee, distant)
 - Damage Type (hybrid, magical, physical)
+```
+sets.precast.ws.melee.physical
+sets.precast.ws.distant.magical
+```
