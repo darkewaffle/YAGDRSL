@@ -10,7 +10,7 @@
 	CreateMod("AutoDW",          "ShF12 DW",     true, "~f12",  "On")
 
 	ConfigureDefensePriority("End   DefPriority", true, "end")
-	CreateOverride("ShEnd Override", true, "~end", "BossTank", "Vagary")
+	ConfigureOverride("ShEnd Override", true, "~end", "BossTank", "Vagary")
 
 
 	SetAutoCancelBuff({"Curing Waltz", "Curing Waltz II", "Curing Waltz III", "Curing Waltz IV", "Curing Waltz V", "Divine Waltz", "Divine Waltz II", "Healing Waltz"},

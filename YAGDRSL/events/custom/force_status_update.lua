@@ -5,9 +5,6 @@
 --@@require "YAGDRSL/get/sets/get_set_status.lua"
 --@@require "YAGDRSL/do/equip_safe.lua"
 
--- @User
--- Not a Gearswap event. Logic to manually trigger an update to equip the gear for the character's current status.
--- Called to force an update to the character's equipment based off the character's current status.
 
 function ForceStatusUpdate()
 	ChatCheckpoint("ForceStatusUpdate Start")
