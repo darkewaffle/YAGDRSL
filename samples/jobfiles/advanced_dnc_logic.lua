@@ -2,7 +2,10 @@
 -- LIBRARY SETTINGS
 --
 
-	--CreateMod(ModName, ModDescription, ControlPanelDisplay, CycleKeyBind, ...)
+	TickEnable = true
+	TickInterval = 30
+	TickEvaluateMovement = true
+
 	CreateMod("Offense",         "F9    Offense",true, "f9",    "Acc",    "STP",    "Multi", "Subtle")
 	CreateMod("PhysicalDefense", "F10   PDef",   true, "f10",   "PDT",    "PDTHP",  "Eva")
 	CreateMod("MagicalDefense",  "F11   MDef",   true, "f11",   "MEvaLo", "MEvaHi", "MEvaHP")

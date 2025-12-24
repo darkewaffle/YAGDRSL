@@ -470,16 +470,14 @@
 -- IDLE & RESTING SETS
 --
 
-	InsertGearSet(sets.idle, set_combine(collections.Gleti,
-		{
-			--feet="Skadi's Jambeaux +1"
-		}))
+	InsertGearSet(sets.idle, collections.Gleti)
 
 	sets.idle.town =
 		{
 			ring1="Warp Ring",
 			ring2="Trizek Ring",
-			back="Nexus Cape"
+			back="Nexus Cape",
+			feet="Skadi's Jambeaux +1"
 		}
 
 	sets.resting = collections.Gleti
