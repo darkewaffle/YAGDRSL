@@ -9,7 +9,7 @@ function pet_aftercast(spell)
 	AfterCastContainer(EVENT_AFTERCAST_PET)
 
 	local SpellAttributes = GetSpellAttributes(spell)
-	HookOnAftercast(SpellAttributes) -- @Hook
+	HookOnPetAftercast(SpellAttributes) -- @Hook
 
 	ChatCheckpointLogged("pet_aftercast End", spell.name)
 end

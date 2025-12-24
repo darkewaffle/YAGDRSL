@@ -10,9 +10,12 @@ Toggles the display of debug messages.
 
 ## demo
 ## gs c demo (ability type) (ability name)
-### Example: gs c demo ja Spectral Jig
-### Example: gs c demo ws Rudra's Storm
-### Example: gs c demo ma Burst II
+### Examples
+```
+gs c demo ja Spectral Jig
+gs c demo ws Rudra's Storm
+gs c demo ma Burst II
+```
 Enables debug messages temporarily and then simulates the precast and midcast events and gearset creation steps for the ability with respect to all current mod, override and library settings. The debug messages will be printed to the chat log and will detail how the gearset was assembled and what sets became part of it. Also useful to test abilities that may just have long cooldowns or high resource costs.
 
 ## orders
@@ -29,7 +32,7 @@ Writes a timestamped log of the last action (precast to aftercast) to the chat l
 
 ## tables
 ## gs c tables
-Writes a file to xxx that contains a list of every expected/supported status, item, ability, magic and weaponskill path. Useful for reference or to just copy and paste long paths.
+Writes YAG_tables.txt to Windower\addons\GearSwap\data\export which contains a list of every expected/supported status, item, ability, magic and weaponskill path. Useful for reference or to just copy and paste long paths. Note that current job's gearset definitions may interfere with the results. 
 
 ## update
 ## gs c update

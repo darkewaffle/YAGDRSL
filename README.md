@@ -24,4 +24,4 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 - Event Hooks
 - Gearset Table Structure
 - Gearset Paths for Actions
-- Intentions, Gotchas and Limitations
+- Gotchas and Limitations To Be Mindful Of
