@@ -19,10 +19,10 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 #### Full Documentation
 - [Quick Primer on the Difference Between Gearswap and a Gearswap Library](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Gearswap%20and%20Libraries.md)
 - [How YAGDRSL Builds a GearSet](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Sets.md)
-- [How YAGDRLS Modifies a GearSet](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Mods.md)
+- [How YAGDRSL Modifies a GearSet](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Mods.md)
 - [Overriding Sets for Special Cases](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Overrides.md)
 - [Gotchas and Limitations](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Gotchas%20and%20Limitations.md)
-- [Building Your CharacterName.lua File]()
+- [Building Your CharacterName.lua File](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20Your%20Character%20File.md)
 
 
 #### Technical Resources
