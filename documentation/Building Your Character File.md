@@ -124,40 +124,35 @@ These are settings that control many aspects of how YAGDRSL works and looks. You
 | UnbindSubJobScript | blank | Default unbind scripts that will be run anytime your job changes or the library is unloaded. |
 
 
-### UPDATE AFTER CHANGING ZONE
+### Update After Changing Zone
 | Setting | Default Value | Description |
 | --- | --- | --- |
 | ForceUpdateAfterZone | false | Controls whether or not an update to your current status set will be applied when you change zone. |
 | ForceUpdateAfterZoneDelay | 10 | Controls the amount of time that must pass before the force update occurs after changing zone. |
 
-| Setting | Default Value | Description |
-| --- | --- | --- |
-|  |  |  |
-|  |  |  |
 
-
-### UPDATE AFTER CYCLING MOD VALUE
+### Update After Cycling Mod Value
 | Setting | Default Value | Description |
 | --- | --- | --- |
 | ForceUpdateAfterCycle | true | Controls whether or not an update to your current status set will be applied when you cycle a mod value. |
 | ForceUpdateAfterCycle | 0 | How long the update will be delayed. Essentially this lets you cycle a mod value repeatedly without causing an update every time and then after you stop cycling for ForceUpdateAfterCycleDelay amount of seconds then the update will be applied. |
 
 
-### CHAT SETTINGS
+### Chat Settings
 | Setting | Default Value | Description |
 | --- | --- | --- |
 | ShowDebugMessages | false | YAGDRSL has fairly extensive debug messages in place that are normally hidden. But if you want to see them to learn more about how it works or to try to diagnose why something isn't working like you expect then turning them on can be helpful. You can also turn them on at will using a 'gs c debug' command. |
 | GearSetChatSlotWidth | 35 | Debug messages will also display gearsets in the chat log. This controls how much horizontal space each slot will take up in the chat log. |
 
 
-### OTHER SETTINGS
+### Other Settings
 | Setting | Default Value | Description |
 | --- | --- | --- |
 | AutoCancelDelayAmount | .2 | YAGDRSL can automatically cancel buffs configured with the SetAutoCancelBuff function. When a cancel takes place this determines how much time the action is delayed before being cast. |
 | AutomaticPrecastTermination | false | Precast has some simple checks in place that will cancel an action (and will not change gear) if the action is on recast or if the action is a Weaponskill and the character has <1000 TP. This may be expanded in the future. |
 
 
-### TICK SETTINGS
+### Tick Settings
 These controls YAGDRSL's OnTick event. Essentially this allows code to be run at regular intervals regardless of what's happening in the game. However because of that if it is used irresponsibly then it can degrade game performance. But that should not be a problem as long as you are careful to not set TickInterval too low.
 
 | Setting | Default Value | Description |
@@ -169,7 +164,7 @@ These controls YAGDRSL's OnTick event. Essentially this allows code to be run at
 | TickEvaluateFacing | false | Enables tracking of whether or not you are currently engaged with the target and facing the target's face. Useful for conditionally equipping items like Horos Toe Shoes. |
 | TickEvaluateHook | false | Enables the HookOnTick function where the user can write their own code that would be run every tick interval. |
 
-### CONTROL PANEL SETTINGS
+### Control Panel Settings
 The control panel is a text display that will show you the current state of various mods. Most of these should be self explanatory however a few are worth mentioning specifically.
 
 
