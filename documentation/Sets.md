@@ -7,56 +7,56 @@ In YAGDRSL spells and actions have been mapped to a gearset 'path' that will hop
 
 For weapon skills the full path is made out of the following elements.
 
-> Root Table Name: This is just 'sets'.
-> Action Event: This would be 'precast'.
-> Action Category: Weaponskills are simply abbreviated as 'ws'. So far this probably looks very familiar.
-> Weapon Range: Here we hit a branch - melee weapon skills are 'melee' and ranged weapon skills become 'distant'*.
-> Damage Type: The final element also branches as weapon skills can be mapped to 'physical', 'magical' or 'hybrid'. 
+Root Table Name: This is just 'sets'.
+Action Event: This would be 'precast'.
+Action Category: Weaponskills are simply abbreviated as 'ws'. So far this probably looks very familiar.
+Weapon Range: Here we hit a branch - melee weapon skills are 'melee' and ranged weapon skills become 'distant'*.
+Damage Type: The final element also branches as weapon skills can be mapped to 'physical', 'magical' or 'hybrid'. 
 
-**If you're curious why, click here.*
+[**If you're curious why, click here.*](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Gotchas%20and%20Limitations.md)
 
 So together the possible, full weaponskill paths are all of the following.
-
-> sets.precast.ws.melee.physical
-> sets.precast.ws.melee.magical
-> sets.precast.ws.melee.hybrid
-> sets.precast.ws.distant.physical
-> sets.precast.ws.distant.magical
-> sets.precast.ws.distant.hybrid
-
+```
+sets.precast.ws.melee.physical
+sets.precast.ws.melee.magical
+sets.precast.ws.melee.hybrid
+sets.precast.ws.distant.physical
+sets.precast.ws.distant.magical
+sets.precast.ws.distant.hybrid
+```
 This probably looks a bit wordy - but you only need to define then ones you want to use. And because the path steps are all added together, you may end up defining fewer or smaller sets than you think. Why? Let's look at all the steps the path takes for a weapon skill like Evisceration.
 
 Evisceration's final path would be sets.precast.ws.melee.physical. But it's not going to equip just what it finds in that set - instead the final set would actually be the result of combining the sets found in each of the following tables.
-
-> sets
-> sets.precast
-> sets.precast.ws
-> sets.precast.ws.melee
-> sets.precast.ws.melee.physical
-
+```
+sets
+sets.precast
+sets.precast.ws
+sets.precast.ws.melee
+sets.precast.ws.melee.physical
+```
 This means that your sets can look something like this where you can separately define gear that would apply to all weaponskills in sets.precast.ws and gear that would only apply to melee, physical weapon skills in sets.precast.ws.melee.physical. 
-
+```
 sets.precast.ws = {neck="Fotia Gorget", body="Scorpion Harness", waist="Fotia Belt"}
 sets.precast.ws.melee.physical = {head="Nyame Helm", body="Nyame Mail"}
-
+```
 So by logically placing gear where it would be appropriate to use for all actions with the characteristics described by the path we've now defined not just our Evisceration set - but also a set for every other melee, physical weapon skill. They would all equip Fotia Gorget, Fotia Belt, Nyame Helm and Nyame Mail. Additionally, take note that the sets will be combined from 'least specific' to 'most specific' so to speak - so Scorpion Harness would be overwritten by Nyame Mail.
 
 Now we can define a bunch of gear that is the same for weapon skills to give ourselves a starting point - but what about the gear that should be different? That actually works pretty similar to other libraries in that you can define, for example, a set specific to Evisceration with +Crit gear that isn't applicable to other weapon skills. However the way that it finds it is again a little different. Instead of only looking for sets.precast.ws.melee.physical.Evisceration YAGDRSL will instead search through those same paths from before and look for any sets (or rather, table keys) named Evisceration. 
-
-> sets.Evisceration
-> sets.precast.Evisceration
-> sets.precast.ws.Evisceration
-> sets.precast.ws.melee.Evisceration
-> sets.precast.ws.melee.physical.Evisceration
-
+```
+sets.Evisceration
+sets.precast.Evisceration
+sets.precast.ws.Evisceration
+sets.precast.ws.melee.Evisceration
+sets.precast.ws.melee.physical.Evisceration
+```
 All of these are valid. I can't think of any reason to actually define multiple sets for an individual skill but it does mean you can place it wherever you think is convenient or logical. And once again, any Evisceration-specific sets that it finds will be combined with the sets that were found originally.
 
 All told if our sets were defined like this and we used Evisceration...
-
-> sets.precast.ws = {neck="Fotia Gorget", body="Scorpion Harness", waist="Fotia Belt"}
-> sets.precast.ws.melee.physical = {head="Nyame Helm", body="Nyame Mail"}
-> sets.precast.Evisceration {head="Gleti's Helm", feet="Gleti's Boots"}
-
+```
+sets.precast.ws = {neck="Fotia Gorget", body="Scorpion Harness", waist="Fotia Belt"}
+sets.precast.ws.melee.physical = {head="Nyame Helm", body="Nyame Mail"}
+sets.precast.Evisceration {head="Gleti's Helm", feet="Gleti's Boots"}
+```
 Then our final set would be **{head="Gleti's Helm", body="Nyame Mail", neck="Fotia Gorget", waist="Fotia Belt", feet="Gleti's Boots"}**.
 
 But that's not actually our final set. Because sometimes we want to modify it. How? How else - with mods!

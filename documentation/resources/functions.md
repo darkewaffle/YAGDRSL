@@ -60,7 +60,7 @@ function SetModOrderPrecastRAOffense(...)
 function SetModOrderPrecastRADefense(...)
 function SetModOrderPrecastWSOffense(...)
 function SetModOrderPrecastWSDefense(...)
----
+
 function SetModOrderMidcastJAOffense(...)
 function SetModOrderMidcastJADefense(...)
 function SetModOrderMidcastMagicOffense(...)
@@ -69,13 +69,13 @@ function SetModOrderMidcastRAOffense(...)
 function SetModOrderMidcastRADefense(...)
 function SetModOrderMidcastWSOffense(...)
 function SetModOrderMidcastWSDefense(...)
----
+
 function SetModOrderEngagedOffense(...)
 function SetModOrderEngagedDefense(...)
 function SetModOrderIdleOffense(...)
 function SetModOrderIdleDefense(...)
 function SetModOrderRestingOffense(...)
 function SetModOrderRestingDefense(...)
----
+
 SetModOrderEngagedOffense("OffenseMode", "TreasureHunter")
 ```
