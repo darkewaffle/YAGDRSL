@@ -240,6 +240,7 @@
 	mods.midcast.magic["HPHi"] = mods.precast.magic["HPHi"]
 
 	mods.midcast.magic.healing["SIRD"] = templates.sird
+	mods.midcast.magic.blue["SIRD"] = templates.sird
 
 	mods.midcast.magic["FullSIRD"] = templates.sird
 
