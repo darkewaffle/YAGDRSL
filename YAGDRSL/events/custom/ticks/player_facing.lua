@@ -30,7 +30,7 @@ function GetPlayerFacingTargetAndTargetFacingPlayer()
 			--ChatDebug("Player facing target face")
 			SetTracker(TRACK_PLAYER_FACING, STATE_PLAYER_FACING_FRONT)
 			return STATE_PLAYER_FACING_FRONT
-		elseif FacingDifference <= 15 or Facing Difference >= 345
+		elseif FacingDifference <= 15 or FacingDifference >= 345 then
 			--ChatDebug("Player facing target back")
 			SetTracker(TRACK_PLAYER_FACING, STATE_PLAYER_FACING_BACK)
 			return STATE_PLAYER_FACING_BACK

@@ -41,7 +41,7 @@ function OnTick()
 		end
 
 		if _G[YAG_SETTINGS]["TickEvaluateFacing"] then
-			if GetCharacterStatus() == STATUS_ENGAGED  and GetCharacterHasTarget() then
+			if GetCharacterStatus() == STATUS_ENGAGED and GetCharacterHasTarget() then
 				UpdateStatus = UpdateStatus or GetPlayerFacingStateHasChanged()
 			end
 		end
