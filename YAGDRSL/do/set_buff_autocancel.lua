@@ -4,7 +4,7 @@ require "YAGDRSL/get/get_buff.lua"
 require "YAGDRSL/get/get_spell.lua"
 
 -- @User
--- Function record which spells should trigger an automatic buff cancel and which buffs it should attempt to cancel.
+-- Function to configure record which spells should trigger an automatic buff cancel and which buffs it should attempt to cancel.
 -- Every spell submitted in SpellsBeingCast will attempt to cancel any of the buffs in BuffsToCancel if they are active each time the spell is cast.
 -- SpellsBeingCast and BuffsToCancel are both expected to be tables. Using it should look like the below example
 --

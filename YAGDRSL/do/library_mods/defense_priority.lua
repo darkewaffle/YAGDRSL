@@ -7,7 +7,6 @@ require "YAGDRSL/get/mods/get_mod_value.lua"
 -- Mods are broadly split into two classes - defense and offense (or anything that is not-defense really).
 -- When Defense Priority is true that means the offense mods will be assembled first and then the defense mods will overwrite them where applicable.
 -- When Defense Priority is false the opposite will happen - offense mod gear will overwrite defense mod gear where applicable.
--- It can be manipulated directly by implementation of these functions or you can simply call ConfigureWeaponLock into your player or job file.
 
 -- ModDescription is the description of the mod that will show up in the ControlPanel
 -- ControlPanelDisplay should be a true or false value indicating if you want it to display in the ControlPanel

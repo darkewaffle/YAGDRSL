@@ -1,4 +1,6 @@
 # Library Functions Suggested for Users
+More details on these functions can be found in the .lua files defining them. You can locate them easily by searching for @User.
+
 
 ## BindKey
 ```

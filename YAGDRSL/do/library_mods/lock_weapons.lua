@@ -4,7 +4,7 @@ require "YAGDRSL/get/mods/get_mod_value.lua"
 -- @User
 -- These functions allow the user to manipulate the built in Locked Weapons modifier
 -- The value selected by this mod will not affect how the gearset is created but instead it will determine which, if any, slots are removed from the gearset before it is equipped.
--- It can be manipulated directly by implementation of these functions or you can simply call ConfigureWeaponLock into your player or job file.
+-- It can be manipulated directly by implementation of these functions or you can simply call ConfigureWeaponLock in your player or job file.
 
 -- ModDescription is the description of the mod that will show up in the ControlPanel
 -- ControlPanelDisplay should be a true or false value indicating if you want it to display in the ControlPanel

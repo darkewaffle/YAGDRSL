@@ -1,6 +1,5 @@
 -- @User
--- Allows inserts of a gearset into a parent table without destroying
--- children tables.
+-- Allows inserts of a gearset into a parent table without destroying children tables.
 
 -- eg: InsertGearSet(sets.precast.ws, {head="Onion Helm"}) will not affect sets.precast.ws.melee.
 -- Whereas sets.precast.ws = {head="Onion Helm"} will destroy sets.precast.ws.melee and other child tables.
