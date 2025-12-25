@@ -8,6 +8,7 @@
 	CreateMod("Preserve HP",     "ShF10 HP",     true, "~f10",  "HPHi", "HPLo")
 	CreateMod("MagicalDefense",  "F11   MDef",   true, "f11",   "MEva")
 	CreateMod("Refresh",         "ShF11",        true, "~f11",  "+Refresh")
+	CreateMod("MagicBurst",      "CtF11",        true, "^f11",  "MB")
 
 	CreateMod("ShelteredRing", "n/a", false, nil, "Shelter")
 	SetModValue("ShelteredRing", "Shelter")
@@ -20,7 +21,7 @@
 
 	SetModOrderPrecastMagicDefense("Preserve HP")
 
-	SetModOrderMidcastMagicOffense()
+	SetModOrderMidcastMagicOffense("MagicBurst")
 	SetModOrderMidcastMagicDefense("Preserve HP", "SIRD", "ShelteredRing")
 
 	SetModOrderPrecastWSOffense("Offense")

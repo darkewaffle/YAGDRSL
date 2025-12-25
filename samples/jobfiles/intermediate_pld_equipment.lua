@@ -250,6 +250,24 @@
 	mods.midcast.magic["Reprisal"] = {}
 	mods.midcast.magic["Reprisal"]["FullSIRD"] = templates.fastcast
 
+	mods.midcast.magic.divine.banish["MB"] = set_combine(collections.Nyame, collections.Null,
+		{
+			helm="Jumalik Helm",
+			ear1="Friomisi Earring",
+			ear2="Hecate's Earring",
+			ring1="Kishar Ring",
+			ring2="Etana Ring"
+		})
+
+	mods.midcast.magic.divine.holy["MB"] = set_combine(collections.Nyame, collections.Null,
+		{
+			helm="Jumalik Helm",
+			ear1="Friomisi Earring",
+			ear2="Hecate's Earring",
+			ring1="Kishar Ring",
+			ring2="Etana Ring"
+		})
+
 	mods.midcast.magic.enhancing.protect["Shelter"] = 
 		{
 			ring1="Sheltered Ring"
@@ -259,6 +277,7 @@
 		{
 			ring1="Sheltered Ring"
 		}
+
 --
 -- ENGAGED SET
 --
