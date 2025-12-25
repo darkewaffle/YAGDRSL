@@ -78,7 +78,7 @@
 
 		for _, DualWieldAmount in ipairs(DualWieldThresholds) do
 			if DualWieldToCap >= DualWieldAmount then
-				Threshold = DualWieldThresholds[i]
+				Threshold = DualWieldAmount
 				break
 			end
 		end
