@@ -54,6 +54,10 @@ function GetCharacterAsPlayer()
 	return windower.ffxi.get_player()
 end
 
+function GetCharacterBuffs()
+	return GetCharacterAsPlayer().buffs
+end
+
 function GetCharacterAsMob()
 	local PlayerData = GetCharacterAsPlayer()
 

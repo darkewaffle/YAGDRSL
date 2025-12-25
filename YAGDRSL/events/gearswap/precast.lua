@@ -103,6 +103,8 @@ function PrecastTerminate(SpellAttributes)
 	--		return TerminateSpell, TerminateReason
 	--	end
 
+		TerminateSpell, TerminateReason = PrecastTerminateByStatus(SpellAttributes)
+
 		if SpellAttributes["Category"] == CATEGORY_WS then
 			TerminateSpell = TerminateSpell or GetCharacterTP() < 1000
 			TerminateReason = "Insufficient TP to perform WS -"
@@ -121,6 +123,33 @@ function PrecastTerminate(SpellAttributes)
 
 	if not TerminateSpell then
 		TerminateReason = nil
+	end
+
+	return TerminateSpell, TerminateReason
+end
+
+function PrecastTerminateByStatus(SpellAttributes)
+	local TerminateSpell = false
+	local TerminateReason = ""
+	
+	local AllActions = {[CATEGORY_ITEM]=true, [CATEGORY_JA]=true, [CATEGORY_MAGIC]=true, [CATEGORY_RA]=true, [CATEGORY_WS]=true}
+	local Ailments = 
+	{
+		[6] = {[CATEGORY_MAGIC]=true},						-- Silence
+		[7] = AllActions,									-- Petrify
+		[10] = AllActions,									-- Stun
+		[16] = {[CATEGORY_JA]=true, [CATEGORY_WS]=true},	-- Amnesia
+		[28] = AllActions									-- Terror
+	}
+
+	local PlayerBuffs = GetCharacterBuffs()
+
+	for _, BuffID in pairs(PlayerBuffs) do
+		if Ailments[BuffID] and Ailments[BuffID][SpellAttributes["Category"]] then
+			TerminateSpell = true
+			TerminateReason = "Action cannot be completed due to status ailment " .. GetBuffName(BuffID)
+			break
+		end
 	end
 
 	return TerminateSpell, TerminateReason
