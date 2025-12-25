@@ -1,4 +1,4 @@
-# First things first - what does Gearswap do and why does a library help?
+# What does Gearswap do and why does a library help?
 You can think of the Gearswap addon as an announcer of sorts. It's responsible for listening to what the game is doing, identifying important events and then telling us when they happen. It lets us know when our character is in the middle of casting a spell, when we receive a new buff, when our pet starts to use an ability and many other useful pieces of information. Then when we tell Gearswap what to do during those events it also handles all of the heavy lifting of translating that information into data (packets) that the game will process.
 
 But how do we tell Gearswap what we want to do? That's where a library comes in. By itself Gearswap will announce events like 'you are about to start casting a spell' (precast) and 'you are currently casting a spell' (midcast) all day but won't do anything with that information. So it's up to the library to listen to Gearswap's announcements, make a decision about what to do in response and then give Gearswap that information so it can translate it back to the game.

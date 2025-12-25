@@ -8,10 +8,10 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 
 #### Quick Start Guide
 1. Download the YAG_include.lua file and the entire YAGDRSL folder.
-2. Place them in your C:\Program Files (x86)\Windower\addons\GearSwap\libs folder
-- *Or if you want to test-drive YAGDRSL and keep the files for it separate from your existing Gearswap files you can also just put everything in the libs-dev folder*.
+2. Place them in your Windower\addons\GearSwap\libs folder
+*Or if you want to test-drive YAGDRSL and keep the files for it separate from your existing Gearswap files you can also just put everything in the libs-dev folder*.
 3. In the libs folder create a .lua file with the same name as your character. (eg: If your character is John then create John.lua).
-- If using libs-dev to test YAGDRSL, you can easily go back and forth between your current Gearswap setup and YAGDRSL. Just rename the libs-dev/charactername.lua file so gearswap won't recognize it, input a 'gs reload' command and you're back to your original gearswap. Then when you want to continue trying YAGDSRL just do the reverse - change the file name to match your character, 'gs reload' and you're back in YAGDRSL.
+*If using libs-dev to test YAGDRSL, you can easily go back and forth between your current Gearswap setup and YAGDRSL. Just rename the libs-dev/charactername.lua file so gearswap won't recognize it, input a 'gs reload' command and you're back to your original gearswap. Then when you want to continue trying YAGDSRL just do the reverse - change the file name to match your character, 'gs reload' and you're back in YAGDRSL.*
 4. Follow the examples in [the sample character file](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/charactername.lua) to create your character file.
 5. When created correctly the character file will then load your job files and you are up and running.
 
