@@ -22,7 +22,7 @@ function RegisterOnTickTrackers()
 	end
 
 	if _G[YAG_SETTINGS]["TickEvaluateFacing"] then
-		CreateTrackerQueued(STATE_PLAYER_FACING_TARGET_FACE, MOD_CLASS_OFFENSE)
+		CreateTrackerQueued(TRACK_PLAYER_FACING, MOD_CLASS_OFFENSE)
 	end
 end
 

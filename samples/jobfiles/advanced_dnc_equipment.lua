@@ -491,7 +491,7 @@
 			feet="Skadi's Jambeaux +1"
 		}
 
-	mods.engaged[STATE_PLAYER_FACING_TARGET_FACE] =
+	mods.engaged[STATE_PLAYER_FACING_FRONT] =
 		{
 			feet="Horos Toe Shoes +4"
 		}
