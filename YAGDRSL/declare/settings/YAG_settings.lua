@@ -16,8 +16,6 @@ _G[YAG_SETTINGS][SETTINGS_DEFAULT] =
 	UnbindMainJobScript = "",
 	UnbindSubJobScript = "",
 
-	AutoLowerSetNames = true,
-
 	ForceUpdateAfterZone = false,
 	ForceUpdateAfterZoneDelay = 10,
 

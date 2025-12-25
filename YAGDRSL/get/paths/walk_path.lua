@@ -24,10 +24,6 @@ function WalkPath(...)
 		for Index, Value in ipairs(PathElements) do
 			NextElement = PathElements[Index]
 
-			if NextElement ~= nil and _G[YAG_SETTINGS]["AutoLowerSetNames"] then
-				NextElement = string.lower(NextElement)
-			end
-
 			if TestedPath[NextElement] then
 				TestedPath = TestedPath[NextElement]
 				TestedPathString = ConcatenatePathStrings(TestedPathString, NextElement)
