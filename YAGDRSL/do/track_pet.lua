@@ -33,6 +33,8 @@ function ClearPetNameTracker()
 	UnsetTracker(TRACK_PET_NAME)
 end
 
+-- @User
+
 function TrackPetNameAsOffenseMod()
 	TrackPetNameAsMod(MOD_CLASS_OFFENSE)
 end

@@ -7,9 +7,9 @@ STATUS_RESTING = "resting"
 
 STATE_STATIONARY = "player_stationary"
 STATE_MOVING = "player_moving"
-STATE_PLAYER_FACING_FRONT = "player_facing_face"
-STATE_PLAYER_FACING_BACK = "player_facing_back"
-STATE_PLAYER_FACING_OTHER = "player_facing_other"
+STATE_PLAYER_FACING_FRONT = "facing_front"
+STATE_PLAYER_FACING_BACK = "facing_back"
+STATE_PLAYER_FACING_OTHER = "facing_other"
 
 
 ZONE_FIELD = "field"
