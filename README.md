@@ -21,9 +21,13 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 - [How YAGDRSL Builds a GearSet](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Sets.md)
 - [How YAGDRSL Modifies a GearSet](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Mods.md)
 - [Overriding Sets for Special Cases](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Overrides.md)
+- [Trackers To Track the Trackables](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Trackers.md)
 - [Gotchas and Limitations](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Gotchas%20and%20Limitations.md)
-- [Building Your CharacterName.lua File](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20Your%20Character%20File.md)
 
+#### Getting Up and Running with YAGDRSL
+- [Building Your CharacterName.lua File](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20Your%20Character%20File.md)
+- [Building a Job Equipment File](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20a%20Job%20Equipment%20File.md)
+- [Building a Job Logic File](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20a%20Job%20Logic%20File.md)
 
 #### Technical Resources
 - [Examples of Interactions Between sets, mods and overrides](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Equipment%20Examples.md)

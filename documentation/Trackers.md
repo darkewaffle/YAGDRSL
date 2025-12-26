@@ -1,4 +1,4 @@
-# Trackers
+# Trackers to Track the Trackables
 Trackers are a specific type of mod that YAGDRSL uses to, well, track information about the current state of the game. However unlike other mods the user doesn't interact with them directly. You don't need to create trackers, define the values they hold or cycle them. Instead when the library is loaded it will automatically create trackers based on your library settings and the functions you use in GetPlayerSettings or in file_logic for your job. In general the functions that you can call that will create trackers should be placed in your job's file_logic.
 
 
