@@ -1,8 +1,10 @@
 --@@require "YAGDRSL/events/custom/force_status_update.lua"
 --@@require "YAGDRSL/do/reset_player_state.lua"
 
+require "YAGDRSL/do/windower_events.lua"
+
 function RegisterOnZoneChange()
-	windower.raw_register_event('zone change', OnZoneChange)
+	RegisterWindowerEvent("zone change", OnZoneChange)
 end
 
 function OnZoneChange()

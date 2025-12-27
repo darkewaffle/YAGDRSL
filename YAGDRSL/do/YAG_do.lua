@@ -25,5 +25,6 @@ require "YAGDRSL/do/set_job_lockstyle.lua"
 require "YAGDRSL/do/set_job_macros.lua"
 require "YAGDRSL/do/set_mod_order.lua"
 require "YAGDRSL/do/track_pet.lua"
+require "YAGDRSL/do/windower_events.lua"
 
 require "YAGDRSL/do/library_mods/YAG_library_mods.lua"

@@ -1,4 +1,6 @@
 -- Table names the library uses to track user configured settings.
+TRACK_REGISTERED_EVENTS = "tracking_registered_events"
+
 TRACK_AUTO_CANCEL_SPELLS = "tracking_auto_cancel_spells"
 TRACK_BUFFS = "tracking_buffs"
 TRACK_PET_NAME = "pet_name"

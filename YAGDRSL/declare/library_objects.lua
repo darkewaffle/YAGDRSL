@@ -28,4 +28,6 @@ function DeclareLibraryObjects()
 	_G[TRACK_KEY_BINDS] = {}
 	_G[TRACK_BUFFS] = {}
 	_G[TRACKER_INTO_ORDERS_QUEUE] = {}
+
+	_G[TRACK_REGISTERED_EVENTS] = {}
 end

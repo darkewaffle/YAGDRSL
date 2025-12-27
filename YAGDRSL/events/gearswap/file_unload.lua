@@ -6,6 +6,7 @@ function file_unload(file_name)
 	ChatDebug("Unloading file_name = ", file_name)
 
 	ClearTrackedKeyBinds()
+	UnregisterWindowerEvents()
 	HookOnFileUnload(file_name) -- @Hook
 
 	ChatCheckpoint("file_unload end")

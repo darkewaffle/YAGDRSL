@@ -5,18 +5,19 @@
 --@@require "YAGDRSL/events/custom/force_status_update.lua"
 require "YAGDRSL/events/custom/ticks/player_facing.lua"
 require "YAGDRSL/events/custom/ticks/player_movement.lua"
+require "YAGDRSL/do/windower_events.lua"
 
 local TickCounter = 1
 local LastTickUpdate = 0
 
 function RegisterOnTick()
 	if _G[YAG_SETTINGS]["TickEnable"] == true then
-		windower.raw_register_event('prerender', OnTick)
-		RegisterOnTickTrackers()
+		RegisterWindowerEvent("prerender", OnTick)
+		CreateOnTickTrackers()
 	end
 end
 
-function RegisterOnTickTrackers()
+function CreateOnTickTrackers()
 	if _G[YAG_SETTINGS]["TickEvaluateMovement"] then
 		CreateTrackerQueued(STATE_MOVING, MOD_CLASS_DEFENSE)
 	end

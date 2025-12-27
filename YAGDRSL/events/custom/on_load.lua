@@ -91,6 +91,7 @@ function RegisterCustomEvents()
 	-- Registers functions with Windower events 'prerender' and 'zone change'
 	RegisterOnTick()
 	RegisterOnZoneChange()
+	RegisterOnLogOut()
 end
 
 function ApplyTrackers()
