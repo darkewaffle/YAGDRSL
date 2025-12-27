@@ -20,7 +20,7 @@ flowchart TD;
 	G2D --> G3D[[Combine defense<br>mod sets by mod order]];
 	G3O --> I;
 	G3D --> I;
-	I(Defense Priority?);
+	I{Defense Priority?};
 	I --> I1(Yes);
 	I --> I2(No);
 	I1 --> I1D[[Combine<br>offense mod + defense mod]];
