@@ -1,7 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/get/get_item.lua"
---@@require "YAGDRSL/events/gearswap/commands/validate/get_augment.lua"
-
 function GetEquipmentIDsInContainer(ContainerName)
 
 	local InventoryIndexes =

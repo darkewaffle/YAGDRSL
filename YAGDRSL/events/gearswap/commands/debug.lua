@@ -1,5 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
-
 -- Toggles the display of debug messages on/off.
 
 function SelfCommandDebug(CommandInputs)

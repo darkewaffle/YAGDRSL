@@ -1,5 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
-
 function pet_status_change(new, old)
 	ChatBlankLine()
 	ChatCheckpoint("pet_status_change start: NEW =", new)

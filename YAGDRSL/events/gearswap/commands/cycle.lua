@@ -1,6 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/display/YAG_display.lua"
-
 function SelfCommandCycle(CommandInputs)
 	if #CommandInputs == 0 then
 		ChatError("SelfCommandCycle failure: insufficient parameters")

@@ -71,12 +71,6 @@ function GetStatusSetTerminate(CharacterStatus)
 			[STATUS_RESTING] = true
 		}
 
-	-- This is a global boolean value that indicates if there is an action currently underway. True when precast has been confirmed and set to false when aftercast begins.
-	--if STATE_ACTION_IN_PROGRESS then
-	--	TerminateStatus = true
-	--	TerminateReason = "Character action currently in progress, status set will not be applied."
-	--end
-
 	if not ValidStatuses[CharacterStatus] then
 		TerminateStatus = true
 		TerminateReason = "Gear may not be equipped while status ="

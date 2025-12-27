@@ -1,7 +1,3 @@
---@@require "YAGDRSL/do/math_helpers.lua"
---@@require "YAGDRSL/get/get_character.lua"
---@@require "YAGDRSL/get/get_target.lua"
-
 local LastPlayerState = STATE_PLAYER_FACING_OTHER
 
 function GetPlayerFacingStateHasChanged()

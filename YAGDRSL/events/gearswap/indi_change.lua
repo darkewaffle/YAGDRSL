@@ -1,5 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
-
 function indi_change(indi_table, gain)
 	ChatBlankLine()
 	ChatCheckpoint("indi_change start", name)

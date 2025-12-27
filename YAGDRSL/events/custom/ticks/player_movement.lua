@@ -1,5 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
-
 local PreviousCoordinates = {["x"] = player.x, ["y"] = player.y}
 local LastPlayerState = STATE_STATIONARY
 

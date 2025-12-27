@@ -1,14 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/debug/chat_objects.lua"
---@@require "YAGDRSL/debug/performance.lua"
-
---@@require "YAGDRSL/do/auto_cancel.lua"
---@@require "YAGDRSL/get/mods/get_mod_total.lua"
---@@require "YAGDRSL/get/overrides/get_override.lua"
---@@require "YAGDRSL/get/get_recast.lua"
---@@require "YAGDRSL/get/get_spellattributes.lua"
---@@require "YAGDRSL/get/sets/get_set_event.lua"
-
 function precast(spell, position)
 	-- Every precast-to-aftercast sequence is logged by entries made in each ChatCheckpointLogged call.
 	-- Reset ensures that the log is empty at the start of each sequence.
@@ -97,12 +86,6 @@ function PrecastTerminate(SpellAttributes)
 
 	if _G[YAG_SETTINGS]["AutomaticPrecastTermination"] == true then
 
-	--	if STATE_ACTION_IN_PROGRESS then
-	--		TerminateSpell = true
-	--		TerminateReason = "Another action is already in progress."
-	--		return TerminateSpell, TerminateReason
-	--	end
-
 		TerminateSpell, TerminateReason = PrecastTerminateByStatus(SpellAttributes)
 
 		if SpellAttributes["Category"] == CATEGORY_WS then
@@ -133,11 +116,14 @@ function PrecastTerminateByStatus(SpellAttributes)
 	local TerminateReason = ""
 	
 	local AllActions = {[CATEGORY_ITEM]=true, [CATEGORY_JA]=true, [CATEGORY_MAGIC]=true, [CATEGORY_RA]=true, [CATEGORY_WS]=true}
-	local Ailments = 
+	local Ailments =
 	{
+		[0] = AllActions,									-- KO / dead
 		[6] = {[CATEGORY_MAGIC]=true},						-- Silence
 		[7] = AllActions,									-- Petrify
 		[10] = AllActions,									-- Stun
+		[14] = AllActions,									-- Charm
+		[17] = AllActions,									-- Charm
 		[16] = {[CATEGORY_JA]=true, [CATEGORY_WS]=true},	-- Amnesia
 		[28] = AllActions									-- Terror
 	}

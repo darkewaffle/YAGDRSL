@@ -1,8 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/debug/chat_objects.lua"
-
---@@require "YAGDRSL/get/sets/get_set_status.lua"
-
 function status_change(new, old)
 	ChatBlankLine()
 	ChatCheckpointLogged("status_change start: NEW =", new)

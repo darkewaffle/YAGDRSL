@@ -1,6 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/do/create_key_bind.lua"
-
 function file_unload(file_name)
 	ChatBlankLine()
 	ChatDebug("Unloading file_name = ", file_name)

@@ -1,8 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/do/create_tracker.lua"
---@@require "YAGDRSL/get/get_character.lua"
-
---@@require "YAGDRSL/events/custom/force_status_update.lua"
 require "YAGDRSL/events/custom/ticks/player_facing.lua"
 require "YAGDRSL/events/custom/ticks/player_movement.lua"
 require "YAGDRSL/do/windower_events.lua"

@@ -1,12 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/debug/chat_objects.lua"
-
---@@require "YAGDRSL/get/sets/get_set_event.lua"
---@@require "YAGDRSL/get/mods/get_mod_total.lua"
---@@require "YAGDRSL/get/mods/get_mod_value.lua"
---@@require "YAGDRSL/get/overrides/get_override.lua"
---@@require "YAGDRSL/get/get_spellattributes.lua"
-
 function midcast(spell)
 	ChatBlankLine()
 	ChatCheckpointLogged("Midcast Start")

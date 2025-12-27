@@ -1,5 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
-
 function SelfCommandTest1()
 	ChatCheckpoint("Command Test 1 Start")
 

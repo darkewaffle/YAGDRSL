@@ -1,13 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/debug/chat_objects.lua"
-
---@@require "YAGDRSL/events/gearswap/midcast.lua"
---@@require "YAGDRSL/events/gearswap/precast.lua"
---@@require "YAGDRSL/get/get_action.lua"
---@@require "YAGDRSL/get/get_spell.lua"
---@@require "YAGDRSL/get/get_spellattributes_demo.lua"
---@@require "YAGDRSL/get/sets/get_set_status.lua"
-
 function SelfCommandDemo(CommandInputs)
 	if #CommandInputs == 0 then
 		ChatError("SelfCommandDemo failure: insufficient parameters")

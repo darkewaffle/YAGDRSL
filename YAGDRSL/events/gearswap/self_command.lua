@@ -1,4 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
 require "YAGDRSL/events/gearswap/commands/YAG_commands.lua"
 
 function self_command(CommandInputs)

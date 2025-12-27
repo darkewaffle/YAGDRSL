@@ -1,5 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
-
 function filtered_action(spell)
 	--ChatBlankLine()
 	--ChatCheckpoint("filtered_action start", spell.name)

@@ -1,5 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
-
 function pretarget(spell)
 	--ChatBlankLine()
 	--ChatCheckpoint("pretarget start", spell.name)

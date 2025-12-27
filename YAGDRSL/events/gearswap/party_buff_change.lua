@@ -1,5 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
-
 function party_buff_change(member_table, name, gain, buffid)
 	--ChatBlankLine()
 	--ChatCheckpoint("party_buff_change start")

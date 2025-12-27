@@ -1,11 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/debug/chat_objects.lua"
-
---@@require "YAGDRSL/get/get_character.lua"
---@@require "YAGDRSL/get/sets/get_set_status.lua"
---@@require "YAGDRSL/do/equip_safe.lua"
-
-
 function ForceStatusUpdate()
 	ChatCheckpoint("ForceStatusUpdate Start")
 

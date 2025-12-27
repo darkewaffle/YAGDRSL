@@ -1,7 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/debug/chat_objects.lua"
---@@require "YAGDRSL/events/gearswap/aftercast.lua"
-
 function pet_aftercast(spell)
 	ChatBlankLine()
 	ChatCheckpointLogged("pet_aftercast Start")

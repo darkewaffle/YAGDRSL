@@ -1,5 +1,3 @@
---@@require "YAGDRSL/events/gearswap/commands/validate/get_augment.lua"
-
 function GetItemNamesInRootTable(RootObject)
 
 	local ValidGearSlots =

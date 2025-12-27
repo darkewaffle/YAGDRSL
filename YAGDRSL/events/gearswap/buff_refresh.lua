@@ -1,5 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
-
 function buff_refresh(name, gain, buff_details)
 	--ChatBlankLine()
 	--ChatCheckpoint("buff_refresh start", name)

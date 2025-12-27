@@ -1,8 +1,3 @@
---@@require "YAGDRSL/events/gearswap/commands/validate/get_items_equipment.lua"
---@@require "YAGDRSL/events/gearswap/commands/validate/get_augment.lua"
---@@require "YAGDRSL/get/get_item.lua"
---@@require "YAGDRSL/do/send_game_command.lua"
-
 local ExtDataLibrary = require "extdata"
 local UsableRings = {}
 local UseRing = ""

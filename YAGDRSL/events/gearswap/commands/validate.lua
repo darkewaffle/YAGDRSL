@@ -1,15 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/declare/tables/validation/declare_validation.lua"
---@@require "YAGDRSL/do/load_file.lua"
---@@require "YAGDRSL/do/nullify_table.lua"
---@@require "YAGDRSL/events/gearswap/commands/validate/get_augment.lua"
---@@require "YAGDRSL/events/gearswap/commands/validate/get_items_equipment.lua"
---@@require "YAGDRSL/events/gearswap/commands/validate/get_items_gearset.lua"
---@@require "YAGDRSL/get/get_character.lua"
---@@require "YAGDRSL/get/get_item.lua"
---@@require "YAGDRSL/get/get_jobcontrol.lua"
-
-
 function SelfCommandValidate(CommandInputs)
 
 	local ValidationModes = {}

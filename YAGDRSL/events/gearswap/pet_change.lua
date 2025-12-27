@@ -1,8 +1,3 @@
---@@require "YAGDRSL/debug/chat.lua"
---@@require "YAGDRSL/debug/chat_objects.lua"
-
---@@require "YAGDRSL/do/track_pet.lua"
-
 function pet_change(pet, gain)
 	ChatBlankLine()
 	ChatCheckpoint("pet_change start: NEW = ", pet.name)
