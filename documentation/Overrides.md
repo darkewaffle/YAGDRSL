@@ -34,4 +34,4 @@ overrides.engaged["+CP"] = {back="Aptitude Mantle"}
 ```
 
 
-Good lord that was a lot to take in, no? If you're still unsure of how the steps in the process connect or if you're more of a visual learner then take a look at the [Flow Diagram](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Flow%20Diagram.md) which charts out how all the major steps in building a set fit together.
+That was a lot to take in, no? If you're still unsure of how the steps in the process connect or if you're more of a visual learner then take a look at the [Flow Diagram](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Flow%20Diagram.md) which charts out how all the major steps in building a set fit together.
