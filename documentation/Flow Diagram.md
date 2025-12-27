@@ -1,16 +1,16 @@
 This flowchart represents how 'precast' works but 'midcast' is essentially the exact same process - it just uses a different 'event' name in the paths. Equipping a status set is a similar process but simpler because the paths are basically just 'sets.engaged', 'mods.engaged.modvalue', and so on and so forth. 
 
 
-But each one ultimately follows the same steps of 'get a set', 'apply the mods' and 'apply the override' and 'equip the result'.
+But each one ultimately follows the same steps of 'get a set', 'apply the mods', 'apply the override' and 'equip the result'.
 
 
 ```mermaid
 flowchart TD;
 	A[Character Issues an Action Command] --> B(Find sets.precast...<br>action sets);
-	B -->|1a| C((sets<br>sets.precast<br>sets.precast.ws<br>sets.precast.ws.melee<br>...<br>...)) -->|1b| B;
-	B -->|2| D(Find sets.precast...<br>named sets);
-	D -->|3a| E((sets.Combo<br>sets.precast.Combo<br>sets.precast.ws.Combo<br>...<br>...)) -->|3b| D;
-	D -->|4| F[[Combine<br>action sets + named sets]] --> X[(Complete 'set' gearset)] --> Q;
+	B --> C((sets<br>sets.precast<br>sets.precast.ws<br>sets.precast.ws.melee<br>...<br>...));
+	C --> D(Find sets.precast...<br>named sets);
+	D --> E((sets.Combo<br>sets.precast.Combo<br>sets.precast.ws.Combo<br>...<br>...)) -->|3b| D;
+	D --> F[[Combine<br>action sets + named sets]] --> X[(Complete 'set' gearset)] --> Q;
 	F --> G{Are mods active?};
 	G --> G1(Yes);
 	G --> G2(No) --> K;

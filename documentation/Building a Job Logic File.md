@@ -12,6 +12,7 @@ First we need to actually make our mods. Usually these represent a variation of 
 function CreateMod(ModName, ModDescription, ControlPanelDisplay, CycleKeyBind, ...)
 ```
 
+| Parameter | Description |
 | --- | --- |
 | ModName | The name of the mod that will be used 'in code' to identify it. This should be unique to each mod. |
 | ModDescription | The description of the mod that will show up in the ControlPanel. You can make this whatever makes sense to you. |
@@ -21,7 +22,7 @@ function CreateMod(ModName, ModDescription, ControlPanelDisplay, CycleKeyBind, .
 
 Here's an example of how it would look in practice.
 ```
-CreateMod("Offense",         "F9    Offense",true, "f9",    "Acc",    "STP",    "Multi", "Subtle")
+CreateMod("Offense", "F9    Offense",true, "f9", "Acc", "STP", "Multi", "Subtle")
 ```
 
 This will create a mod named "Offense". It will appear in the control panel and cycling the mod will be automatically bound to the key F9. Additionally in the control panel the description will be "F9    Offense". You can make the description whatever you like but including the keybind can be a handy reminder. Then you would just repeat the process for each mod you want to be able to control. It could be as simple as just having an "Offense" mod and "Defense" mod or as intricate as Offense, Physical Defense, Magical Defense, Treasure Hunter, Magic Burst, Cure Mode, etc. It's really up to you - although starting with fewer mods and keeping them simple is probably going to be the best place to start.
@@ -57,7 +58,7 @@ First there are two mods that don't affect your gear directly like other mods bu
 
 ### Override
 
-Then we have the override configuration. If you're not sure what the override is [then check out the full documentation to find out what it is and how it's used in YAGDRSL.*](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Overrides.md).
+Then we have the override configuration. If you're not sure what the override is [then check out the full documentation to find out what it is and how it's used in YAGDRSL.](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Overrides.md).
 
 Since the override is built into the library you don't need to create it. But if you want to use it then you will need to populate it with values. You can do this with the ConfigureOverride function which works very similar to the previous Configure functions.
 
@@ -73,6 +74,9 @@ ConfigureOverride("My Overrides", true, "f10", "CP", "BluLearn", "Vagary")
 
 Once you've given values to the override it essentially works like any other mod. You can just cycle it to a value and then that value will be used to find override gearsets.
 
+## Trackers
+Trackers are very similar to mods in terms of how they affect gearsets but the user doesn't need to interact with them directly. You can't cycle a tracker or set it's value. Instead it will track something like a buff or a pet name and automatically update the value it contains. Trackers belong in a job logic file but if you want to find out what can be tracked and how to enable them then [refer to the Tracker documentation](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Trackers.md).
+
 ---
 
-And with that we've covered the basics of what can and should be in your job logic file. However there are a lot of other useful things you can do here if you decide to dive further into the library or .lua. If you want to just see some complete example files or get some ideas of more advanced implementations [check out the sample files](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/jobfiles).
+And with that we've covered the basics of what can and should be in your job logic file. However there are a lot of other useful things you can do here if you decide to dive further into the library or .lua. If you would like to see some complete example files or get some ideas about what more advanced implementation can do then [check out the sample files](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/jobfiles).

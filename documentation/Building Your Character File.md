@@ -212,7 +212,7 @@ The control panel is a text display that will show you the current state of vari
 | ControlPanelFontOutlineBlue | 0 |
 
 ## Character Gear
-Lastly, you may also want to include gearsets or aliases that are useful across multiple jobs. Maybe you have a crafting set...
+You may also want to include gearsets or aliases that are useful across multiple jobs. Maybe you have a crafting set...
 
 ```
 	sets.craft =
@@ -237,4 +237,4 @@ Or gear that you want to re-use on multiple jobs easily.
 
 The character file is a good place to put those as well. Just make sure that your JobControls, settings and any of your gear definitions are *inside* of your GetPlayerSettings function. 
 
-[Lastly, click here to see an annotated example of a complete character file.](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/charactername.lua)
+[Finally, click here to see an annotated example of a complete character file.](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/charactername.lua)
