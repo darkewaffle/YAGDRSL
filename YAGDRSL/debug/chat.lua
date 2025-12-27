@@ -94,6 +94,7 @@ end
 
 function ChatError(Label, Message)
 	Chat("ERROR", Label, Message, ChatRed)
+	print("ERROR: " .. tostring(label) .. " - " .. tostring(Message))
 end
 
 function ChatNotice(Label, Message)
