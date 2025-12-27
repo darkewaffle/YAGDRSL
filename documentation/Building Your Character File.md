@@ -40,7 +40,7 @@ end
 But now let's add some more.
 
 ## JobControls
-JobControls is the most important part of your character file because it's how your character file connects to your job files. It's a table that you fill out to tell YAGDRSL what settings should be applied when you change to a job and what files contain your job data. Every time YAGDRSL is loaded or your job is changed the values you put into JobControls will determine how your macrobook, macroset and lockstyle are set as well as what files are loaded to define your gearsets and any custom logic. Here's how it looks before you put anything into it.
+JobControls is the most important part of your character file because it's how your character file connects to your job files. It's a table that you fill out to tell YAGDRSL what settings should be applied when you change to a job and what files contain your job data. Every time YAGDRSL is loaded or your job is changed the values you put into JobControls will determine how your macrobook, macroset and lockstyle are changed as well as what files are loaded to define your gearsets and any custom logic. Here's how it looks before you put anything into it.
 
 ```
 	JobControls = 
@@ -74,8 +74,8 @@ As you can see each job represents a row in the table and each row contains seve
 
 | Name | Description |
 | --- | --- |
-| macrobook | The in-game macro book that will be automatically selected for the job. |
-| macroset | The in-game macro set that will be automatically selected for the job. |
+| macrobook | The number of the in-game macro book that will be automatically selected for the job. |
+| macroset | The number of the in-game macro set that will be automatically selected for the job. |
 | lockstyle | The number of the in-game equipment set that will be automatically set for the job. |
 | file_equipment | The name of the file that contains the all the gearsets for the job. |
 | file_logic | The name of the file that contains any custom logic (variables, functions) for the job. Technically this is optional as you could put everything into the equipment file - or vice versa - but some users may prefer organizing them into two files.|
@@ -117,7 +117,7 @@ Now that we have our JobControls table we'll look at all the settings that you c
 
 
 ## YAGDRSL SETTINGS
-These are settings that control many aspects of how YAGDRSL works and looks. You do not need to include all of them, only the ones you want to use and change. The others will simply use a safe, default value. You can define these inside of GetPlayerSettings by simply typing a line with the setting name, then an equals sign and the desired value.
+These are settings that control many aspects of how YAGDRSL works and looks. You do not need to include all of them, only the ones you want to use and change. The others will simply revert to a safe, default value. You can define these inside of GetPlayerSettings by simply typing a line with the setting name, then an equals sign and the desired value.
 ```
 ApplyKeybindScripts = false
 ```

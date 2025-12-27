@@ -39,12 +39,39 @@ sets = {}
 sets.precast = {}
 sets.precast.ws = {neck="Fotia Gorget"}
 ```
-Whereas "ws" used to contain "melee" and "melee" then contained "hybrid", "magical" and "physical" those have all been wiped out because "ws" was redefined to now only contain "neck". Depending on what you want to do, this might be fine. For instance it's not uncommon for non-caster jobs to define only sets.precast.magic and sets.midcast.magic - all the rest of the tables below those aren't relevant to them. But it might also be a problem if you decide you do want to put gear into sets.precast.ws.melee.physical because now you're trying to put the table "physical" into the table "melee" - which does not exist. This will cause the common error 'attempt to index nil'.
+
+Or to put it more visually.
 ```
-sets.precast.ws.melee.physical = {body="Scorpion Harness"} -> will cause an error
+sets= {
+		"precast"= {
+					"ws"= {
+							"neck" = "Fotia Gorget"
+						  }
+				   }
+	  }
 ```
-However we have a way to address this with a library function called InsertGearSet. When you use this instead of redefining the table, your gearset will instead just be inserted into the existing table. To handle the example above you would simply do this.
+
+
+While "ws" originally contained "melee" and "melee" contained "hybrid", "magical" and "physical" those were all wiped out because "ws" was redefined to now only contain "neck". Depending on what you want to do, this might be fine. For instance it's common for non-caster jobs to define only sets.precast.magic and sets.midcast.magic since the rest of the tables below those often aren't relevant to them. But it might also be a problem if you decide you do want to put gear into sets.precast.ws.melee.physical because now you're trying to put the table "physical" into the table "melee" - which does not exist. This will cause the common error 'attempt to index nil'.
+```
+sets.precast.ws.melee.physical = {body="Scorpion Harness"} -> would cause an error
+```
+However we have a way to address this with a library function called InsertGearSet. When you use this instead of redefining the table, your gearset will just be inserted into the existing table. To handle the example above you would simply do this.
 ```
 InsertGearSet(sets.precast.ws, {neck="Fotia Gorget"})
 ```
-This will ensure that "neck" is inserted without harming "melee" or the other tables that "melee" contains.
+This will ensure that "neck" is inserted without harming "melee" or the other tables that "melee" contains. Illustrated below.
+```
+sets= {
+		"precast"= {
+					"ws"= {
+							"neck"  = "Fotia Gorget",
+							"melee" = {
+										"hybrid" = {},
+										"magical = {},
+										"physical" = {}
+									  }
+						  }
+				   }
+	  }
+```
