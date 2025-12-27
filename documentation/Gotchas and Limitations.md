@@ -75,3 +75,11 @@ sets= {
 				   }
 	  }
 ```
+
+# EquipSafe() and equip()
+GearSwap natively provides the equip() function which is how we give GearSwap the items that we actually want to put on. However YAGDRSL uses a wrapper for equip() called EquipSafe() that provides a bit of extra processing and error protection. As such you should not call equip() directly - and unless you know what you're doing you probably should not call EquipSafe() either since all the processes where you might want to equip an item should give you a gearset to work. Since that gearset will already be equipped at the end of the process you should instead just modify the gearset and return it - not equip it directly.
+
+## What does EquipSafe() do though?
+- It checks if the gearset is empty before passing it to equip(). I'm sure equip() already has no problem with this but it just seemed logical to do it.
+- It implements YAGDRSL's WeaponLock mod. Rather than having to disable and enable Gearswap slots YAGDRSL instead uses the mod value to remove locked slots from the gearset before it is ever given to equip().
+- It prevents a bug that can cause earring or ring slots to become 'stuck'. If your character is currently equipped with left_ear = EarringA and right_ear = EarringB but then you submit a gearset to equip left_ear = EarringB and right_ear = EarringC this can sometimes cause an error message stating 'Unable to equip EarringB' and potentially cause GearSwap to no longer successfully equip to one of the ear slots. EquipSafe will check the currently equipped earrings (and rings) and swap them inside the GearSet if necessary to prevent the errors and slot lock.
