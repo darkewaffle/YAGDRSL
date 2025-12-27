@@ -13,3 +13,17 @@ collections.Null
 collections.Nyame
 collections.Sakpata
 ```
+
+## Keybinds
+Any keybinds set by YAGDSRL functions will accept the same [keybind syntax used by Windower.](https://docs.windower.net/commands/input/) [Here is a link to the full list of keys as well.](https://docs.windower.net/commands/keymapping/)
+
+### Keybind Quick Reference
+| Key Modifier | Description |
+| --- | --- |
+| ^ | Ctrl |
+| ! | Alt |
+| @ | Win |
+| # | Apps |
+| ~ | Shift |
+| $ | Keybind works while chat is open |
+| % | Keybind does not work while chat is open |
