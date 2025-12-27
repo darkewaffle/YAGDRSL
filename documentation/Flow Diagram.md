@@ -9,7 +9,7 @@ flowchart TD;
 	A[Character Issues an Action Command] --> B(Find sets.precast...<br>action sets);
 	B --> C((sets<br>sets.precast<br>sets.precast.ws<br>sets.precast.ws.melee<br>...<br>...));
 	C --> D(Find sets.precast...<br>named sets);
-	D --> E((sets.Combo<br>sets.precast.Combo<br>sets.precast.ws.Combo<br>...<br>...)) -->|3b| D;
+	D --> E((sets.Combo<br>sets.precast.Combo<br>sets.precast.ws.Combo<br>...<br>...));
 	D --> F[[Combine<br>action sets + named sets]] --> X[(Complete 'set' gearset)] --> Q;
 	F --> G{Are mods active?};
 	G --> G1(Yes);
