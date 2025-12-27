@@ -9,7 +9,7 @@ In order for Gearswap to recognize and load your character file we have to make 
 Additionally if you are using libs-dev to test YAGDRSL, you can easily go back and forth between your current Gearswap setup and YAGDRSL. Just rename the libs-dev/charactername.lua file so gearswap won't recognize it, input a 'gs reload' command and you're back to your original gearswap. Then when you want to continue trying YAGDSRL just do the reverse - change the file name to match your character, 'gs reload' and you're back in YAGDRSL.
 
 ## File Structure
-Your character file needs to contain two functions for GearSwap and YAGDRSL to work correctly together. The first is get_sets() and the second is GetPlayerSettings(). These function names **are** case sensitive.
+Your character file needs to contain two functions for GearSwap and YAGDRSL to work together correctly. The first is get_sets() and the second is GetPlayerSettings(). These function names **are** case sensitive.
 #### get_sets()
 ```
 function get_sets()
@@ -76,9 +76,9 @@ As you can see each job represents a row in the table and each row contains seve
 | --- | --- |
 | macrobook | The number of the in-game macro book that will be automatically selected for the job. |
 | macroset | The number of the in-game macro set that will be automatically selected for the job. |
-| lockstyle | The number of the in-game equipment set that will be automatically set for the job. |
+| lockstyle | The number of the in-game equipment set lockstyle that will be automatically set for the job. |
 | file_equipment | The name of the file that contains the all the gearsets for the job. |
-| file_logic | The name of the file that contains any custom logic (variables, functions) for the job. Technically this is optional as you could put everything into the equipment file - or vice versa - but some users may prefer organizing them into two files.|
+| file_logic | The name of the file that contains any library function calls or custom code for the job. Technically this is optional as you could put everything into the equipment file - or vice versa - but I suggest separating them into two files to stay organized.|
 | script_binds_main | When the job is set to your main job this script will be executed. This is an optional setting and will only be applied if the library setting ApplyKeybindScripts = true. |
 | script_binds_sub | When the job is set to your sub job this script will be executed. This is an optional setting and will only be applied if the library setting ApplyKeybindScripts = true. |
 
@@ -159,7 +159,7 @@ ApplyKeybindScripts = false
 
 
 ### Tick Settings
-These controls YAGDRSL's OnTick event. Essentially this allows code to be run at regular intervals regardless of what's happening in the game. However because of that if it is used irresponsibly then it can degrade game performance. But that should not be a problem as long as you are careful to not set TickInterval too low.
+These control YAGDRSL's OnTick event. Essentially this allows code to be run at regular intervals regardless of what's happening in the game. However because of that if it is used irresponsibly then it can degrade game performance. But that should not be a problem as long as you are careful to not set TickInterval too low.
 
 | Setting | Default Value | Description |
 | --- | --- | --- |
@@ -176,7 +176,7 @@ The control panel is a text display that will show you the current state of vari
 
 | Setting | Default Value | Description |
 | --- | --- | --- |
-| ControlPanelDescriptionWidth | 20 | When a mod is formatted into the control panel the description will be padded with spaces up to ControlPanelDescriptionWidth length. And mod values will be padded up to ControlPanelValueWidth. |
+| ControlPanelDescriptionWidth | 20 | When a mod is formatted into the control panel the description will be padded with spaces up to ControlPanelDescriptionWidth length. |
 | ControlPanelValueWidth | 10 | When a mod is formatted into the control panel the value will be padded with spaces up to ControlPanelValueWidth length. |
 | ControlPanelActiveValueOnly | false | This setting controls whether or not the control panel will display all the values a mod contains (highlighting the active value among them) or if it will only display the currently active value. |
 

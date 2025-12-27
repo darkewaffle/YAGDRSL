@@ -10,7 +10,7 @@ sets.resting
 ```
 
 # Action Paths
-All action paths begin with the same three elements. Each group will detail the elements unique to them. Additionally all found action paths will be searched using the name of the spell, ability or item.
+All action paths begin with the same three elements. Beyond that each group will detail the elements specifically used for the rest of their path. Additionally all found action paths will be searched using the name of the spell, ability or item.
 - Table Name (sets, mods, overrides)
 - Event (precast, midcast)
 - Category (ja, ra, magic, ws)

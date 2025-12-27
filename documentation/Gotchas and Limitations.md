@@ -5,7 +5,7 @@
 - This is also why the ranged weaponskill path is sets.precast.ws.distant as opposed to sets.precast.ws.range; "range" and "ranged" are both words already effectively 'reserved' by Gearswap.
 
 # Table Definitions and InsertGearSet
-- Because YAGDRSL defines so many tables behind the scenes you should be able to just drop your sets into wherever makes sense to you and move on. *However* depending on the position in the path 'chain' this can cause some errors.
+Because YAGDRSL defines so many tables behind the scenes you should be able to just drop your sets into wherever makes sense to you and move on. *However* depending on the position in the path 'chain' this can cause some errors.
 If we take melee weaponskills as an example then when YAGDRSL is loaded the following tables will all already exist.
 
 ```
@@ -52,7 +52,7 @@ sets= {
 ```
 
 
-While "ws" originally contained "melee" and "melee" contained "hybrid", "magical" and "physical" those were all wiped out because "ws" was redefined to now only contain "neck". Depending on what you want to do, this might be fine. For instance it's common for non-caster jobs to define only sets.precast.magic and sets.midcast.magic since the rest of the tables below those often aren't relevant to them. But it might also be a problem if you decide you do want to put gear into sets.precast.ws.melee.physical because now you're trying to put the table "physical" into the table "melee" - which does not exist. This will cause the common error 'attempt to index nil'.
+While "ws" originally contained "melee" and "melee" contained "hybrid", "magical" and "physical" those were all wiped out because "ws" was redefined to now only contain "neck". Depending on what you want to do, this might be fine. For instance it's common for non-caster jobs to define only sets.precast.magic and sets.midcast.magic since the rest of the tables below those often aren't relevant to them. But it might also be a problem if you decide you do want to put gear into sets.precast.ws.melee.physical because now you're trying to put the table "physical" into the table "melee" - which does not exist. This will cause the common 'attempt to index nil' error.
 ```
 sets.precast.ws.melee.physical = {body="Scorpion Harness"} -> would cause an error
 ```
@@ -77,9 +77,9 @@ sets= {
 ```
 
 # EquipSafe() and equip()
-GearSwap natively provides the equip() function which is how we give GearSwap the items that we actually want to put on. However YAGDRSL uses a wrapper for equip() called EquipSafe() that provides a bit of extra processing and error protection. As such you should not call equip() directly - and unless you know what you're doing you probably should not call EquipSafe() either since all the processes where you might want to equip an item should give you a gearset to work. Since that gearset will already be equipped at the end of the process you should instead just modify the gearset and return it - not equip it directly.
+GearSwap natively provides the equip() function which is how we give GearSwap the items that we actually want to put on. However YAGDRSL uses a wrapper for equip() called EquipSafe() that provides a bit of extra processing and error protection. As such you should not call equip() directly - and unless you know what you're doing you probably should not call EquipSafe() either since all the processes where you might want to equip an item should give you a gearset to work with. Since that gearset will already be equipped at the end of the process you should instead just modify the gearset and return it - not equip it directly.
 
-## What does EquipSafe() do though?
+### What does EquipSafe() do though?
 - It checks if the gearset is empty before passing it to equip(). I'm sure equip() already has no problem with this but it just seemed logical to do it.
 - It implements YAGDRSL's WeaponLock mod. Rather than having to disable and enable Gearswap slots YAGDRSL instead uses the mod value to remove locked slots from the gearset before it is ever given to equip().
-- It prevents a bug that can cause earring or ring slots to become 'stuck'. If your character is currently equipped with left_ear = EarringA and right_ear = EarringB but then you submit a gearset to equip left_ear = EarringB and right_ear = EarringC this can sometimes cause an error message stating 'Unable to equip EarringB' and potentially cause GearSwap to no longer successfully equip to one of the ear slots. EquipSafe will check the currently equipped earrings (and rings) and swap them inside the GearSet if necessary to prevent the errors and slot lock.
+- It prevents a bug that can cause earring or ring slots to become 'stuck'. If your character is currently equipped with left_ear = EarringA and right_ear = EarringB but then you try to equip a gearset that contains left_ear = EarringB and right_ear = EarringC this can sometimes cause an error message stating 'Unable to equip EarringB'. Additionally this can sometimes cause GearSwap to no longer successfully equip one of the ear slots until the library or addon is reloaded. EquipSafe will check the currently equipped earrings (and rings) and swap them inside the GearSet if necessary to prevent the errors and slot lock.

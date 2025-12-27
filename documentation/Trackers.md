@@ -1,5 +1,5 @@
 # Trackers to Track the Trackables
-Trackers are a specific type of mod that YAGDRSL uses to, well, track information about the current state of the game. However unlike other mods the user doesn't interact with them directly. You don't need to create trackers, define the values they hold or cycle them. Instead when the library is loaded it will automatically create trackers based on your library settings and the functions you use in GetPlayerSettings or in file_logic for your job. In general the functions that you can call that will create trackers should be placed in your job's file_logic.
+Trackers are a specific type of mod that YAGDRSL uses to, well, track information about the current state of the game. However unlike other mods the user doesn't interact with them directly. You don't need to create trackers, define the values they hold or cycle them. Instead when the library is loaded it will automatically create trackers based on your library settings and the functions you use in GetPlayerSettings or in your job's file_logic. In general the functions that you can call that will create trackers should most likely be placed in your job's file_logic.
 
 
 Then when a tracker has been created it will behave like a high priority mod because they will be added to the mod orders *after* your own mod order definitions. This behavior may change in the future but for now it seems appropriate for the game elements that trackers currently record.
@@ -90,7 +90,7 @@ Then anytime your pet changes the pet tracker will change from "off" to the name
 		}
 ```
 
-This would mean that anytime your are idle with Carbuncle then you will equip Asteria Mitts and reduce Carbuncle's perpetuation cost. Likewise anytime you are using a Carbuncle bloodpact you would get +1 Carbuncle Level from the Asteria Mitts. But anytime you are idle or using a bloodpact with a different pet then the Asteria Mitts would not be applied.
+This means that anytime you are idle with Carbuncle then you will equip Asteria Mitts to reduce Carbuncle's perpetuation cost. Likewise anytime you are use a Carbuncle bloodpact you would equip Asteria Mitts to gain +1 Carbuncle Level. But anytime you are idle or using a bloodpact with a different pet then the Asteria Mitts would not be applied.
 
 ### Player Facing & Player Moving
 These trackers are tied to using the Tick event. That means that in order for facing and movement information to be tracked you first need to enable Tick and the trackers by defining the necessary settings as true in your character file. That just means you will need to place some or all of the following lines inside the GetPlayerSettings function in your character file. However these can also be in your job's file_logic. Normally it is best to only define settings in one place or the other - however in this case you may want the tracking turned on by default but turn it off for specific jobs so there can be valid reasons like this to have them defined in both locations.

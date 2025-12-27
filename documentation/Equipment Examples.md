@@ -17,21 +17,21 @@ mods.engaged.Acc = {neck="Peacock Charm"}
 overrides["+CP"] = {back="Aptitude Mantle"}
 ```
 
-Example 1: Evisceration
+Example 1: Evisceration<br>
 Mods active = none
 ```
 sets.precast.ws + sets.precast.ws.melee.physical = 
 {neck="Fotia Gorget", ring1="Rajas Ring"}
 ```
 
-Example 2: Evisceration
+Example 2: Evisceration<br>
 Mods active: "Acc"
 ```
 sets.precast.ws + sets.precast.ws.melee.physical + mods.precast.Acc + mods.precast.ws.melee.Acc = 
 {neck="Peacock Charm", ring1="Sniper's Ring"}
 ```
 
-Example 3: Cure
+Example 3: Cure<br>
 Mods active: "Acc"
 ```
 sets.precast.magic + mods.precast.Acc = 
@@ -40,33 +40,33 @@ sets.precast.magic + mods.precast.Acc =
 *This illustrates something you should not do / should be careful about. In this case mods.precast.Acc is in the wrong place as it is defined to apply to **all** precast actions, not just a specific category. As such it overwrites the Voltsurge Torque, which is useful for precast magic, with a Peacock Charm that is useless for precast magic.*
 
 
-Example 4: Evisceration
-Mods active: "Acc", "DT"
+Example 4: Evisceration<br>
+Mods active: "Acc", "DT"<br>
 Defense Priority = true
 ```
 sets.precast.ws + sets.precast.ws.melee.physical + mods.precast.Acc + mods.precast.ws.melee.Acc + mods.DT = 
 {ear1="Alabaster Earring", neck="Peacock Charm", ring1="Defending Ring"}
 ```
 
-Example 5: Evisceration
-Mods active: "Acc", "DT"
+Example 5: Evisceration<br>
+Mods active: "Acc", "DT"<br>
 Defense Priority = false
 ```
 sets.precast.ws + sets.precast.ws.melee.physical + mods.DT + mods.precast.Acc + mods.precast.ws.melee.Acc = 
 {ear1="Alabaster Earring", neck="Peacock Charm", ring1="Sniper's Ring"}
 ```
 
-Example 6: Idle Set
-Mods active: "Acc", "DT"
+Example 6: Idle Set<br>
+Mods active: "Acc", "DT"<br>
 Defense Priority = true
 ```
 (there are no idle sets defined) + mods.DT = 
 {ear1="Alabaster Earring", ring1="Defending Ring"}
 ```
 
-Example 7: Engaged Set
-Mods active: "Acc", "DT"
-Defense Priority = true
+Example 7: Engaged Set<br>
+Mods active: "Acc", "DT"<br>
+Defense Priority = true<br>
 Override value = "+CP"
 ```
 sets.engaged + mods.engaged.Acc + mods.DT + mods.engaged.DT + overrides["+CP"] = 

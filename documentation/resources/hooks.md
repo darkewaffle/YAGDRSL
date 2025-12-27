@@ -3,7 +3,7 @@ There are hook functions available in all Gearswap events and most major custom 
 
 
 | Function Name | Expected Return(s) | Location |
-| --- | --- |
+| --- | --- | --- |
 | HookMidcastCustomizeDefense(SpellAttributes, MidcastSet) | MidcastSet | midcast.lua |
 | HookMidcastCustomizeFinal(SpellAttributes, MidcastSet)  | MidcastSet | midcast.lua |
 | HookMidcastCustomizeOffense(SpellAttributes, MidcastSet)  | MidcastSet |  midcast.lua |

@@ -2,7 +2,9 @@
 
 Building your equipment sets ultimately works the same way in YAGDRSL as it does in most other GearSwap libraries. It's still just a matter of defining a table name and putting the names of your items into the slots. The primary difference with YAGDRSL is most likely going to be in where you put your sets and aligning them with the set, mod and override paths that YAGDRSL has defined for each action.
 
-*Before moving on click here for the [path definitions of each action](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/paths.md) or [a full list of all the 'base' paths that YAGDRSL can recognize.](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/YAG_tables.txt). Also [click here for a handful of complete job equipment and job logic files](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/jobfiles) if you'd prefer to learn by looking through them.*
+*Before moving on click here for the [path definitions of each action](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/paths.md) or [a full list of all the 'base' paths that YAGDRSL can recognize](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/YAG_tables.txt). Also [click here for a handful of complete job equipment and job logic files](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/jobfiles) if you'd prefer to learn by looking through them.*
+
+Additionally this document will make use of YAGDRSL collections. [Click here for an overview](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/YAG%20Tips%20and%20Tricks.md#collections) of what they are and which ones are available.
 
 So how do we make these paths work for us? In general I think there are two ideas you should try to follow.
 
@@ -74,7 +76,7 @@ sets.precast.ws.melee.physical =
 		feet="Maculele Toe Shoes +3"
 	}
 
-sets.precast.ws.melee.magical = set_combine([collections.Nyame](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/YAG%20Tips%20and%20Tricks.md#collections),
+sets.precast.ws.melee.magical = set_combine(collections.Nyame,
 	{
 		ammo="Oshasha's Treatise",
 		ear1="Friomisi Earring",
@@ -89,10 +91,10 @@ sets.precast.ws.melee.magical = set_combine([collections.Nyame](https://github.c
 
 Take note that we did not include any head, neck or waist slots in the above sets. Since they're already defined in sets.precast.ws we don't need to include any gear for those slots *unless we want to change them*.
 
-So now we have defined a starting point for Aeolian Edge, Evisceration, Rudra's Storm and Shark Bite. And as an added bonus we've actually defined a starting set for all of our dagger weaponskills. Even though we didn't set out to do anything with them we now have a complete set ready for Exenterator, Dancing Edge, Cyclone and all the others. Since they're all melee weapon skills that deal physical or magical damage they'll all follow the same paths to find a gearset. Now we just have to customize the gear that will be specific to certain weaponskills. In our case Evisceration probabably wants some +Critical Hit or +Critical Damage gear while Shark Bite and Rudra's Storm probably want more focus on +Weaponskill Damage. Fortunately we can do that by just defining some additional sets using the name of the weaponskill.
+So now we have defined a starting point for Aeolian Edge, Evisceration, Rudra's Storm and Shark Bite. And as an added bonus we've actually defined a starting set for all of our dagger weaponskills. Even though we didn't set out to do anything with them we now have a complete set ready for Exenterator, Dancing Edge, Cyclone and all the others. Since they're all melee weapon skills that deal physical or magical damage they'll all follow the same paths to find a gearset. Now we just have to customize the gear that will be specific to certain weaponskills. In our case Evisceration probabably wants some +Crit gear while Shark Bite and Rudra's Storm probably want more focus on +Weaponskill Damage. Fortunately we can do that by just defining some additional sets using the name of each weaponskill.
 
 ```
-sets.precast.ws.Evisceration = set_combine([collections.Gleti](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/YAG%20Tips%20and%20Tricks.md#collections),
+sets.precast.ws.Evisceration = set_combine(collections.Gleti,
 	{
 		ear1="Odr Earring",
 		ear2="Sherida Earring",
@@ -183,4 +185,4 @@ With this approach your accuracy mod set for physical weaponskills contains prim
 
 ## Defining Your Override Sets
 
-This part is easy. It's exactly the same as defining a mod set except you use the overrides table instead of the mods table and you use override values instead of mod values.
+Good news, if you can define a mod set then you can define an override set. The process for the two is exactly the same - the only difference is an override set will start in the 'overrides' table instead of the 'mods' table and YAGDRSL will look for sets using the active override value instead of an active mod value.

@@ -22,10 +22,10 @@ function CreateMod(ModName, ModDescription, ControlPanelDisplay, CycleKeyBind, .
 
 Here's an example of how it would look in practice.
 ```
-CreateMod("Offense", "F9    Offense",true, "f9", "Acc", "STP", "Multi", "Subtle")
+CreateMod("Offense", "F9 Offense", true, "f9", "Acc", "STP", "Multi", "Subtle")
 ```
 
-This will create a mod named "Offense". It will appear in the control panel and cycling the mod will be automatically bound to the key F9. Additionally in the control panel the description will be "F9    Offense". You can make the description whatever you like but including the keybind can be a handy reminder. Then you would just repeat the process for each mod you want to be able to control. It could be as simple as just having an "Offense" mod and "Defense" mod or as intricate as Offense, Physical Defense, Magical Defense, Treasure Hunter, Magic Burst, Cure Mode, etc. It's really up to you - although starting with fewer mods and keeping them simple is probably going to be the best place to start.
+This will create a mod named "Offense". It will appear in the control panel and cycling the mod will be automatically bound to the key F9. Additionally in the control panel the description will be "F9 Offense". You can make the description whatever you like but including the keybind can be a handy reminder. Then you would just repeat the process for each mod you want to be able to control. It could be as simple as just having an "Offense" mod and "Defense" mod or as intricate as Offense, Physical Defense, Magical Defense, Treasure Hunter, Magic Burst, Cure Mode, etc. It's really up to you - although starting with fewer mods and keeping them simple is probably going to be the best place to start.
 
 ## Ordering Your Mods
 
@@ -79,4 +79,4 @@ Trackers are very similar to mods in terms of how they affect gearsets but the u
 
 ---
 
-And with that we've covered the basics of what can and should be in your job logic file. However there are a lot of other useful things you can do here if you decide to dive further into the library or .lua. If you would like to see some complete example files or get some ideas about what more advanced implementation can do then [check out the sample files](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/jobfiles).
+And with that we've covered the basics of what can and should be in your job logic file. However there are a lot of other useful things you can do here if you decide to dive further into the library or .lua. If you would like to see some complete example files or get some ideas about what more advanced implementation can do then [have a look at the Making a Job Logic File That's Fancy documentation](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20a%20Job%20Logic%20File%20That's%20Fancy.md) or [check out some of the library's sample files](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/jobfiles).

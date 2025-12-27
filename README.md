@@ -28,10 +28,11 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 - [Building Your CharacterName.lua File](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20Your%20Character%20File.md)
 - [Building a Job Equipment File](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20a%20Job%20Equipment%20File.md)
 - [Building a Job Logic File](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20a%20Job%20Logic%20File.md)
+- [Building a Job Logic File That's Fancy](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20a%20Job%20Logic%20File%20That's%20Fancy.md)
 
 #### Technical Resources
-- [Examples of Interactions Between sets, mods and overrides](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Equipment%20Examples.md)
 - [YAGDRSL Flow Diagram](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Flow%20Diagram.md)
+- [Examples of Interactions Between sets, mods and overrides](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Equipment%20Examples.md)
 - [Gearset Paths for Actions](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/paths.md)
 - [Complete List of Supported Gearset Paths](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/YAG_tables.txt)
 - [YAGDRSL Commands](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/commands.md)
