@@ -47,7 +47,7 @@
 			ring1="Meridian Ring",
 			ring2="Etana Ring",
 			waist="Platinum Moogle Belt",
-			legs="Maxixi Tights +3",
+			legs="Maxixi Tights +4",
 			feet="Horos Toe Shoes +4"
 		}
 
