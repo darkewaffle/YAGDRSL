@@ -7,16 +7,14 @@ In YAGDRSL spells and actions have been mapped to a gearset 'path' that will hop
 
 For weapon skills the full path is made out of the following elements.
 
-| | |
-| --- | --- |
 | Root Table Name | sets |
+| --- | --- |
 | Action Event | precast |
 | Action Category | Weaponskills are simply abbreviated as 'ws' |
 
 So far this probably looks very familiar - we have sets.precast.ws. But now we go further.
-| | |
-| --- | --- |
 | Weapon Range | Weapon skills are divided into 'melee' and 'distant' |
+| --- | --- |
 | Damage Type | Weapon skills are then further divided into 'physical', 'magical' or 'hybrid'. | 
 
 So if we put it all together then the possible, complete paths are each of the following.
@@ -29,7 +27,7 @@ sets.precast.ws.distant.magical*
 sets.precast.ws.distant.hybrid*
 ```
 
-[*If you're curious why we call it 'distant', click here.*](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Gotchas%20and%20Limitations.md#naming-mods-and-overrides)
+[**If you're curious why we call it 'distant', click here.*](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Gotchas%20and%20Limitations.md#naming-mods-and-overrides)
 
 This probably looks a bit wordy - but you only need to define the ones you want to use. And because the path steps are all added together, you may end up defining fewer or smaller sets than you think. Why? Let's look at all the steps the path takes for a weapon skill like Evisceration.
 
@@ -48,7 +46,7 @@ sets.precast.ws.melee.physical = {head="Nyame Helm", body="Nyame Mail"}
 ```
 So by logically placing gear where it would be appropriate to use for all actions with the characteristics described by the path we've now defined not just our Evisceration set - but also a set for every melee, physical weapon skill. They would all equip Fotia Gorget, Fotia Belt, Nyame Helm and Nyame Mail. Additionally, take note that the sets will be combined from 'least specific' to 'most specific' so to speak - so Scorpion Harness would be overwritten by Nyame Mail.
 
-Now that lets us define a bunch of gear that is the same for our weapon skills as a starting point - but what about the gear that should be different? That actually works pretty similar to other libraries in that you can define a set specific to Evisceration with +Crit gear that would only apply to Evisceration. However the way that it finds it is again a little different. Instead of only looking for sets.precast.ws.melee.physical.Evisceration YAGDRSL will instead search through those same paths from before but this time it will look for any sets (or rather, table keys) named Evisceration. 
+Now that lets us define a bunch of gear that is the same for our weapon skills as a starting point - but what about the gear that should be different? That actually works pretty similar to other libraries in that you can define a set specific to Evisceration with +Crit gear that would only apply to Evisceration. However the way that it finds it is again a little different. Instead of only looking for sets.precast.ws.melee.physical.Evisceration YAGDRSL will instead search through those same paths from before but this time it will look for any sets (or rather, table keys) named Evisceration.
 ```
 sets.Evisceration
 sets.precast.Evisceration

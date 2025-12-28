@@ -127,7 +127,7 @@ ApplyKeybindScripts = false
 | --- | --- | --- |
 | ApplyKeybindScripts | false | This setting controls whether or not the script_binds_main and script_binds_sub values in JobControls are executed or not. |
 | UnbindMainJobScript | blank | Default unbind script that will be run anytime your job changes or the library is unloaded. |
-| UnbindSubJobScript | blank | Default unbind scripts that will be run anytime your job changes or the library is unloaded. |
+| UnbindSubJobScript | blank | Default unbind script that will be run anytime your job changes or the library is unloaded. |
 
 
 ### Update After Changing Zone

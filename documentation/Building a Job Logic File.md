@@ -18,7 +18,7 @@ function CreateMod(ModName, ModDescription, ControlPanelDisplay, CycleKeyBind, .
 | ModDescription | The description of the mod that will show up in the ControlPanel. You can make this whatever makes sense to you. |
 | ControlPanelDisplay | This is a true or false value that controls whether or not the mod will be displayed in the Control Panel. |
 | CycleKeyBind | If this value is input then YAGDRSL will attempt to use it to keybind a cycle command for the mod. [Click here for resources on how to format a key for binding.](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/YAG%20Tips%20and%20Tricks.md#keybinds)|
-| ... | These will be the mod values. They should be wrapped with quotation marks and separated by strings. While not required it is recommended that your mod values be unique across all mods in use by the job as well. |
+| ... | These will be the mod values. They should be wrapped with quotation marks and separated by commas. While not required it is recommended that your mod values be unique across all mods in use by the job as well. |
 
 Here's an example of how it would look in practice.
 ```
