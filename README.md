@@ -6,6 +6,18 @@ YAGDRSL is a gearswap library intended to make your gearswap files smaller and e
 However, YAGDRSL is not intended to provide any automatic 'reactions' to game events. It will not automatically use Holy Water when you are afflicted with Doom, it will not use Presto before a Step, it will not remove Berserk if you're receiving damage, etc. There are hooks in each major event where you could potentially define this behavior. But they will not be part of the library.
 
 
+## Significant Features
+- Thoughtful mapping of spells and abilities into groups so that more sets and more gear can be defined by function rather than per spell. (eg: Blue magic split into groups like blue.enfeebling, blue.enhancing and blue.cure. Bloodpact Rage split into bloodpact.rage.physical, bloodpact.rage.magical, bloodpact.rage.hybrid)
+- Gearsets that are put together through an additive process so that items don't need to be repeated as often, updates are easier to complete and gearset files are shorter overall.
+- Gearset "mods" that can quickly modify gearsets on the fly and .lua functions to easily create them.
+- Gearset "overrides" to create sets for unique situations that can be easily be turned on or turned off without affecting regularly used sets.
+- Buff tracking that is straightforward to setup and that can be used to create buff-specific mods by simply naming the mod after the buff (eg: mods.engaged["Berserk"] or mods.precast.ws["Sneak Attack"])
+- A simple but clear Control Panel UI element that can be customized thoroughly to control its contents and style.
+- Built in validation command that can evaluate gear for a single job or all jobs without requiring any changes to the files.
+- Built in demo command and comprehensive debug messages to test and understand how a gearset is put together through precast-midcast events.
+- Hook functions in all major Gearswap and library events that users can override to implement custom logic.
+
+
 #### Quick Start Guide
 1. Download the YAG_include.lua file and the entire YAGDRSL folder.
 2. Place them in your Windower\addons\GearSwap\libs folder.<br>
