@@ -21,7 +21,7 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 
 ## Guides and Documentation
 #### Quick Start Guide
-1. Download the YAG_include.lua file and the entire YAGDRSL folder.
+1. Download the YAG_include.lua file and the entire YAGDRSL folder. These can also be found in the YAGDRSL_vX.Y.Z.zip folder in Github Releases to the right.
 2. Place them in your Windower\addons\GearSwap\libs folder.<br>
 *Or if you want to test-drive YAGDRSL and keep the files for it separate from your existing Gearswap files you can also just put everything in the libs-dev folder*.
 3. In the libs folder create a .lua file with the same name as your character. (eg: If your character is John then create John.lua).<br>
