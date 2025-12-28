@@ -18,6 +18,10 @@ gs c demo (ability type) (ability name)
 gs c demo ja Spectral Jig
 gs c demo ws Rudra's Storm
 gs c demo ma Burst II
+---
+gs c demo status (status name)
+gs c demo status engaged
+gs c demo status idle
 ```
 Enables debug messages temporarily and then simulates the precast and midcast events and gearset creation steps for the ability with respect to all current mod, override and library settings. The debug messages will be printed to the chat log and will detail how the gearset was assembled and what sets became part of it. Also useful to test abilities that may just have long cooldowns or high resource costs.
 
