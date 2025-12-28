@@ -57,7 +57,7 @@ function SelfCommandDemo(CommandInputs)
 				local DemoPrecastSet = PrecastContainer(DemoSpellAttributes, EVENT_PRECAST_DEMO)
 				ChatGearSet(DemoPrecastSet, EVENT_PRECAST_DEMO)
 
-				ChatNotice("DEMO displays all midcast set possibilities. However Midcast WS does not exist and midcast JA only applies to Bloodpact and Ready commands.")
+				ChatNotice("DEMO displays all midcast set possibilities. However midcast WS does not exist and midcast JA only applies to Bloodpact and Ready commands.")
 				local DemoMidcastSet = MidcastContainer(DemoSpellAttributes, EVENT_MIDCAST_DEMO)
 				ChatGearSet(DemoMidcastSet, EVENT_MIDCAST_DEMO)
 			end

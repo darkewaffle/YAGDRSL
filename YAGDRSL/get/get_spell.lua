@@ -91,8 +91,10 @@ end
 function GetSpellTarget(spell, TargetClass)
 	-- Consts in the library are all lower case however spell.targets are all proper cased (Self, Enemy, etc)
 	TargetClass = CapitalizeFirstLetter(TargetClass)
-	if spell.targets[TargetClass] then
-		return true
+	if spell.targets then
+		if spell.targets[TargetClass] then
+			return true
+		end
 	else
 		return false
 	end
@@ -149,7 +151,11 @@ function GetSpellTargetRaw(spell)
 end
 
 function GetSpellTargetHPDecimal(spell)
-	return spell.target.hpp / 100
+	if spell.target.hpp then
+		return spell.target.hpp / 100
+	else
+		return 0
+	end
 end
 
 function GetSpellType(spell)

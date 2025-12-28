@@ -1,4 +1,4 @@
---It all starts here. This should be the first code that the library runs.
+-- It all starts here. This should be the first code that the library runs.
 
 function OnLoad()
 	ChatCheckpoint("OnLoad started")

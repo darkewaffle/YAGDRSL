@@ -82,9 +82,9 @@ function GetItemNamesInRootTable(RootObject)
 			if ValidGearSlots[Key] then
 
 				if ItemNameList[ItemName] then
-					--The item name is already in the list and this variant has no data.
+					-- The item name is already in the list and this variant has no data.
 				else
-					--The item name is not in the list. Create it with empty augment data.
+					-- The item name is not in the list. Create it with empty augment data.
 					ItemNameList[ItemName] = {[VALIDATION_ITEM_AUGMENTS]={}, [VALIDATION_ITEM_AUGMENT_CODES]={}}
 				end
 

@@ -26,7 +26,6 @@ function ChatGearSet(GearSet, Source, ShowEmptySlots)
 		ChatSet(Source, "set is empty")
 
 	else
-		--ChatBlankLine()
 		ChatDashLine()
 		ChatSet("Source =", Source)
 		local LineText = ""
@@ -79,7 +78,6 @@ function ChatGearSet(GearSet, Source, ShowEmptySlots)
 				LineText = ""
 			end
 		end
-	--ChatBlankLine()
 	ChatDashLine()
 	end
 end

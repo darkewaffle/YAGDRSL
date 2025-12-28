@@ -18,7 +18,7 @@ function precast(spell, position)
 
 	TerminateStatus, TerminateReason = HookPrecastTerminate(SpellAttributes) -- @Hook
 	if TerminateStatus then
-		TerminateReason = TerminateReason --or "TerminateReason Undefined"
+		TerminateReason = TerminateReason or "TerminateReason Undefined"
 		ChatWarning("User defined precast termination: " .. TerminateReason, SpellAttributes["Name"])
 		cancel_spell()
 		return
@@ -89,18 +89,24 @@ function PrecastTerminate(SpellAttributes)
 		TerminateSpell, TerminateReason = PrecastTerminateByStatus(SpellAttributes)
 
 		if SpellAttributes["Category"] == CATEGORY_WS then
-			TerminateSpell = TerminateSpell or GetCharacterTP() < 1000
-			TerminateReason = "Insufficient TP to perform WS -"
+			if GetCharacterTP() < 1000 then
+				TerminateSpell = true
+				TerminateReason = "Insufficient TP to perform WS -"
+			end
 		end
 
 		if SpellAttributes["Category"] == CATEGORY_JA then
-			TerminateSpell = TerminateSpell or GetRecastJobAbility(SpellAttributes["RecastID"]) > 0
-			TerminateReason = "Job ability is still on recast -"
+			if GetRecastJobAbility(SpellAttributes["RecastID"]) > 0 then
+				TerminateSpell = true
+				TerminateReason = "Job ability is still on recast -"
+			end
 		end
 
 		if SpellAttributes["Category"] == CATEGORY_MAGIC then
-			TerminateSpell = TerminateSpell or GetRecastSpell(SpellAttributes["RecastID"]) > 0
-			TerminateReason = "Spell is still on recast -"
+			if GetRecastSpell(SpellAttributes["RecastID"]) > 0 then
+				TerminateSpell = true 
+				TerminateReason = "Spell is still on recast -"
+			end
 		end
 	end
 
@@ -133,7 +139,7 @@ function PrecastTerminateByStatus(SpellAttributes)
 	for _, BuffID in pairs(PlayerBuffs) do
 		if Ailments[BuffID] and Ailments[BuffID][SpellAttributes["Category"]] then
 			TerminateSpell = true
-			TerminateReason = "Action cannot be completed due to status ailment " .. GetBuffName(BuffID)
+			TerminateReason = "Action cannot be started due to status ailment " .. GetBuffName(BuffID)
 			break
 		end
 	end

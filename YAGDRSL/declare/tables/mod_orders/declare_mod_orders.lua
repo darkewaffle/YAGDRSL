@@ -1,4 +1,4 @@
---Container objects the library will read to determine the order of mod application.
+-- Container objects the library will read to determine the order of mod application.
 
 function DeclareModOrderTables()
 	_G[MOD_ORDER_CONTAINER] = {}

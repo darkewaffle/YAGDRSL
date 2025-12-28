@@ -185,16 +185,16 @@ function GetEquipmentItemsNotUsed(SkipWeapons)
 			-- Do nothing.
 		else
 
-			--CharacterEquipmentID not found in GearSetIDs.
+			-- CharacterEquipmentID not found in GearSetIDs.
 			if not GearSetIDs[CharacterEquipmentID] then
 				table.insert(UnusedEquipment, {[VALIDATION_ITEM_NAME] = GetItemName(CharacterEquipmentID)})
 			else
 
-				--CharacterEquipmentID found in GearSetIDs. Evaluate augments.
+				-- CharacterEquipmentID found in GearSetIDs. Evaluate augments.
 				local GearSetAugments = GearSetIDs[CharacterEquipmentID][VALIDATION_ITEM_AUGMENT_CODES]
 
-				--If #GearSetAugments == 0 then GearSet entries provided no augment data and ID match alone means an augment is in a set. No further action required.
-				--If #GearSetAugments >0 then evaluate augments to find a match.
+				-- If #GearSetAugments == 0 then GearSet entries provided no augment data and ID match alone means an augment is in a set. No further action required.
+				-- If #GearSetAugments >0 then evaluate augments to find a match.
 				if #GearSetAugments > 0 then
 
 					-- Iterate through each augment code corresponding to the ID of the equipment item.

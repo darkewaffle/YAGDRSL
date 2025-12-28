@@ -26,7 +26,7 @@ function GetEventModBase(SpellAttributes, EventSource, ModClass)
 	return EventMod
 end
 
---Logically the same as GetEventModBase.
+-- Logically the same as GetEventModBase.
 function GetStatusModBase(CharacterStatus, ModClass)
 	local StatusMod = {}
 	local ModOrder = GetStatusModOrder(CharacterStatus, ModClass)
