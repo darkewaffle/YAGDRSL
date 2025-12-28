@@ -10,7 +10,7 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 - Thoughtful mapping of spells and abilities into groups so that more sets and more gear can be defined by purpose rather than by individual spells. (eg: Blue magic split into groups like blue.enfeebling, blue.enhancing and blue.cure. Bloodpact Rage split into bloodpact.rage.physical, bloodpact.rage.magical, bloodpact.rage.hybrid)
 - Gearsets that are put together through an additive process so that items don't need to be repeated as often, updates are easier to complete and gearset files are shorter overall.
 - Gearset "mods" that can quickly modify gearsets on the fly and .lua functions to easily create them.
-- Gearset "overrides" to create sets for unique situations that can be easily be turned on and off without affecting regularly used sets.
+- Gearset "overrides" to create sets for unique situations that can easily be turned on and off without affecting regularly used sets.
 - Buff tracking that is straightforward to setup and that can be used to create buff-specific mods by simply naming the mod after the buff (eg: mods.engaged["Berserk"] or mods.precast.ws["Sneak Attack"])
 - Optional automatic tracking of other dynamic game elements like pet name, character movement and character-target facing that can all be used to apply mods.
 - A simple but clear Control Panel UI with customizable content and style to display both user mod and library mod values and options.
