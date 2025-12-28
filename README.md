@@ -7,17 +7,19 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 
 
 ## Significant Features
-- Thoughtful mapping of spells and abilities into groups so that more sets and more gear can be defined by function rather than per spell. (eg: Blue magic split into groups like blue.enfeebling, blue.enhancing and blue.cure. Bloodpact Rage split into bloodpact.rage.physical, bloodpact.rage.magical, bloodpact.rage.hybrid)
+- Thoughtful mapping of spells and abilities into groups so that more sets and more gear can be defined by purpose rather than by individual spells. (eg: Blue magic split into groups like blue.enfeebling, blue.enhancing and blue.cure. Bloodpact Rage split into bloodpact.rage.physical, bloodpact.rage.magical, bloodpact.rage.hybrid)
 - Gearsets that are put together through an additive process so that items don't need to be repeated as often, updates are easier to complete and gearset files are shorter overall.
 - Gearset "mods" that can quickly modify gearsets on the fly and .lua functions to easily create them.
 - Gearset "overrides" to create sets for unique situations that can be easily be turned on or turned off without affecting regularly used sets.
 - Buff tracking that is straightforward to setup and that can be used to create buff-specific mods by simply naming the mod after the buff (eg: mods.engaged["Berserk"] or mods.precast.ws["Sneak Attack"])
-- A simple but clear Control Panel UI element that can be customized thoroughly to control its contents and style.
+- Optional automatic tracking of other dynamic game elements like pet name, character movement and character-target facing that can all be used to apply mods.
+- A simple but clear Control Panel UI with customizable content and style to display both user mod and library mod values and options.
 - Built in validation command that can evaluate gear for a single job or all jobs without requiring any changes to the files.
 - Built in demo command and comprehensive debug messages to test and understand how a gearset is put together through precast-midcast events.
 - Hook functions in all major Gearswap and library events that users can override to implement custom logic.
 
 
+## Guides and Documentation
 #### Quick Start Guide
 1. Download the YAG_include.lua file and the entire YAGDRSL folder.
 2. Place them in your Windower\addons\GearSwap\libs folder.<br>
