@@ -31,6 +31,7 @@ function ChatGearSet(GearSet, Source, ShowEmptySlots)
 		local LineText = ""
 		local FoundSlots = 0
 		local ItemsInSet = 0
+
 		for _, _ in pairs(GearSet) do
 			ItemsInSet = ItemsInSet + 1
 		end
@@ -68,7 +69,7 @@ function ChatGearSet(GearSet, Source, ShowEmptySlots)
 				LineText = LineText .. SlotText
 			end
 
-			-- When displaying empty slots this ensure that all slots count as being found.
+			-- When displaying empty slots this ensures that all slots count as being found.
 			if ShowEmptySlots then
 				FoundSlots = Key
 			end
@@ -76,6 +77,7 @@ function ChatGearSet(GearSet, Source, ShowEmptySlots)
 			if (FoundSlots > 0 and FoundSlots % 4 == 0) or Key == 16 then
 				ChatSet(LineText)
 				LineText = ""
+				FoundSlots = 0
 			end
 		end
 	ChatDashLine()
@@ -129,9 +131,11 @@ function ChatTableValuesAsMessage(ChatTable)
 end
 
 function ChatTableMessage(ChatTable)
+	local Iterator = 1
 	if ChatTable then
 		for Key, Value in pairs(ChatTable) do
-			ChatMessage(Key, Value)
+			ChatMessage(tostring(Iterator) .. Key, Value)
+			Iterator = Iterator + 1
 		end
 	end
 end
