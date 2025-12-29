@@ -149,7 +149,7 @@
 			ear1="Cessance Earring",
 			ear2="Brutal Earring",
 			ring1="Rajas Ring",
-			ring2="Apate Ring",
+			ring2="Karieyh Ring +1",
 			back=capes.WSD,
 			waist="Sailfi Belt +1",
 		})

@@ -28,6 +28,7 @@
 			ear1="Sroda Earring",
 			ear2="Moonshade Earring",
 			ring1="Epona's Ring",
+			ring2="Karieyh Ring +1",
 			back="Null Shawl",
 			waist="Fotia Belt"
 		})

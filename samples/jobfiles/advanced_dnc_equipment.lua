@@ -216,7 +216,7 @@
 			body="Horos Casaque +3",
 			hands="Maculele Bangles +3",
 			ring1="Ilabrat Ring",
-			ring2="Apate Ring",
+			ring2="Karieyh Ring +1",
 			back=capes.tp,
 			legs="Maculele Tights +3",
 			feet="Maculele Toe Shoes +3"
@@ -234,17 +234,13 @@
 	sets.precast.ws["Rudra's Storm"] = set_combine(templates.wsd,
 		{
 			neck="Republican Platinum Medal",
-			waist="Sailfi Belt +1",
-			ring1="Ilabrat Ring",
-			ring2="Lehko's Ring"
+			waist="Sailfi Belt +1"
 		})
 
 	sets.precast.ws["Shark Bite"] = set_combine(templates.wsd,
 		{
 			neck="Republican Platinum Medal",
-			waist="Sailfi Belt +1",
-			ring1="Ilabrat Ring",
-			ring2="Lehko's Ring"
+			waist="Sailfi Belt +1"
 		})
 
 	sets.precast.ws.melee.magical = set_combine(collections.Nyame,
@@ -256,8 +252,8 @@
 			ear2="Moonshade Earring",
 			body="Samnuha Coat",
 			hands="Maxixi Bangles +4",
-			ring1="Ilabrat Ring",
-			ring2="Etana Ring",
+			ring1="Etana Ring",
+			ring2="Karieyh Ring +1",
 			back=capes.wsd,
 			waist="Null Belt"
 		})
@@ -470,7 +466,7 @@
 -- IDLE & RESTING SETS
 --
 
-	InsertGearSet(sets.idle, collections.Gleti)
+	InsertGearSet(sets.idle, set_combine(collections.Gleti, {ring1="Karieyh Ring +1"}))
 
 	sets.idle.town =
 		{
