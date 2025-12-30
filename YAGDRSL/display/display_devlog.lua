@@ -30,8 +30,6 @@ function GetDisplayDevLogContent()
 	local DevLogContents = ""
 
 	for i=LogStart, TotalLogs do
-		ChatNotice(i)
-		ChatError(LogStart, TotalLogs)
 		if _G[DEVELOPER_LOG][i] then
 			DevLogContents = DevLogContents .. _G[DEVELOPER_LOG][i] .. "\n"
 		end
@@ -48,7 +46,7 @@ end
 function WriteDevLog(Label, Message)
 	Label = tostring(Label) or ""
 	Message = tostring(Message) or ""
-	table.insert(_G[DEVELOPER_LOG], Label .. ": " .. Message)
+	table.insert(_G[DEVELOPER_LOG], Label .. Message)
 
 	if STATE_DISPLAY_DEV_LOG then
 		UpdateDisplayDevLog()

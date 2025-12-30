@@ -10,7 +10,7 @@ function midcast(spell)
 	local TerminateReason = ""
 	TerminateStatus, TerminateReason = MidcastTerminate(SpellAttributes)
 	if TerminateStatus then
-		ChatWarning("Midcast Terminating: " .. TerminateReason, SpellAttributes["Name"])
+		ChatWarning("Midcast Terminating: ", TerminateReason)
 		return
 	end
 

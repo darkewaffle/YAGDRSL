@@ -13,8 +13,8 @@ function precast(spell, position)
 	local TerminateReason = ""
 	TerminateStatus, TerminateReason = PrecastTerminate(SpellAttributes)
 	if TerminateStatus then
-		ChatWarning("Precast Terminating: " .. TerminateReason)
-		WriteDevLog("Precast Terminating: " .. TerminateReason)
+		ChatWarning("Precast Terminating: ", TerminateReason)
+		WriteDevLog("Precast Terminating: ", TerminateReason)
 		cancel_spell()
 		return
 	end
