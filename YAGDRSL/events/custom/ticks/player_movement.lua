@@ -19,7 +19,7 @@ function GetPlayerMovementState()
 	local CurrentCoordinates = {}
 	CurrentCoordinates.x, CurrentCoordinates.y = GetCharacterCoordinates()
 
-	if TickEvaluateMovementMinimumDistance == 0 then
+	if _G[YAG_SETTINGS]["TickEvaluateMovementMinimumDistance"] == 0 then
 
 		if CurrentCoordinates.x ~= PreviousCoordinates.x or CurrentCoordinates.y ~= PreviousCoordinates.y then
 			PreviousCoordinates.x = CurrentCoordinates.x
@@ -33,7 +33,7 @@ function GetPlayerMovementState()
 			return STATE_STATIONARY
 		end
 
-	elseif TickEvaluateMovementMinimumDistance > 0 then
+	elseif _G[YAG_SETTINGS]["TickEvaluateMovementMinimumDistance"] > 0 then
 
 		local DeltaX = (CurrentCoordinates.x - PreviousCoordinates.x)^2
 		local DeltaY = (CurrentCoordinates.y - PreviousCoordinates.y)^2
@@ -43,7 +43,7 @@ function GetPlayerMovementState()
 		PreviousCoordinates.x = CurrentCoordinates.x
 		PreviousCoordinates.y = CurrentCoordinates.y
 
-		if Distance >= TickEvaluateMovementMinimumDistance then
+		if Distance >= _G[YAG_SETTINGS]["TickEvaluateMovementMinimumDistance"] then
 			--ChatDebug("Player is", STATE_MOVING)
 			SetTracker(STATE_MOVING, STATE_MOVING)
 			return STATE_MOVING
