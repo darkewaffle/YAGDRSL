@@ -1,5 +1,6 @@
 require "YAGDRSL/debug/chat.lua"
 
+require "YAGDRSL/events/gearswap/terminations/terminate_update.lua"
 require "YAGDRSL/get/sets/build_set.lua"
 require "YAGDRSL/get/mods/get_mod_total.lua"
 require "YAGDRSL/get/mods/get_mod_value.lua"
@@ -61,21 +62,30 @@ function GetValidStatusFromCharacterStatus(CharacterStatus)
 end
 
 function GetStatusSetTerminate(CharacterStatus)
+	ChatCheckpointLogged("GetStatusSetTerminate Start")
 	local TerminateStatus = false
 	local TerminateReason = ""
 
-	local ValidStatuses =
+	local TerminationFunctions =
 		{
-			[STATUS_ENGAGED] = true,
-			[STATUS_IDLE] = true,
-			[STATUS_RESTING] = true
+			UpdateTerminateMidaction,
+			UpdateTerminateStatus
 		}
 
-	if not ValidStatuses[CharacterStatus] then
-		TerminateStatus = true
-		TerminateReason = "Gear may not be equipped while status ="
+	if _G[YAG_SETTINGS]["AutomaticUpdateTermination"] == true then
+		for _, TerminationCheck in ipairs(TerminationFunctions) do
+			TerminateStatus, TerminateReason = TerminationCheck(CharacterStatus)
+			if TerminateStatus then
+				break
+			end
+		end
 	end
 
+	if not TerminateStatus then
+		TerminateReason = nil
+	end
+
+	ChatCheckpointLogged("GetStatusSetTerminate End")
 	return TerminateStatus, TerminateReason
 end
 

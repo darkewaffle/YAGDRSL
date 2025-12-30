@@ -155,7 +155,8 @@ ApplyKeybindScripts = false
 | Setting | Default Value | Description |
 | --- | --- | --- |
 | AutoCancelDelayAmount | .2 | YAGDRSL can automatically cancel buffs configured with the SetAutoCancelBuff function. When a cancel takes place this determines how much time the action is delayed before being cast. |
-| AutomaticPrecastTermination | false | Precast has some simple checks in place that will cancel an action (and will not change gear) if the action is on recast or if the action is a Weaponskill and the character has <1000 TP. This may be expanded in the future. |
+| AutomaticPrecastTermination | false | Precast has some checks in place that will cancel an action (and will not change gear) if the action is on recast, if the action is a Weaponskill and the character has <1000 TP or if the character is already in midcast for another action. This may be expanded in the future. Midcast update termination may not be 100% reliable due to networking shenanigans. |
+| AutomaticUpdateTermination | false | Prevents status set updates when the character is not in a valid status (such as in a cutscene or speaking to an NPC) or when the character is already in the midcast of an action. Midcast update termination may not be 100% reliable due to networking shenanigans. |
 
 
 ### Tick Settings

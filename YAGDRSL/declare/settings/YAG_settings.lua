@@ -24,6 +24,7 @@ _G[YAG_SETTINGS][SETTINGS_DEFAULT] =
 	AutoCancelDelayAmount = .2,
 
 	AutomaticPrecastTermination = false,
+	AutomaticUpdateTermination = false,
 
 	TickEnable = false,
 	TickInterval = 60,
