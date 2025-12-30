@@ -14,6 +14,7 @@ function precast(spell, position)
 	TerminateStatus, TerminateReason = PrecastTerminate(SpellAttributes)
 	if TerminateStatus then
 		ChatWarning("Precast Terminating: " .. TerminateReason, SpellAttributes["Name"])
+		WriteDevLog("Precast Terminating: " .. TerminateReason, SpellAttributes["Name"])
 		cancel_spell()
 		return
 	end

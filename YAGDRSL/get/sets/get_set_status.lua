@@ -15,6 +15,7 @@ function GetStatusSet(CharacterStatus)
 	TerminateStatus, TerminateReason = GetStatusSetTerminate(CharacterStatus)
 	if TerminateStatus then
 		ChatWarning("GetStatusSet Terminating: " .. TerminateReason, OriginalStatus)
+		WriteDevLog("GetStatusSet Terminating: " .. TerminateReason, OriginalStatus)
 		return {}
 	end
 

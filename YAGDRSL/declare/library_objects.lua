@@ -16,7 +16,11 @@ function DeclareLibraryObjects()
 	STATE_JOB_LOGIC_LOADED = false
 
 	STATE_DISPLAY_ORDER_DEBUG = false
+	STATE_DISPLAY_DEV_LOG = false
 	STATE_TRACK_PET = false
+
+	DEVELOPER_LOG = "developer_log"
+	_G[DEVELOPER_LOG] = {}
 
 	PERFORMANCE_LOG = "performance_log"
 	_G[PERFORMANCE_LOG] = {}

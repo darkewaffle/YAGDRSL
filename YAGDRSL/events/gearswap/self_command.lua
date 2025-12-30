@@ -28,6 +28,7 @@ CommandMap =
 	["cycle"]      = SelfCommandCycle,
 	["debug"]      = SelfCommandDebug,
 	["demo"]       = SelfCommandDemo,
+	["devlog"]     = SelfCommandDevLog,
 	["orders"]     = SelfCommandOrders,
 	["ring"]       = SelfCommandRing,
 	["showlog"]    = SelfCommandShowLog,
