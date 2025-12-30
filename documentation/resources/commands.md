@@ -56,6 +56,12 @@ gs c update
 ```
 Forces Gearswap to update the equipment set for your current status.
 
+## updatetick
+```
+gs c updatetick
+```
+Identical to update except it passes a different source parameter so that logging can differentiate between an update from SelfCommand and an update from OnTick.
+
 ## validate
 ```
 gs c validate (alljobs) (noweapons)

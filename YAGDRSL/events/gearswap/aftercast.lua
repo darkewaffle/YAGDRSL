@@ -16,7 +16,7 @@ function AfterCastContainer(EventName)
 	local CharacterStatus = GetCharacterStatus()
 	ChatDebug(EventName .. ", CharacterStatus =", CharacterStatus)
 	local StatusSet = {}
-	StatusSet = GetStatusSet(CharacterStatus)
+	StatusSet = GetStatusSet(CharacterStatus, EVENT_AFTERCAST)
 
 	ChatGearSet(StatusSet, EventName)
 	EquipSafe(StatusSet, EventName)

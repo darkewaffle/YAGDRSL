@@ -28,7 +28,7 @@ function SelfCommandDemo(CommandInputs)
 
 				-- Demo for a status does not require any additional parameters (unlike SpellAttributes for an action).
 				-- Just submit the status to GetStatusSet and voila.
-				local DemoStatusSet = GetStatusSet(CharacterStatus)
+				local DemoStatusSet = GetStatusSet(CharacterStatus, EVENT_STATUS_CHANGE_DEMO)
 				ChatGearSet(DemoStatusSet, EVENT_STATUS_CHANGE_DEMO)
 			end
 

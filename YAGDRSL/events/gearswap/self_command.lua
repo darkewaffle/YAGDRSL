@@ -36,5 +36,6 @@ CommandMap =
 	["test1"]      = SelfCommandTest1,
 	["test2"]      = SelfCommandTest2,
 	["update"]     = SelfCommandUpdate,
+	["updatetick"] = SelfCommandUpdateTick,
 	["validate"]   = SelfCommandValidate
 }

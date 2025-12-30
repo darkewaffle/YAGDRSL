@@ -6,7 +6,7 @@ require "YAGDRSL/get/mods/get_mod_total.lua"
 require "YAGDRSL/get/mods/get_mod_value.lua"
 require "YAGDRSL/get/overrides/get_override.lua"
 
-function GetStatusSet(CharacterStatus)
+function GetStatusSet(CharacterStatus, Source)
 	local OriginalStatus = CharacterStatus
 	local CharacterStatus = GetValidStatusFromCharacterStatus(CharacterStatus)
 
@@ -14,8 +14,8 @@ function GetStatusSet(CharacterStatus)
 	local TerminateReason = ""
 	TerminateStatus, TerminateReason = GetStatusSetTerminate(CharacterStatus)
 	if TerminateStatus then
-		ChatWarning("GetStatusSet Terminating: ", TerminateReason)
-		WriteDevLog("GetStatusSet Terminating: ", TerminateReason)
+		ChatWarning(Source .. " GetStatusSet Terminating: ", TerminateReason)
+		WriteDevLog(Source .. " GetStatusSet Terminating: ", TerminateReason)
 		return {}
 	end
 

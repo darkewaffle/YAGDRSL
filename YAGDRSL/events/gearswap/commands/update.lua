@@ -1,3 +1,3 @@
 function SelfCommandUpdate(CommandInputs)
-	ForceStatusUpdate()
+	ForceStatusUpdate(EVENT_SELF_COMMAND_UPDATE)
 end

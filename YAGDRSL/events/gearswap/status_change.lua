@@ -5,7 +5,7 @@ function status_change(new, old)
 	local NewStatus = new
 	local OldStatus = old
 	local StatusSet = {}
-	StatusSet = GetStatusSet(NewStatus)
+	StatusSet = GetStatusSet(NewStatus, EVENT_STATUS_CHANGE)
 	
 	ChatGearSet(StatusSet, EVENT_STATUS_CHANGE)
 	EquipSafe(StatusSet, EVENT_STATUS_CHANGE)

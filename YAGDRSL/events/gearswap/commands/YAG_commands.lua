@@ -8,6 +8,7 @@ require "YAGDRSL/events/gearswap/commands/showlog.lua"
 require "YAGDRSL/events/gearswap/commands/tables.lua"
 require "YAGDRSL/events/gearswap/commands/test.lua"
 require "YAGDRSL/events/gearswap/commands/update.lua"
+require "YAGDRSL/events/gearswap/commands/updatetick.lua"
 
 require "YAGDRSL/events/gearswap/commands/validate.lua"
 require "YAGDRSL/events/gearswap/commands/validate/get_augment.lua"

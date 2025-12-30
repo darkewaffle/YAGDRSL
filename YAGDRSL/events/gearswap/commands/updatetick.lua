@@ -1,0 +1,3 @@
+function SelfCommandUpdateTick(CommandInputs)
+	ForceStatusUpdate(EVENT_TICK_UPDATE)
+end
