@@ -58,6 +58,7 @@
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
 			hands="Maxixi Bangles +4",
+			ring1="Karieyh Ring +1",
 			back=capes.wsd,
 			legs="Horos Tights +3"
 		}
@@ -207,7 +208,7 @@
 			waist="Fotia Belt"
 		})
 
-	sets.precast.ws.melee.physical = 
+	sets.precast.ws.melee.physical =
 		{
 			ammo="Charis Feather",
 			head="Maculele Tiara +3",
@@ -215,8 +216,8 @@
 			ear2="Maculele Earring +1",
 			body="Horos Casaque +3",
 			hands="Maculele Bangles +3",
-			ring1="Ilabrat Ring",
-			ring2="Karieyh Ring +1",
+			ring1="Karieyh Ring +1",
+			ring2="Ilabrat Ring",
 			back=capes.tp,
 			legs="Maculele Tights +3",
 			feet="Maculele Toe Shoes +3"
@@ -227,8 +228,7 @@
 			ear1="Odr Earring",
 			ear2="Sherida Earring",
 			ammo="Charis Feather",
-			ring1="Mummu Ring",
-			ring2="Lehko's Ring"
+			ring1="Lehko's Ring"
 		})
 
 	sets.precast.ws["Rudra's Storm"] = set_combine(templates.wsd,
@@ -252,8 +252,8 @@
 			ear2="Moonshade Earring",
 			body="Samnuha Coat",
 			hands="Maxixi Bangles +4",
-			ring1="Etana Ring",
-			ring2="Karieyh Ring +1",
+			ring1="Karieyh Ring +1",
+			ring2="Etana Ring",
 			back=capes.wsd,
 			waist="Null Belt"
 		})

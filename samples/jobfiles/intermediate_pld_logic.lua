@@ -1,7 +1,6 @@
 	TickEnable = true
 	TickInterval = 30
 	TickEvaluateMovement = true
-	TickEvaluateMovementMinimumDistance = 1
 
 	CreateMod("Offense",         "F9    Offense", true, "f9",    "Hybrid",    "DPS")
 	CreateMod("BlockTP",         "ShF9  BlockTP", true, "~f9",   "BlockTP")
