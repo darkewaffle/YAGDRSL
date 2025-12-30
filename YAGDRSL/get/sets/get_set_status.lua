@@ -58,8 +58,9 @@ function GetValidStatusFromCharacterStatus(CharacterStatus)
 			[STATUS_RESTING] = STATUS_RESTING
 		}
 	CharacterStatus = string.lower(CharacterStatus)
-	CharacterStatus = StatusMap[CharacterStatus]
-	return CharacterStatus
+	ValidatedStatus = StatusMap[CharacterStatus]
+
+	return ValidatedStatus or CharacterStatus
 end
 
 function GetStatusSetTerminate(CharacterStatus)
