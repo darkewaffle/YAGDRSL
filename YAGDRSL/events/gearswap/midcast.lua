@@ -1,3 +1,5 @@
+require "YAGDRSL/events/gearswap/terminations/terminate_midcast.lua"
+
 function midcast(spell)
 	ChatBlankLine()
 	ChatCheckpointLogged("Midcast Start")
@@ -57,15 +59,17 @@ function MidcastTerminate(SpellAttributes)
 	local TerminateMidcast = false
 	local TerminateReason = ""
 
-	local ValidMidcastCategories = {[CATEGORY_MAGIC]=true, [CATEGORY_RA]=true, [CATEGORY_ITEM]=true}
 
-	if not ValidMidcastCategories[SpellAttributes["Category"]] then
-		TerminateMidcast = true
-		TerminateReason = "Midcast is not valid for " .. SpellAttributes["Category"]
-	end
+	local TerminationFunctions =
+		{
+			MidcastTerminateCategory
+		}
 
-	if not TerminateMidcast then
-		TerminateReason = nil
+	for _, TerminationCheck in ipairs(TerminationFunctions) do
+		TerminateMidcast, TerminateReason = TerminationCheck(SpellAttributes)
+		if TerminateMidcast then
+			break
+		end
 	end
 
 	ChatCheckpointLogged("Midcast Termination End")

@@ -1,3 +1,5 @@
+require "YAGDRSL/events/gearswap/terminations/terminate_precast.lua"
+
 function precast(spell, position)
 	-- Every precast-to-aftercast sequence is logged by entries made in each ChatCheckpointLogged call.
 	-- Reset ensures that the log is empty at the start of each sequence.
@@ -81,31 +83,23 @@ function PrecastDelay(SpellAttributes)
 end
 
 function PrecastTerminate(SpellAttributes)
+	ChatCheckpointLogged("PrecastTerminate Start")
 	local TerminateSpell = false
 	local TerminateReason = ""
 
+	local TerminationFunctions =
+		{
+			PrecastTerminateMidaction,
+			PrecastTerminateAilments,
+			PrecastTerminateRecasts,
+			PrecastTerminateTP
+		}
+
 	if _G[YAG_SETTINGS]["AutomaticPrecastTermination"] == true then
-
-		TerminateSpell, TerminateReason = PrecastTerminateByStatus(SpellAttributes)
-
-		if SpellAttributes["Category"] == CATEGORY_WS then
-			if GetCharacterTP() < 1000 then
-				TerminateSpell = true
-				TerminateReason = "Insufficient TP to perform WS -"
-			end
-		end
-
-		if SpellAttributes["Category"] == CATEGORY_JA then
-			if GetRecastJobAbility(SpellAttributes["RecastID"]) > 0 then
-				TerminateSpell = true
-				TerminateReason = "Job ability is still on recast -"
-			end
-		end
-
-		if SpellAttributes["Category"] == CATEGORY_MAGIC then
-			if GetRecastSpell(SpellAttributes["RecastID"]) > 0 then
-				TerminateSpell = true 
-				TerminateReason = "Spell is still on recast -"
+		for _, TerminationCheck in ipairs(TerminationFunctions) do
+			TerminateSpell, TerminateReason = TerminationCheck(SpellAttributes)
+			if TerminateSpell then
+				break
 			end
 		end
 	end
@@ -114,36 +108,7 @@ function PrecastTerminate(SpellAttributes)
 		TerminateReason = nil
 	end
 
-	return TerminateSpell, TerminateReason
-end
-
-function PrecastTerminateByStatus(SpellAttributes)
-	local TerminateSpell = false
-	local TerminateReason = ""
-	
-	local AllActions = {[CATEGORY_ITEM]=true, [CATEGORY_JA]=true, [CATEGORY_MAGIC]=true, [CATEGORY_RA]=true, [CATEGORY_WS]=true}
-	local Ailments =
-	{
-		[0] = AllActions,									-- KO / dead
-		[6] = {[CATEGORY_MAGIC]=true},						-- Silence
-		[7] = AllActions,									-- Petrify
-		[10] = AllActions,									-- Stun
-		[14] = AllActions,									-- Charm
-		[17] = AllActions,									-- Charm
-		[16] = {[CATEGORY_JA]=true, [CATEGORY_WS]=true},	-- Amnesia
-		[28] = AllActions									-- Terror
-	}
-
-	local PlayerBuffs = GetCharacterBuffs()
-
-	for _, BuffID in pairs(PlayerBuffs) do
-		if Ailments[BuffID] and Ailments[BuffID][SpellAttributes["Category"]] then
-			TerminateSpell = true
-			TerminateReason = "Action cannot be started due to status ailment " .. GetBuffName(BuffID)
-			break
-		end
-	end
-
+	ChatCheckpointLogged("PrecastTerminate End")
 	return TerminateSpell, TerminateReason
 end
 
