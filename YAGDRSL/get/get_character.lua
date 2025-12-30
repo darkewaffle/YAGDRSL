@@ -73,7 +73,7 @@ end
 
 function GetCharacterCoordinates()
 	local PlayerMobData = GetCharacterAsMob()
-	return PlayerMobData.x, PlayerMobData.y, PlayerMobData.z
+	return PlayerMobData.x or 0, PlayerMobData.y or 0, PlayerMobData.z or 0
 end
 
 function GetCharacterFacing()

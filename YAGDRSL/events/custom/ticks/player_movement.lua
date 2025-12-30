@@ -1,4 +1,4 @@
-local PreviousCoordinates = {["x"] = player.x, ["y"] = player.y}
+local PreviousCoordinates = {["x"] = player.x or 0, ["y"] = player.y or 0}
 local LastPlayerState = STATE_STATIONARY
 
 function GetPlayerMovementStateHasChanged()
