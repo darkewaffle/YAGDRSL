@@ -30,6 +30,7 @@ _G[YAG_SETTINGS][SETTINGS_DEFAULT] =
 	TickInterval = 60,
 	TickForceUpdateCooldown = 5,
 	TickEvaluateMovement = false,
+	TickEvaluateMovementMinimumDistance = 0,
 	TickEvaluateFacing = false,
 	TickEvaluateHook = false,
 
@@ -124,6 +125,8 @@ function ValidateSettings()
 	_G[YAG_SETTINGS]["ForceUpdateAfterCycleDelay"] = Clamp(_G[YAG_SETTINGS]["ForceUpdateAfterCycleDelay"], 0, 60)
 	_G[YAG_SETTINGS]["AutoCancelDelayAmount"] = Clamp(_G[YAG_SETTINGS]["AutoCancelDelayAmount"], 0, 60)
 
-	_G[YAG_SETTINGS]["TickInterval"] = Clamp(_G[YAG_SETTINGS]["TickInterval"], 6, 600)
-	_G[YAG_SETTINGS]["TickForceUpdateCooldown"] = Clamp(_G[YAG_SETTINGS]["TickForceUpdateCooldown"], 1, 60)
+	_G[YAG_SETTINGS]["TickInterval"] = Clamp(_G[YAG_SETTINGS]["TickInterval"], 1, 600)
+	_G[YAG_SETTINGS]["TickForceUpdateCooldown"] = Clamp(_G[YAG_SETTINGS]["TickForceUpdateCooldown"], .1, 60)
+
+	_G[YAG_SETTINGS]["TickEvaluateMovementMinimumDistance"] = Clamp(_G[YAG_SETTINGS]["TickEvaluateMovementMinimumDistance"], 0, 100)
 end

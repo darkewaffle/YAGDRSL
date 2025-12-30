@@ -114,6 +114,9 @@ function GetPlayerSettings()
 		-- Useful for idling in defensive gear but then equipping +Movement Speed gear when you start to move.
 		TickEvaluateMovement = false
 
+		-- Requires movement between ticks to be at least TickEvaluateMovementMinimumDistance units in order to be considered 'moving'.
+		TickEvaluateMovementMinimumDistance = 0
+
 		-- Enables tracking of whether or not you are currently engaged with the target and facing the target's face. Useful for conditionally equipping items like Horos Toe Shoes.
 		-- Could also track if you are behind the target.
 		TickEvaluateFacing = false

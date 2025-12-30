@@ -168,6 +168,7 @@ These control YAGDRSL's OnTick event. Essentially this allows code to be run at 
 | TickInterval | 60 | Controls the frequency of the tick event. Essentially this is the number of frames that must be displayed between each tick. If you play at 30FPS then I would not go lower than 10. If you play at 60FPS then I would not go lower than 20. |
 | TickForceUpdateCooldown | 5 | Controls how many seconds must pass between each force update called by tick. |
 | TickEvaluateMovement | false | Enables movement tracking so that gearsets can be equipped or modified depending on whether or not the character is moving or stationary. |
+| TickEvaluateMovementMinimumDistance | 0 | Requires movement between ticks to be at least TickEvaluateMovementMinimumDistance units in order to be considered 'moving'. |
 | TickEvaluateFacing | false | Enables tracking of whether or not you are currently engaged with the target and facing the target's face. Useful for conditionally equipping items like Horos Toe Shoes. |
 | TickEvaluateHook | false | Enables the HookOnTick function where the user can write their own code that would be run every tick interval. |
 
