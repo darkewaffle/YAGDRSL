@@ -15,7 +15,7 @@ function PrecastTerminateMidaction(SpellAttributes)
 		local NameInProgress = PlayerActionInProgress["name"]
 
 		TerminateSpell = true
-		TerminateReason = NameInProgress .. " is already in midcast. Terminating "
+		TerminateReason = NameInProgress .. " is already in midcast. Terminating " .. SpellAttributes["name"]
 	end
 	
 --[[ @TODO This part will take some thought.
@@ -57,7 +57,7 @@ function PrecastTerminateAilments(SpellAttributes)
 	for _, BuffID in pairs(PlayerBuffs) do
 		if Ailments[BuffID] and Ailments[BuffID][SpellAttributes["Category"]] then
 			TerminateSpell = true
-			TerminateReason = "Action cannot be started due to status ailment " .. GetBuffName(BuffID) .. ". Terminating "
+			TerminateReason = "Action cannot be started due to status ailment '" .. GetBuffName(BuffID) .. "'. Terminating " .. SpellAttributes["name"]
 			break
 		end
 	end
@@ -72,13 +72,13 @@ function PrecastTerminateRecasts(SpellAttributes)
 	if SpellAttributes["Category"] == CATEGORY_JA then
 		if GetRecastJobAbility(SpellAttributes["RecastID"]) > 0 then
 			TerminateSpell = true
-			TerminateReason = "Job ability is still on recast -"
+			TerminateReason = "Job ability is still on recast = " .. SpellAttributes["name"]
 		end
 
 	elseif SpellAttributes["Category"] == CATEGORY_MAGIC then
 		if GetRecastSpell(SpellAttributes["RecastID"]) > 0 then
 			TerminateSpell = true 
-			TerminateReason = "Spell is still on recast -"
+			TerminateReason = "Spell is still on recast = " .. SpellAttributes["name"]
 		end
 
 	end
@@ -93,7 +93,7 @@ function PrecastTerminateTP(SpellAttributes)
 	if SpellAttributes["Category"] == CATEGORY_WS then
 		if GetCharacterTP() < 1000 then
 			TerminateSpell = true
-			TerminateReason = "Insufficient TP to perform WS -"
+			TerminateReason = "Insufficient TP to perform WS = " .. SpellAttributes["name"]
 		end
 	end
 

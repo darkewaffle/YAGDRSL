@@ -46,7 +46,7 @@ function UpdateTerminateStatus(CharacterStatus)
 
 	if not ValidStatuses[CharacterStatus] then
 		TerminateStatus = true
-		TerminateReason = "Gear may not be equipped while status ="
+		TerminateReason = "Gear may not be equipped while status =" .. CharacterStatus
 	end
 
 	return TerminateStatus, TerminateReason
