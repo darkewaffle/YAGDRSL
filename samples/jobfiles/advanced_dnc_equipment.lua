@@ -200,7 +200,7 @@
 
 --
 -- PRECAST WS SETS
--- 
+--
 
 	InsertGearSet(sets.precast.ws,
 		{
@@ -479,7 +479,7 @@
 	sets.resting = collections.Gleti
 
 --
---	IDLE & RESTING MODS
+-- IDLE & RESTING MODS
 --
 
 	mods.idle[STATE_MOVING] =
