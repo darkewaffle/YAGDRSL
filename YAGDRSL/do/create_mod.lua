@@ -24,3 +24,13 @@ end
 function SetModValue(ModName, Value)
 	_G[MOD_VALUES_ROOT_NAME][ModName]:set(Value)
 end
+
+function AssignModOptions(ModName, ...)
+	if _G[MOD_VALUES_ROOT_NAME][ModName] then
+		local PreviousDescription = _G[MOD_VALUES_ROOT_NAME][ModName]["description"]
+		_G[MOD_VALUES_ROOT_NAME][ModName] = M{MOD_DEFAULT_OFF, ...}
+		_G[MOD_VALUES_ROOT_NAME][ModName]:describe(PreviousDescription)
+	else
+		ChatError("Mod name does not exist", ModName)
+	end
+end
