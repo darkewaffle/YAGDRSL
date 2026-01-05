@@ -29,7 +29,11 @@ function GetCharacterZone()
 end
 
 function GetCharacterZoneClass()
-	return MapGetZoneClass(world.zone)
+	if world.zone then
+		return MapGetZoneClass(world.zone)
+	else
+		return nil
+	end
 end
 
 function GetCharacterMissingHP()
