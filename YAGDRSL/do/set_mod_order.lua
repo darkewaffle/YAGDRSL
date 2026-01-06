@@ -90,3 +90,90 @@ end
 function SetModOrderRestingDefense(...)
 	SetModOrder(MOD_ORDER_STATUS_RESTING_DEFENSE, ...)
 end
+
+
+-- @User
+-- These functions will accept the names of mods and store them in the Mod Order tables to configure the order in which mods are applied.
+-- AppendModOrder will simply add the mods to the end of the existing mod order, all of the mods already added to it will remain.
+
+-- Precast Mod Order
+function AppendModOrderPrecastJAOffense(...)
+	AppendModOrder(MOD_ORDER_PRECAST_JA_OFFENSE, ...)
+end
+function AppendModOrderPrecastJADefense(...)
+	AppendModOrder(MOD_ORDER_PRECAST_JA_DEFENSE, ...)
+end
+
+function AppendModOrderPrecastMagicOffense(...)
+	AppendModOrder(MOD_ORDER_PRECAST_MAGIC_OFFENSE, ...)
+end
+function AppendModOrderPrecastMagicDefense(...)
+	AppendModOrder(MOD_ORDER_PRECAST_MAGIC_DEFENSE, ...)
+end
+
+function AppendModOrderPrecastRAOffense(...)
+	AppendModOrder(MOD_ORDER_PRECAST_RA_OFFENSE, ...)
+end
+function AppendModOrderPrecastRADefense(...)
+	AppendModOrder(MOD_ORDER_PRECAST_RA_DEFENSE, ...)
+end
+
+function AppendModOrderPrecastWSOffense(...)
+	AppendModOrder(MOD_ORDER_PRECAST_WS_OFFENSE, ...)
+end
+function AppendModOrderPrecastWSDefense(...)
+	AppendModOrder(MOD_ORDER_PRECAST_WS_DEFENSE, ...)
+end
+
+
+-- Midcast Mod Order
+function AppendModOrderMidcastJAOffense(...)
+	AppendModOrder(MOD_ORDER_MIDCAST_JA_OFFENSE, ...)
+end
+function AppendModOrderMidcastJADefense(...)
+	AppendModOrder(MOD_ORDER_MIDCAST_JA_DEFENSE, ...)
+end
+
+function AppendModOrderMidcastMagicOffense(...)
+	AppendModOrder(MOD_ORDER_MIDCAST_MAGIC_OFFENSE, ...)
+end
+function AppendModOrderMidcastMagicDefense(...)
+	AppendModOrder(MOD_ORDER_MIDCAST_MAGIC_DEFENSE, ...)
+end
+
+function AppendModOrderMidcastRAOffense(...)
+	AppendModOrder(MOD_ORDER_MIDCAST_RA_OFFENSE, ...)
+end
+function AppendModOrderMidcastRADefense(...)
+	AppendModOrder(MOD_ORDER_MIDCAST_RA_DEFENSE, ...)
+end
+
+function AppendModOrderMidcastWSOffense(...)
+	AppendModOrder(MOD_ORDER_MIDCAST_WS_OFFENSE, ...)
+end
+function AppendModOrderMidcastWSDefense(...)
+	AppendModOrder(MOD_ORDER_MIDCAST_WS_DEFENSE, ...)
+end
+
+
+-- Status Mod Order
+function AppendModOrderEngagedOffense(...)
+	AppendModOrder(MOD_ORDER_STATUS_ENGAGED_OFFENSE, ...)
+end
+function AppendModOrderEngagedDefense(...)
+	AppendModOrder(MOD_ORDER_STATUS_ENGAGED_DEFENSE, ...)
+end
+
+function AppendModOrderIdleOffense(...)
+	AppendModOrder(MOD_ORDER_STATUS_IDLE_OFFENSE, ...)
+end
+function AppendModOrderIdleDefense(...)
+	AppendModOrder(MOD_ORDER_STATUS_IDLE_DEFENSE, ...)
+end
+
+function AppendModOrderRestingOffense(...)
+	AppendModOrder(MOD_ORDER_STATUS_RESTING_OFFENSE, ...)
+end
+function AppendModOrderRestingDefense(...)
+	AppendModOrder(MOD_ORDER_STATUS_RESTING_DEFENSE, ...)
+end
