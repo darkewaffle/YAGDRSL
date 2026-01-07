@@ -33,6 +33,11 @@ function GetPlayerSettings()
 	ForceUpdateAfterCycle = true
 	ForceUpdateAfterCycleDelay = 1
 
+	TickEnable = true
+	TickInterval = 30
+	TickEvaluateMovement = true
+	TickForceUpdateCooldown = 3
+
 	AutomaticPrecastTermination = true
 	AutomaticUpdateTermination = true
 

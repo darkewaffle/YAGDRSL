@@ -149,13 +149,13 @@
 --
 -- ENGAGED OFFENSE MODS
 --
-	-- +Accuracy gear when engaged and the the Offense mod = "Acc"
+	-- +Accuracy gear when engaged and the Offense mod = "Acc"
 	mods.engaged["Acc"] =
 		{
 
 		}
 
-	-- +Multiattack gear when engaged and the the Offense mod = "Multi"
+	-- +Multiattack gear when engaged and the Offense mod = "Multi"
 	mods.engaged["Multi"] =
 		{
 
@@ -256,6 +256,12 @@
 		}
 
 	mods.idle["MEvaHi"] =
+		{
+
+		}
+
+	-- Additional gear that will be equipped when idle and the player is moving.
+	mods.idle["player_moving"] =
 		{
 
 		}

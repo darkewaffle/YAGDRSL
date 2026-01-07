@@ -2,54 +2,42 @@
 -- PRECAST JA SETS
 --
 
-	sets.precast.ja.jig =
+	sets.precast.ja["Accomplice"] =
 		{
 
 		}
 
-	sets.precast.ja.samba =
+	sets.precast.ja["Collaborator"] =
 		{
 
 		}
 
-	sets.precast.ja.step =
+	sets.precast.ja["Despoil"] =
 		{
 
 		}
 
-	-- Gear that should be applied to all Waltzes
-	sets.precast.ja.waltz =
+	sets.precast.ja["Flee"] =
 		{
 
 		}
 
-	-- Gear that should be applied to all Waltzes that cure HP
-	sets.precast.ja.waltz.cure =
+	sets.precast.ja["Hide"] =
 		{
 
 		}
 
-	sets.precast.ja["Climactic Flourish"] =
+	sets.precast.ja["Mug"] =
 		{
 
 		}
 
-	sets.precast.ja["Feather Step"] =
+	sets.precast.ja["Perfect Dodge"] =
 		{
 
 		}
 
-	sets.precast.ja["No Foot Rise"] =
-		{
-
-		}
-
-	sets.precast.ja["Reverse Flourish"] =
-		{
-
-		}
-
-	sets.precast.ja["Trance"] =
+	sets.precast.ja["Steal"] =
 		{
 
 		}
@@ -76,7 +64,7 @@
 
 		}
 
-	sets.precast.ws["Pyrrhic Kleos"] = 
+	sets.precast.ws["Mandalic Stab"] = 
 		{
 
 		}
@@ -111,14 +99,14 @@
 
 		}
 
-	-- Additional gear that will be equipped when using a melee, physical weaponskill and Climactic Flourish is active
-	mods.precast.ws.melee.physical["Climactic Flourish"] =
+	-- Additional gear that will be equipped when using a melee, physical weaponskill and Sneak Attack is active
+	mods.precast.ws.melee.physical["Sneak Attack"] =
 		{
 
 		}
 
-	-- Additional gear that will be equipped when using a melee, physical weaponskill and Striking Flourish is active
-	mods.precast.ws.melee.physical["Striking Flourish"] =
+	-- Additional gear that will be equipped when using a melee, physical weaponskill and Trick Attack is active
+	mods.precast.ws.melee.physical["Trick Attack"] =
 		{
 
 		}
@@ -134,7 +122,7 @@
 --
 -- MIDCAST MAGIC SETS
 --
-	-- DNC isn't a caster so just use the magic precast set to shorten recast
+	-- THF isn't a caster so just use the magic precast set to shorten recast
 	sets.midcast.magic = sets.precast.magic
 
 --
@@ -166,6 +154,18 @@
 
 		}
 
+	-- Additional gear that will be equipped when engaged and Conspirator is active
+	mods.engaged["Conspirator"] =
+			{
+
+			}
+
+	-- Additional gear that will be equipped when engaged and Feint is active
+	mods.engaged["Feint"] =
+			{
+				
+			}
+
 --
 -- ENGAGED DEFENSE MODS
 --
@@ -193,6 +193,18 @@
 		{
 
 		}
+
+	-- Additional gear that will be equipped when engaged and Flee is active
+	mods.engaged["Flee"] =
+			{
+
+			}
+
+	-- Additional gear that will be equipped when engaged and Perfect Dodge is active
+	mods.engaged["Perfect Dodge"] =
+			{
+				
+			}
 
 --
 -- IDLE & RESTING SETS
@@ -231,6 +243,18 @@
 		}
 
 	mods.idle["MEvaHi"] =
+		{
+
+		}
+
+	-- Additional gear that will be equipped when idle and Flee is active
+	mods.idle["Flee"] =
+		{
+			
+		}
+
+	-- Additional gear that will be equipped when idle and Perfect Dodge is active
+	mods.idle["Perfect Dodge"] =
 		{
 
 		}
