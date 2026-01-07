@@ -1,58 +1,57 @@
 --
 -- PRECAST JA SETS
 --
-
-	sets.precast.ja.jig =
+	sets.precast.ja["Boost"] =
 		{
 
 		}
 
-	sets.precast.ja.samba =
+	sets.precast.ja["Chakra"] =
 		{
 
 		}
 
-	sets.precast.ja.step =
+	sets.precast.ja["Chi Blast"] =
 		{
 
 		}
 
-	-- Gear that should be applied to all Waltzes
-	sets.precast.ja.waltz =
+	sets.precast.ja["Counterstance"] =
 		{
 
 		}
 
-	-- Gear that should be applied to all Waltzes that cure HP
-	sets.precast.ja.waltz.cure =
+	sets.precast.ja["Dodge"] =
 		{
 
 		}
 
-	sets.precast.ja["Climactic Flourish"] =
+	sets.precast.ja["Focus"] =
 		{
 
 		}
 
-	sets.precast.ja["Feather Step"] =
+	sets.precast.ja["Footwork"] =
 		{
 
 		}
 
-	sets.precast.ja["No Foot Rise"] =
+	sets.precast.ja["Formless Strikes"] =
 		{
 
 		}
 
-	sets.precast.ja["Reverse Flourish"] =
+	sets.precast.ja["Hundred Fists"] =
 		{
 
 		}
 
-	sets.precast.ja["Trance"] =
+	sets.precast.ja["Mantra"] =
 		{
 
 		}
+
+
 
 --
 -- PRECAST WS SETS
@@ -71,27 +70,42 @@
 
 		}
 
-	sets.precast.ws["Evisceration"] =
+	sets.precast.ws["Asuran Fists"] =
 		{
 
 		}
 
-	sets.precast.ws["Pyrrhic Kleos"] = 
+	sets.precast.ws["Dragon Kick"] =
 		{
 
 		}
 
-	sets.precast.ws["Rudra's Storm"] = 
+	sets.precast.ws["Howling Fist"] =
 		{
 
 		}
 
-	sets.precast.ws["Ruthless Stroke"] = 
+	sets.precast.ws["Maru Kala"] =
 		{
 
 		}
 
-	sets.precast.ws["Shark Bite"] =
+	sets.precast.ws["Raging Fists"] =
+		{
+
+		}
+
+	sets.precast.ws["Shijin Spiral"] =
+		{
+
+		}
+
+	sets.precast.ws["Tornado Kick"] =
+		{
+
+		}
+
+	sets.precast.ws["Victory Smite"] =
 		{
 
 		}
@@ -111,14 +125,14 @@
 
 		}
 
-	-- Additional gear that will be equipped when using a melee, physical weaponskill and Climactic Flourish is active
-	mods.precast.ws.melee.physical["Climactic Flourish"] =
+	-- Additional gear that will be equipped when using a melee, physical weaponskill and Footwork is active
+	mods.precast.ws.melee.physical["Footwork"] =
 		{
 
 		}
 
-	-- Additional gear that will be equipped when using a melee, physical weaponskill and Striking Flourish is active
-	mods.precast.ws.melee.physical["Striking Flourish"] =
+	-- Additional gear that will be equipped when using a melee, physical weaponskill and Impetus is active
+	mods.precast.ws.melee.physical["Impetus"] =
 		{
 
 		}
@@ -134,7 +148,7 @@
 --
 -- MIDCAST MAGIC SETS
 --
-	-- DNC isn't a caster so just use the magic precast set to shorten recast
+	-- MNK isn't a caster so just use the magic precast set to shorten recast
 	sets.midcast.magic = sets.precast.magic
 
 --
@@ -166,6 +180,30 @@
 
 		}
 
+	-- Gear that will be equipped when engaged and Boost is active
+	mods.engaged["Boost"] =
+		{
+
+		}
+
+	-- Gear that will be equipped when engaged and Footwork is active
+	mods.engaged["Footwork"] =
+		{
+
+		}
+
+	-- Gear that will be equipped when engaged and Formless Strikes is active
+	mods.engaged["Formless Strikes"] =
+		{
+
+		}
+
+	-- Gear that will be equipped when engaged and Impetus is active
+	mods.engaged["Impetus"] =
+		{
+
+		}
+
 --
 -- ENGAGED DEFENSE MODS
 --
@@ -190,6 +228,19 @@
 
 	-- High MDT/MEva gear when the Magical Defense mod = "MEvaHi"
 	mods.engaged["MEvaHi"] =
+		{
+
+		}
+
+	-- Gear that will be equipped when engaged and Counterstance is active
+	mods.engaged["Counterstance"] =
+		{
+
+		}
+
+
+-- Gear that will be equipped when engaged and Inner Strength is active
+	mods.engaged["Inner Strength"] =
 		{
 
 		}
@@ -237,6 +288,16 @@
 
 	-- Additional gear that will be equipped when idle and the player is moving.
 	mods.idle["player_moving"] =
+		{
+
+		}
+
+	mods.idle["Boost"] =
+		{
+
+		}
+
+	mods.resting["Boost"] =
 		{
 
 		}
