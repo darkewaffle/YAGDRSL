@@ -48,8 +48,8 @@ function WalkPathJA(RootName, EventSource, SpellAttributes)
 			end
 
 
-	-- The damage type is meaningful for Ready abilities so include it in the WalkPath.
-	elseif SpellAttributes["ParentGroup"] == MAP_JA_READY then
+	-- The damage type is meaningful for Pet Ready abilities so include it in the WalkPath.
+	elseif SpellAttributes["ParentGroup"] == MAP_JA_PET_READY then
 
 			-- Example: sets.midcast.ja.ready.magical
 			SetPaths, SetPathStrings = WalkPath(RootName, EventSource, SpellAttributes["Category"], SpellAttributes["ParentGroup"], SpellAttributes["DamageType"])
