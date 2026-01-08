@@ -16,6 +16,9 @@ function UpdatePetNameTracker(NewPet)
 	elseif CharacterJob == "DRG" then
 		PetName = TRACK_PET_WYVERN
 
+	elseif CharacterJob == "GEO" then
+		PetName = TRACK_PET_LUOPAN
+
 	elseif CharacterJob == "PUP" then
 		PetName = TRACK_PET_AUTOMATON
 

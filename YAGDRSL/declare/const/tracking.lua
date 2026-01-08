@@ -8,5 +8,6 @@ TRACK_PLAYER_FACING = "tracking_facing"
 TRACKER_INTO_ORDERS_QUEUE = "trackers_queued"
 TRACK_KEY_BINDS = "tracking_mod_binds"
 
-TRACK_PET_WYVERN = "wyvern"
 TRACK_PET_AUTOMATON = "automaton"
+TRACK_PET_LUOPAN = "luopan"
+TRACK_PET_WYVERN = "wyvern"
