@@ -1,0 +1,1 @@
+TrackOffenseBuffs("Blood Weapon", "Last Resort", "Souleater", "Dark Seal", "Nether Void")

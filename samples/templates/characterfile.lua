@@ -59,7 +59,6 @@ function GetPlayerSettings()
 	SetModOrderMidcastMagicOffense("Offense", "TH")
 	SetModOrderMidcastMagicDefense("PhysicalDefense", "MagicalDefense")
 
-	SetModOrderMidcastRAOffense("Offense", "TH")
 	SetModOrderMidcastRADefense("PhysicalDefense", "MagicalDefense")
 
 	SetModOrderEngagedOffense ("Offense", "TH")
