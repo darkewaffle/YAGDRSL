@@ -197,7 +197,14 @@
 --
 -- ENGAGED SET
 --
+	-- Engaged gear that would be appropriate even if the BST has no pet. Define mods.engaged["beast"] below to create your set for when a pet is present.
 	sets.engaged =
+		{
+
+		}
+
+	-- Anytime a pet is present this mod will be active and it will be the first mod applied. Essentially it is your 'engaged with a pet' set.
+	mods.engaged["beast"] =
 		{
 
 		}

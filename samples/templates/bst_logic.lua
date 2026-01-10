@@ -1,1 +1,2 @@
 TrackOffenseBuffs("Unleash")
+TrackPetNameAsOffenseMod()
