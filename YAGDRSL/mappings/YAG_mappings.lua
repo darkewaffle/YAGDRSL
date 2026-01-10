@@ -52,7 +52,11 @@ function MapGetJADamageType(JAName)
 end
 
 function MapGetZoneIsTown(ZoneName)
-	return _G[MAP_ZONES][ZoneName]["IsTown"] or false
+	if _G[MAP_ZONES] and ZoneName then
+		return _G[MAP_ZONES][ZoneName]["IsTown"] or false
+	else
+		return false
+	end
 end
 
 function MapGetZoneIsAdoulin(ZoneName)
