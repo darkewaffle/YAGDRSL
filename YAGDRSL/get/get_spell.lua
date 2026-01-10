@@ -159,7 +159,17 @@ function GetSpellTargetHPDecimal(spell)
 end
 
 function GetSpellType(spell)
-	return spell.type
+	local SpellType = spell.type
+
+	if SpellType = "BlackMagic" then
+		SpellType = MAP_CLASS_BLACK_MABIC
+	elseif SpellType = "WhiteMagic" then
+		SpellType = MAP_CLASS_WHITE_MAGIC
+	else
+		SpellType = string.lower(SpellType)
+	end
+
+	return SpellType
 end
 
 function GetSpellRecastID(spell)

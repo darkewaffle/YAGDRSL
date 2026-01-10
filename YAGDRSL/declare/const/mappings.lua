@@ -11,6 +11,10 @@ MAP_SPELLS = "custom_map_spells"
 MAP_WS = "custom_map_ws"
 MAP_ZONES = "custom_map_zones"
 
+-- Names to represent broad splots in types of spells
+MAP_CLASS_BLACK_MABIC = "black"
+MAP_CLASS_WHITE_MAGIC = "white"
+
 -- Mapping values to describe damage types
 MAP_DAMAGE_HYBRID = "hybrid"
 MAP_DAMAGE_MAGICAL = "magical"
