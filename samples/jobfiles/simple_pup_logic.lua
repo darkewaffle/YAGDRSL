@@ -9,3 +9,5 @@ SetAutoCancelBuff({"Spectral Jig"},
 
 SetModOrderEngagedOffense ("PetMode")
 SetModOrderIdleOffense ("PetMode")
+
+TrackPetNameAsOffenseMod()
