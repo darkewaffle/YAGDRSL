@@ -97,83 +97,83 @@ end
 -- AppendModOrder will simply add the mods to the end of the existing mod order, all of the mods already added to it will remain.
 
 -- Precast Mod Order
-function AppendModOrderPrecastJAOffense(...)
-	AppendModOrder(MOD_ORDER_PRECAST_JA_OFFENSE, ...)
+function AppendModOrderPrecastJAOffense(ModName)
+	AppendModOrder(MOD_ORDER_PRECAST_JA_OFFENSE, ModName)
 end
-function AppendModOrderPrecastJADefense(...)
-	AppendModOrder(MOD_ORDER_PRECAST_JA_DEFENSE, ...)
-end
-
-function AppendModOrderPrecastMagicOffense(...)
-	AppendModOrder(MOD_ORDER_PRECAST_MAGIC_OFFENSE, ...)
-end
-function AppendModOrderPrecastMagicDefense(...)
-	AppendModOrder(MOD_ORDER_PRECAST_MAGIC_DEFENSE, ...)
+function AppendModOrderPrecastJADefense(ModName)
+	AppendModOrder(MOD_ORDER_PRECAST_JA_DEFENSE, ModName)
 end
 
-function AppendModOrderPrecastRAOffense(...)
-	AppendModOrder(MOD_ORDER_PRECAST_RA_OFFENSE, ...)
+function AppendModOrderPrecastMagicOffense(ModName)
+	AppendModOrder(MOD_ORDER_PRECAST_MAGIC_OFFENSE, ModName)
 end
-function AppendModOrderPrecastRADefense(...)
-	AppendModOrder(MOD_ORDER_PRECAST_RA_DEFENSE, ...)
+function AppendModOrderPrecastMagicDefense(ModName)
+	AppendModOrder(MOD_ORDER_PRECAST_MAGIC_DEFENSE, ModName)
 end
 
-function AppendModOrderPrecastWSOffense(...)
-	AppendModOrder(MOD_ORDER_PRECAST_WS_OFFENSE, ...)
+function AppendModOrderPrecastRAOffense(ModName)
+	AppendModOrder(MOD_ORDER_PRECAST_RA_OFFENSE, ModName)
 end
-function AppendModOrderPrecastWSDefense(...)
-	AppendModOrder(MOD_ORDER_PRECAST_WS_DEFENSE, ...)
+function AppendModOrderPrecastRADefense(ModName)
+	AppendModOrder(MOD_ORDER_PRECAST_RA_DEFENSE, ModName)
+end
+
+function AppendModOrderPrecastWSOffense(ModName)
+	AppendModOrder(MOD_ORDER_PRECAST_WS_OFFENSE, ModName)
+end
+function AppendModOrderPrecastWSDefense(ModName)
+	AppendModOrder(MOD_ORDER_PRECAST_WS_DEFENSE, ModName)
 end
 
 
 -- Midcast Mod Order
-function AppendModOrderMidcastJAOffense(...)
-	AppendModOrder(MOD_ORDER_MIDCAST_JA_OFFENSE, ...)
+function AppendModOrderMidcastJAOffense(ModName)
+	AppendModOrder(MOD_ORDER_MIDCAST_JA_OFFENSE, ModName)
 end
-function AppendModOrderMidcastJADefense(...)
-	AppendModOrder(MOD_ORDER_MIDCAST_JA_DEFENSE, ...)
-end
-
-function AppendModOrderMidcastMagicOffense(...)
-	AppendModOrder(MOD_ORDER_MIDCAST_MAGIC_OFFENSE, ...)
-end
-function AppendModOrderMidcastMagicDefense(...)
-	AppendModOrder(MOD_ORDER_MIDCAST_MAGIC_DEFENSE, ...)
+function AppendModOrderMidcastJADefense(ModName)
+	AppendModOrder(MOD_ORDER_MIDCAST_JA_DEFENSE, ModName)
 end
 
-function AppendModOrderMidcastRAOffense(...)
-	AppendModOrder(MOD_ORDER_MIDCAST_RA_OFFENSE, ...)
+function AppendModOrderMidcastMagicOffense(ModName)
+	AppendModOrder(MOD_ORDER_MIDCAST_MAGIC_OFFENSE, ModName)
 end
-function AppendModOrderMidcastRADefense(...)
-	AppendModOrder(MOD_ORDER_MIDCAST_RA_DEFENSE, ...)
+function AppendModOrderMidcastMagicDefense(ModName)
+	AppendModOrder(MOD_ORDER_MIDCAST_MAGIC_DEFENSE, ModName)
 end
 
-function AppendModOrderMidcastWSOffense(...)
-	AppendModOrder(MOD_ORDER_MIDCAST_WS_OFFENSE, ...)
+function AppendModOrderMidcastRAOffense(ModName)
+	AppendModOrder(MOD_ORDER_MIDCAST_RA_OFFENSE, ModName)
 end
-function AppendModOrderMidcastWSDefense(...)
-	AppendModOrder(MOD_ORDER_MIDCAST_WS_DEFENSE, ...)
+function AppendModOrderMidcastRADefense(ModName)
+	AppendModOrder(MOD_ORDER_MIDCAST_RA_DEFENSE, ModName)
+end
+
+function AppendModOrderMidcastWSOffense(ModName)
+	AppendModOrder(MOD_ORDER_MIDCAST_WS_OFFENSE, ModName)
+end
+function AppendModOrderMidcastWSDefense(ModName)
+	AppendModOrder(MOD_ORDER_MIDCAST_WS_DEFENSE, ModName)
 end
 
 
 -- Status Mod Order
-function AppendModOrderEngagedOffense(...)
-	AppendModOrder(MOD_ORDER_STATUS_ENGAGED_OFFENSE, ...)
+function AppendModOrderEngagedOffense(ModName)
+	AppendModOrder(MOD_ORDER_STATUS_ENGAGED_OFFENSE, ModName)
 end
-function AppendModOrderEngagedDefense(...)
-	AppendModOrder(MOD_ORDER_STATUS_ENGAGED_DEFENSE, ...)
-end
-
-function AppendModOrderIdleOffense(...)
-	AppendModOrder(MOD_ORDER_STATUS_IDLE_OFFENSE, ...)
-end
-function AppendModOrderIdleDefense(...)
-	AppendModOrder(MOD_ORDER_STATUS_IDLE_DEFENSE, ...)
+function AppendModOrderEngagedDefense(ModName)
+	AppendModOrder(MOD_ORDER_STATUS_ENGAGED_DEFENSE, ModName)
 end
 
-function AppendModOrderRestingOffense(...)
-	AppendModOrder(MOD_ORDER_STATUS_RESTING_OFFENSE, ...)
+function AppendModOrderIdleOffense(ModName)
+	AppendModOrder(MOD_ORDER_STATUS_IDLE_OFFENSE, ModName)
 end
-function AppendModOrderRestingDefense(...)
-	AppendModOrder(MOD_ORDER_STATUS_RESTING_DEFENSE, ...)
+function AppendModOrderIdleDefense(ModName)
+	AppendModOrder(MOD_ORDER_STATUS_IDLE_DEFENSE, ModName)
+end
+
+function AppendModOrderRestingOffense(ModName)
+	AppendModOrder(MOD_ORDER_STATUS_RESTING_OFFENSE, ModName)
+end
+function AppendModOrderRestingDefense(ModName)
+	AppendModOrder(MOD_ORDER_STATUS_RESTING_DEFENSE, ModName)
 end
