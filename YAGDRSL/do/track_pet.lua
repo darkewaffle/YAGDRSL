@@ -11,7 +11,7 @@ function UpdatePetNameTracker(NewPet)
 	local PetName = ""
 
 	if CharacterJob == "BST" then
-		PetName = NewPet
+		PetName = TRACK_PET_BEAST
 
 	elseif CharacterJob == "DRG" then
 		PetName = TRACK_PET_WYVERN
