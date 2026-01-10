@@ -19,8 +19,6 @@ function AppendModOrder(ModOrderName, ModName, Priority)
 	local ModOrderList = _G[MOD_ORDER_CONTAINER][ModOrderName]
 	local Position = 0
 
-	ChatNotice(ModOrderName .. " " .. ModName, Priority)
-
 	if GetModExists(ModName) then
 
 		if Priority == MOD_ORDER_PRIORITY_LOW then
