@@ -2,7 +2,14 @@ require "YAGDRSL/do/create_tracker.lua"
 require "YAGDRSL/get/get_character.lua"
 
 function TrackPetNameAsMod(ModClass)
-	CreateTrackerQueued(TRACK_PET_NAME, ModClass)
+	local CharacterJob = GetCharacterJobShort()
+
+	local Priority = MOD_ORDER_PRIORITY_LOW
+	if CharacterJob == "SMN" then
+		Priority = MOD_ORDER_PRIORITY_HIGH
+	end
+
+	CreateTrackerQueued(TRACK_PET_NAME, ModClass, MOD_DEFAULT_OFF, Priority)
 	STATE_TRACK_PET = true
 end
 

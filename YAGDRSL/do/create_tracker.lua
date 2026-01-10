@@ -56,26 +56,27 @@ end
 -- CreateTrackerQueued is used to handle the calls from SetBuffTracking in user files.
 -- By queueing Mod Order insertion instead of creating them as they are called (which could be before or after Mod Order definitions) we can ensure the trackers are placed
 -- at the end of the Mod Order list (giving them high priority).
-function CreateTrackerQueued(TrackerName, ModClass, DefaultValue)
+function CreateTrackerQueued(TrackerName, ModClass, DefaultValue, Priority)
 	local TrackerName = FormatTrackerName(TrackerName)
 	local DefaultValue = DefaultValue or MOD_DEFAULT_OFF
+	local Priority = Priority or MOD_ORDER_PRIORITY_HIGH
 
 	_G[MOD_VALUES_ROOT_NAME][TrackerName] = {}
 	_G[MOD_VALUES_ROOT_NAME][TrackerName]["value"] = DefaultValue
 	_G[MOD_VALUES_ROOT_NAME][TrackerName]["default"] = DefaultValue
 
 	if ModClass then
-		QueueTrackerForModOrders(TrackerName, ModClass)
+		QueueTrackerForModOrders(TrackerName, ModClass, Priority)
 	end
 end
 
-function QueueTrackerForModOrders(TrackerName, ModClass)
-	table.insert(_G[TRACKER_INTO_ORDERS_QUEUE], {["TrackerName"]=TrackerName, ["DestinationClass"]=ModClass})
+function QueueTrackerForModOrders(TrackerName, ModClass, Priority)
+	table.insert(_G[TRACKER_INTO_ORDERS_QUEUE], {["TrackerName"]=TrackerName, ["DestinationClass"]=ModClass, ["ModPriority"]=Priority})
 end
 
 function ProcessQueuedTrackers()
 	for Index, Tracker in ipairs(_G[TRACKER_INTO_ORDERS_QUEUE]) do
-		AppendModOrderClass(Tracker["DestinationClass"], Tracker["TrackerName"])
+		AppendModOrderClass(Tracker["DestinationClass"], Tracker["TrackerName"], Tracker["ModPriority"])
 	end
 	_G[TRACKER_INTO_ORDERS_QUEUE] = {}
 end
