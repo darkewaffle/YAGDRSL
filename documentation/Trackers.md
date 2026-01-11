@@ -9,7 +9,7 @@ Then when a tracker has been created it will behave like a high priority mod bec
 | Tracked Data | Purpose | Values |
 | --- | --- | --- |
 | Active Buff | Indicates if the player currently has the specified buff. | Full buff name |
-| Pet Name | Records the name of the character's pet. | BST: Full pet name<br>DRG: "wyvern"<br> PUP: "automaton"<br>SMN: Full pet name |
+| Pet Name | Records the name of the character's pet. | BST: "beast"<br>DRG: "wyvern"<br>GEO: "luopan"<br>PUP: "automaton"<br>SMN: Full pet name |
 | Player Facing | Indicates the player's facing relative to the current target. Only tracked when engaged and settings TickEnable and TickEvaluateFacing are both true. Front and back are currently defined as 30 degree cones. | facing_front<br>facing_back<br>facing_other |
 | Player Moving | Indicates if the player is currently moving. Only tracked when settings TickEnable and TickEvaluateMovement are both true. | player_moving |
 
