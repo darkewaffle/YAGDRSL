@@ -219,7 +219,7 @@
 --
 	InsertGearSet(sets.midcast.magic, templates.fastcast)
 
-	sets.midcast.magic.enhancing.phalanx = 
+	sets.midcast.magic.enhancing.white.phalanx = 
 		{
 			hands="Souveran Handschuhs",
 			legs="Sakpata's Cuisses",
@@ -268,12 +268,12 @@
 			ring2="Etana Ring"
 		})
 
-	mods.midcast.magic.enhancing.protect["Shelter"] = 
+	mods.midcast.magic.enhancing.white.protect["Shelter"] = 
 		{
 			ring1="Sheltered Ring"
 		}
 
-	mods.midcast.magic.enhancing.shell["Shelter"] = 
+	mods.midcast.magic.enhancing.white.shell["Shelter"] = 
 		{
 			ring1="Sheltered Ring"
 		}
