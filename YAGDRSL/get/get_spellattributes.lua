@@ -98,6 +98,12 @@ function RefineSpellAttributes(SpellAttributes)
 		RefinedSpellAttributes["ParentGroup"] = OriginalDamageType
 		RefinedSpellAttributes["ChildGroup"] = nil
 
+	-- Splits enhancing and enfeebling spells into parent = black/white and child = group to better support Grimoires and provide more granularity
+	-- This allows for sets.midcast.magic.enfeebling.black and sets.midcast.enfeebling.white.paralyze, etc.
+	elseif OriginalSkill == MAP_SKILL_ENHANCING or OriginalSkill == MAP_SKILL_ENFEEBLING then
+		RefinedSpellAttributes["ParentGroup"] = RefinedSpellAttributes["Class"]
+		RefinedSpellAttributes["ChildGroup"] = OriginalParentGroup
+
 	else
 		RefinedSpellAttributes["ChildGroup"] = nil
 	end
