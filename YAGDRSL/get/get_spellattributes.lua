@@ -1,5 +1,6 @@
 require "YAGDRSL/debug/chat.lua"
 require "YAGDRSL/get/get_spell.lua"
+require "YAGDRSL/get/get_weather.lua"
 require "YAGDRSL/mappings/YAG_mappings.lua"
 
 function GetSpellAttributes(spell)
@@ -42,6 +43,8 @@ function GetSpellAttributes(spell)
 		end
 
 		SpellAttributes["Element"] = GetSpellElementName(spell)
+		SpellAttributes["Element=Weather"] = GetWeatherMatchesSpell(SpellAttributes["Element"])
+		SpellAttributes["Element=Day"] = GetDayMatchesSpell(SpellAttributes["Element"])
 		SpellAttributes["DamageType"] = GetSpellDamageType(SpellAttributes["Category"], SpellAttributes["Name"], SpellAttributes["Element"])
 		SpellAttributes["RecastID"] = GetSpellRecastID(spell)
 

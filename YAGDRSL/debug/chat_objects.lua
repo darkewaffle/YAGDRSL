@@ -111,7 +111,10 @@ function ChatSpellAttributes(SpellAttributes)
 	ChatDebugForced("DamageType",  SpellAttributes["DamageType"])
 	ChatDebugForced("WSRange",     SpellAttributes["WSRange"])
 	ChatDebugForced("RecastID",    SpellAttributes["RecastID"])
-	--ChatDebugForced("Element",     SpellAttributes["Element"])
+
+	ChatDebugForced("Element",         SpellAttributes["Element"])
+	ChatDebugForced("Element=Weather", SpellAttributes["Element=Weather"])
+	ChatDebugForced("Element=Day",     SpellAttributes["Element=Day"])
 end
 
 function ChatTableKeysAsMessage(ChatTable)
