@@ -89,7 +89,7 @@ function GetSpellElementID(spell)
 	local ElementName = GetSpellElementName(spell)
 	for Index, ElementData in pairs(WINDOWER_RESOURCES.elements) do
 		if ElementData["en"] == ElementName then
-			return index
+			return Index
 		end
 	end
 end
