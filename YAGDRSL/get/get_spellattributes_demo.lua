@@ -64,11 +64,18 @@ function DemoGetSpellSkill (SpellName, SpellCategory)
 end
 
 function DemoGetSpellElementID(SpellName, SpellCategory)
-	local SpellElement = ""
+	local SpellElement = 0
 
-	-- The return from this value is only submitted to GetSpellDamageType which only cares about the element ID for Magic.
 	if SpellCategory == CATEGORY_MAGIC then
 		for _, SpellData in pairs(WINDOWER_RESOURCES.spells) do
+			if SpellData["en"] == SpellName then
+				SpellElement = SpellData["element"]
+				break
+			end
+		end
+
+	elseif SpellCategory == CATEGORY_WS then
+		for _, SpellData in pairs(WINDOWER_RESOURCES.weapon_skills) do
 			if SpellData["en"] == SpellName then
 				SpellElement = SpellData["element"]
 				break
