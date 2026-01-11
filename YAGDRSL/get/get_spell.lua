@@ -69,7 +69,7 @@ function GetSpellDamageType(SpellCategory, SpellName, SpellElement)
 		return MapGetJADamageType(SpellName)
 
 	elseif SpellCategory == CATEGORY_MAGIC then
-		return ElementTypeMap[SpellElement]
+		return ElementNameMap[SpellElement]
 
 	elseif SpellCategory == CATEGORY_RA then
 		return MAP_DAMAGE_PHYSICAL
