@@ -48,6 +48,20 @@ function GetSpellDamageType(SpellCategory, SpellName, SpellElement)
 		[15] = MAP_DAMAGE_PHYSICAL
 	}
 
+	local ElementNameMap =
+	{
+		["Physical"] =  MAP_DAMAGE_PHYSICAL,
+		["Fire"] =      MAP_DAMAGE_MAGICAL,
+		["Ice"] =       MAP_DAMAGE_MAGICAL,
+		["Wind"] =      MAP_DAMAGE_MAGICAL,
+		["Earth"] =     MAP_DAMAGE_MAGICAL,
+		["Lightning"] = MAP_DAMAGE_MAGICAL,
+		["Water"] =     MAP_DAMAGE_MAGICAL,
+		["Light"] =     MAP_DAMAGE_MAGICAL,
+		["Dark"] =      MAP_DAMAGE_MAGICAL,
+		["None"] =      MAP_DAMAGE_PHYSICAL
+	}
+
 	if SpellCategory == CATEGORY_ITEM then
 		return MAP_DAMAGE_NONE
 
