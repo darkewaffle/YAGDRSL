@@ -105,72 +105,82 @@
 
 		})
 
-	sets.midcast.magic.enfeebling.addle =
+	InsertGearSet(sets.midcast.magic.enfeebling.black,
+		{
+
+		})
+
+	sets.midcast.magic.enfeebling.black.bind =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.bind =
+	sets.midcast.magic.enfeebling.black.blind =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.blind =
+	sets.midcast.magic.enfeebling.black.break =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.break =
+	sets.midcast.magic.enfeebling.black.dispel =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.dia =
+	sets.midcast.magic.enfeebling.black.distract =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.dispel =
+	sets.midcast.magic.enfeebling.black.frazzle =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.distract =
+	sets.midcast.magic.enfeebling.black.gravity =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.frazzle =
+	sets.midcast.magic.enfeebling.black.poison =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.gravity =
+	sets.midcast.magic.enfeebling.black.sleep =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.paralyze =
+	InsertGearSet(sets.midcast.magic.enfeebling.white,
+		{
+			
+		})
+
+	sets.midcast.magic.enfeebling.white.addle =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.poison =
+	sets.midcast.magic.enfeebling.white.dia =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.silence =
+	sets.midcast.magic.enfeebling.white.paralyze =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.sleep =
+	sets.midcast.magic.enfeebling.white.silence =
 		{
 
 		}
 
-	sets.midcast.magic.enfeebling.slow =
+	sets.midcast.magic.enfeebling.white.slow =
 		{
 
 		}
@@ -184,57 +194,57 @@
 
 		})
 
-	sets.midcast.magic.enhancing.barelement =
+	sets.midcast.magic.enhancing.black.spikes =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.barstatus =
+	sets.midcast.magic.enhancing.white.barelement =
+		{
+
+		}
+
+	sets.midcast.magic.enhancing.white.barstatus =
 		{
 			
 		}
 
-	sets.midcast.magic.enhancing.boost =
+	sets.midcast.magic.enhancing.white.boost =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.enspell =
+	sets.midcast.magic.enhancing.white.enspell =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.flurry =
+	sets.midcast.magic.enhancing.white.flurry =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.gain =
+	sets.midcast.magic.enhancing.white.gain =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.haste =
+	sets.midcast.magic.enhancing.white.haste =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.phalanx =
+	sets.midcast.magic.enhancing.white.phalanx =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.refresh =
+	sets.midcast.magic.enhancing.white.refresh =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.spikes =
-		{
-
-		}
-
-	sets.midcast.magic.enhancing.temper =
+	sets.midcast.magic.enhancing.white.temper =
 		{
 
 		}
@@ -242,6 +252,11 @@
 --
 -- MIDCAST MAGIC HEALING
 --
+
+	InsertGearSet(sets.midcast.magic.healing,
+		{
+
+		})
 
 	sets.midcast.magic.healing.cure =
 		{
@@ -262,7 +277,7 @@
 -- MIDCAST MAGIC MODS
 --
 	-- +Magic Accuracy gear when casting an enfeebling spell and Debuff mod = "EnfAcc"
-	mods.micast.magic.enfeebling["EnfAcc"] =
+	mods.midcast.magic.enfeebling["EnfAcc"] =
 		{
 			
 		}

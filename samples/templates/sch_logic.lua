@@ -1,0 +1,49 @@
+AssignModOptions("Offense", "MAcc", "MDmg")
+CreateMod("Refresh",     "CtF12 Refresh", true, "^f12",  "+Refresh")
+CreateMod("Magic Burst", "ShF9 MBurst",   true, "~f9",   "+MBurst")
+
+AppendModOrderMidcastMagicOffense("Magic Burst")
+AppendModOrderIdleOffense("Refresh")
+AppendModOrderRestingOffense("Refresh")
+
+-- Light Arts Buffs
+TrackOffenseBuffs("Light Arts", "Penury", "Rapture", "Perpetuance")
+
+-- Dark Arts Buffs
+TrackOffenseBuffs("Dark Arts", "Parsimony", "Ebullience", "Immanence")
+
+-- General Buffs
+TrackOffenseBuffs("Sublimation")
+
+function HookPrecastCustomizeOffense(SpellAttributes, PrecastSet) -- @Hook
+	-- This is a function the user can override to implement custom logic.
+	-- It must return a gearset in order proceed properly.
+
+	if SpellAttributes["Category"] == "magic" and SpellAttributes["Element=Weather"] then
+
+		if (buffactive["Celerity"] and SpellAttributes["Class"] == "white") or (buffactive["Alacrity"] and SpellAttributes["Class"] == "black") then
+			PrecastSet = set_combine(PrecastSet, customize.relicboots)
+		end
+
+	end
+
+	return PrecastSet
+end
+
+function HookMidcastCustomizeOffense(SpellAttributes, MidcastSet) -- @Hook
+	-- This is a function the user can override to implement custom logic.
+	-- It must return a gearset in order proceed properly.
+
+	if SpellAttributes["Category"] == "magic" and SpellAttributes["Element=Weather"] then
+
+		if (buffactive["Celerity"] and SpellAttributes["Class"] == "white") or (buffactive["Alacrity"] and SpellAttributes["Class"] == "black") then
+			MidcastSet = set_combine(MidcastSet, customize.relicboots)
+
+		elseif buffactive["Klimaform"] and (SpellAttributes["Skill"] == "elemental" or SpellAttributes["Skill"] == "dark")
+			MidcastSet = set_combine(MidcastSet, customize.empyreanboots)
+		end
+		
+	end
+
+	return MidcastSet
+end

@@ -189,10 +189,15 @@
 
 		}
 
-	sets.midcast.magic.enhancing.barelement =
+	sets.midcast.magic.enhancing.white.barelement =
 		{
 
 		}
+
+	InsertGearSet(sets.midcast.magic.healing,
+		{
+
+		})
 
 	sets.midcast.magic.healing.cure =
 		{
@@ -219,7 +224,7 @@
 --
 
 	-- +Treasure Hunter gear that will be equipped when casting a Dia spell and the Treasure Hunter mod = "+TH"
-	mods.midcast.magic.enfeebling.dia["+TH"] =
+	mods.midcast.magic.enfeebling.white.dia["+TH"] =
 		{
 			
 		}

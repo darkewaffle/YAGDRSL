@@ -2,53 +2,7 @@
 -- PRECAST JA SETS
 --
 
-	-- Gear that will be equipped for all JA uses, often contains DT/Enmity/HP.
-	InsertGearSet(sets.precast.ja,
-		{
-			
-		})
-
-	sets.precast.ja["Chivalry"] =
-		{
-
-		}
-
-	sets.precast.ja["Cover"] =
-		{
-
-		}
-
-	sets.precast.ja["Divine Emblem"] =
-		{
-
-		}
-
-	sets.precast.ja["Fealty"] =
-		{
-
-		}
-
-	sets.precast.ja["Holy Circle"] =
-		{
-
-		}
-
-	sets.precast.ja["Invincible"] =
-		{
-
-		}
-
-	sets.precast.ja["Rampart"] =
-		{
-
-		}
-
-	sets.precast.ja["Sentinel"] =
-		{
-
-		}
-
-	sets.precast.ja["Shield Bash"] =
+	sets.precast.ja["Azure Lore"] =
 		{
 
 		}
@@ -56,6 +10,7 @@
 --
 -- PRECAST WS SETS
 --
+
 	-- Gear that should apply to all weaponskills
 	-- Likely just Fotia or +Weaponskill Damage pieces
 	InsertGearSet(sets.precast.ws,
@@ -69,12 +24,12 @@
 
 		}
 
-	sets.precast.ws["Atonement"] =
+	sets.precast.ws["Chant du Cygne"] = 
 		{
 
 		}
 
-	sets.precast.ws["Chant du Cygne"] = 
+	sets.precast.ws["Expiacion"] =
 		{
 
 		}
@@ -90,12 +45,6 @@
 		}
 
 	sets.precast.ws["Savage Blade"] =
-		{
-
-		}
-
-	-- Gear that should apply to all melee, magical weaponskills
-	sets.precast.ws.melee.magical =
 		{
 
 		}
@@ -118,10 +67,10 @@
 			
 		})
 
-	sets.precast.magic.healing.cure =
+	InsertGearSet(sets.precast.magic.blue,
 		{
-
-		}
+			
+		})
 
 --
 -- MIDCAST MAGIC SETS
@@ -132,27 +81,50 @@
 
 		}))
 
-	sets.midcast.magic.divine.enlight =
+	-- Gear that will be equipped for all blue spells
+	InsertGearSet(sets.midcast.magic.blue,
+		{
+			
+		})
+
+	-- Gear that will be equipped for blue spells that cure HP
+	sets.midcast.magic.blue.cure =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.white.phalanx =
+	-- Gear that will be equipped for blue spells that primarily inflict ailments
+	sets.midcast.magic.blue.enfeebling =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.white.protect =
+	-- Gear that will be equipped for blue spells that primarily grant buffs
+	sets.midcast.magic.blue.enhancing =
+		{
+
+		}
+	
+	-- Gear that will be equipped for blue spells that primarily deal magic damage
+	sets.midcast.magic.blue.magical =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.white.shell =
+	-- Gear that will be equipped for blue spells that primarily deal physical damage
+	sets.midcast.magic.blue.physical =
 		{
 
 		}
 
-	sets.midcast.magic.healing.cure =
+	-- Gear that will be equipped for blue spells that grant refresh
+	sets.midcast.magic.blue.refresh =
+		{
+
+		}
+	
+	-- Gear that will be equipped for blue spells that grant regen
+	sets.midcast.magic.blue.regen =
 		{
 
 		}
@@ -161,31 +133,35 @@
 -- MIDCAST MAGIC MODS
 --
 
-	-- SIRD gear that will be applied to healing spells when the SIRD mod = "CureSIRD"
-	mods.midcast.magic.healing["CureSIRD"] = 
+	-- Additional gear that will be equipped when casting a magical blue spell and Burst Affinity is active
+	mods.midcast.magic.blue.magical["Burst Affinity"] =
 		{
-			
+
 		}
 
-	-- SIRD gear that will be applied to all magic when the SIRD mod = "FullSIRD"
-	mods.midcast.magic["FullSIRD"] =
+	-- Additional gear that will be equipped when casting a physical blue spell and Chain Affinity is active
+	mods.midcast.magic.blue.physical["Chain Affinity"] =
 		{
-			
+
 		}
 
-	-- Creates an 'exception' to FullSIRD for Flash since Flash is very fast and a low recast is likely preferable.
-	mods.midcast.magic["Flash"] = {}
-	mods.midcast.magic["Flash"]["FullSIRD"] = set_combine(sets.precast.magic,
-	{
-		
-	})
+	-- Additional gear that will be equipped when casting a magical blue spell and Convergence is active
+	mods.midcast.magic.blue.magical["Convergence"] =
+		{
 
-	-- Creates an 'exception' to FullSIRD for Reprisal since Reprisal is very fast and a low recast is likely preferable.
-	mods.midcast.magic["Reprisal"] = {}
-	mods.midcast.magic["Reprisal"]["FullSIRD"] = set_combine(sets.precast.magic,
-	{
+		}
 
-	})
+	-- Additional gear that will be equipped when casting a blue spell and Diffusion is active
+	mods.midcast.magic.blue["Diffusion"] =
+		{
+
+		}
+
+	-- Additional gear that will be equipped when casting a physical blue spell and Efflux is active
+	mods.midcast.magic.blue.physical["Efflux"] =
+		{
+
+		}
 
 --
 -- ENGAGED SET

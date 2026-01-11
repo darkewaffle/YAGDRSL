@@ -2,44 +2,60 @@
 -- PRECAST JA SETS
 --
 
-	sets.precast.ja["Aggressor"] =
+	sets.precast.ja["Angon"] =
 		{
 
 		}
 
-	sets.precast.ja["Berserk"] =
+	sets.precast.ja["Ancient Circle"] =
 		{
 
 		}
 
-	sets.precast.ja["Blood Rage"] =
+	sets.precast.ja["Call Wyvern"] =
 		{
 
 		}
 
-	sets.precast.ja["Defender"] =
+	sets.precast.ja["Spirit Link"] =
 		{
 
 		}
 
-	sets.precast.ja["Mighty Strikes"] =
+	sets.precast.ja["Spirit Surge"] =
 		{
 
 		}
 
-	sets.precast.ja["Provoke"] =
+	-- Gear that will be equipped for all Jump abilities
+	sets.precast.ja.jump =
 		{
 
 		}
 
-	sets.precast.ja["Tomahawk"] =
+	sets.precast.ja["Jump"] = 
 		{
-
+			
 		}
 
-	sets.precast.ja["Warcry"] =
+	sets.precast.ja["High Jump"] = 
 		{
+			
+		}
 
+	sets.precast.ja["Super Jump"] = 
+		{
+			
+		}
+
+	sets.precast.ja["Spirit Jump"] = 
+		{
+			
+		}
+
+	sets.precast.ja["Soul Jump"] = 
+		{
+			
 		}
 
 --
@@ -59,34 +75,27 @@
 
 		}
 
-	sets.precast.ws["Disaster"] =
+	sets.precast.ws["Camlann's Torment"] =
 		{
 
 		}
 
-	sets.precast.ws["King's Justice"] =
+	sets.precast.ws["Diarmuid"] =
 		{
 
 		}
 
-	sets.precast.ws["Savage Blade"] =
+	sets.precast.ws["Drakesbane"] =
 		{
 
 		}
 
-	sets.precast.ws["Ukko's Fury"] =
+	sets.precast.ws["Impulse Drive"] =
 		{
 
 		}
 
-	sets.precast.ws["Upheaval"] =
-		{
-
-		}
-
-
-	-- Gear that should apply to all melee, magical weaponskills
-	sets.precast.ws.melee.magical =
+	sets.precast.ws["Stardiver"] =
 		{
 
 		}
@@ -96,30 +105,6 @@
 --
 	-- +Accuracy gear for melee, physical weaponskills when the Offense mod = "Acc"
 	mods.precast.ws.melee.physical["Acc"] =
-		{
-
-		}
-
-	-- Additional gear that will be equipped when using a melee, physical weaponskill and Mighty Strikes is active
-	mods.precast.ws.melee.physical["Mighty Strikes"] =
-		{
-
-		}
-
-	-- Additional gear that will be equipped when using a melee, physical weaponskill and Brazen Rush is active
-	mods.precast.ws.melee.physical["Brazen Rush"] =
-		{
-
-		}
-
-	-- Additional gear that will be equipped when using a melee, physical weaponskill and Warcry is active
-	mods.precast.ws.melee.physical["Warcry"] =
-		{
-
-		}
-
-	-- Additional gear that will be equipped when using a melee, physical weaponskill and Warrior's Charge is active
-	mods.precast.ws.melee.physical["Warrior's Charge"] =
 		{
 
 		}
@@ -141,7 +126,15 @@
 --
 -- ENGAGED SET
 --
+
+	-- Engaged gear that would be appropriate even if the DRG has no pet. Define mods.engaged["wyvern"] below to create your set for when a pet is present.
 	sets.engaged =
+		{
+
+		}
+
+	-- Anytime a pet is present this mod will be active and it will be the first offense mod applied. Essentially it is your 'engaged with a pet' set.
+	mods.engaged["wyvern"] =
 		{
 
 		}
@@ -163,24 +156,6 @@
 
 	-- +Treasure Hunter gear when engaged and the TH mod = "+TH"
 	mods.engaged["+TH"] =
-		{
-
-		}
-
-	-- Gear that will be equipped when engaged and Berserk is active
-	mods.engaged["Berserk"] =
-		{
-
-		}
-
-	-- Gear that will be equipped when engaged and Restraint is active
-	mods.engaged["Restraint"] =
-		{
-
-		}
-
-	-- Gear that will be equipped when engaged and Retaliation is active
-	mods.engaged["Retaliation"] =
 		{
 
 		}
@@ -209,12 +184,6 @@
 
 	-- High MDT/MEva gear when the Magical Defense mod = "MEvaHi"
 	mods.engaged["MEvaHi"] =
-		{
-
-		}
-
-	-- Gear that will be equipped when engaged and Defender is active
-	mods.engaged["Defender"] =
 		{
 
 		}

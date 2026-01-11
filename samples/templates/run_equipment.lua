@@ -8,47 +8,47 @@
 			
 		})
 
-	sets.precast.ja["Chivalry"] =
+	sets.precast.ja["Elemental Sforzo"] =
 		{
 
 		}
 
-	sets.precast.ja["Cover"] =
+	sets.precast.ja["Gambit"] =
 		{
 
 		}
 
-	sets.precast.ja["Divine Emblem"] =
+	sets.precast.ja["Liement"] =
 		{
 
 		}
 
-	sets.precast.ja["Fealty"] =
+	sets.precast.ja["Pflug"] =
 		{
 
 		}
 
-	sets.precast.ja["Holy Circle"] =
+	sets.precast.ja["Rayke"] =
 		{
 
 		}
 
-	sets.precast.ja["Invincible"] =
+	sets.precast.ja["Swordplay"] =
 		{
 
 		}
 
-	sets.precast.ja["Rampart"] =
+	sets.precast.ja["Valiance"] =
 		{
 
 		}
 
-	sets.precast.ja["Sentinel"] =
+	sets.precast.ja["Vallation"] =
 		{
 
 		}
 
-	sets.precast.ja["Shield Bash"] =
+	sets.precast.ja["Vivacious Pulse"] =
 		{
 
 		}
@@ -69,22 +69,22 @@
 
 		}
 
-	sets.precast.ws["Atonement"] =
+	sets.precast.ws["Dimidiation"] = 
 		{
 
 		}
 
-	sets.precast.ws["Chant du Cygne"] = 
+	sets.precast.ws["Fimbulvetr"] =
 		{
 
 		}
 
-	sets.precast.ws["Imperator"] = 
+	sets.precast.ws["Ground Strike"] = 
 		{
 
 		}
 
-	sets.precast.ws["Requiescat"] = 
+	sets.precast.ws["Resolution"] = 
 		{
 
 		}
@@ -118,9 +118,20 @@
 			
 		})
 
-	sets.precast.magic.healing.cure =
+--
+-- PRECAST MAGIC MODS
+--
+
+	-- Additional gear that will be equipped when casting a spell and Valiance is active
+	mods.precast.magic["Valiance"] =
 		{
 
+		}
+
+	-- Additional gear that will be equipped when casting a spell and Vallation is active
+	mods.precast.magic["Vallation"] =
+		{
+			
 		}
 
 --
@@ -132,7 +143,22 @@
 
 		}))
 
-	sets.midcast.magic.divine.enlight =
+	sets.midcast.magic.divine["Flash"] =
+		{
+
+		}
+
+	sets.midcast.magic.enhancing.black.spikes =
+		{
+
+		}
+
+	sets.midcast.magic.enhancing.white.barelement =
+		{
+
+		}
+
+	sets.midcast.magic.enhancing.white.barstatus =
 		{
 
 		}
@@ -142,17 +168,17 @@
 
 		}
 
-	sets.midcast.magic.enhancing.white.protect =
+	sets.midcast.magic.enhancing.white.regen =
 		{
 
 		}
 
-	sets.midcast.magic.enhancing.white.shell =
+	sets.midcast.magic.enhancing.white.refresh =
 		{
 
 		}
 
-	sets.midcast.magic.healing.cure =
+	sets.midcast.magic.enhancing.white.temper =
 		{
 
 		}
@@ -161,31 +187,22 @@
 -- MIDCAST MAGIC MODS
 --
 
-	-- SIRD gear that will be applied to healing spells when the SIRD mod = "CureSIRD"
-	mods.midcast.magic.healing["CureSIRD"] = 
+	-- Additional gear that will be equipped when casting a spell and Valiance is active
+	mods.midcast.magic["Valiance"] =
+		{
+
+		}
+
+	-- Additional gear that will be equipped when casting a spell and Vallation is active
+	mods.midcast.magic["Vallation"] =
 		{
 			
 		}
 
-	-- SIRD gear that will be applied to all magic when the SIRD mod = "FullSIRD"
-	mods.midcast.magic["FullSIRD"] =
+	mods.midcast.magic.enhancing["Embolden"] =
 		{
-			
+
 		}
-
-	-- Creates an 'exception' to FullSIRD for Flash since Flash is very fast and a low recast is likely preferable.
-	mods.midcast.magic["Flash"] = {}
-	mods.midcast.magic["Flash"]["FullSIRD"] = set_combine(sets.precast.magic,
-	{
-		
-	})
-
-	-- Creates an 'exception' to FullSIRD for Reprisal since Reprisal is very fast and a low recast is likely preferable.
-	mods.midcast.magic["Reprisal"] = {}
-	mods.midcast.magic["Reprisal"]["FullSIRD"] = set_combine(sets.precast.magic,
-	{
-
-	})
 
 --
 -- ENGAGED SET
@@ -216,6 +233,12 @@
 
 		}
 
+	-- Additional gear that will be equipped when engaged and Battuta is active
+	mods.engaged["Battuta"] = 
+		{
+
+		}
+
 --
 -- ENGAGED DEFENSE MODS
 --
@@ -239,6 +262,12 @@
 
 	-- High MDT/MEva gear when the Magical Defense mod = "MEvaHi"
 	mods.engaged["MEvaHi"] =
+		{
+
+		}
+
+	-- Parry enhancement gear when engaged and Parry mod = "+Parry"
+	mods.engaged["+Parry"] =
 		{
 
 		}

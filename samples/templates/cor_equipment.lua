@@ -2,47 +2,32 @@
 -- PRECAST JA SETS
 -- 
 
-	sets.precast.ja["Barrage"] =
+	sets.precast.ja["Fold"] =
 		{
 
 		}
 
-	sets.precast.ja["Bounty Shot"] =
+	sets.precast.ja["Random Deal"] =
 		{
 
 		}
 
-	sets.precast.ja["Camouflage"] =
+	sets.precast.ja["Snake Eye"] =
 		{
 
 		}
 
-	sets.precast.ja["Double Shot"] =
+	sets.precast.ja["Wild Card"] =
 		{
 
 		}
 
-	sets.precast.ja["Eagle Eye Shot"] =
+	sets.precast.ja.corsairshot =
 		{
 
 		}
 
-	sets.precast.ja["Flashy Shot"] =
-		{
-
-		}
-
-	sets.precast.ja["Scavenge"] =
-		{
-
-		}
-
-	sets.precast.ja["Shadowbind"] =
-		{
-
-		}
-
-	sets.precast.ja["Sharpshot"] =
+	sets.precast.ja.roll =
 		{
 
 		}
@@ -105,17 +90,7 @@
 
 		}
 
-	sets.precast.ws["Apex Arrow"] =
-		{
-
-		}
-
 	sets.precast.ws["Detonator"] =
-		{
-
-		}
-
-	sets.precast.ws["Jishnu's Radiance"] =
 		{
 
 		}
@@ -125,17 +100,12 @@
 
 		}
 
-	sets.precast.ws["Sarv"] =
+	sets.precast.ws["Leaden Salute"] =
 		{
 
 		}
 
 	sets.precast.ws["Terminus"] =
-		{
-
-		}
-
-	sets.precast.ws["Trueflight"] =
 		{
 
 		}
@@ -173,25 +143,6 @@
 
 		}
 
-	-- Additional gear that will be equipped when using a ranged weapon weaponskill and Barrage is active
-	mods.precast.ws.distant["Barrage"] =
-		{
-
-		}
-
-	-- Additional gear that will be equipped when using a ranged weapon weaponskill and Unlimited Shot is active
-	-- mods.precast.ws.distant.magical["Unlimited Shot"] and mods.precast.ws.distant.physical["Unlimited Shot"] can both also be defined
-	mods.precast.ws.distant["Unlimited Shot"] =
-		{
-			
-		}
-
-	-- Additional gear that will be equipped when using a ranged weapon weaponskill and Velocity Shot is active
-	mods.precast.ws.distant["Velocity Shot"] =
-		{
-			
-		}
-
 --
 -- PRECAST MAGIC SETS
 --
@@ -203,7 +154,7 @@
 --
 -- MIDCAST MAGIC SETS
 --
-	-- RNG isn't a caster so just use the magic precast set to shorten recast
+	-- COR isn't a caster so just use the magic precast set to shorten recast
 	sets.midcast.magic = sets.precast.magic
 
 --
@@ -240,32 +191,8 @@
 
 		}
 
-	-- Additional gear that will be equipped when performing a ranged attack and Barrage is active
-	mods.midcast.ra["Barrage"] =
-		{
-			
-		}
-
-	-- Additional gear that will be equipped when performing a ranged attack and Double Shot is active
-	mods.midcast.ra["Double Shot"] =
-		{
-			
-		}
-
-	-- Additional gear that will be equipped when performing a ranged attack and Hover Shot is active
-	mods.midcast.ra["Hover Shot"] =
-		{
-			
-		}
-
-	-- Additional gear that will be equipped when performing a ranged attack and Overkill is active
-	mods.midcast.ra["Overkill"] =
-		{
-			
-		}
-
-	-- Additional gear that will be equipped when performing a ranged attack and Velocity Shot is active
-	mods.midcast.ra["Velocity Shot"] =
+	-- Additional gear that will be equipped when performing a ranged attack and Triple Shot is active
+	mods.midcast.ra["Triple Shot"] =
 		{
 			
 		}
