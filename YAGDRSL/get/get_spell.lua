@@ -175,9 +175,9 @@ end
 function GetSpellType(spell)
 	local SpellType = spell.type
 
-	if SpellType = "BlackMagic" then
+	if SpellType == "BlackMagic" then
 		SpellType = MAP_CLASS_BLACK_MAGIC
-	elseif SpellType = "WhiteMagic" then
+	elseif SpellType == "WhiteMagic" then
 		SpellType = MAP_CLASS_WHITE_MAGIC
 	else
 		SpellType = string.lower(SpellType)
