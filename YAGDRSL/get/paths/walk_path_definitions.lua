@@ -86,8 +86,9 @@ function WalkPathMagic(RootName, EventSource, SpellAttributes)
 
 	else
 
-		-- Example: sets.precast.magic.enfeebling.paralyze
-		SetPaths, SetPathStrings = WalkPath(RootName, EventSource, SpellAttributes["Category"], SpellAttributes["Skill"], SpellAttributes["ParentGroup"])
+		-- Example: sets.precast.magic.healing.cure or sets.precast.magic.enfeebling.white.paralyze
+		-- ChildGroup is usually nil and has no effect. However for Enhancing and Enfeebling spells ParentGroup = black/white and ChildGroup = paralyze/silence/etc.
+		SetPaths, SetPathStrings = WalkPath(RootName, EventSource, SpellAttributes["Category"], SpellAttributes["Skill"], SpellAttributes["ParentGroup"], SpellAttributes["ChildGroup"])
 
 		-- Example: sets.precast.magic.enhancing["Phalanx II"], sets.precast.magic["Burn"] and sets.precast.magic.elemental.debuff["Burn"]
 		AppendValidNamedPaths(SetPaths, SetPathStrings, SpellAttributes["Name"])
