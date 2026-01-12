@@ -58,7 +58,7 @@ sets.precast.magic.enfeebling
 sets.precast.magic.enfeebling.black
 sets.precast.magic.enfeebling.black.bind
 sets.precast.magic.enfeebling.black.blind
-sets.precast.magic.enfeebling.black.break
+sets.precast.magic.enfeebling.black.petrify
 sets.precast.magic.enfeebling.black.dispel
 sets.precast.magic.enfeebling.black.distract
 sets.precast.magic.enfeebling.black.frazzle
