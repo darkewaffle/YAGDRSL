@@ -47,3 +47,8 @@ function LoadJobEquipmentFile(JobShortName)
 	local JobEquipmentFileName = GetJobFileEquipment(JobShortName)
 	return LoadPlayerFileProtected(JobEquipmentFileName, JobShortName .. " job equipment")
 end
+
+function LoadJobLogicFile(JobShortName)
+	local JobLogicFileName = GetJobFileLogic(JobShortName)
+	return LoadPlayerFileProtected(JobLogicFileName, JobShortName .. " job logic")
+end

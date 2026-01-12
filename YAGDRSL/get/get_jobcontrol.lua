@@ -51,3 +51,7 @@ end
 function GetJobFileEquipment(JobShortName)
 	return GetJobControl(JobShortName, JOB_CONTROL_FILE_EQUIPMENT) or PlaceholderString
 end
+
+function GetJobFileLogic(JobShortName)
+	return GetJobControl(JobShortName, JOB_CONTROL_FILE_LOGIC) or PlaceholderString
+end
