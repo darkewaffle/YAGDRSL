@@ -22,7 +22,7 @@ function CreateMod(ModName, ModDescription, ControlPanelDisplayOrder, CycleKeyBi
 
 Here's an example of how it would look in practice.
 ```
-CreateMod("Offense", "F9 Offense", true, "f9", "Acc", "STP", "Multi", "Subtle")
+CreateMod("Offense", "F9 Offense", 1, "f9", "Acc", "STP", "Multi", "Subtle")
 ```
 
 This will create a mod named "Offense". It will appear in the control panel and cycling the mod will be automatically bound to the key F9. Additionally in the control panel the description will be "F9 Offense". You can make the description whatever you like but including the keybind can be a handy reminder. Then you would just repeat the process for each mod you want to be able to control. It could be as simple as just having an "Offense" mod and "Defense" mod or as intricate as Offense, Physical Defense, Magical Defense, Treasure Hunter, Magic Burst, Cure Mode, etc. It's really up to you - although starting with fewer mods and keeping them simple is probably going to be the best place to start.
