@@ -34,7 +34,7 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 - ControlPanelX represents the horizontal position of the control panel
 - ControlPanelY represents the vertical position of the control panel
 - WeatherItems and DayItems represent gear that you want to equip when dealing magical damage that matches the current weather element or game day element
-6. Open the job_equipment.lua file and start filling out the gearsets. Many should be self-explanatory just from how they are named however there are also comments to help explain how and when some will be used.
+6. Open the job_equipment.lua file and start filling out the gearsets. Many should be self-explanatory just from how they are named however there are also comments to help explain how and when some of the more unfamiliar ones will be used.
 7. Once your character file and job equipment files have been updated you should be able to run a 'gs reload' command and start using YAGDRSL. Good luck!
 
 
