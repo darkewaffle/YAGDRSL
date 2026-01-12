@@ -9,14 +9,14 @@ So what should we put in the logic file? The most useful parts are probably all 
 First we need to actually make our mods. Usually these represent a variation of a gearset that contains more of a specific stat - more accuracy, more damage reduction, more magic evasion, etc. But you can also define them for more generic uses like an idle mod to equip your crafting or fishing gear. In order to make a mod we'll want to use the library's CreateMod function. CreateMod is a function that accepts four core parameters and then a variable number of parameters that represent the values that the mod can have.
 
 ```
-function CreateMod(ModName, ModDescription, ControlPanelDisplay, CycleKeyBind, ...)
+function CreateMod(ModName, ModDescription, ControlPanelDisplayOrder, CycleKeyBind, ...)
 ```
 
 | Parameter | Description |
 | --- | --- |
 | ModName | The name of the mod that will be used 'in code' to identify it. This should be unique to each mod. |
 | ModDescription | The description of the mod that will show up in the ControlPanel. You can make this whatever makes sense to you. |
-| ControlPanelDisplay | This is a true or false value that controls whether or not the mod will be displayed in the Control Panel. |
+| ControlPanelDisplayOrder | This is a numeric value that controls the order that the mod will be displayed in the Control Panel. If <= 0 then it will not be displayed. |
 | CycleKeyBind | If this value is input then YAGDRSL will attempt to use it to keybind a cycle command for the mod. [Click here for resources on how to format a key for binding.](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/YAG%20Tips%20and%20Tricks.md#keybinds)|
 | ... | These will be the mod values. They should be wrapped with quotation marks and separated by commas. While not required it is recommended that your mod values be unique across all mods in use by the job as well. |
 

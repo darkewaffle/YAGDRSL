@@ -28,8 +28,8 @@ ConfigureWeaponLock("LockWeps", false, "~end")
 
 ## CreateMod
 ```
-function CreateMod(ModName, ModDescription, ControlPanelDisplay, CycleKeyBind, ...)
-CreateMod("MagicBurst", "MB Mode", true, "f9", "MB High", "MB Low")
+function CreateMod(ModName, ModDescription, ControlPanelDisplayOrder, CycleKeyBind, ...)
+CreateMod("MagicBurst", "MB Mode", 2, "f9", "MB High", "MB Low")
 ```
 
 ## InsertGearSet
