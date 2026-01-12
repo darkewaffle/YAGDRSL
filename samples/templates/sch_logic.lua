@@ -1,5 +1,5 @@
 AssignModOptions("Offense", "MAcc", "MDmg")
-CreateMod("Magic Burst", "ShF9 MBurst",   true, "~f9",   "+MBurst")
+CreateMod("Magic Burst", "ShF9  MBurst",   true, "~f9",   "+MBurst")
 CreateMod("Refresh",     "CtF12 Refresh", true, "^f12",  "+Refresh")
 
 
@@ -14,7 +14,7 @@ TrackOffenseBuffs("Light Arts", "Penury", "Rapture", "Perpetuance")
 TrackOffenseBuffs("Dark Arts", "Parsimony", "Ebullience", "Immanence")
 
 -- General Buffs
-TrackOffenseBuffs("Sublimation")
+TrackOffenseBuffs("Sublimation: Activated")
 
 function HookPrecastCustomizeOffense(SpellAttributes, PrecastSet) -- @Hook
 	-- This is a function the user can override to implement custom logic.
@@ -40,7 +40,7 @@ function HookMidcastCustomizeOffense(SpellAttributes, MidcastSet) -- @Hook
 		if (buffactive["Celerity"] and SpellAttributes["Class"] == "white") or (buffactive["Alacrity"] and SpellAttributes["Class"] == "black") then
 			MidcastSet = set_combine(MidcastSet, customize.relicboots)
 
-		elseif buffactive["Klimaform"] and (SpellAttributes["Skill"] == "elemental" or SpellAttributes["Skill"] == "dark")
+		elseif buffactive["Klimaform"] and (SpellAttributes["Skill"] == "elemental" or SpellAttributes["Skill"] == "dark") then
 			MidcastSet = set_combine(MidcastSet, customize.empyreanboots)
 		end
 		

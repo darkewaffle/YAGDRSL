@@ -80,7 +80,7 @@
 
 	-- This type of mod is supported for all pet names and types of bloodpacts.
 	-- It can be used to equip avatar-specific gear only when the named avatar is active.
-	mods.midcast.bloodpact["Cait Sith"] =
+	mods.midcast.ja.bloodpact["Cait Sith"] =
 		{
 			
 		}
@@ -177,15 +177,15 @@
 -- MIDCAST MAGIC SETS
 --
 
-	sets.midcast.magic.enfeebling =
+	InsertGearSet(sets.midcast.magic.enfeebling,
 		{
 			
-		}
+		})
 
-	sets.midcast.magic.enhancing =
+	InsertGearSet(sets.midcast.magic.enhancing,
 		{
 			
-		}
+		})
 
 	sets.midcast.magic.enhancing.white.barelement =
 		{

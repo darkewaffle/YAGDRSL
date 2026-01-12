@@ -236,7 +236,7 @@
 		}
 
 	-- +Block or +Shield Mastery gear when engaged and BlockTP mod = "+BlockTP"
-	mods.engaged["+BlockTP"]
+	mods.engaged["+BlockTP"] =
 		{
 			
 		}

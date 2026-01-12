@@ -109,16 +109,17 @@
 --
 
 	-- Probably just Fast Cast gear
-	sets.precast.magic =
+	InsertGearSet(sets.precast.magic,
 		{
 			
-		}
+		})
+
 --
 -- MIDCAST MAGIC SETS
 --
 
 	-- PUP isn't a caster so just use the magic precast set to shorten recast
-	sets.midcast.magic = sets.precast.magic
+	InsertGearSet(sets.midcast.magic, sets.precast.magic)
 
 --
 -- ENGAGED SET

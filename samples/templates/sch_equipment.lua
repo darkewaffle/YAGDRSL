@@ -175,7 +175,7 @@
 			
 		}
 
-	sets.midcast.magic.enfeebling.black.break =
+	sets.midcast.magic.enfeebling.black.petrify =
 		{
 			
 		}
@@ -558,7 +558,7 @@
 		}
 
 	-- Additional gear that will be equipped when idle and Sublimation is active
-	mods.idle["Sublimation"] =
+	mods.idle["Sublimation: Activated"] =
 		{
 			
 		}

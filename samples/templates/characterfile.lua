@@ -44,7 +44,8 @@ function GetPlayerSettings()
 	ControlPanelX = 200
 	ControlPanelY = 200
 	ControlPanelDescriptionWidth = 20
-	ControlPanelValueWidth = 10
+	ControlPanelValueWidth = 12
+	ControlPanelDraggable = true
 
 	CreateMod("Offense",         "F9    Offense",true, "f9",    "Acc",    "Multi")
 	CreateMod("PhysicalDefense", "F10   PDef",   true, "f10",   "PDTLo",  "PDTHi")

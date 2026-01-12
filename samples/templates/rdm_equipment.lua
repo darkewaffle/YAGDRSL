@@ -121,7 +121,7 @@
 			
 		}
 
-	sets.midcast.magic.enfeebling.black.break =
+	sets.midcast.magic.enfeebling.black.petrify =
 		{
 			
 		}
