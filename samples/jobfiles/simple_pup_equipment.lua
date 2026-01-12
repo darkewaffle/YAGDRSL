@@ -22,7 +22,7 @@
 -- PRECAST WS SETS
 --
 
-	sets.precast.ws = set_combine(collections.Mpaca,
+	InsertGearSet(sets.precast.ws, set_combine(collections.Mpaca,
 		{
 			neck="Fotia Gorget",
 			ear1="Sroda Earring",
@@ -31,32 +31,32 @@
 			ring2="Karieyh Ring +1",
 			back="Null Shawl",
 			waist="Fotia Belt"
-		})
+		}))
 
 --
 -- PRECAST MAGIC SETS
 --
 
-	sets.precast.magic =
-	{
-		ammo="Sapience Orb",
-		head=gear.fastcast_light_head,
-		neck="Voltsurge Torque",
-		ear1="Etiolation Earring",
-		ear2="Loquacious Earring",
-		body=gear.fastcast_light_body,
-		hands=gear.fastcast_light_hands,
-		ring1="Prolix Ring",
-		ring2="Naji's Loop",
-		legs=gear.fastcast_light_legs,
-		feet=gear.fastcast_light_feet
-	}
+	InsertGearSet(sets.precast.magic,
+		{
+			ammo="Sapience Orb",
+			head=gear.fastcast_light_head,
+			neck="Voltsurge Torque",
+			ear1="Etiolation Earring",
+			ear2="Loquacious Earring",
+			body=gear.fastcast_light_body,
+			hands=gear.fastcast_light_hands,
+			ring1="Prolix Ring",
+			ring2="Naji's Loop",
+			legs=gear.fastcast_light_legs,
+			feet=gear.fastcast_light_feet
+		})
 
 --
 -- MIDCAST MAGIC SETS
 --
 	
-	sets.midcast.magic = sets.precast.magic
+	InsertGearSet(sets.midcast.magic, sets.precast.magic)
 
 --
 -- ENGAGED SET
