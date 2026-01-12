@@ -186,8 +186,8 @@ The control panel is a text display that will show you the current state of vari
 | Setting Name | Default Value |
 | --- | --- |
 | ControlPanelVisible | true |
-| ControlPanelActiveDecoratorPrefix | "**" |
-| ControlPanelActiveDecoratorSuffix | "**" |
+| ControlPanelActiveDecoratorPrefix | "*" |
+| ControlPanelActiveDecoratorSuffix | "*" |
 | ControlPanelX | 100 |
 | ControlPanelY | 100 |
 | ControlPanelBackgroundTransparency | 128 |

@@ -41,8 +41,8 @@ _G[YAG_SETTINGS][SETTINGS_DEFAULT] =
 	ControlPanelDescriptionWidth = 20,
 	ControlPanelValueWidth = 10,
 	ControlPanelActiveValueOnly = false,
-	ControlPanelActiveDecoratorPrefix = "**",
-	ControlPanelActiveDecoratorSuffix = "**",
+	ControlPanelActiveDecoratorPrefix = "*",
+	ControlPanelActiveDecoratorSuffix = "*",
 
 	ControlPanelX = 100,
 	ControlPanelY = 100,

@@ -137,8 +137,8 @@ function GetPlayerSettings()
 		ControlPanelActiveValueOnly = false
 
 		ControlPanelVisible = true
-		ControlPanelActiveDecoratorPrefix = "**"
-		ControlPanelActiveDecoratorSuffix = "**"
+		ControlPanelActiveDecoratorPrefix = "*"
+		ControlPanelActiveDecoratorSuffix = "*"
 
 		ControlPanelX = 100
 		ControlPanelY = 100
