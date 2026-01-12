@@ -70,7 +70,127 @@ function GetPlayerSettings()
 
 	BindKey("f12", "gs c update")
 
-	SetAutoCancelBuff({"Monomi: Ichi", "Sneak", "Spectral Jig"},	
+	SetAutoCancelBuff({"Monomi: Ichi", "Sneak", "Spectral Jig"},
 					  {"Sneak"})
 
+	-- Gear that should be equipped when dealing magic damage that matches the game weather element
+	WeatherItems = {}
+	WeatherItems.Fire =
+		{
+			
+		}
+
+	WeatherItems.Ice =
+		{
+			
+		}
+
+	WeatherItems.Wind =
+		{
+			
+		}
+
+	WeatherItems.Earth =
+		{
+			
+		}
+
+	WeatherItems.Lightning =
+		{
+			
+		}
+
+	WeatherItems.Water =
+		{
+			
+		}
+
+	WeatherItems.Light =
+		{
+			
+		}
+		
+	WeatherItems.Dark =
+		{
+			
+		}
+
+	-- Gear that should be equipped when dealing magic damage that matches the game day element
+	DayItems = {}
+	DayItems.Fire =
+		{
+			
+		}
+
+	DayItems.Ice =
+		{
+			
+		}
+
+	DayItems.Wind =
+		{
+			
+		}
+
+	DayItems.Earth =
+		{
+			
+		}
+
+	DayItems.Lightning =
+		{
+			
+		}
+
+	DayItems.Water =
+		{
+			
+		}
+
+	DayItems.Light =
+		{
+			
+		}
+		
+	DayItems.Dark =
+		{
+			
+		}
+end
+
+function ApplyWeatherAndDayGear(SpellAttributes, GearSet)
+	if SpellAttributes["DamageType"] == MAP_DAMAGE_MAGICAL then
+		if SpellAttributes["Element=Day"] then
+			GearSet = set_combine(GearSet, DayItems[SpellAttributes["Element"]])
+		end
+
+		if SpellAttributes["Element=Weather"] then
+			GearSet = set_combine(GearSet, WeatherItems[SpellAttributes["Element"]])
+		end
+	end
+	return GearSet
+end
+
+function HookPrecastCustomizeOffense(SpellAttributes, PrecastSet) -- @Hook
+	-- This is a function the user can override to implement custom logic.
+	-- It must return a gearset in order proceed properly.
+
+	-- Precast customize for weather/day gear will only apply to weaponskills
+	if SpellAttributes["Category"] == "ws" then
+		PrecastSet = ApplyWeatherAndDayGear(SpellAttributes, PrecastSet)
+	end
+
+	return PrecastSet
+end
+
+function HookMidcastCustomizeOffense(SpellAttributes, MidcastSet) -- @Hook
+	-- This is a function the user can override to implement custom logic.
+	-- It must return a gearset in order proceed properly.
+
+	-- Midcast customize for weather/day gear will only apply to spells
+	if SpellAttributes["Category"] == "magic" then
+		MidcastSet = ApplyWeatherAndDayGear(SpellAttributes, MidcastSet)
+	end
+
+	return MidcastSet
 end

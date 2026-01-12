@@ -28,6 +28,11 @@ function HookPrecastCustomizeOffense(SpellAttributes, PrecastSet) -- @Hook
 
 	end
 
+	-- Precast customize for weather/day gear will only apply to weaponskills
+	if SpellAttributes["Category"] == "ws" then
+		PrecastSet = ApplyWeatherAndDayGear(SpellAttributes, PrecastSet)
+	end
+
 	return PrecastSet
 end
 
@@ -39,11 +44,15 @@ function HookMidcastCustomizeOffense(SpellAttributes, MidcastSet) -- @Hook
 
 		if (buffactive["Celerity"] and SpellAttributes["Class"] == "white") or (buffactive["Alacrity"] and SpellAttributes["Class"] == "black") then
 			MidcastSet = set_combine(MidcastSet, customize.relicboots)
-
 		elseif buffactive["Klimaform"] and (SpellAttributes["Skill"] == "elemental" or SpellAttributes["Skill"] == "dark") then
 			MidcastSet = set_combine(MidcastSet, customize.empyreanboots)
 		end
-		
+
+	end
+
+	-- Midcast customize for weather/day gear will only apply to spells
+	if SpellAttributes["Category"] == "magic" then
+		MidcastSet = ApplyWeatherAndDayGear(SpellAttributes, MidcastSet)
 	end
 
 	return MidcastSet
