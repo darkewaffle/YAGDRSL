@@ -7,11 +7,11 @@ require "YAGDRSL/get/mods/get_mod_value.lua"
 -- It can be manipulated directly by implementation of these functions or you can simply call ConfigureWeaponLock in your player or job file.
 
 -- ModDescription is the description of the mod that will show up in the ControlPanel
--- ControlPanelDisplay should be a true or false value indicating if you want it to display in the ControlPanel
+-- ControlPanelDisplayOrder should be a numeric value that controls the order that the mod will be displayed in the Control Panel. If <= 0 then it will not be displayed.
 -- ModKeyBind should be a string that represents a key you want to use to cycle WeaponLock
 -- Example: ConfigureWeaponLock("DisabledWeps", true, "f12")
-function ConfigureWeaponLock(ModDescription, ControlPanelDisplay, ModKeyBind)
-	ModifyMod(MOD_LOCK_WEAPONS, ModDescription, ControlPanelDisplay, ModKeyBind)
+function ConfigureWeaponLock(ModDescription, ControlPanelDisplayOrder, ModKeyBind)
+	ModifyMod(MOD_LOCK_WEAPONS, ModDescription, ControlPanelDisplayOrder, ModKeyBind)
 end
 
 function CycleWeaponLock()

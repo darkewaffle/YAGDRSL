@@ -2,7 +2,7 @@
 
 The override is a special type of mod. It works just like a mod except the gearsets for it are defined in the 'overrides' table and there's only one override. And it's always given priority over other mods no matter what. The override is a built-in mod that you just need to populate with values. Then it works just like other mods - you can cycle it to select the active value and then the active value is applied to the set paths to find the appropriate override. Here's how it looks to define your override values.
 ```
-ConfigureOverride("ShEnd Override", true, "~end", "BossTank", "Vagary")
+ConfigureOverride("ShEnd Override", 10, "~end", "BossTank", "Vagary")
 ```
 ConfigureOverride is the function you use to define your override, we'll cover what the parameters do later but for now the important thing to know is that this creates an override that has three values - the default "off" and then two different active values of "BossTank" and "Vagary". When the override is set to "off" it does nothing and has no impact on your gear. When an override value is active then YAGDRSL will look for override sets that have the same name as the override value - just like how it searches for a mod set based on the mod value. Then it will apply this override set to the gearset as the final step after both offense and defense mods have been applied. Therefore the override set will override any previously selected gear. Let's look at an example of how this might be useful.
 

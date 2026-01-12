@@ -51,8 +51,8 @@ Once you've put the mods in the mod order YAGDRSL will use them, when active and
 ### Library Mods
 A few other functions are worth mentioning as inclusions in your job logic file. These are primarily related to adjusting mods that are built-in to YAGDRSL. So you don't need to create them but you are able to configure them.
 ```
-function ConfigureDefensePriority(ModDescription, ControlPanelDisplay, ModKeyBind)
-function ConfigureWeaponLock(ModDescription, ControlPanelDisplay, ModKeyBind)
+function ConfigureDefensePriority(ModDescription, ControlPanelDisplayOrder, ModKeyBind)
+function ConfigureWeaponLock(ModDescription, ControlPanelDisplayOrder, ModKeyBind)
 ```
 First there are two mods that don't affect your gear directly like other mods but instead control how YAGDRSL operates. Defense Priority is the mod that controls whether your defense or offense mods are applied first - meaning it controls which ones can potentially overwrite the other. Weapon Lock is a mod that tells YAGDRSL which weapon slots you want to be enabled or disabled. You do not need to input the values of these mods but you can still control their description, decide if they should appear in the control panel and give them a keybind.
 
@@ -63,13 +63,13 @@ Then we have the override configuration. If you're not sure what the override is
 Since the override is built into the library you don't need to create it. But if you want to use it then you will need to populate it with values. You can do this with the ConfigureOverride function which works very similar to the previous Configure functions.
 
 ```
-function ConfigureOverride(OverrideDescription, ControlPanelDisplay, OverrideKeyBind, ...)
+function ConfigureOverride(OverrideDescription, ControlPanelDisplayOrder, OverrideKeyBind, ...)
 ```
 
 The only difference is ConfigureOverride accepts additional parameters at the end which will become the values that the override can have. Here's an example.
 
 ```
-ConfigureOverride("My Overrides", true, "f10", "CP", "BluLearn", "Vagary")
+ConfigureOverride("MyOverrides", 10, "f10", "CP", "BluLearn", "Vagary")
 ```
 
 Once you've given values to the override it essentially works like any other mod. You can just cycle it to a value and then that value will be used to find override gearsets.

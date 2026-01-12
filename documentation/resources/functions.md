@@ -10,20 +10,20 @@ BindKey("f12", "gs c update", true)
 
 ## ConfigureDefensePriority
 ```
-function ConfigureDefensePriority(ModDescription, ControlPanelDisplay, ModKeyBind)
-ConfigureDefensePriority("Def Prio", true, "end")
+function ConfigureDefensePriority(ModDescription, ControlPanelDisplayOrder, ModKeyBind)
+ConfigureDefensePriority("Def Prio", 15, "end")
 ```
 
 ## ConfigureOverride
 ```
-function ConfigureOverride(OverrideDescription, ControlPanelDisplay, OverrideKeyBind, ...)
-ConfigureOverride("My Overrides", true, "f10", "CP", "BluLearn", "Vagary")
+function ConfigureOverride(OverrideDescription, ControlPanelDisplayOrder, OverrideKeyBind, ...)
+ConfigureOverride("My Overrides", 10, "f10", "CP", "BluLearn", "Vagary")
 ```
 
 ## ConfigureWeaponLock
 ```
-function ConfigureWeaponLock(ModDescription, ControlPanelDisplay, ModKeyBind)
-ConfigureWeaponLock("LockWeps", false, "~end")
+function ConfigureWeaponLock(ModDescription, ControlPanelDisplayOrder, ModKeyBind)
+ConfigureWeaponLock("LockWeps", 20, "~end")
 ```
 
 ## CreateMod
