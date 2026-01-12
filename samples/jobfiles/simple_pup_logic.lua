@@ -1,6 +1,6 @@
-CreateMod("PetMode", "F9  PetMode", true, "f9", "FullPet", "FullMaster")
+CreateMod("PetMode", "F9  PetMode", 1, "f9", "FullPet", "FullMaster")
 
-ConfigureWeaponLock("F10 WepLock", true, "f10")
+ConfigureWeaponLock("F10 WepLock", 2, "f10")
 SetWeaponLockAll()
 
 

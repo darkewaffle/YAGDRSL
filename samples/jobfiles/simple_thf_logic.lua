@@ -6,11 +6,11 @@
 	TickInterval = 30
 	TickEvaluateMovement = true
 
-	CreateMod("Offense",         "F9    Offense",true, "f9",    "Acc")
-	CreateMod("PhysicalDefense", "F10   PDef",   true, "f10",   "PDT")
-	CreateMod("TH",              "CtF12 TH",     true, "^f12",  "TH")
+	CreateMod("Offense",         "F9    Offense", 1, "f9",    "Acc")
+	CreateMod("PhysicalDefense", "F10   PDef",    2, "f10",   "PDT")
+	CreateMod("TH",              "CtF12 TH",      3, "^f12",  "TH")
 
-	ConfigureDefensePriority("End   DefPriority", true, "end")
+	ConfigureDefensePriority("End   DefPriority", 4, "end")
 
 	SetAutoCancelBuff({"Spectral Jig"},	
 					{"Sneak"})

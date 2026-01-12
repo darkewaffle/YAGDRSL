@@ -6,14 +6,14 @@
 	TickInterval = 30
 	TickEvaluateMovement = true
 
-	CreateMod("Offense",         "F9    Offense",true, "f9",    "Acc",    "STP",    "Multi", "Subtle")
-	CreateMod("PhysicalDefense", "F10   PDef",   true, "f10",   "PDT",    "PDTHP",  "Eva")
-	CreateMod("MagicalDefense",  "F11   MDef",   true, "f11",   "MEvaLo", "MEvaHi", "MEvaHP")
-	CreateMod("TH",              "CtF12 TH",     true, "^f12",  "TH4",    "TH2")
-	CreateMod("AutoDW",          "ShF12 DW",     true, "~f12",  "On")
+	CreateMod("Offense",         "F9    Offense",1, "f9",    "Acc",    "STP",    "Multi", "Subtle")
+	CreateMod("PhysicalDefense", "F10   PDef",   2, "f10",   "PDT",    "PDTHP",  "Eva")
+	CreateMod("MagicalDefense",  "F11   MDef",   3, "f11",   "MEvaLo", "MEvaHi", "MEvaHP")
+	CreateMod("TH",              "CtF12 TH",     4, "^f12",  "TH4",    "TH2")
+	CreateMod("AutoDW",          "ShF12 DW",     5, "~f12",  "On")
 
-	ConfigureDefensePriority("End   DefPriority", true, "end")
-	ConfigureOverride("ShEnd Override", true, "~end", "BossTank", "Vagary")
+	ConfigureDefensePriority("End   DefPriority", 6, "end")
+	ConfigureOverride("ShEnd Override", 7, "~end", "BossTank", "Vagary")
 
 
 	SetAutoCancelBuff({"Curing Waltz", "Curing Waltz II", "Curing Waltz III", "Curing Waltz IV", "Curing Waltz V", "Divine Waltz", "Divine Waltz II", "Healing Waltz"},

@@ -1,4 +1,4 @@
-	CreateMod("Refresh",         "ShF11",        true, "~f11",  "+Refresh")
+	CreateMod("Refresh",         "ShF11",        1, "~f11",  "+Refresh")
 
 	ConfigureWeaponLock("Home  WeaponLock", true, "home")
 	ConfigureDefensePriority("End   DefPriority", true, "end")
