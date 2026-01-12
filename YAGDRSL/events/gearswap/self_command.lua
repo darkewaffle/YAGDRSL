@@ -25,17 +25,18 @@ end
 
 CommandMap =
 {
-	["cycle"]      = SelfCommandCycle,
-	["debug"]      = SelfCommandDebug,
-	["demo"]       = SelfCommandDemo,
-	["devlog"]     = SelfCommandDevLog,
-	["orders"]     = SelfCommandOrders,
-	["ring"]       = SelfCommandRing,
-	["showlog"]    = SelfCommandShowLog,
-	["tables"]     = SelfCommandTables,
-	["test1"]      = SelfCommandTest1,
-	["test2"]      = SelfCommandTest2,
-	["update"]     = SelfCommandUpdate,
-	["updatetick"] = SelfCommandUpdateTick,
-	["validate"]   = SelfCommandValidate
+	["cycle"]       = SelfCommandCycle,
+	["debug"]       = SelfCommandDebug,
+	["demo"]        = SelfCommandDemo,
+	["devlog"]      = SelfCommandDevLog,
+	["loadalljobs"] = SelfCommandLoadAllJobs,
+	["orders"]      = SelfCommandOrders,
+	["ring"]        = SelfCommandRing,
+	["showlog"]     = SelfCommandShowLog,
+	["tables"]      = SelfCommandTables,
+	["test1"]       = SelfCommandTest1,
+	["test2"]       = SelfCommandTest2,
+	["update"]      = SelfCommandUpdate,
+	["updatetick"]  = SelfCommandUpdateTick,
+	["validate"]    = SelfCommandValidate
 }
