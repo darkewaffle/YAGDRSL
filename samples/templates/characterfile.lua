@@ -47,13 +47,13 @@ function GetPlayerSettings()
 	ControlPanelValueWidth = 12
 	ControlPanelDraggable = true
 
-	CreateMod("Offense",         "F9    Offense",true, "f9",    "Acc",    "Multi")
-	CreateMod("PhysicalDefense", "F10   PDef",   true, "f10",   "PDTLo",  "PDTHi")
-	CreateMod("MagicalDefense",  "F11   MDef",   true, "f11",   "MEvaLo", "MEvaHi")
-	CreateMod("TH",              "ShF12 TH",     true, "~f12",  "+TH")
+	CreateMod("Offense",         "F9    Offense",1, "f9",    "Acc",    "Multi")
+	CreateMod("PhysicalDefense", "F10   PDef",   2, "f10",   "PDTLo",  "PDTHi")
+	CreateMod("MagicalDefense",  "F11   MDef",   3, "f11",   "MEvaLo", "MEvaHi")
+	CreateMod("TH",              "ShF12 TH",     4, "~f12",  "+TH")
 
-	ConfigureDefensePriority("End   DefPriority", true, "end")
-	ConfigureWeaponLock("ShEnd WepLock", true, "~end")
+	ConfigureDefensePriority("End   DefPriority", 98, "end")
+	ConfigureWeaponLock(     "ShEnd WepLock",     99, "~end")
 
 	SetModOrderPrecastWSOffense("Offense")
 
