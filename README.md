@@ -20,14 +20,22 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 
 
 ## Guides and Documentation
-#### Quick Start Guide
+#### Quick Start Guide Using YAGDRSL Templates
 1. Download the YAG_include.lua file and the entire YAGDRSL folder. These can also be found [in the zip file under 'Releases'](https://github.com/darkewaffle/YAGDRSL/releases).
 2. Place them in your Windower\addons\GearSwap\libs folder.<br>
 *Or if you want to test-drive YAGDRSL and keep the files for it separate from your existing Gearswap files you can also just put everything in the libs-dev folder*.
-3. In the libs folder create a .lua file with the same name as your character. (eg: If your character is John then create John.lua).<br>
+3. Download a copy of the [character file template](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/templates/characterfile.lua) and both the equipment and logic file from the [templates directory](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/templates) for any job(s) that you want to configure with YAGDRSL.
+4. Place the character file and any job-specific files into the same directory as YAG_include.lua and the YAGDRSL folder.
+3. Rename characterfile.lua to actually match the name of your character. (eg: If your character is John then create John.lua).<br>
 *If using libs-dev to test YAGDRSL, you can easily go back and forth between your current Gearswap setup and YAGDRSL. Just rename the libs-dev/charactername.lua file so gearswap won't recognize it, input a 'gs reload' command and you're back to your original gearswap. Then when you want to continue trying YAGDSRL just do the reverse - change the file name to match your character, 'gs reload' and you're back in YAGDRSL.*
-4. Follow the examples in [the sample character file](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/charactername.lua) to create your character file.
-5. When created correctly the character file will then load your job files and you are up and running.
+4. When you have all the files in place then your folder [should look something like this](https://imgur.com/a/H3WAsw2).
+5. The character file should be fairly complete already - however you may want to adjust the following items.
+- macrobook, macroset, and lockstyle inside of 'JobControls' represent the in-game macros and lockstyle that are set when YAGDRSL is loaded or you change to a new job
+- ControlPanelX represents the horizontal position of the control panel
+- ControlPanelY represents the vertical position of the control panel
+- WeatherItems and DayItems represent gear that you want to equip when dealing magical damage that matches the current weather element or game day element
+6. Open the job_equipment.lua file and start filling out the gearsets. Many should be self-explanatory just from how they are named however there are also comments to help explain how and when some will be used.
+7. Once your character file and job equipment files have been updated you should be able to run a 'gs reload' command and start using YAGDRSL. Good luck!
 
 
 #### Full Documentation
