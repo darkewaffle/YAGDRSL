@@ -61,7 +61,7 @@
 
 --
 -- PRECAST WS SETS
--- 
+--
 
 	InsertGearSet(sets.precast.ws,
 		{

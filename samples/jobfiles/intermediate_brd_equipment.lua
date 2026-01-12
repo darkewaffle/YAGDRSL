@@ -109,7 +109,7 @@
 	-- sets.precast.magic currently provides 81% Fast Cast
 	sets.precast.magic.singing =
 		{
-
+			
 		}
 
 --
