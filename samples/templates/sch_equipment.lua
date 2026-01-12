@@ -310,13 +310,13 @@
 			
 		}
 
-	-- +Magic Accuracy gear when casting an elemental spell and Magic Offense mod = "MAcc"
+	-- +Magic Accuracy gear when casting an elemental spell and Offense mod = "MAcc"
 	mods.midcast.magic.elemental["MAcc"] =
 		{
 			
 		}
 
-	-- +Magic damage gear when casting an elemental spell and Magic Offense mod = "MDmg"
+	-- +Magic damage gear when casting an elemental spell and Offense mod = "MDmg"
 	mods.midcast.magic.elemental["MDmg"] =
 		{
 			

@@ -289,7 +289,7 @@
 			
 		}
 
-	-- +Magic Accuracy gear when casting an elemental spell and Magic Offense mod = "MDmg"
+	-- +Magic damage gear when casting an elemental spell and Magic Offense mod = "MDmg"
 	mods.midcast.magic.elemental["MDmg"] =
 		{
 			
@@ -306,6 +306,7 @@
 		{
 			
 		}
+
 	-- Additional gear that will be equipped when casting an enfeebling spell and Saboteur is active
 	mods.midcast.magic.enfeebling["Saboteur"] =
 		{
