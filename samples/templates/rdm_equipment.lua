@@ -283,13 +283,13 @@
 			
 		}
 
-	-- +Magic Accuracy gear when casting an elemental spell and Magic Offense mod = "NukeAcc"
+	-- +Magic Accuracy gear when casting an elemental spell and MagicOffense mod = "NukeAcc"
 	mods.midcast.magic.elemental["NukeAcc"] =
 		{
 			
 		}
 
-	-- +Magic damage gear when casting an elemental spell and Magic Offense mod = "MDmg"
+	-- +Magic damage gear when casting an elemental spell and MagicOffense mod = "MDmg"
 	mods.midcast.magic.elemental["MDmg"] =
 		{
 			

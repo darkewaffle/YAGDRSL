@@ -5,7 +5,7 @@
 	CreateMod("Offense",         "F9    Offense", true, "f9",    "Hybrid",    "DPS")
 	CreateMod("BlockTP",         "ShF9  BlockTP", true, "~f9",   "BlockTP")
 	CreateMod("SIRD",            "F10   SIRD",    true, "f10",   "SIRD", "FullSIRD")
-	CreateMod("Preserve HP",     "ShF10 HP",      true, "~f10",  "HPHi", "HPLo")
+	CreateMod("PreserveHP",      "ShF10 HP",      true, "~f10",  "HPHi", "HPLo")
 	CreateMod("MagicalDefense",  "F11   MDef",    true, "f11",   "MEva")
 	CreateMod("Refresh",         "ShF11 Refresh", true, "~f11",  "+Refresh")
 	CreateMod("MagicBurst",      "CtF11 MBurst",  true, "^f11",  "MB")
@@ -14,18 +14,18 @@
 	SetModValue("ShelteredRing", "Shelter")
 
 	SetModValue("SIRD", "SIRD")
-	SetModValue("Preserve HP", "HPHi")
+	SetModValue("PreserveHP", "HPHi")
 
 
 	ConfigureDefensePriority("End   DefPriority", true, "end")
 
-	SetModOrderPrecastMagicDefense("Preserve HP")
+	SetModOrderPrecastMagicDefense("PreserveHP")
 
 	SetModOrderMidcastMagicOffense("MagicBurst")
-	SetModOrderMidcastMagicDefense("Preserve HP", "SIRD", "ShelteredRing")
+	SetModOrderMidcastMagicDefense("PreserveHP", "SIRD", "ShelteredRing")
 
 	SetModOrderPrecastWSOffense("Offense")
-	SetModOrderPrecastWSDefense("Preserve HP")
+	SetModOrderPrecastWSDefense("PreserveHP")
 
 	SetModOrderEngagedOffense ("Offense", "BlockTP")
 	SetModOrderEngagedDefense ("MagicalDefense")

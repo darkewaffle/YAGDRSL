@@ -130,7 +130,7 @@
 			
 		}
 
-	-- Magic burst enhancement gear that will be equipped when casting an elemental spell and the Magic Burst mod = "+MBurst"
+	-- Magic burst enhancement gear that will be equipped when casting an elemental spell and the MagicBurst mod = "+MBurst"
 	mods.midcast.magic.elemental["+MBurst"] =
 		{
 			
