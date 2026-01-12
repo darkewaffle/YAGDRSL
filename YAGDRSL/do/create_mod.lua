@@ -5,12 +5,17 @@ require "YAGDRSL/libraries/modes.lua"
 -- Wrapper function to make sure that mods follow an expected template for use with the library.
 -- Also just makes it less of a hassle.
 
-function CreateMod(ModName, ModDescription, ControlPanelDisplay, CycleKeyBind, ...)
+function CreateMod(ModName, ModDescription, ControlPanelDisplayOrder, CycleKeyBind, ...)	
+	local SpacesFound = string.match(ModName, "%s")
+	if SpacesFound then
+		ChatError("Mod name '" .. ModName .. "'", "contains spaces. This is not recommended and may interfere with attempting to cycle the mod.")
+	end
+
 	_G[MOD_VALUES_ROOT_NAME][ModName] = M{MOD_DEFAULT_OFF, ...}
 	_G[MOD_VALUES_ROOT_NAME][ModName]:describe(ModDescription)
 
-	if ControlPanelDisplay then
-		table.insert(_G[MOD_ORDER_CONTROL_PANEL], ModName)
+	if ControlPanelDisplayOrder > 0 then
+		table.insert(_G[MOD_ORDER_CONTROL_PANEL], {["Name"]=ModName, ["Order"]=ControlPanelDisplayOrder})
 	end
 
 	if CycleKeyBind then

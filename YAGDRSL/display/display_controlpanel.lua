@@ -22,10 +22,12 @@ end
 function GetControlPanelContents()
 	local ControlPanelContents = ""
 
+	SortControlPanelMods()
+
 	-- The control panel displays the state of mod values.
-	-- _G[MOD_ORDER_CONTROL_PANEL] is a table that will be populated with ModName values from user calls of CreateMod
-	for Index, ModName in ipairs(_G[MOD_ORDER_CONTROL_PANEL]) do
-		ControlPanelContents = ControlPanelContents .. FormatModForControlPanel(ModName)
+	-- _G[MOD_ORDER_CONTROL_PANEL] is a table that will be populated with ModDetails values from user calls of CreateMod
+	for Index, ModDetails in ipairs(_G[MOD_ORDER_CONTROL_PANEL]) do
+		ControlPanelContents = ControlPanelContents .. FormatModForControlPanel(ModDetails.Name)
 		
 		-- Append a newline character when the mod is not the last mod in the list.
 		if Index ~= #_G[MOD_ORDER_CONTROL_PANEL] then
@@ -34,4 +36,12 @@ function GetControlPanelContents()
 	end
 
 	return ControlPanelContents
+end
+
+function SortControlPanelMods()
+	table.sort(_G[MOD_ORDER_CONTROL_PANEL], SortOrderComparison)
+end
+
+function SortOrderComparison(TableA, TableB)
+	return TableA.Order < TableB.Order
 end
