@@ -103,6 +103,7 @@
 --
 -- PRECAST WS MODS
 --
+
 	-- +Accuracy gear for melee, physical weaponskills when the Offense mod = "Acc"
 	mods.precast.ws.melee.physical["Acc"] =
 		{
@@ -112,6 +113,7 @@
 --
 -- PRECAST MAGIC SETS
 --
+
 	-- Probably just Fast Cast gear
 	sets.precast.magic =
 		{
@@ -120,7 +122,8 @@
 --
 -- MIDCAST MAGIC SETS
 --
-	-- WAR isn't a caster so just use the magic precast set to shorten recast
+
+	-- DRG isn't a caster so just use the magic precast set to shorten recast
 	sets.midcast.magic = sets.precast.magic
 
 --
@@ -142,6 +145,7 @@
 --
 -- ENGAGED OFFENSE MODS
 --
+
 	-- +Accuracy gear when engaged and the Offense mod = "Acc"
 	mods.engaged["Acc"] =
 		{
@@ -191,6 +195,7 @@
 --
 -- IDLE & RESTING SETS
 --
+
 	sets.idle =
 		{
 
@@ -209,6 +214,7 @@
 --
 -- IDLE & RESTING MODS
 --
+
 	mods.idle["PDTLo"] =
 		{
 

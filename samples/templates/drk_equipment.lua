@@ -12,7 +12,6 @@
 
 		}
 
-
 	sets.precast.ja["Consume Mana"] =
 		{
 
@@ -114,6 +113,7 @@
 --
 -- PRECAST WS MODS
 --
+
 	-- +Accuracy gear for melee, physical weaponskills when the Offense mod = "Acc"
 	mods.precast.ws.melee.physical["Acc"] =
 		{
@@ -203,6 +203,7 @@
 --
 -- ENGAGED SET
 --
+
 	sets.engaged =
 		{
 
@@ -251,6 +252,7 @@
 --
 -- ENGAGED DEFENSE MODS
 --
+
 	-- Moderate PDT gear when the Physical Defense mod = "PDTLo"
 	mods.engaged["PDTLo"] =
 		{
@@ -278,6 +280,7 @@
 --
 -- IDLE & RESTING SETS
 --
+
 	sets.idle =
 		{
 
@@ -296,6 +299,7 @@
 --
 -- IDLE & RESTING MODS
 --
+
 	mods.idle["PDTLo"] =
 		{
 

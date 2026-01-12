@@ -1,4 +1,4 @@
-CreateMod("Refresh",       "CtF12 Refresh", true, "^f12",  "+Refresh")
+CreateMod("Refresh", "CtF12 Refresh", true, "^f12",  "+Refresh")
 
 AppendModOrderIdleOffense("Refresh")
 AppendModOrderRestingOffense("Refresh")

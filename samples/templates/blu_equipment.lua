@@ -52,6 +52,7 @@
 --
 -- PRECAST WS MODS
 --
+
 	-- +Accuracy gear for melee, physical weaponskills when the Offense mod = "Acc"
 	mods.precast.ws.melee.physical["Acc"] =
 		{
@@ -75,6 +76,7 @@
 --
 -- MIDCAST MAGIC SETS
 --
+
 	-- Gear that will be equipped as midcast for all spells. sets.precast.magic serves as a base that provides recast reduction.
 	InsertGearSet(sets.midcast.magic, set_combine(sets.precast.magic,
 		{
@@ -166,6 +168,7 @@
 --
 -- ENGAGED SET
 --
+
 	sets.engaged =
 		{
 
@@ -174,6 +177,7 @@
 --
 -- ENGAGED OFFENSE MODS
 --
+
 	-- +Accuracy gear when engaged and the Offense mod = "Acc"
 	mods.engaged["Acc"] =
 		{
@@ -195,6 +199,7 @@
 --
 -- ENGAGED DEFENSE MODS
 --
+
 	-- Moderate PDT gear when the Physical Defense mod = "PDTLo"
 	mods.engaged["PDTLo"] =
 		{
@@ -222,6 +227,7 @@
 --
 -- IDLE & RESTING SETS
 --
+
 	sets.idle =
 		{
 
@@ -240,6 +246,7 @@
 --
 -- IDLE & RESTING MODS
 --
+
 	mods.idle["PDTLo"] =
 		{
 

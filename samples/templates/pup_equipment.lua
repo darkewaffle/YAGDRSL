@@ -97,6 +97,7 @@
 --
 -- PRECAST WS MODS
 --
+
 	-- +Accuracy gear for melee, physical weaponskills when the Offense mod = "Acc"
 	mods.precast.ws.melee.physical["Acc"] =
 		{
@@ -106,6 +107,7 @@
 --
 -- PRECAST MAGIC SETS
 --
+
 	-- Probably just Fast Cast gear
 	sets.precast.magic =
 		{
@@ -114,12 +116,14 @@
 --
 -- MIDCAST MAGIC SETS
 --
+
 	-- PUP isn't a caster so just use the magic precast set to shorten recast
 	sets.midcast.magic = sets.precast.magic
 
 --
 -- ENGAGED SET
 --
+
 	-- Engaged gear that would be appropriate even if the PUP has no pet. Define mods.engaged["automaton"] below to create your set for when a pet is present.
 	sets.engaged =
 		{
@@ -135,6 +139,7 @@
 --
 -- ENGAGED OFFENSE MODS
 --
+
 	-- +Accuracy gear when engaged and the Offense mod = "Acc"
 	mods.engaged["Acc"] =
 		{
@@ -196,6 +201,7 @@
 --
 -- IDLE & RESTING SETS
 --
+
 	sets.idle =
 		{
 
@@ -214,6 +220,7 @@
 --
 -- IDLE & RESTING MODS
 --
+
 	mods.idle["PDTLo"] =
 		{
 

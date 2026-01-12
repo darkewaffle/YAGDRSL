@@ -56,6 +56,7 @@
 --
 -- PRECAST WS SETS
 --
+
 	-- Gear that should apply to all weaponskills
 	-- Likely just Fotia or +Weaponskill Damage pieces
 	InsertGearSet(sets.precast.ws,
@@ -103,6 +104,7 @@
 --
 -- PRECAST WS MODS
 --
+
 	-- +Accuracy gear for melee, physical weaponskills when the Offense mod = "Acc"
 	mods.precast.ws.melee.physical["Acc"] =
 		{
@@ -126,16 +128,32 @@
 --
 -- MIDCAST MAGIC SETS
 --
+
 	-- Gear that will be equipped as midcast for all spells. sets.precast.magic serves as a base that provides recast reduction.
 	InsertGearSet(sets.midcast.magic, set_combine(sets.precast.magic,
 		{
 
 		}))
 
+	InsertGearSet(sets.midcast.magic.divine,
+		{
+			
+		})
+
+	sets.midcast.magic.divine["Flash"] =
+		{
+
+		}
+
 	sets.midcast.magic.divine.enlight =
 		{
 
 		}
+
+	InsertGearSet(sets.midcast.magic.enhancing,
+		{
+			
+		})
 
 	sets.midcast.magic.enhancing.white.phalanx =
 		{
@@ -190,6 +208,7 @@
 --
 -- ENGAGED SET
 --
+
 	sets.engaged =
 		{
 
@@ -216,9 +235,16 @@
 
 		}
 
+	-- +Block or +Shield Mastery gear when engaged and BlockTP mod = "+BlockTP"
+	mods.engaged["+BlockTP"]
+		{
+
+		}
+
 --
 -- ENGAGED DEFENSE MODS
 --
+
 	-- Moderate PDT gear when the Physical Defense mod = "PDTLo"
 	mods.engaged["PDTLo"] =
 		{
@@ -246,6 +272,7 @@
 --
 -- IDLE & RESTING SETS
 --
+
 	sets.idle =
 		{
 
@@ -264,6 +291,7 @@
 --
 -- IDLE & RESTING MODS
 --
+
 	mods.idle["PDTLo"] =
 		{
 

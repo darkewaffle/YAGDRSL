@@ -64,8 +64,15 @@
 --
 -- PRECAST WS MODS
 --
+
 	-- +Accuracy gear for melee, hybrid weaponskills when the Offense mod = "Acc"
 	mods.precast.ws.melee.hybrid["Acc"] =
+		{
+
+		}
+
+	-- +Magic Accuracy gear for melee, magical weaponskills when the Offense mod = "Acc"
+	mods.precast.ws.melee.magical["Acc"] =
 		{
 
 		}
@@ -79,6 +86,7 @@
 --
 -- PRECAST MAGIC SETS
 --
+
 	-- Probably just Fast Cast gear
 	InsertGearSet(sets.precast.magic,
 		{
@@ -127,6 +135,7 @@
 --
 -- MIDCAST MAGIC MODS
 --
+
 	-- Additional gear that will be equipped when casting elemental ninjutsu and Futae is active
 	mods.midcast.magic.ninjutsu.elemental["Futae"] =
 		{
@@ -136,6 +145,7 @@
 --
 -- ENGAGED SET
 --
+
 	sets.engaged =
 		{
 
@@ -144,6 +154,7 @@
 --
 -- ENGAGED OFFENSE MODS
 --
+
 	-- +Accuracy gear when engaged and the Offense mod = "Acc"
 	mods.engaged["Acc"] =
 		{
@@ -211,6 +222,7 @@
 --
 -- IDLE & RESTING SETS
 --
+
 	sets.idle =
 		{
 
@@ -229,6 +241,7 @@
 --
 -- IDLE & RESTING MODS
 --
+
 	mods.idle["PDTLo"] =
 		{
 

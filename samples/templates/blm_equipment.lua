@@ -67,16 +67,17 @@
 --
 -- MIDCAST MAGIC SETS
 --
+
 	-- Gear that will be equipped as midcast for all spells. sets.precast.magic serves as a base that provides recast reduction.
 	InsertGearSet(sets.midcast.magic, set_combine(sets.precast.magic,
 		{
 
 		}))
 
-	sets.midcast.magic.dark =
+	InsertGearSet(sets.midcast.magic.dark,
 		{
 
-		}
+		})
 
 	sets.midcast.magic.dark.aspir =
 		{
@@ -93,15 +94,15 @@
 
 		}
 
-	sets.midcast.magic.enfeebling =
+	InsertGearSet(sets.midcast.magic.enfeebling,
 		{
 
-		}
+		})
 
-	sets.midcast.magic.elemental =
+	InsertGearSet(sets.midcast.magic.elemental,
 		{
 
-		}
+		})
 
 	sets.midcast.magic.elemental.ancient =
 		{
@@ -116,6 +117,7 @@
 --
 -- MIDCAST MAGIC MODS
 --
+
 	-- +Magic Accuracy gear that will be equipped when casting an elemental spell the Offense mod = "MAcc"
 	mods.midcast.magic.elemental["MAcc"] =
 		{
@@ -148,6 +150,7 @@
 --
 -- ENGAGED SET
 --
+
 	sets.engaged =
 		{
 
@@ -156,6 +159,7 @@
 --
 -- ENGAGED DEFENSE MODS
 --
+
 	-- Moderate PDT gear when the Physical Defense mod = "PDTLo"
 	mods.engaged["PDTLo"] =
 		{
@@ -189,6 +193,7 @@
 --
 -- IDLE & RESTING SETS
 --
+
 	sets.idle =
 		{
 
@@ -207,6 +212,7 @@
 --
 -- IDLE & RESTING MODS
 --
+
 	mods.idle["PDTLo"] =
 		{
 

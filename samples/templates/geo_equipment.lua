@@ -133,7 +133,6 @@
 
 		})
 
-
 	InsertGearSet(sets.midcast.magic.geomancy,
 		{
 
@@ -152,6 +151,7 @@
 --
 -- MIDCAST MAGIC MODS
 --
+
 	-- +Magic Accuracy gear that will be equipped when casting an elemental spell the Offense mod = "MAcc"
 	mods.midcast.magic.elemental["MAcc"] =
 		{
@@ -195,6 +195,7 @@
 --
 -- ENGAGED DEFENSE MODS
 --
+
 	-- Moderate PDT gear when the Physical Defense mod = "PDTLo"
 	mods.engaged["PDTLo"] =
 		{
@@ -222,6 +223,7 @@
 --
 -- IDLE & RESTING SETS
 --
+
 	-- Idle gear that would be appropriate even if the GEO has no luopan. Define mods.idle["luopan"] below to create your set for when a pet is present.
 	sets.idle =
 		{
@@ -254,6 +256,7 @@
 --
 -- IDLE & RESTING MODS
 --
+
 	mods.idle["PDTLo"] =
 		{
 

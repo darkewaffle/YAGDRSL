@@ -146,6 +146,7 @@
 --
 -- PRECAST MAGIC SETS
 --
+
 	-- Probably just Fast Cast gear
 	sets.precast.magic =
 		{
@@ -154,6 +155,7 @@
 --
 -- MIDCAST MAGIC SETS
 --
+
 	-- COR isn't a caster so just use the magic precast set to shorten recast
 	sets.midcast.magic = sets.precast.magic
 
@@ -200,6 +202,7 @@
 --
 -- ENGAGED SET
 --
+
 	sets.engaged =
 		{
 
@@ -208,6 +211,7 @@
 --
 -- ENGAGED OFFENSE MODS
 --
+
 	-- +Accuracy gear when engaged and the Offense mod = "Acc"
 	mods.engaged["Acc"] =
 		{
@@ -257,6 +261,7 @@
 --
 -- IDLE & RESTING SETS
 --
+
 	sets.idle =
 		{
 
@@ -275,6 +280,7 @@
 --
 -- IDLE & RESTING MODS
 --
+
 	mods.idle["PDTLo"] =
 		{
 
