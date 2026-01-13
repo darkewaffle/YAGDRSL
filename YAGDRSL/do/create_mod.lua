@@ -34,3 +34,26 @@ function AssignModOptions(ModName, ...)
 		ChatError("Mod name does not exist", ModName)
 	end
 end
+
+function DeleteMod(ModName)
+	_G[MOD_VALUES_ROOT_NAME][ModName] = nil
+
+	ClearTrackedKeyFromSource(ModName)
+
+	for Index, ModDetails in ipairs(_G[MOD_ORDER_CONTROL_PANEL]) do
+		if ModDetails.Name == ModName then
+			table.remove(_G[MOD_ORDER_CONTROL_PANEL], Index)
+			break
+		end
+	end
+
+	for _, OrderList in pairs(_G[MOD_ORDER_CONTAINER]) do
+		for Index, ModOrderMod in ipairs(OrderList) do
+			if ModOrderMod == ModName then
+				table.remove(OrderList, Index)
+				break
+			end
+		end
+	end
+
+end
