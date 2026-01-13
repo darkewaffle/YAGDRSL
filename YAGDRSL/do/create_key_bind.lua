@@ -18,7 +18,17 @@ function TrackKeyBind(KeyCode, Source)
 end
 
 function ClearTrackedKeyBinds()
-	for Index, BoundKey in ipairs(_G[TRACK_KEY_BINDS]) do
-		UnbindKey(BoundKey)
+	for Index, KeyDetails in ipairs(_G[TRACK_KEY_BINDS]) do
+		UnbindKey(KeyDetails["KeyCode"])
+	end
+end
+
+function ClearTrackedKeyFromSource(Source)
+	for Index, KeyDetails in ipairs(_G[TRACK_KEY_BINDS]) do
+		if KeyDetails["Source"] == Source then
+			UnbindKey(KeyDetails["KeyCode"])
+			table.remove(_G[TRACK_KEY_BINDS], Index)
+			break
+		end
 	end
 end
