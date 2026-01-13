@@ -1,16 +1,22 @@
 function SelfCommandCycle(CommandInputs)
+	local ModName = ""
+
 	if #CommandInputs == 0 then
 		ChatError("SelfCommandCycle failure: insufficient parameters")
 		return
+	elseif #CommandInputs == 1 then
+		ModName = CommandInputs[1]
+	elseif #CommandInputs > 1 then
+		ModName = CycleConstructModName(CommandInputs)
 	end
 
-	local ModToCycle = _G[MOD_VALUES_ROOT_NAME][CommandInputs[1]]
+	local ModToCycle = _G[MOD_VALUES_ROOT_NAME][ModName]
 
 	if ModToCycle then
 		ModToCycle:cycle()
-		ChatNotice(CommandInputs[1] .. " =", ModToCycle.current)
+		ChatNotice(ModName .. " =", ModToCycle.current)
 	else
-		ChatError("SelfCommandCycle: " .. CommandInputs[1] .. " mod not found")
+		ChatError("SelfCommandCycle: " .. ModName .. " mod not found")
 	end
 
 	UpdateControlPanel()
@@ -37,4 +43,15 @@ function SelfCommandCycle(CommandInputs)
 			ForceStatusUpdateFromCycle()
 		end
 	end
+end
+
+function CycleConstructModName(CommandParameters)
+	-- Command inputs are split on each space character. Reconstruct the mod name if it contained spaces.
+	-- eg: CommandInputs may be {"Magic", "Defense"}
+
+	local ModName = CommandParameters[1]
+	for i = 2, #CommandParameters do
+		ModName = ModName .. " " .. CommandParameters[i]
+	end
+	return ModName
 end

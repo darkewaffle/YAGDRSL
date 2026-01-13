@@ -14,7 +14,7 @@ function CreateMod(ModName, ModDescription, ControlPanelDisplayOrder, CycleKeyBi
 
 | Parameter | Description |
 | --- | --- |
-| ModName | The name of the mod that will be used 'in code' to identify it. This should be unique to each mod and it should not contain spaces. |
+| ModName | The name of the mod that will be used 'in code' to identify it. This should be unique to each mod. |
 | ModDescription | The description of the mod that will show up in the ControlPanel. You can make this whatever makes sense to you. |
 | ControlPanelDisplayOrder | This is a numeric value that controls the order that the mod will be displayed in the Control Panel. If <= 0 then it will not be displayed. |
 | CycleKeyBind | If this value is input then YAGDRSL will attempt to use it to keybind a cycle command for the mod. [Click here for resources on how to format a key for binding.](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/YAG%20Tips%20and%20Tricks.md#keybinds)|

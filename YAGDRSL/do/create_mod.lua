@@ -6,11 +6,6 @@ require "YAGDRSL/libraries/modes.lua"
 -- Also just makes it less of a hassle.
 
 function CreateMod(ModName, ModDescription, ControlPanelDisplayOrder, CycleKeyBind, ...)	
-	local SpacesFound = string.match(ModName, "%s")
-	if SpacesFound then
-		ChatError("Mod name '" .. ModName .. "'", "contains spaces. This is not recommended and may interfere with attempting to cycle the mod.")
-	end
-
 	_G[MOD_VALUES_ROOT_NAME][ModName] = M{MOD_DEFAULT_OFF, ...}
 	_G[MOD_VALUES_ROOT_NAME][ModName]:describe(ModDescription)
 
