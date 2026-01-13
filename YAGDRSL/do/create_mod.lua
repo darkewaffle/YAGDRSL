@@ -17,7 +17,7 @@ function CreateMod(ModName, ModDescription, ControlPanelDisplayOrder, CycleKeyBi
 		local CycleCommand = "gs c cycle " .. ModName
 		BindKey(CycleKeyBind, CycleCommand)
 		-- Records the bound keys for mods so they can be unbound later during unload.
-		TrackKeyBind(CycleKeyBind)
+		TrackKeyBind(CycleKeyBind, ModName)
 	end
 end
 

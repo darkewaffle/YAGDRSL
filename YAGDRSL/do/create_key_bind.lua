@@ -13,8 +13,8 @@ function UnbindKey(KeyCode)
 end
 
 -- Records the bound keys for mods so they can be unbound later during unload.
-function TrackKeyBind(KeyCode)
-	table.insert(_G[TRACK_KEY_BINDS], KeyCode)
+function TrackKeyBind(KeyCode, Source)
+	table.insert(_G[TRACK_KEY_BINDS], {["KeyCode"]=KeyCode, ["Source"]=Source})
 end
 
 function ClearTrackedKeyBinds()
