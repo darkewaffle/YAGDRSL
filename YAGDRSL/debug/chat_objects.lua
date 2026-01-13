@@ -74,7 +74,7 @@ function ChatGearSet(GearSet, Source, ShowEmptySlots)
 				FoundSlots = Key
 			end
 
-			if (FoundSlots > 0 and FoundSlots % 4 == 0) or Key == 16 then
+			if (FoundSlots > 0 and FoundSlots % 4 == 0) or (FoundSlots > 0 and Key == 16) or (ShowEmptySlots and Key == 16) then
 				ChatSet(LineText)
 				LineText = ""
 				FoundSlots = 0
