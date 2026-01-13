@@ -1,6 +1,6 @@
 CreateMod("BlockTP",  "ShF9  BlockTP", 1.1, "^f9",    "+BlockTP")
 CreateMod("SIRD",     "ShF10 SIRD",    2.1, "~f10",   "CureSIRD", "FullSIRD")
-CreateMod("Refresh",  "CtF12 Refresh", 4.1, "^f12",   "+Refresh")
+CreateMod("Refresh", "ShF11 Refresh", 3.1, "~f11", "+Refresh")
 
 AppendModOrderEngagedOffense("BlockTP")
 
