@@ -1,6 +1,11 @@
 # Library Functions Suggested for Users
 More details on these functions can be found in the .lua files defining them. You can locate them easily by searching for @User.
 
+## AssignModOptions
+```
+function AssignModOptions(ModName, ...)
+AssignModOptions("Offense", "Acc", "Multi", "STP", "Subtle")
+```
 
 ## BindKey
 ```
@@ -30,6 +35,12 @@ ConfigureWeaponLock("LockWeps", 20, "~end")
 ```
 function CreateMod(ModName, ModDescription, ControlPanelDisplayOrder, CycleKeyBind, ...)
 CreateMod("MagicBurst", "MB Mode", 2, "f9", "MB High", "MB Low")
+```
+
+## DeleteMod
+```
+function DeleteMod(ModName)
+DeleteMod("MagicBurst")
 ```
 
 ## InsertGearSet
@@ -102,4 +113,34 @@ function SetModOrderRestingOffense(...)
 function SetModOrderRestingDefense(...)
 
 SetModOrderEngagedOffense("OffenseMode", "TreasureHunter")
+```
+
+## AppendModOrders
+```
+function AppendModOrderPrecastJAOffense(ModName)
+function AppendModOrderPrecastJADefense(ModName)
+function AppendModOrderPrecastMagicOffense(ModName)
+function AppendModOrderPrecastMagicDefense(ModName)
+function AppendModOrderPrecastRAOffense(ModName)
+function AppendModOrderPrecastRADefense(ModName)
+function AppendModOrderPrecastWSOffense(ModName)
+function AppendModOrderPrecastWSDefense(ModName)
+
+function AppendModOrderMidcastJAOffense(ModName)
+function AppendModOrderMidcastJADefense(ModName)
+function AppendModOrderMidcastMagicOffense(ModName)
+function AppendModOrderMidcastMagicDefense(ModName)
+function AppendModOrderMidcastRAOffense(ModName)
+function AppendModOrderMidcastRADefense(ModName)
+function AppendModOrderMidcastWSOffense(ModName)
+function AppendModOrderMidcastWSDefense(ModName)
+
+function AppendModOrderEngagedOffense(ModName)
+function AppendModOrderEngagedDefense(ModName)
+function AppendModOrderIdleOffense(ModName)
+function AppendModOrderIdleDefense(ModName)
+function AppendModOrderRestingOffense(ModName)
+function AppendModOrderRestingDefense(ModName)
+
+AppendModOrderEngagedOffense("CustomOffense")
 ```
