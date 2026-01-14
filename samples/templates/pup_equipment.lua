@@ -203,7 +203,10 @@
 -- ENGAGED OVERRIDES
 --
 
-	overrides.engaged["PetSolo"] = templates.petsolo
+	overrides.engaged["PetSolo"] =
+		{
+			
+		}
 
 --
 -- IDLE & RESTING SETS
