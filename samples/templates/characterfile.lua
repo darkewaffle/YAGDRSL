@@ -68,7 +68,7 @@ function GetPlayerSettings()
 	SetModOrderIdleDefense    ("PhysicalDefense", "MagicalDefense")
 	SetModOrderRestingDefense ("PhysicalDefense", "MagicalDefense")
 
-	BindKey("f12", "gs c update")
+	BindKey("f12", "gs c update", true)
 
 	SetAutoCancelBuff({"Monomi: Ichi", "Sneak", "Spectral Jig"},
 					  {"Sneak"})
