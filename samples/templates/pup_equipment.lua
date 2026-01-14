@@ -165,6 +165,12 @@
 			
 		}
 
+	-- Additional gear that will be equipped when engaged and Overdrive is active
+	mods.engaged["Overdrive"] =
+		{
+			
+		}
+
 --
 -- ENGAGED DEFENSE MODS
 --
@@ -193,11 +199,11 @@
 			
 		}
 
-	-- Additional gear that will be equipped when engaged and Overdrive is active
-	mods.engaged["Overdrive"] =
-		{
-			
-		}
+--
+-- ENGAGED OVERRIDES
+--
+
+	overrides.engaged["PetSolo"] = templates.petsolo
 
 --
 -- IDLE & RESTING SETS
@@ -248,14 +254,16 @@
 			
 		}
 
-	-- Gear that will be equipped when idle and Pet Mode mod = "PetSolo"
-	mods.idle["PetSolo"] =
+--
+-- IDLE & RESTING OVERRIDES
+--
+
+	overrides.idle["PetSolo"] =
 		{
 			
 		}
 
-	-- Gear that will be equipped when resting and Pet Mode mod = "PetSolo"
-	mods.resting["PetSolo"] =
+	overrides.resting["PetSolo"] =
 		{
 			
 		}
