@@ -257,10 +257,10 @@
 	mods.midcast.magic["FullSIRD"] = templates.sird
 
 	mods.midcast.magic["Flash"] = {}
-	mods.midcast.magic["Flash"]["FullSIRD"] = templates.fastcast
+	mods.midcast.magic["Flash"]["FullSIRD"] = set_combine(templates.fastcast, {ear2="Alabaster Earring", ring1="Meridian Ring", waist="Platinum Moogle Belt"})
 
 	mods.midcast.magic["Reprisal"] = {}
-	mods.midcast.magic["Reprisal"]["FullSIRD"] = templates.fastcast
+	mods.midcast.magic["Reprisal"]["FullSIRD"] = set_combine(templates.fastcast, {ear2="Alabaster Earring", ring1="Meridian Ring", waist="Platinum Moogle Belt"})
 
 	mods.midcast.magic.divine.banish["+MBurst"] = set_combine(collections.Nyame, collections.Null,
 		{
