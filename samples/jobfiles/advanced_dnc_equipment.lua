@@ -1,6 +1,7 @@
 --
 -- CUSTOMIZATIONS
 --
+
 	capes = {}
 	capes.wsd = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%'}}
 	capes.tp = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%'}}
@@ -78,7 +79,6 @@
 			feet=gear.fastcast_light_feet
 		}
 
-
 --
 -- PRECAST JA SETS
 --
@@ -150,11 +150,6 @@
 			feet="Maculele Toe Shoes +3"
 		}
 
-	sets.precast.ja["Fan Dance"] =
-		{
-			hands="Horos Bangles +1"
-		}
-
 	sets.precast.ja["No Foot Rise"] =
 		{
 			body="Horos Casaque +3"
@@ -169,11 +164,6 @@
 	sets.precast.ja["Saber Dance"] =
 		{
 			hands="Horos Tights +3"
-		}
-
-	sets.precast.ja["Striking Flourish"] =
-		{
-			body="Maculele Casaque +2"
 		}
 
 	sets.precast.ja["Trance"] =
@@ -225,11 +215,16 @@
 
 	sets.precast.ws["Evisceration"] = set_combine(collections.Gleti,
 		{
-			ear1="Odr Earring",
-			ear2="Sherida Earring",
+			ear2="Odr Earring",
 			ammo="Charis Feather",
 			ring1="Lehko's Ring"
 		})
+
+	sets.precast.ws["Pyrrhic Kleos"] =
+		{
+			ear2="Odr Earring",
+			ring1="Rajas Ring"
+		}
 
 	sets.precast.ws["Rudra's Storm"] = set_combine(templates.wsd,
 		{
@@ -304,15 +299,20 @@
 --
 -- PRECAST MAGIC SETS
 --
+
 	InsertGearSet(sets.precast.magic, templates.fastcast)
+
 --
 -- MIDCAST MAGIC SETS
 --
+
 	InsertGearSet(sets.midcast.magic, templates.fastcast)
+
 --
 -- ENGAGED SET
 --
-	sets.engaged = 
+
+	sets.engaged =
 		{
 			ammo="Yamarang",
 			head="Maculele Tiara +3",
@@ -333,7 +333,7 @@
 -- ENGAGED OFFENSE MODS
 --
 
-	mods.engaged["Acc"] = 
+	mods.engaged["Acc"] =
 		{
 			ammo="Yamarang",
 			head="Maculele Tiara +3",
@@ -350,7 +350,7 @@
 			feet="Maculele Toe Shoes +3"
 		}
 
-	mods.engaged["Multi"] = 
+	mods.engaged["Multi"] =
 		{
 			ammo="Coiste Bodhar",
 			neck="Lissome Necklace",
@@ -426,7 +426,7 @@
 		{
 			neck="Inquisitor Bead Necklace",
 			ear2="Alabaster Earring",
-			waist="Platinum Moogle Belt"	
+			waist="Platinum Moogle Belt"
 		})
 
 --

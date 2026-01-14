@@ -33,14 +33,46 @@
 -- PRECAST JA SETS
 --
 
-	sets.precast.ja["Perfect Dodge"] =
+
+	sets.precast.ja["Accomplice"] =
 		{
-			hands="Plunderer's Armlets +1"
+			
+		}
+
+	sets.precast.ja["Collaborator"] =
+		{
+			
 		}
 
 	sets.precast.ja["Despoil"] =
 		{
 			feet="Skulker's Poulaines +2"
+		}
+
+	sets.precast.ja["Flee"] =
+		{
+			
+		}
+
+	sets.precast.ja["Hide"] =
+		{
+			
+		}
+
+	sets.precast.ja["Mug"] =
+		{
+			
+		}
+
+	sets.precast.ja["Perfect Dodge"] =
+		{
+			hands="Plunderer's Armlets +1"
+		}
+
+
+	sets.precast.ja["Steal"] =
+		{
+			
 		}
 
 	sets.precast.ja.waltz =
@@ -88,6 +120,13 @@
 			ring1="Lehko's Ring"
 		})
 
+	sets.precast.ws["Mandalic Stab"] = set_combine(templates.wsd,
+		{
+			neck="Republican Platinum Medal",
+			waist="Sailfi Belt +1"
+		})
+
+
 	sets.precast.ws["Rudra's Storm"] = set_combine(templates.wsd,
 		{
 			neck="Republican Platinum Medal",
@@ -127,14 +166,12 @@
 
 	mods.precast.ws.melee.physical["Sneak Attack"] =
 		{
-			ammo="Charis Feather",
-			head="Maculele Tiara +3",
-			neck="Etoile Gorget +1"
+			back=capes.thf
 		}
 
 	mods.precast.ws.melee.physical["Trick Attack"] =
 		{
-			body="Maculele Casaque +2"
+			
 		}
 
 --
@@ -165,7 +202,7 @@
 -- ENGAGED OFFENSE MODS
 --
 
-	mods.engaged["Acc"] = 
+	mods.engaged["Acc"] =
 		{
 			ammo="Yamarang",
 			neck="Null Loop",
@@ -176,12 +213,31 @@
 			waist="Null Belt",
 		}
 
-	mods.engaged["TH"] =
+	-- +Multiattack gear when engaged and the Offense mod = "Multi"
+	mods.engaged["Multi"] =
+		{
+			
+		}
+
+	-- +Treasure Hunter gear when engaged and the TH mod = "+TH"
+	mods.engaged["+TH"] =
 		{
 			ammo="Perfect Lucky Egg",
 			hands="Plunderer's Armlets +1",
 			waist="Chaac Belt",
 			feet="Skulker's Poulaines +2"
+		}
+
+	-- Additional gear that will be equipped when engaged and Conspirator is active
+	mods.engaged["Conspirator"] =
+		{
+			
+		}
+
+	-- Additional gear that will be equipped when engaged and Feint is active
+	mods.engaged["Feint"] =
+		{
+			
 		}
 
 --
@@ -194,6 +250,42 @@
 			ear1="Alabaster Earring",
 			feet="Skulker's Poulaines +2"
 		})
+
+	-- Moderate PDT gear when the Physical Defense mod = "PDTHP"
+	mods.engaged["PDTHP"] =
+		{
+			
+		}
+
+	-- High PDT gear when the Physical Defense mod = "Eva"
+	mods.engaged["Eva"] =
+		{
+			
+		}
+
+	-- Moderate MDT/MEva gear when the Magical Defense mod = "MEvaLo"
+	mods.engaged["MEvaLo"] =
+		{
+			
+		}
+
+	-- High MDT/MEva gear when the Magical Defense mod = "MEvaHi"
+	mods.engaged["MEvaHi"] =
+		{
+			
+		}
+
+	-- Additional gear that will be equipped when engaged and Flee is active
+	mods.engaged["Flee"] =
+			{
+
+			}
+
+	-- Additional gear that will be equipped when engaged and Perfect Dodge is active
+	mods.engaged["Perfect Dodge"] =
+			{
+				
+			}
 
 --
 -- IDLE & RESTING SETS

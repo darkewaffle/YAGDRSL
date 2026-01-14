@@ -1,13 +1,11 @@
-CreateMod("PetMode", "F9  PetMode", 1, "f9", "FullPet", "FullMaster")
+CreateMod("PetMode", "ShF9  PetMode", 1.1, "~f9", "PetDT")
+ConfigureOverride("CtF12 Override", 5, "^f12", "PetSolo")
 
-ConfigureWeaponLock("F10 WepLock", 2, "f10")
-SetWeaponLockAll()
+AppendModOrderEngagedOffense("PetMode")
+SetModOrderIdleOffense("PetMode")
+SetModOrderRestingOffense("PetMode")
 
-
-SetAutoCancelBuff({"Spectral Jig"},	
-				{"Sneak"})
-
-SetModOrderEngagedOffense ("PetMode")
-SetModOrderIdleOffense ("PetMode")
-
+TrackOffenseBuffs("Overdrive")
 TrackPetNameAsOffenseMod()
+
+SetWeaponLockAll()

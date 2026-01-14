@@ -9,7 +9,6 @@
 	templates.fastcast =
 		{
 			main="Malevolence",				--  5%
-			--ammo="Sapience Orb",			--  2%
 			head="Vanya Hood",				-- 10%
 			neck="Voltsurge Torque",		--  4%
 			ear1="Etiolation Earring",		--  1%
@@ -22,7 +21,7 @@
 			waist="Shinjutsu-no-obi +1",	--  5%
 			legs="Ayanmo Cosciales +2",		--  7%
 			feet="Fili Cothurnes +2"		-- 10%
-		}									-- 81% w/o Sapience
+		}									-- 81%
 
 	templates.refresh =
 		{
@@ -36,7 +35,9 @@
 			ammo="Oshasha's Treatise",
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
-			neck="Republican Platinum Medal"
+			neck="Republican Platinum Medal",
+			ring1="Karieyh Ring +1",
+			ring2="Ilabrat Ring"
 		}
 
 --
@@ -75,11 +76,21 @@
 			ear2="Cessance Earring",
 			body="Fili Hongreline +2",
 			hands="Fili Manchettes +2",
-			ring1="Rajas Ring",
+			ring1="Ilabrat Ring",
 			ring2="Lehko's Ring",
 			back="Null Shawl",
 			legs="Fili Rhingrave +2",
 			feet="Fili Cothurnes +2"
+		}
+
+	sets.precast.ws["Evisceration"] =
+		{
+			
+		}
+
+	sets.precast.ws["Mordant Rime"] =
+		{
+			
 		}
 
 	sets.precast.ws["Rudra's Storm"] = templates.wsd
@@ -115,6 +126,7 @@
 --
 -- MIDCAST MAGIC SETS
 --
+
 	InsertGearSet(sets.midcast.magic, templates.fastcast)
 
 	sets.midcast.magic.healing.cure =
@@ -183,7 +195,7 @@
 
 	sets.midcast.magic.singing.friend.paeon =
 		{
-			head="Brioso Roundlet +4",
+			head="Brioso Roundlet +4"
 		}
 
 	sets.midcast.magic.singing.friend.prelude =
@@ -223,10 +235,32 @@
 		}
 
 --
+-- MIDCAST MAGIC MODS
+--
+
+	-- +Magic Accuracy gear when the Debuff mod = "MAcc"
+	mods.midcast.magic.singing.enemy["MAcc"] =
+		{
+			
+		}
+
+	-- +Duration gear when the Debuff mod = "Duration"
+	mods.midcast.magic.singing.enemy["Duration"] =
+		{
+			
+		}
+
+	-- Additional midcast gear that will be equipped when Troubadour is active and the song is targeting an enemy
+	mods.midcast.magic.singing.enemy["Troubadour"] =
+		{
+			
+		}
+
+--
 -- ENGAGED SET
 --
 
-	sets.engaged = 
+	sets.engaged =
 		{
 			head="Fili Calot +2",
 			neck="Null Loop",
@@ -240,6 +274,56 @@
 			waist="Sailfi Belt +1",
 			legs="Fili Rhingrave +2",
 			feet="Fili Cothurnes +2"
+		}
+
+--
+-- ENGAGED OFFENSE MODS
+--
+
+	-- +Accuracy gear when engaged and the Offense mod = "Acc"
+	mods.engaged["Acc"] =
+		{
+			
+		}
+
+	-- +Multiattack gear when engaged and the Offense mod = "Multi"
+	mods.engaged["Multi"] =
+		{
+			
+		}
+
+	-- +Treasure Hunter gear when engaged and the TH mod = "+TH"
+	mods.engaged["+TH"] =
+		{
+			
+		}
+
+--
+-- ENGAGED DEFENSE MODS
+--
+
+	-- Moderate PDT gear when the Physical Defense mod = "PDTLo"
+	mods.engaged["PDTLo"] =
+		{
+			
+		}
+
+	-- High PDT gear when the Physical Defense mod = "PDTHi"
+	mods.engaged["PDTHi"] =
+		{
+			
+		}
+
+	-- Moderate MDT/MEva gear when the Magical Defense mod = "MEvaLo"
+	mods.engaged["MEvaLo"] =
+		{
+			
+		}
+
+	-- High MDT/MEva gear when the Magical Defense mod = "MEvaHi"
+	mods.engaged["MEvaHi"] =
+		{
+			
 		}
 
 --

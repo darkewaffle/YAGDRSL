@@ -1,13 +1,14 @@
 --
 -- CUSTOMIZATIONS
 --
-	capes = {}
-	capes.FCSIRD = { name="Rudianos's Mantle", augments={'HP+60','"Fast Cast"+10','Spell interruption rate down-10%',}}
-	capes.Tank = { name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
-	capes.WSD = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 
-	gear.feet_FC = { name="Odyssean Greaves", augments={'INT+8','AGI+9','"Fast Cast"+7','Mag. Acc.+4 "Mag.Atk.Bns."+4',}}
-	gear.feet_SIRD = { name="Odyssean Greaves", augments={'MND+9','Spell interruption rate down -9%','"Fast Cast"+4','Accuracy+14 Attack+14','Mag. Acc.+3 "Mag.Atk.Bns."+3',}}
+	capes = {}
+	capes.fcsird = { name="Rudianos's Mantle", augments={'HP+60','"Fast Cast"+10','Spell interruption rate down-10%',}}
+	capes.tank = { name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
+	capes.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+
+	gear.feet_fc = { name="Odyssean Greaves", augments={'INT+8','AGI+9','"Fast Cast"+7','Mag. Acc.+4 "Mag.Atk.Bns."+4',}}
+	gear.feet_sird = { name="Odyssean Greaves", augments={'MND+9','Spell interruption rate down -9%','"Fast Cast"+4','Accuracy+14 Attack+14','Mag. Acc.+3 "Mag.Atk.Bns."+3',}}
 
 
 	templates = {}
@@ -22,7 +23,7 @@
 			hands="Caballarius Gauntlets +2",
 			--ring1="",
 			ring2="Vengeful Ring",
-			back=capes.Tank,
+			back=capes.tank,
 			waist="Platinum Moogle Belt",
 			--legs="",
 			feet="Chevalier's Sabatons +2"
@@ -39,10 +40,10 @@
 			hands="Leyline Gloves",
 			ring1="Prolix Ring",
 			ring2="Kishar Ring",
-			back=capes.FCSIRD,
+			back=capes.fcsird,
 			legs="Enif Cosciales",
 			feet="Chevalier's Sabatons +2",
-			feet=gear.feet_FC
+			feet=gear.feet_fc
 		}
 
 	templates.hphi =
@@ -66,7 +67,7 @@
 			ammo="Homiliary",
 			head="Jumalik Helm",
 			neck="Sibyl Scarf",
-			body="Jumalik Mail",
+			body="Jumalik Mail"
 		}
 
 	templates.sird =
@@ -78,15 +79,16 @@
 			body="Chevalier's Cuirass +2",		-- 15% SIRD
 			hands="Chevalier's Gauntlets +2",	--				10% DT
 			ring1="Murky Ring",					--  3% SIRD		10% DT
-			back=capes.FCSIRD,					-- 10% SIRD
+			back=capes.fcsird,					-- 10% SIRD
 			waist="Platinum Moogle Belt",		--				 3% DT
 			legs="Founder's Hose",				-- 30% SIRD
-			feet=gear.feet_SIRD					-- 29% SIRD
+			feet=gear.feet_sird					-- 29% SIRD
 		}
 
 --
 -- PRECAST JA SETS
 --
+
 	InsertGearSet(sets.precast.ja, templates.enmityhp)
 
 	sets.precast.ja["Chivalry"] =
@@ -150,7 +152,7 @@
 			ear2="Brutal Earring",
 			ring1="Rajas Ring",
 			ring2="Karieyh Ring +1",
-			back=capes.WSD,
+			back=capes.wsd,
 			waist="Sailfi Belt +1",
 		})
 
@@ -219,6 +221,16 @@
 --
 	InsertGearSet(sets.midcast.magic, templates.fastcast)
 
+	sets.midcast.magic.divine["Flash"] =
+		{
+			
+		}
+
+	sets.midcast.magic.divine.enlight =
+		{
+			
+		}
+
 	sets.midcast.magic.enhancing.white.phalanx = 
 		{
 			hands="Souveran Handschuhs",
@@ -250,7 +262,7 @@
 	mods.midcast.magic["Reprisal"] = {}
 	mods.midcast.magic["Reprisal"]["FullSIRD"] = templates.fastcast
 
-	mods.midcast.magic.divine.banish["MB"] = set_combine(collections.Nyame, collections.Null,
+	mods.midcast.magic.divine.banish["+MBurst"] = set_combine(collections.Nyame, collections.Null,
 		{
 			helm="Jumalik Helm",
 			ear1="Friomisi Earring",
@@ -259,7 +271,7 @@
 			ring2="Etana Ring"
 		})
 
-	mods.midcast.magic.divine.holy["MB"] = set_combine(collections.Nyame, collections.Null,
+	mods.midcast.magic.divine.holy["+MBurst"] = set_combine(collections.Nyame, collections.Null,
 		{
 			helm="Jumalik Helm",
 			ear1="Friomisi Earring",
@@ -293,7 +305,7 @@
 			hands="Chevalier's Gauntlets +2",
 			ring1="Murky Ring",
 			ring2="Lehko's Ring",
-			back=capes.Tank,
+			back=capes.tank,
 			waist="Platinum Moogle Belt",
 			legs="Chevalier's Cuisses +2",
 			feet="Chevalier's Sabatons +2"
@@ -321,7 +333,7 @@
 			waist="Sailfi Belt +1"
 		})
 
-	mods.engaged["BlockTP"] =
+	mods.engaged["+BlockTP"] =
 		{
 			hands="Reverence Gauntlets +3"
 		}

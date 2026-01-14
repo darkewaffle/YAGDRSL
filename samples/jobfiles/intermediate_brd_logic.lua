@@ -1,21 +1,10 @@
-	CreateMod("Refresh",         "ShF11",        1, "~f11",  "+Refresh")
+CreateMod("Debuff",   "ShF9  Debuff",  1.1, "~f9",   "MAcc",   "Duration")
+CreateMod("Refresh", "ShF11 Refresh", 3.1, "~f11", "+Refresh")
 
-	ConfigureWeaponLock("Home  WeaponLock", true, "home")
-	ConfigureDefensePriority("End   DefPriority", true, "end")
+AppendModOrderMidcastMagicOffense("Debuff")
+AppendModOrderIdleOffense("Refresh")
+AppendModOrderRestingOffense("Refresh")
 
-	SetModOrderPrecastMagicDefense()
+TrackOffenseBuffs("Troubadour")
 
-	SetModOrderMidcastMagicOffense()
-	SetModOrderMidcastMagicDefense()
-
-	SetModOrderPrecastWSOffense()
-	SetModOrderPrecastWSDefense()
-
-	SetModOrderEngagedOffense ()
-	SetModOrderEngagedDefense ()
-
-	SetModOrderIdleOffense    ("Refresh")
-	SetModOrderIdleDefense    ()
-
-	SetModOrderRestingOffense ("Refresh")
-	SetModOrderRestingDefense ()
+SetWeaponLockRangeAmmo()

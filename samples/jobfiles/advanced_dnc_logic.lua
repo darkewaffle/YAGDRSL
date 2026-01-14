@@ -2,39 +2,20 @@
 -- LIBRARY SETTINGS
 --
 
-	TickEnable = true
-	TickInterval = 30
-	TickEvaluateMovement = true
+	AssignModOptions("Offense", "Acc", "Multi", "STP", "Subtle")
+	AssignModOptions("PhysicalDefense", "PDT", "PDTHP", "Eva")
+	AssignModOptions("MagicalDefense", "MEvaLo", "MEvaHi", "MEvaHP")
+	AssignModOptions("TH", "TH4", "TH2")
 
-	CreateMod("Offense",         "F9    Offense",1, "f9",    "Acc",    "STP",    "Multi", "Subtle")
-	CreateMod("PhysicalDefense", "F10   PDef",   2, "f10",   "PDT",    "PDTHP",  "Eva")
-	CreateMod("MagicalDefense",  "F11   MDef",   3, "f11",   "MEvaLo", "MEvaHi", "MEvaHP")
-	CreateMod("TH",              "CtF12 TH",     4, "^f12",  "TH4",    "TH2")
-	CreateMod("AutoDW",          "ShF12 DW",     5, "~f12",  "On")
-
-	ConfigureDefensePriority("End   DefPriority", 6, "end")
-	ConfigureOverride("ShEnd Override", 7, "~end", "BossTank", "Vagary")
-
+	CreateMod("AutoDW", "ShF9  DW", 1.1, "~f9", "On")
+	ConfigureOverride("CtF12 Override", 5, "^f12", "BossTank", "Vagary")
 
 	SetAutoCancelBuff({"Curing Waltz", "Curing Waltz II", "Curing Waltz III", "Curing Waltz IV", "Curing Waltz V", "Divine Waltz", "Divine Waltz II", "Healing Waltz"},
 					{"Saber Dance"})
 
 	SetAutoCancelBuff({"Aspir Samba", "Aspir Samba II", "Drain Samba", "Drain Samba II", "Drain Samba III", "Haste Samba"},
 					{"Fan Dance"})
-
-	SetAutoCancelBuff({"Spectral Jig"},	
-					{"Sneak"})
-
 	
-	SetModOrderPrecastWSOffense("Offense")
-	SetModOrderPrecastWSDefense("PhysicalDefense", "MagicalDefense")
-
-	SetModOrderEngagedOffense ("Offense", "TH")
-	SetModOrderEngagedDefense ("PhysicalDefense", "MagicalDefense")
-
-	SetModOrderIdleDefense    ("PhysicalDefense", "MagicalDefense")
-	SetModOrderRestingDefense ("PhysicalDefense", "MagicalDefense")
-
 	TrackOffenseBuffs("Striking Flourish", "Climactic Flourish")
 	TrackDefenseBuffs("Fan Dance")
 
