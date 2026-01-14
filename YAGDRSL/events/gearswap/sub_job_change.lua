@@ -1,6 +1,6 @@
 function sub_job_change(new, old)
 	ChatBlankLine()
-	ChatCheckpoint("sub_job_change start: NEW = ", new)
+	ChatCheckpoint("sub_job_change start: NEW =", new)
 
 	InitializeJob()
 
