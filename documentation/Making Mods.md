@@ -1,11 +1,11 @@
 # How To Create and Adjust Mods
 
-This information applies equally to both your character file and job logic files. The functions can be used in either location to build a baseline of mods that apply to all jobs or to build a very specific set of mods to suit a specific job. This section will include a written guide on how to create and order your mods as well as a full list of all the functions that are available to configure and manipulate mods.
+This information applies equally to both your character file and job logic files. The processes and functions described here can be used in either location to build a baseline of mods that apply to all jobs or to build a very specific set of mods to suit a specific job. This section will include a written guide on how to create and order your mods as well as a full list of all the functions that are available to configure and manipulate mods.
 
 ## Mod Making Guide
 
 ### Creating a Mod
-These represent a variation of a gearset that contains more of a specific stat - more accuracy, more damage reduction, more magic evasion, etc. But you can also define them for more generic uses like an idle mod to equip your crafting or fishing gear. In order to make a mod we'll want to use the library's CreateMod function. CreateMod is a function that accepts four core parameters and then a variable number of parameters that represent the values that the mod can have.
+Mods represent a variation of a gearset that contains more of a specific stat - more accuracy, more damage reduction, more magic evasion, etc. But you can also define them for more generic purposes like an idle mod to equip your crafting or fishing gear. In order to make a mod we'll want to use the library's CreateMod function. CreateMod is a function that accepts four core parameters and then a variable number of parameters that represent the values that the mod can have.
 
 ```
 function CreateMod(ModName, ModDescription, ControlPanelDisplayOrder, CycleKeyBind, ...)
@@ -15,7 +15,7 @@ function CreateMod(ModName, ModDescription, ControlPanelDisplayOrder, CycleKeyBi
 | --- | --- |
 | ModName | The name of the mod that will be used 'in code' to identify it. This should be unique to each mod. |
 | ModDescription | The description of the mod that will show up in the ControlPanel. You can make this whatever makes sense to you. |
-| ControlPanelDisplayOrder | This is a numeric value that controls the order that the mod will be displayed in the Control Panel. If <= 0 then it will not be displayed. |
+| ControlPanelDisplayOrder | This is a numeric value that controls the order (top to bottom) that the mod will be displayed in the Control Panel. If <= 0 then it will not be displayed. |
 | CycleKeyBind | If this value is input then YAGDRSL will attempt to use it to keybind a cycle command for the mod. [Click here for resources on how to format a key for binding.](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/YAG%20Tips%20and%20Tricks.md#keybinds)|
 | ... | These will be the mod values. They should be wrapped with quotation marks and separated by commas. While not required it is recommended that your mod values be unique across all mods in use by the job as well. |
 
@@ -24,14 +24,14 @@ Here's an example of how it would look in practice.
 CreateMod("Offense", "F9 Offense", 1, "f9", "Acc", "STP", "Multi", "Subtle")
 ```
 
-This will create a mod named "Offense". It will appear in the control panel and cycling the mod will be automatically bound to the key F9. Additionally in the control panel the description will be "F9 Offense". You can make the description whatever you like but including the keybind can be a handy reminder. Then you would just repeat the process for each mod you want to be able to control. It could be as simple as just having an "Offense" mod and "Defense" mod or as intricate as Offense, Physical Defense, Magical Defense, Treasure Hunter, Magic Burst, Cure Mode, etc. It's really up to you - although starting with fewer mods and keeping them simple is probably going to be the best place to start.
+This will create a mod named "Offense". It will appear in the control panel at or near the top and cycling the mod will be automatically bound to the key F9. Additionally in the control panel the description will be "F9 Offense". You can make the description whatever you like but including the keybind can be a handy reminder. Then you would just repeat the process for each mod you want to be able to control. It could be as simple as just having an "Offense" mod and "Defense" mod or as intricate as Offense, Physical Defense, Magical Defense, Treasure Hunter, Magic Burst, Cure Mode, etc. It's really up to you - although starting with fewer mods and keeping them simple is probably going to be the best place to start.
 
 
 ## Ordering Your Mods
 
-Once you have made a few mods they will need to be added to mod orders. This tells YAGDRSL when to look for each mod and the order that they will be applied to the gearset. Creating your Mod Orders is also done with a simple function call to either Set or Append a mod order. You can find a [full list of all of the available functions here](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/functions.md#setmodorders). Keep in mind you do not have to use all of them - you only need to use the ones that correspond to where you want to use mods.
+Once you have made a few mods they will need to be added to mod orders. This tells YAGDRSL when to look for each mod and the order that they will be applied to the gearset. Defining your Mod Orders is done with a simple function call to either Set or Append a mod order. You can find a [full list of all of the available functions here](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/functions.md#setmodorders). Keep in mind you do not have to use all of them - you only need to use the ones that correspond to where you want to use mods.
 
-SetModOrder functions look like this and only need parameters that are mod names. These names should match the names you assign to mods with CreateMod.
+SetModOrder functions look like this and only need parameters that are mod names. These names should match the names you assign to mods with CreateMod. SetModOrder will overwrite any mods that have been previously assigned to the order and create the order anew.
 
 ```
 function SetModOrderPrecastWSOffense(...)
@@ -45,7 +45,14 @@ SetModOrderEngagedOffense("Offense", "TreasureHunter")
 SetModOrderEngagedDefense("Physical Defense", "Magical Defense")
 ```
 
-Once you've put the mods in the mod order YAGDRSL will use them, when active and when appropriate based on the action and event, to identify mod sets and apply them when building your gearset.
+AppendModOrder works very similarly to SetModOrder except it will only accept a single ModName parameter and rather than overwriting the Mod Order it will simply place the mod at the end of the order. This means the appended mod will be the last mod that is evaluated and it will have high priority when added to the gearset.
+
+```
+function AppendModOrderPrecastWSOffense(ModName)
+AppendModOrderPrecastWSOffense("CustomOffense")
+```
+
+Once you've put the mods into the mod orders YAGDRSL will then use them, when active and when appropriate based on the action and event, to identify mod sets and apply them when building your gearset.
 
 ## Configuring Library Mods and Override
 ### Library Mods
