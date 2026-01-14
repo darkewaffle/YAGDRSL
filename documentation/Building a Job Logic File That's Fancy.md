@@ -15,14 +15,6 @@ This function will define a set of actions and a set of buffs that should be can
 In order to give the cancel command time to be completed the action will be delayed by AutoCancelDelayAmount. AutoCancelDelayAmount is a library setting you can customize. The most common use for this is probably to automatically cancel effects like Sneak, Invisible or Utsusemi when you are refreshing them.
 
 
-## SetModValue
-```
-function SetModValue(ModName, Value)
-SetModValue("MagicBurst", "MB Low")
-```
-This is a pretty simple one that you probably won't need to use much. However if you create a mod where you want the default value to be active rather than "off" then you can place a SetModValue call after CreateMod to automatically change the value each time the file is loaded. You can find some examples of how this might be useful in the [intermediate paladin file](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/jobfiles/intermediate_pld_logic.lua) where it's preferable for some of the Paladin's defensive mods to be on by default. 
-
-
 ## Hooks
 All the major events in YAGDRSL (including those are are custom to YAGDRSL and those that are standard in Gearswap) include Hook functions that can be re-defined by the user. You can think of these as 'virtual' functions in other programming languages as they are fully implemented but currently do nothing aside from 'be called'. You can find a [list of the available hooks here](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/hooks.md) and some examples about how they can be used in the [advanced dancer logic file](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/jobfiles/advanced_dnc_logic.lua). If you're using these make sure you pay attention to the return values that are expected from them.
 

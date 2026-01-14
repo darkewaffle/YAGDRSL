@@ -50,6 +50,7 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 
 #### Getting Up and Running with YAGDRSL
 - [Building Your CharacterName.lua File](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20Your%20Character%20File.md)
+- [Making Mods](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Making%20Mods.md)
 - [Building a Job Equipment File](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20a%20Job%20Equipment%20File.md)
 - [Building a Job Logic File](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20a%20Job%20Logic%20File.md)
 - [Building a Job Logic File That's Fancy](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Building%20a%20Job%20Logic%20File%20That's%20Fancy.md)

@@ -237,6 +237,9 @@ Or gear that you want to re-use on multiple jobs easily.
 	gear.TH2_Hands = { name="Herculean Gloves", augments={'"Dbl.Atk."+1','"Occult Acumen"+9','"Treasure Hunter"+2','Mag. Acc.+16 "Mag.Atk.Bns."+16',}}
 ```
 
-The character file is a good place to put those as well. Just make sure that your JobControls, settings and any of your gear definitions are *inside* of your GetPlayerSettings function. 
+## Mods
+Mods can be created in both the character file and the job file. Or you can create them in the character file and then adjust them in the job file - it all depends on what you find convenient. The simplest approach might be to create a baseline set of mods in your character file that would apply to most jobs so that the keybinds, descriptions and values are consistent and then only adjust them in the job file as needed to suit each job. Mod documentation has been consolidated into the [Making Mods page](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/Making%20Mods.md) to better address how mods can be created and customized in both the character and job logic files.
+
+Anything that you think it would be useful to share between jobs or inconvenient to recreate for each job can probably be placed in the character file. Just make sure that your JobControls, settings gear definitions and mods are *inside* of your GetPlayerSettings function. 
 
 [Finally, click here to see an annotated example of a complete character file.](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/charactername.lua)
