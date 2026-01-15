@@ -2,6 +2,7 @@ function get_sets()
 	require "YAG_include.lua"
 end
 
+
 function GetPlayerSettings()
 
 	JobControls =

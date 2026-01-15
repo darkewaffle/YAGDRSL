@@ -2,7 +2,7 @@
 
 Building your equipment sets ultimately works the same way in YAGDRSL as it does in most other GearSwap libraries. It's still just a matter of defining a table name and putting the names of your items into the slots. The primary difference with YAGDRSL is most likely going to be in where you put your sets and aligning them with the set, mod and override paths that YAGDRSL has defined for each action.
 
-*Before moving on click here for the [path definitions of each action](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/paths.md) or [a full list of all the 'base' paths that YAGDRSL can recognize](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/YAG_tables.txt). Also [click here for a handful of complete job equipment and job logic files](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/jobfiles) if you'd prefer to learn by looking through them.*
+*Before moving on click here for the [path definitions of each action](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/paths.md) or [a full list of all the 'base' paths that YAGDRSL can recognize](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/YAG_tables.txt). Also [click here for ready-made 'fill in the blank' equipment files](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/templates) if you'd prefer to jump right in.*
 
 Additionally this document will make use of YAGDRSL collections. [Click here for an overview](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/YAG%20Tips%20and%20Tricks.md#collections) of what they are and which ones are available.
 

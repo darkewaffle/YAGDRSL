@@ -24,9 +24,9 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 1. Download the YAG_include.lua file and the entire YAGDRSL folder. These can also be found [in the zip file under 'Releases'](https://github.com/darkewaffle/YAGDRSL/releases).
 2. Place them in your Windower\addons\GearSwap\libs folder.<br>
 *Or if you want to test-drive YAGDRSL and keep the files for it separate from your existing Gearswap files you can also just put everything in the libs-dev folder*.
-3. Download a copy of the [character file template](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/templates/characterfile.lua) and both the equipment and logic file from the [templates directory](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/templates) for any job(s) that you want to configure with YAGDRSL.
+3. Download a copy of the [character file template](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/templates/charactername.lua) and both the equipment and logic file from the [templates directory](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/templates) for any job(s) that you want to configure with YAGDRSL.
 4. Place the character file and any job-specific files into the same directory as YAG_include.lua and the YAGDRSL folder.
-3. Rename characterfile.lua to actually match the name of your character. (eg: If your character is John then change it to John.lua).<br>
+3. Rename charactername.lua to actually match the name of your character. (eg: If your character is John then change it to John.lua).<br>
 *If using libs-dev to test YAGDRSL, you can easily go back and forth between your current Gearswap setup and YAGDRSL. Just rename the libs-dev/charactername.lua file so gearswap won't recognize it, input a 'gs reload' command and you're back to your original gearswap. Then when you want to continue trying YAGDSRL just do the reverse - change the file name to match your character, 'gs reload' and you're back in YAGDRSL.*
 4. When you have all the files in place then your folder [should look something like this](https://imgur.com/a/H3WAsw2).
 5. The character file should be fairly complete already - however you may want to adjust the following items.

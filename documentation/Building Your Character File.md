@@ -242,4 +242,4 @@ Mods can be created in both the character file and the job file. Or you can crea
 
 Anything that you think it would be useful to share between jobs or inconvenient to recreate for each job can probably be placed in the character file. Just make sure that your JobControls, settings gear definitions and mods are *inside* of your GetPlayerSettings function. 
 
-[Finally, click here to see an annotated example of a complete character file.](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/charactername.lua)
+[Finally, click here to see an example of a complete character file.](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/templates/charactername.lua)
