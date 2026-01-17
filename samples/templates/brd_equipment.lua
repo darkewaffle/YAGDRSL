@@ -59,11 +59,6 @@
 			
 		}
 
-	sets.precast.ws["Shark Bite"] =
-		{
-			
-		}
-
 	-- Gear that should apply to all melee, magical weaponskills
 	sets.precast.ws.melee.magical =
 		{
