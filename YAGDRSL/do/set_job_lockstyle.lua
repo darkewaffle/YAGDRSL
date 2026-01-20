@@ -5,4 +5,5 @@ function SetJobLockStyle()
 	local LockStyleIndex = tostring(GetMainJobLockStyle())
 	ChatDebug("Set LockStyle", LockStyleIndex)
 	send_command("input /lockstyleset " .. LockStyleIndex)
+	STATE_SET_LOCKSTYLE_PENDING = false
 end

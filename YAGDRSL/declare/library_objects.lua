@@ -11,6 +11,9 @@ function DeclareLibraryObjects()
 	STATE_CYCLE_UPDATE_PENDING = false
 	CYCLE_UPDATE_COROUTINE = "cycle_update_coroutine"
 
+	STATE_SET_LOCKSTYLE_PENDING = false
+	SET_LOCKSTYLE_COROUTINE = "set_lockstyle_coroutine"
+
 	STATE_PLAYER_SETTINGS_LOADED = false
 	STATE_JOB_EQUIPMENT_LOADED = false
 	STATE_JOB_LOGIC_LOADED = false
