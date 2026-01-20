@@ -32,7 +32,6 @@
 
 	templates.wsd =
 		{
-			ammo="Oshasha's Treatise",
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
 			neck="Republican Platinum Medal",
@@ -97,8 +96,6 @@
 
 	sets.precast.ws["Savage Blade"] = templates.wsd
 
-	sets.precast.ws["Shark Bite"] = templates.wsd
-
 	sets.precast.ws.melee.magical = set_combine(collections.Nyame,
 		{
 			ammo="Oshasha's Treatise",
@@ -120,7 +117,7 @@
 	-- sets.precast.magic currently provides 81% Fast Cast
 	sets.precast.magic.singing =
 		{
-			
+			ranged="Miracle Cheer"
 		}
 
 --
@@ -128,6 +125,23 @@
 --
 
 	InsertGearSet(sets.midcast.magic, templates.fastcast)
+
+	InsertGearSet(sets.midcast.magic.enfeebling,
+		{
+			main="Daybreak",
+			head="Brioso Roundlet +4",
+			neck="Null Loop",
+			ear1="Regal Earring",
+			ear2="Fili Earring",
+			body="Fili Hongreline +2",
+			hands="Fili Manchettes +2",
+			ring1="Etana Ring",
+			ring2="Kishar Ring",
+			back=capes.bard,
+			waist="Null Belt",
+			legs="Fili Rhingrave +2",
+			feet="Brioso Slippers +4"
+		})
 
 	sets.midcast.magic.healing.cure =
 		{
@@ -143,8 +157,11 @@
 			feet="Vanya Clogs"
 		}
 
+	sets.midcast.magic.healing.curaga = sets.midcast.magic.healing.cure
+
 	InsertGearSet(sets.midcast.magic.singing,
 		{
+			ranged="Miracle Cheer",
 			neck="Moonbow Whistle",
 		})
 
@@ -262,12 +279,13 @@
 
 	sets.engaged =
 		{
-			head="Fili Calot +2",
-			neck="Null Loop",
+			ranged="Linos",
+			head="Ayanmo Zucchetto +2",
+			neck="Bard's Charm +1",
 			ear1="Brutal Earring",
 			ear2="Cessance Earring",
-			body="Fili Hongreline +2",
-			hands="Fili Manchettes +2",
+			body="Ayanmo Corazza +2",
+			hands="Bunzi's Gloves",
 			ring1="Rajas Ring",
 			ring2="Lehko's Ring",
 			back="Null Shawl",
@@ -283,7 +301,7 @@
 	-- +Accuracy gear when engaged and the Offense mod = "Acc"
 	mods.engaged["Acc"] =
 		{
-			
+			neck="Null Loop"
 		}
 
 	-- +Multiattack gear when engaged and the Offense mod = "Multi"
@@ -295,7 +313,7 @@
 	-- +Treasure Hunter gear when engaged and the TH mod = "+TH"
 	mods.engaged["+TH"] =
 		{
-			
+			waist="Chaac Belt"
 		}
 
 --

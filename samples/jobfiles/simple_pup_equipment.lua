@@ -4,6 +4,9 @@
 
 	gear.petlegs = {name="Taeon Tights", augments={'Pet: Attack+20 Pet: Rng.Atk.+20','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}}
 
+
+	templates = {}
+
 	templates.fastcast =
 		{
 			ammo="Sapience Orb",
@@ -21,9 +24,12 @@
 
 	templates.petsolo =
 		{
+			main="Ohtas",
+			ranged="Animator P",
+			ammo="Automaton Oil +3",
 			head="Anwig Salade",
 			neck="Shulmanu Collar",
-			ear1="Sroda Earring",
+			ear1="Enmerkar Earring",
 			ear2="Karagoz Earring +1",
 			body="Pitre Tobe +2",
 			hands="Mpaca's Gloves",
@@ -46,7 +52,7 @@
 
 	sets.precast.ja["Repair"] =
 		{
-			
+			ear1="Guignol Earring"
 		}
 
 	sets.precast.ja["Role Reversal"] =
@@ -100,11 +106,6 @@
 			
 		}
 
-	sets.precast.ws["Maru Kala"] =
-		{
-			
-		}
-
 	sets.precast.ws["Raging Fists"] =
 		{
 			
@@ -149,7 +150,7 @@
 --
 -- MIDCAST MAGIC SETS
 --
-	
+
 	InsertGearSet(sets.midcast.magic, templates.fastcast)
 
 --
@@ -172,7 +173,7 @@
 			ear1="Sroda Earring",
 			ear2="Karagoz Earring +1",
 			back="Visucius's Mantle",		-- 10% Haste
-			waist="Ukko Sash",				--  5% Haste
+			waist="Klouskap Sash",			--  8% Haste
 			feet="Tali'ah Crackows +2"		--  7% Haste
 		}
 
