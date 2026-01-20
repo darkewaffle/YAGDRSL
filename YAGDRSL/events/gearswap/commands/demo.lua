@@ -57,9 +57,10 @@ function SelfCommandDemo(CommandInputs)
 				local DemoPrecastSet = PrecastContainer(DemoSpellAttributes, EVENT_PRECAST_DEMO)
 				ChatGearSet(DemoPrecastSet, EVENT_PRECAST_DEMO)
 
-				ChatNotice("DEMO displays all midcast set possibilities. However midcast WS does not exist and midcast JA only applies to Bloodpact and Ready commands.")
-				local DemoMidcastSet = MidcastContainer(DemoSpellAttributes, EVENT_MIDCAST_DEMO)
-				ChatGearSet(DemoMidcastSet, EVENT_MIDCAST_DEMO)
+				if DemoSpellAttributes["Category"] == CATEGORY_MAGIC or DemoSpellAttributes["Category"] == CATEGORY_RA or DemoSpellAttributes["ParentGroup"] == MAP_JA_BLOODPACT then
+					local DemoMidcastSet = MidcastContainer(DemoSpellAttributes, EVENT_MIDCAST_DEMO)
+					ChatGearSet(DemoMidcastSet, EVENT_MIDCAST_DEMO)
+				end
 			end
 		end
 	end
@@ -76,7 +77,7 @@ function DemoValidateCategory(CategoryInput)
 	
 	local CategoryMap =
 		{
-			["i"]=CATEGORY_ITEM, ["item"]=CATEGORY_ITEM,
+			--["i"]=CATEGORY_ITEM, ["item"]=CATEGORY_ITEM,
 			["j"]=CATEGORY_JA, ["ja"]=CATEGORY_JA, ["jobability"]=CATEGORY_JA, ["p"]=CATEGORY_JA, ["pet"]=CATEGORY_JA,
 			["m"]=CATEGORY_MAGIC, ["ma"]=CATEGORY_MAGIC, ["magic"]=CATEGORY_MAGIC, ["spell"]=CATEGORY_MAGIC, ["n"]=CATEGORY_MAGIC, ["nin"]=CATEGORY_MAGIC, ["ninjutsu"]=CATEGORY_MAGIC, ["s"]=CATEGORY_MAGIC, ["song"]=CATEGORY_MAGIC,
 			["r"]=CATEGORY_RA, ["ra"]=CATEGORY_RA, ["range"]=CATEGORY_RA, ["ranged"]=CATEGORY_RA,
