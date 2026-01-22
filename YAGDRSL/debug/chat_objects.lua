@@ -26,8 +26,8 @@ function ChatGearSet(GearSet, Source, ShowEmptySlots)
 		ChatSet(Source, "set is empty")
 
 	else
-		ChatDashLine()
-		ChatSet("Source =", Source)
+		ChatDashLine(Source)
+		--ChatSet("Source =", Source)
 		local LineText = ""
 		local FoundSlots = 0
 		local ItemsInSet = 0

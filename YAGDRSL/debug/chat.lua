@@ -73,8 +73,11 @@ function ChatBlankLineForced()
 	add_to_chat(1, " ")
 end
 
-function ChatDashLine()
-	local Line = string.rep(" -", 80)
+function ChatDashLine(Prefix)
+	local Prefix = Prefix or ""
+	local PrefixLength = #Prefix / 2
+
+	local Line = Prefix .. string.rep(" -", 80 - PrefixLength)
 
 	if _G[YAG_SETTINGS]["ShowDebugMessages"] then
 		add_to_chat(1, Line)
