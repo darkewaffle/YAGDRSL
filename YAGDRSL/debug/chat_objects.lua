@@ -137,7 +137,7 @@ function ChatTableMessage(ChatTable)
 	local Iterator = 1
 	if ChatTable then
 		for Key, Value in pairs(ChatTable) do
-			ChatMessage(tostring(Iterator) .. Key, Value)
+			ChatMessage("#" .. tostring(Iterator) .. ": " .. Key, Value)
 			Iterator = Iterator + 1
 		end
 	end
