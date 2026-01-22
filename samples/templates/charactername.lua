@@ -157,6 +157,31 @@ function GetPlayerSettings()
 		{
 			
 		}
+
+	function HookPrecastCustomizeOffense(SpellAttributes, PrecastSet) -- @Hook
+		-- This is a function the user can override to implement custom logic.
+		-- It must return a gearset in order proceed properly.
+
+		-- Precast customize for weather/day gear will only apply to weaponskills
+		if SpellAttributes["Category"] == "ws" then
+			PrecastSet = ApplyWeatherAndDayGear(SpellAttributes, PrecastSet)
+		end
+
+		return PrecastSet
+	end
+
+	function HookMidcastCustomizeOffense(SpellAttributes, MidcastSet) -- @Hook
+		-- This is a function the user can override to implement custom logic.
+		-- It must return a gearset in order proceed properly.
+
+		-- Midcast customize for weather/day gear will only apply to spells
+		if SpellAttributes["Category"] == "magic" then
+			MidcastSet = ApplyWeatherAndDayGear(SpellAttributes, MidcastSet)
+		end
+
+		return MidcastSet
+	end
+
 end
 
 function ApplyWeatherAndDayGear(SpellAttributes, GearSet)
@@ -170,28 +195,4 @@ function ApplyWeatherAndDayGear(SpellAttributes, GearSet)
 		end
 	end
 	return GearSet
-end
-
-function HookPrecastCustomizeOffense(SpellAttributes, PrecastSet) -- @Hook
-	-- This is a function the user can override to implement custom logic.
-	-- It must return a gearset in order proceed properly.
-
-	-- Precast customize for weather/day gear will only apply to weaponskills
-	if SpellAttributes["Category"] == "ws" then
-		PrecastSet = ApplyWeatherAndDayGear(SpellAttributes, PrecastSet)
-	end
-
-	return PrecastSet
-end
-
-function HookMidcastCustomizeOffense(SpellAttributes, MidcastSet) -- @Hook
-	-- This is a function the user can override to implement custom logic.
-	-- It must return a gearset in order proceed properly.
-
-	-- Midcast customize for weather/day gear will only apply to spells
-	if SpellAttributes["Category"] == "magic" then
-		MidcastSet = ApplyWeatherAndDayGear(SpellAttributes, MidcastSet)
-	end
-
-	return MidcastSet
 end

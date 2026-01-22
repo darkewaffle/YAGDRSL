@@ -1,6 +1,8 @@
 # Event Hook Overrides Available To Users
 There are hook functions available in all Gearswap events and most major custom YAGDRSL events. You can easily find them in the codebase by searching for @Hook. Please be mindful of the comments for each one and make sure they return the appropriate data when necessary. The Hook(event)Customize events must return a gearset in order for processing to continue correctly.
 
+Additionally if you plan to override these by defining them in your character file then they must be defined within GetPlayerSettings - otherwise the empty library versions of the functions will actually end up overriding your custom versions.
+
 
 | Function Name | Expected Return(s) | Location |
 | --- | --- | --- |
