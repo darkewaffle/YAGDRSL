@@ -15,3 +15,14 @@ function GetWeatherMatchesSpell(SpellElement)
 		return false
 	end
 end
+
+function GetWeatherOpposesSpell(SpellElement)
+	local WeatherElement = GetWeatherElement()
+	local SpellOppositeElement = MapGetOppositeElement(SpellElement)
+
+	if WeatherElement and SpellOppositeElement and WeatherElement == SpellOppositeElement then
+		return true
+	else
+		return false
+	end
+end
