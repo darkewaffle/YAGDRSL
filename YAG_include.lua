@@ -2,6 +2,7 @@ WINDOWER_RESOURCES = require "resources"
 require "YAGDRSL/libraries/modes.lua"
 require "YAGDRSL/declare/YAG_declarations.lua"
 
+require "YAGDRSL/customize_helpers/YAG_customize.lua"
 require "YAGDRSL/debug/YAG_debug.lua"
 require "YAGDRSL/display/YAG_display.lua"
 require "YAGDRSL/do/YAG_do.lua"
