@@ -6,30 +6,35 @@
 	capes.wsd = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%'}}
 	capes.tp = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%'}}
 
-	templates = {}
+	DualWield = {}
+	DualWield[0] = {}
 
-	templates.dualwield = {}
-	templates.dualwield[0] = {}
-
-	templates.dualwield[4] =
+	DualWield[4] =
 		{
-		ear1="Eabani Earring"
+			ear1="Eabani Earring"
 		}
 
-	templates.dualwield[9] =
+	DualWield[9] =
 		{
 			ear1="Eabani Earring",
 			waist="Patentia Sash"
 		}
 
-	templates.dualwield[14] =
+	DualWield[14] =
 		{
 			ear1="Eabani Earring",
 			ear2="Suppanomimi",
 			waist="Patentia Sash"
 		}
 
-	templates.dualwield[25] =
+	DualWield[20] =
+		{
+			ear1="Eabani Earring",
+			body="Maculele Casaque +2",
+			waist="Patentia Sash"
+		}
+
+	DualWield[25] =
 		{
 			ear1="Eabani Earring",
 			ear2="Suppanomimi",
@@ -37,6 +42,8 @@
 			waist="Patentia Sash"
 		}
 
+	templates = {}
+	
 	templates.maxhp =
 		{
 			head="Maculele Tiara +3",

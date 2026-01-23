@@ -19,6 +19,15 @@
 	TrackOffenseBuffs("Striking Flourish", "Climactic Flourish")
 	TrackDefenseBuffs("Fan Dance")
 
+	HasteDefinitions =
+		{
+			HasteSpell = 30,
+			March = 10,
+			Embrava = 25,
+			Samba = 10,
+			GeoHaste = 20
+		}
+
 --
 -- LIBRARY FUNCTION OVERRIDES
 --
@@ -41,8 +50,12 @@
 
 	function HookStatusCustomizeOffense(CharacterStatus, StatusSet)
 
-		if GetModValue("AutoDW", false) == "On" and CharacterStatus == STATUS_ENGAGED then
-			StatusSet = AutoDualWield(StatusSet)
+		if GetModValue("AutoDW") == "On" and CharacterStatus == STATUS_ENGAGED then
+
+			local CurrentHaste = GetCharacterHaste(HasteDefinitions)
+			local DualWieldToCap = GetDualWieldToCap(35, CurrentHaste)
+			StatusSet = CustomizeDualWield(StatusSet, DualWieldToCap)
+
 		end
 
 		return StatusSet
@@ -51,22 +64,6 @@
 --
 -- CUSTOM PLAYER FUNCTIONS
 --
-
-	function AutoDualWield(GearSet)
-		local DualWieldToCap = GetDualWieldToCap(35, EstimateCharacterTotalHaste())
-		local DualWieldThresholds = {25, 14, 9, 4}
-		local Threshold = 0
-
-		for _, DualWieldAmount in ipairs(DualWieldThresholds) do
-			if DualWieldToCap >= DualWieldAmount then
-				Threshold = DualWieldAmount
-				break
-			end
-		end
-
-		GearSet = set_combine(GearSet, templates.dualwield[Threshold])
-		return GearSet
-	end
 
 	function ReplaceMoonshade(SpellAttributes, PrecastSet)
 		local MoonshadeAlternates = {"Ishvara Earring", "Sherida Earring"}
