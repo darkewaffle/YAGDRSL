@@ -15,3 +15,14 @@ function GetDayMatchesSpell(SpellElement)
 		return false
 	end
 end
+
+function GetDayOpposesSpell(SpellElement)
+	local DayElement = GetDayElement()
+	local SpellOppositeElement = MapGetOppositeElement(SpellElement)
+
+	if DayElement and SpellOppositeElement and DayElement == SpellOppositeElement then
+		return true
+	else
+		return false
+	end
+end
