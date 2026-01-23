@@ -12,7 +12,7 @@ MAP_SPELLS = "custom_map_spells"
 MAP_WS = "custom_map_ws"
 MAP_ZONES = "custom_map_zones"
 
--- Names to represent broad splots in types of spells
+-- Names to represent broad splits in types of spells
 MAP_CLASS_BLACK_MAGIC = "black"
 MAP_CLASS_WHITE_MAGIC = "white"
 
