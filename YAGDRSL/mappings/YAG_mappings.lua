@@ -1,6 +1,7 @@
 require "YAGDRSL/mappings/constructed/items.lua"
 require "YAGDRSL/mappings/constructed/buffs.lua"
 
+require "YAGDRSL/mappings/static/element_opposites.lua"
 require "YAGDRSL/mappings/static/ja.lua"
 require "YAGDRSL/mappings/static/skills.lua"
 require "YAGDRSL/mappings/static/spells.lua"
@@ -74,5 +75,11 @@ end
 function MapGetSkillShortName(SkillName)
 	if SkillName and SkillName ~= "" then
 		return _G[MAP_SKILLS][SkillName]["shortname"] or ""
+	end
+end
+
+function MapGetOppositeElement(ElementName)
+	if ElementName then
+		return _G[MAP_ELEMENT_OPPOSITES][ElementName]
 	end
 end
