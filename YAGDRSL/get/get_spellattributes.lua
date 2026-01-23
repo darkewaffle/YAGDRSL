@@ -43,8 +43,13 @@ function GetSpellAttributes(spell)
 		end
 
 		SpellAttributes["Element"] = GetSpellElementName(spell)
+
 		SpellAttributes["Element=Weather"] = GetWeatherMatchesSpell(SpellAttributes["Element"])
+		SpellAttributes["ElementOpposesWeather"] = GetWeatherOpposesSpell(SpellAttributes["Element"])
+
 		SpellAttributes["Element=Day"] = GetDayMatchesSpell(SpellAttributes["Element"])
+		SpellAttributes["ElementOpposesDay"] = GetDayOpposesSpell(SpellAttributes["Element"])
+
 		SpellAttributes["DamageType"] = GetSpellDamageType(SpellAttributes["Category"], SpellAttributes["Name"], SpellAttributes["Element"])
 		SpellAttributes["RecastID"] = GetSpellRecastID(spell)
 

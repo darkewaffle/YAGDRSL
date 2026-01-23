@@ -27,9 +27,10 @@ function DemoConstructSpellAttributes(SpellCategory, SpellName)
 	local SpellElementID = DemoGetSpellElementID(SpellAttributes["Name"], SpellAttributes["Category"])
 	SpellAttributes["Element"] = GetElementName(SpellElementID)
 	SpellAttributes["Element=Weather"] = GetWeatherMatchesSpell(SpellAttributes["Element"])
+	SpellAttributes["ElementOpposesWeather"] = GetWeatherOpposesSpell(SpellAttributes["Element"])
 	SpellAttributes["Element=Day"] = GetDayMatchesSpell(SpellAttributes["Element"])
+	SpellAttributes["ElementOpposesDay"] = GetDayOpposesSpell(SpellAttributes["Element"])
 	SpellAttributes["DamageType"] = GetSpellDamageType(SpellAttributes["Category"], SpellAttributes["Name"], SpellAttributes["Element"])
-
 
 	if FriendlyTurn then
 		SpellAttributes["TargetPrimary"] = SPELL_TARGET_FRIEND
@@ -43,7 +44,7 @@ function DemoConstructSpellAttributes(SpellCategory, SpellName)
 
 	SpellAttributes = RefineSpellAttributes(SpellAttributes)
 
-	--ChatSpellAttributes(SpellAttributes)
+	ChatSpellAttributes(SpellAttributes)
 	return SpellAttributes
 end
 
