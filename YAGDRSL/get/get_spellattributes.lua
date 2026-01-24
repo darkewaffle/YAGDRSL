@@ -26,6 +26,7 @@ function GetSpellAttributes(spell)
 		SpellAttributes["ChildGroup"] = ""
 		
 		SpellAttributes["TargetSymbol"] = GetSpellTargetRaw(spell)
+		SpellAttributes["TargetID"] = GetSpellTargetID(spell)
 		SpellAttributes["TargetPrimary"] = GetSpellTargetPrimary(spell)
 		SpellAttributes["TargetFriendEnemy"] =GetSpellTargetFriendEnemy(spell)
 		SpellAttributes["TargetHPDecimal"] = GetSpellTargetHPDecimal(spell)

@@ -99,6 +99,7 @@ function ChatSpellAttributes(SpellAttributes)
 	ChatDebugForced("ChildGroup" , SpellAttributes["ChildGroup"])
 
 	ChatDebugForced("TargetSymbol",      SpellAttributes["TargetSymbol"])
+	ChatDebugForced("TargetID",          SpellAttributes["TargetID"])
 	ChatDebugForced("TargetPrimary",     SpellAttributes["TargetPrimary"])
 	ChatDebugForced("TargetFriendEnemy", SpellAttributes["TargetFriendEnemy"])
 	ChatDebugForced("TargetHPDecimal",   SpellAttributes["TargetHPDecimal"])
