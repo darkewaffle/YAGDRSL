@@ -5,6 +5,8 @@ function DeclareLibraryObjects()
 
 	-- Mode to control if Offense or Defense mods are combined into the set first
 	_G[MOD_VALUES_ROOT_NAME][MOD_PRIORITIZE_DEFENSE] = M{true, false, ["description"]="Defense Priority"}
+
+	-- Mode to handle locking weapon slots (implemented in EquipSafe)
 	_G[MOD_VALUES_ROOT_NAME][MOD_LOCK_WEAPONS] = M{MOD_DEFAULT_OFF, MOD_LOCK_ALL, MOD_LOCK_MAIN_SUB_RANGE, MOD_LOCK_MAIN_SUB, MOD_LOCK_RANGE_AMMO, ["description"]="Locked Weapons"}
 
 	-- Globals to track if a cycle command already has a ForceStatusUpdate scheduled.
