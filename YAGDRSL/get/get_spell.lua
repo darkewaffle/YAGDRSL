@@ -164,6 +164,10 @@ function GetSpellTargetRaw(spell)
 	return spell.target.raw
 end
 
+function GetSpellTargetID(spell)
+	return spell.target.id
+end
+
 function GetSpellTargetHPDecimal(spell)
 	if spell.target.hpp then
 		return spell.target.hpp / 100
