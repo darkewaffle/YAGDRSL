@@ -14,28 +14,58 @@ function ConfigureWeaponLock(ModDescription, ControlPanelDisplayOrder, ModKeyBin
 	ModifyMod(MOD_LOCK_WEAPONS, ModDescription, ControlPanelDisplayOrder, ModKeyBind)
 end
 
-function CycleWeaponLock()
-	_G[MOD_VALUES_ROOT_NAME][MOD_LOCK_WEAPONS]:cycle()
-end
-
-function SetWeaponLock(Value)
+function ValidWeaponLock(Value)
 	local ValidLockStates =
 	{
 		[MOD_LOCK_ALL] = true,
+		[MOD_LOCK_MAIN_SUB_AMMO] = true,
 		[MOD_LOCK_MAIN_SUB_RANGE] = true,
 		[MOD_LOCK_MAIN_SUB] = true,
 		[MOD_LOCK_RANGE_AMMO] = true
 	}
 
 	if ValidLockStates[Value] then
+		return true
+	else
+		return false
+	end
+end
+
+function SetWeaponLock(Value)
+	if ValidWeaponLock(Value) then
 		SetModValue(MOD_LOCK_WEAPONS, Value)
 	else
 		ChatError("Invalid weapon lock state submitted to SetWeaponLock")
 	end
 end
 
+-- Changes the option list for MOD_LOCK_WEAPONS. Will only proceed if all options are permitted by ValidWeaponLock.
+function AssignWeaponLockOptions(...)
+	local OptionList = {...}
+	local AssignmentsValid = true
+
+	for _, Value in ipairs(OptionList) do
+		if not ValidWeaponLock(Value) then
+			ChatError("Invalid weapon lock state submitted to AssignWeaponLockOptions")
+			AssignmentsValid = false
+		end
+	end
+
+	if AssignmentsValid then
+		AssignModOptions(MOD_LOCK_WEAPONS, ...)
+	end
+end
+
+function CycleWeaponLock()
+	_G[MOD_VALUES_ROOT_NAME][MOD_LOCK_WEAPONS]:cycle()
+end
+
 function SetWeaponLockAll()
 	SetWeaponLock(MOD_LOCK_ALL)
+end
+
+function SetWeaponLockMainSubAmmo()
+	SetWeaponLock(MOD_LOCK_MAIN_SUB_AMMO)
 end
 
 function SetWeaponLockMainSubRange()
