@@ -15,7 +15,8 @@
 function CustomizeGearForDayElement(SpellAttributes, GearSet)
 
 	if SpellAttributes["DamageType"] == MAP_DAMAGE_MAGICAL then
-		if SpellAttributes["Element=Day"] then
+		-- Day gear will only be equipped if element and day match and the element does not oppose the weather (typical behavior for Hachirin-no-obi)
+		if SpellAttributes["Element=Day"] and not SpellAttributes["ElementOpposesWeather"] then
 			GearSet = set_combine(GearSet, DayItems[SpellAttributes["Element"]])
 		end
 	end
