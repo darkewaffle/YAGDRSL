@@ -23,11 +23,8 @@ function GetPartyMemberMissingHP(TargetID)
 				if PartyMember["mob"]["id"] == TargetID then
 
 					local CurrentHP = PartyMember["hp"]
-					ChatError(CurrentHP)
 					local MaxHP = math.floor(CurrentHP/(PartyMember["hpp"]/100))
-					ChatError(MaxHP)
 					local MissingHP = Clamp(MaxHP - CurrentHP, 0, 9999)
-					ChatError(MissingHP)
 					return MissingHP
 
 				end
