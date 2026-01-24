@@ -100,6 +100,7 @@ function WeaponLock(GearSet)
 	local MapLockToSlots =
 	{
 		[MOD_LOCK_ALL] = {"main", "sub", "range", "ranged", "ammo"},
+		[MOD_LOCK_MAIN_SUB_AMMO] = {"main", "sub", "ammo"},
 		[MOD_LOCK_MAIN_SUB_RANGE] = {"main", "sub", "range", "ranged"},
 		[MOD_LOCK_MAIN_SUB] = {"main", "sub"},
 		[MOD_LOCK_RANGE_AMMO] = {"range", "ranged", "ammo"}
