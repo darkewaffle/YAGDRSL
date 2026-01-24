@@ -115,23 +115,51 @@ function GetSpellTarget(spell, TargetClass)
 end
 
 function GetSpellTargetSelf(spell)
-	return GetSpellTarget(spell, SPELL_TARGET_SELF)
+	if GetSpellTargetType(spell) == "SELF" then
+		return true
+	else
+		return false
+	end
 end
 
 function GetSpellTargetParty(spell)
-	return GetSpellTarget(spell, SPELL_TARGET_PARTY)
+	if spell.target["ispartymember"] then
+		return true
+	else
+		return false
+	end
 end
 
 function GetSpellTargetAlly(spell)
-	return GetSpellTarget(spell, SPELL_TARGET_ALLY)
+	if spell.target["isallymember"] then
+		return true
+	else
+		return false
+	end
 end
 
 function GetSpellTargetPlayer(spell)
-	return GetSpellTarget(spell, SPELL_TARGET_PLAYER)
+	if GetSpellTargetType(spell) == "PLAYER" then
+		return true
+	else
+		return false
+	end
+end
+
+function GetSpellTargetNPC(spell)
+	if GetSpellTargetType(spell) == "NPC" then
+		return true
+	else
+		return false
+	end
 end
 
 function GetSpellTargetEnemy(spell)
-	return GetSpellTarget(spell, SPELL_TARGET_ENEMY)
+	if GetSpellTargetType(spell) == "MONSTER" then
+		return true
+	else
+		return false
+	end
 end
 
 function GetSpellTargetType(spell)
