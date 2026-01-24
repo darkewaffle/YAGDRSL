@@ -42,7 +42,7 @@
 		local TerminateReason = "Spell will not be terminated"
 
 		if SpellAttributes["ParentGroup"] == MAP_JA_WALTZ then
-			TerminateSpell, TerminateReason = InterceptWaltz(SpellAttributes, 1.5)
+			TerminateSpell, TerminateReason = ScaleWaltz(SpellAttributes, 1.5)
 		end
 
 		return TerminateSpell, TerminateReason
@@ -95,80 +95,4 @@
 		end
 
 		return PrecastSet
-	end
-
-	function InterceptWaltz(SpellAttributes, WaltzPotency)
-		local CancelCurrentSpell = false
-		local IgnoreSpells = S{"Divine Waltz", "Divine Waltz II", "Healing Waltz"}
-		local OriginalSpell = SpellAttributes["Name"]
-		local NewSpell = "Curing Waltz"
-		local SpellTargetSymbol = SpellAttributes["TargetSymbol"]
-
-		local PlayerDancerLevel = GetCharacterJobLevel("DNC")
-		local PlayerTP = GetCharacterTP()
-
-		local EstimatePlayerCHR = 150
-		local EstimatePlayerMaxHP = 2200
-		local EstimateTargetVIT = 150
-		local JobGiftBonus = 0
-		local MMultiplier = 0
-		local TargetMissingHP = 0
-		local WaltzPotency = WaltzPotency or 1
-
-		local WaltzProperties =
-			{
-				{name = "Curing Waltz V",   level = 80, cost = 800, m = 1.25, b = 600},
-				{name = "Curing Waltz IV",  level = 70, cost = 650, m = 1.0,  b = 450},
-				{name = "Curing Waltz III", level = 45, cost = 500, m = .75,  b = 270},
-				{name = "Curing Waltz II",  level = 30, cost = 350, m = .50,  b = 130},
-				{name = "Curing Waltz",     level = 15, cost = 200, m = .25,  b = 60}
-			}
-
-		if buffactive["Trance"] then
-			PlayerTP = 3000
-		end
-
-		if PlayerTP < 200 then
-			CancelCurrentSpell = true
-			return CancelCurrentSpell, "Insufficient TP for Waltz"
-		end
-
-		if IgnoreSpells:contains(OriginalSpell) then
-			CancelCurrentSpell = false
-			return CancelCurrentSpell, "Healing Waltz and Divine Waltz are ignored by InterceptWaltz"
-		end
-
-		if GetCharacterJobShort() == "DNC" then
-			MMultiplier = 1.0
-			JobGiftBonus = 40
-		elseif GetCharacterSubJobShort() == "DNC" then
-			MMultiplier = .5
-			JobGiftBonus = 0
-		end
-
-		if SpellAttributes["TargetSelf"] then
-			TargetMissingHP = GetCharacterMissingHP()
-			if TargetMissingHP < 100 then
-				CancelCurrentSpell = true
-				return CancelCurrentSpell, "Target is not missing enough HP to Waltz"
-			end
-		elseif SpellAttributes["TargetParty"] or SpellAttributes["TargetAlly"] or SpellAttributes["TargetPlayer"] then
-			TargetMissingHP = math.floor(EstimatePlayerMaxHP - (EstimatePlayerMaxHP*SpellAttributes["TargetHPDecimal"]))
-		end
-
-		for Index, Waltz in ipairs(WaltzProperties) do
-			local CureAmount = math.floor(WaltzPotency * math.floor(Waltz["m"]*MMultiplier*(EstimatePlayerCHR + EstimateTargetVIT) + Waltz["b"] + JobGiftBonus))
-			if PlayerDancerLevel >= Waltz["level"] and PlayerTP >= Waltz["cost"] and CureAmount <= TargetMissingHP then
-				NewSpell = Waltz["name"]
-				break
-			end
-		end
-
-		if OriginalSpell ~= NewSpell then
-			CancelCurrentSpell = true
-			SendGameJA(NewSpell, SpellTargetSymbol)
-			return CancelCurrentSpell, "Waltz selection has been changed"
-		end
-
-		return CancelCurrentSpell, "No change made to Waltz"
 	end
