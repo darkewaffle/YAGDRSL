@@ -107,6 +107,7 @@ function ChatSpellAttributes(SpellAttributes)
 	ChatDebugForced("TargetParty",       SpellAttributes["TargetParty"])
 	ChatDebugForced("TargetAlly",        SpellAttributes["TargetAlly"])
 	ChatDebugForced("TargetPlayer",      SpellAttributes["TargetPlayer"])
+	ChatDebugForced("TargetNPC",         SpellAttributes["TargetNPC"])
 	ChatDebugForced("TargetEnemy",       SpellAttributes["TargetEnemy"])
 
 	ChatDebugForced("DamageType",  SpellAttributes["DamageType"])

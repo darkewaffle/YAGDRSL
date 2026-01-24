@@ -34,6 +34,7 @@ function GetSpellAttributes(spell)
 		SpellAttributes["TargetParty"] = GetSpellTargetParty(spell)
 		SpellAttributes["TargetAlly"] = GetSpellTargetAlly(spell)
 		SpellAttributes["TargetPlayer"] = GetSpellTargetPlayer(spell)
+		SpellAttributes["TargetNPC"] = GetSpellTargetNPC(spell)
 		SpellAttributes["TargetEnemy"] = GetSpellTargetEnemy(spell)
 
 		-- WS designation for melee/distant.
