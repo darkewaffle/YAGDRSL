@@ -6,6 +6,14 @@ function GetWeatherElement()
 	end
 end
 
+function GetWeatherIntensity()
+	if world.weather_intensity then
+		return world.weather_intensity
+	else
+		return nil
+	end
+end
+
 function GetWeatherMatchesSpell(SpellElement)
 	local WeatherElement = GetWeatherElement()
 
