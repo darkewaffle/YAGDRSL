@@ -7,4 +7,5 @@ AppendModOrderRestingOffense("Refresh")
 
 TrackOffenseBuffs("Troubadour")
 
-SetWeaponLockMainSub()
+AssignWeaponLockOptions(MOD_LOCK_ALL, MOD_LOCK_MAIN_SUB, MOD_LOCK_MAIN_SUB_AMMO)
+SetWeaponLockMainSubAmmo()
