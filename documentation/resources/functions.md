@@ -1,5 +1,5 @@
 # Library Functions Suggested for Users
-More details on these functions can be found in the .lua files defining them. You can locate them easily by searching for @User.
+More details on these functions can be found in the .lua files defining them. You can locate them easily by searching for the name of the function or @User which is found in the comments for each one.
 
 ## AssignModOptions
 ```
@@ -37,16 +37,64 @@ function CreateMod(ModName, ModDescription, ControlPanelDisplayOrder, CycleKeyBi
 CreateMod("MagicBurst", "MB Mode", 2, "f9", "MB High", "MB Low")
 ```
 
+## CustomizeDualWield
+```
+function CustomizeDualWield(GearSet, DualWieldToAdd)
+StatusSet = CustomizeDualWield(StatusSet, 9)
+```
+
+## CustomizeGearForDayElement
+```
+function CustomizeGearForDayElement(SpellAttributes, GearSet)
+CustomizeGearForDayElement(SpellAttributes, MidcastSet)
+```
+
+## CustomizeGearForWeatherElement
+```
+function CustomizeGearForWeatherElement(SpellAttributes, GearSet)
+CustomizeGearForWeatherElement(SpellAttributes, MidcastSet)
+```
+
 ## DeleteMod
 ```
 function DeleteMod(ModName)
 DeleteMod("MagicBurst")
 ```
 
+## GetCharacterHaste
+```
+function GetCharacterHaste(HasteDefinitions)
+local CurrentHaste = GetCharacterHaste({HasteSpell = 15, Samba = 10})
+```
+
+## GetDualWieldToCap
+```
+function GetDualWieldToCap(JobDualWield, PlayerHaste)
+local DualWieldNeeded = GetDualWieldToCap(35, 68)
+```
+
 ## InsertGearSet
 ```
 function InsertGearSet(InsertIntoTable, InsertFromTable)
 InsertGearSet(sets.precast.magic, {ring1="Kishar Ring", ear1="Loquacious Earring"})
+```
+
+## ReplaceMoonshade
+```
+function ReplaceMoonshade(PrecastSet, AlternateEarrings)
+PrecastSet = ReplaceMoonshade(PrecastSet, {"Ishvara Earring", "Sherida Earring"})
+```
+
+## ScaleCure
+```
+function ScaleCure(SpellAttributes, CurePotency, CureReceived, DayWeatherMultiplier)
+TerminateSpell, TerminateReason = ScaleCure(SpellAttributes, 1.5, 1, 1)
+```
+
+## ScaleWaltz
+```
+function ScaleWaltz(SpellAttributes, WaltzPotency)
+TerminateSpell, TerminateReason = ScaleWaltz(SpellAttributes, 1.5)
 ```
 
 ## SetAutoCancelBuff
