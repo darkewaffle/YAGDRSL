@@ -33,7 +33,11 @@
 --
 
 	function HookPrecastCustomizeOffense(SpellAttributes, PrecastSet)
-		PrecastSet = ReplaceMoonshade(SpellAttributes, PrecastSet)
+
+		if SpellAttributes["Category"] == CATEGORY_WS and GetCharacterTP() > 2850 then
+			PrecastSet = ReplaceMoonshade(PrecastSet, MoonshadeAlternates)
+		end
+
 		return PrecastSet
 	end
 
@@ -59,40 +63,4 @@
 		end
 
 		return StatusSet
-	end
-
---
--- CUSTOM PLAYER FUNCTIONS
---
-
-	function ReplaceMoonshade(SpellAttributes, PrecastSet)
-		local MoonshadeAlternates = {"Ishvara Earring", "Sherida Earring"}
-		local ReplacementEarring = ""
-		local ReplacementSlot = ""
-		local PrecastEar1 = PrecastSet["left_ear"]
-		local PrecastEar2 = PrecastSet["right_ear"]
-
-		if SpellAttributes["Category"] == CATEGORY_WS and GetCharacterTP() > 2800 then
-
-			if PrecastEar1 == "Moonshade Earring" then
-				ReplacementSlot = "left_ear"
-			elseif PrecastEar2 == "Moonshade Earring" then
-				ReplacementSlot = "right_ear"
-			else
-				ReplacementSlot = nil
-			end
-
-			if ReplacementSlot then
-				for _, AlternateName in ipairs(MoonshadeAlternates) do
-					if PrecastEar1 ~= AlternateName and PrecastEar2 ~= AlternateName then
-						ReplacementEarring = AlternateName
-						break
-					end
-				end
-
-				PrecastSet[ReplacementSlot] = ReplacementEarring
-			end
-		end
-
-		return PrecastSet
 	end
