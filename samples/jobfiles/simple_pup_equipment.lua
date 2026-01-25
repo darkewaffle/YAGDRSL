@@ -52,7 +52,8 @@
 
 	sets.precast.ja["Repair"] =
 		{
-			ear1="Guignol Earring"
+			ear1="Guignol Earring",
+			feet="Foire Babouches +3"
 		}
 
 	sets.precast.ja["Role Reversal"] =
@@ -73,6 +74,7 @@
 	sets.precast.ja.maneuver =
 		{
 			body="Karagoz Farsetto",
+			hands="Foire Dastanas +3",
 			back="Visucius's Mantle"
 		}
 
@@ -85,6 +87,7 @@
 			neck="Fotia Gorget",
 			ear1="Sroda Earring",
 			ear2="Moonshade Earring",
+			body="Foire Tobe +4",
 			ring1="Epona's Ring",
 			ring2="Karieyh Ring +1",
 			back="Null Shawl",
