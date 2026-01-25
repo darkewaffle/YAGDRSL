@@ -43,11 +43,11 @@ function GetCharacterHaste(HasteDefinitions)
 
 	HasteSpell =		HasteDefinitions.HasteSpell 			or 30			-- Defaults to Haste II
 	LastResort =		HasteDefinitions.LastResort 			or 15			-- 15 base, only 25 if main DRK and merited
-	March		 =		HasteDefinitions.March	 				or 13			-- 13 is the average of an unenhanced Advancing/Victory March
+	March =				HasteDefinitions.March	 				or 13			-- 13 is the average of an unenhanced Advancing/Victory March
 	Embrava =			HasteDefinitions.Embrava 				or 21			-- Assumes Light Arts + Max Skill but no meaningful +skill gear
 	Hasso =				HasteDefinitions.Hasso 					or 10			-- Base 10, only enhanced by gear
 	Samba =				HasteDefinitions.Samba 					or 5			-- Base 5, only 10 if main DNC and merited
-	GeoHaste = 			HasteDefinitions.GeoHaste	 			or 33 			-- Rough estimate of not quite max skill + Dunna
+	GeoHaste = 			HasteDefinitions.GeoHaste	 			or 33 			-- Assumes max skill + Dunna but no meaningful +skill gear
 
 	local HasteBuffs =
 		{
