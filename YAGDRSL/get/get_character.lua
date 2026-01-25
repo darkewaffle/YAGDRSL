@@ -44,6 +44,10 @@ function GetCharacterTP()
 	return player.tp
 end
 
+function GetCharacterMP()
+	return player.mp
+end
+
 function GetCharacterJobLevel(JobShort)
 	if JobShort == GetCharacterJobShort() then
 		return player.main_job_level
