@@ -1,7 +1,7 @@
 --[[
 
--- @User
--- This function can be used to calculate an estimate of the character's total haste. It accepts a HasteDefinitions table which can be used to define the expected value of haste related buffs.
+@User
+This function can be used to calculate an estimate of the character's total haste. It accepts a HasteDefinitions table which can be used to define the expected value of haste related buffs. See below for all parameters supported in HasteDefinitions.
 
 HasteDefinitions =
 	{
@@ -27,8 +27,9 @@ HasteDefinitions =
 		GeoHaste = nil
 	}
 
-eg: local HasteDefinitions = {HasteSpell = 15, Samba = 10}
-eg: local CurrentCharacterHaste = GetCharacterHaste(HasteDefinitions)
+And here is an example of how you could create HasteDefinitions and then call GetCharacterHaste.
+	local HasteDefinitions = {HasteSpell = 15, Samba = 10}
+	local CurrentCharacterHaste = GetCharacterHaste(HasteDefinitions)
 
 ]]
 

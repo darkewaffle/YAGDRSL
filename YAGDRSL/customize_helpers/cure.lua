@@ -1,6 +1,7 @@
 --[[
 @User
 This function can be called in HookPrecastTerminate to adjust which Cure is cast based on [estimated] missing HP of target and the [estimated] amount cured by each Cure 1-6.
+If it determines that a cure different from the original is more appropriate it will return CancelCurrentSpell = true, a string containing the reason and send a command to cast the new cure instead.
 The SpellAttributes parameter is required, the CurePotency, CureReceived and DayWeatherMultipliers are optional and default to 1.
 It is recommended that you simply implement this function in the HookPrecastTerminate definition in your job logic file(s) and call it with cure potency values appropriate for your equipment.
 See below for an implementation example as used by a job with +50% cure potency and no additional cure received or weather/day multiplier.

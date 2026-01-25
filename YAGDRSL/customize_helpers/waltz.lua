@@ -1,6 +1,7 @@
 --[[
 @User
 This function can be called in HookPrecastTerminate to adjust which Waltz is cast based on [estimated] missing HP of target and the [estimated] amount cured by waltz.
+If it determines that a waltz different from the original is more appropriate it will return CancelCurrentSpell = true, a string containing the reason and send a command to cast the new waltz instead.
 The SpellAttributes parameter is required, the WaltzPotency attribute is optional and will default to 1 if not provided.
 It is recommended that you simply implement this function in the HookPrecastTerminate definition in your job logic file(s) and call it with a waltz potency value appopriate for the job's equipment.
 See below for an implementation example as used by a main Dancer with +50% waltz potency.
