@@ -44,7 +44,7 @@ function DemoConstructSpellAttributes(SpellCategory, SpellName)
 
 	SpellAttributes = RefineSpellAttributes(SpellAttributes)
 
-	ChatSpellAttributes(SpellAttributes)
+	--ChatSpellAttributes(SpellAttributes)
 	return SpellAttributes
 end
 
