@@ -53,6 +53,11 @@ function ScaleCure(SpellAttributes, CurePotency, CureReceived, DayWeatherMultipl
 			{name = "Cure VI",  cost = 227, id = 6, amount = 0}
 		}
 
+	if SpellAttributes["TargetFriendEnemy"] = SPELL_TARGET_ENEMY then
+		CancelCurrentSpell = false
+		return CancelCurrentSpell, "ScaleCure does not apply when targeting an enemy"
+	end
+
 	if PlayerMP < 8 then
 		CancelCurrentSpell = true
 		return CancelCurrentSpell, "Insufficient MP for any Cure"
@@ -60,7 +65,7 @@ function ScaleCure(SpellAttributes, CurePotency, CureReceived, DayWeatherMultipl
 
 	if IgnoreSpells:contains(OriginalSpell) then
 		CancelCurrentSpell = false
-		return CancelCurrentSpell, "Full Cure is ignored by ScaleWaltz"
+		return CancelCurrentSpell, "Full Cure is ignored by ScaleCure"
 	end
 
 	-- Iterate through CureProperties and remove entries for Cures that are not available to the player's current jobs
