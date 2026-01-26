@@ -7,16 +7,18 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 
 
 ## Significant Features
+- [A full set of template files](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/templates) that, when used with the Quick Start Guide below, should allow users to simply fill in their gear and start using YAGDRSL pretty easily. Hopefully.
 - Thoughtful mapping of spells and abilities into groups so that more sets and more gear can be defined by purpose rather than by individual spells. (eg: Blue magic split into groups like blue.enfeebling, blue.enhancing and blue.cure. Bloodpact Rage split into bloodpact.rage.physical, bloodpact.rage.magical, bloodpact.rage.hybrid)
 - Gearsets that are put together through an additive process so that items don't need to be repeated as often, updates are easier to complete and gearset files are shorter overall.
-- Gearset "mods" that can quickly modify gearsets on the fly and .lua functions to easily create them.
+- Gearset "mods" that can quickly modify gearsets on the fly and .lua functions to easily define them.
 - Gearset "overrides" to create sets for unique situations that can easily be turned on and off without affecting regularly used sets.
 - Buff tracking that is straightforward to setup and that can be used to create buff-specific mods by simply naming the mod after the buff (eg: mods.engaged["Berserk"] or mods.precast.ws["Sneak Attack"])
 - Optional automatic tracking of other dynamic game elements like pet name, character movement and character-target facing that can all be used to apply mods.
-- A simple but clear Control Panel UI with customizable content and style to display both user mod and library mod values and options.
-- Built in validation command that can evaluate gear for a single job or all jobs without requiring any changes to the files.
-- Built in demo command and comprehensive debug messages to test and understand how a gearset is put together through precast-midcast events.
-- Hook functions in all major Gearswap and library events that users can override to implement custom logic.
+- A simple but clear Control Panel UI with customizable content and style to display both user mod and library mod values and options. [[1]](https://imgur.com/dYL9gml), [[2]](https://imgur.com/qTM9qvR)
+- Built in validation command that can evaluate gear for a single job or all jobs without requiring any changes to the files. [[1]](https://imgur.com/zj89dfF)
+- Built in demo command and comprehensive debug messages to test and understand how a gearset is put together through precast-midcast events. [[1]](https://imgur.com/IAZ55wV), [[2]](https://imgur.com/BhUOjxz)
+- [Hook functions in all major Gearswap and library events](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/hooks.md) that users can override to implement custom logic.
+- [Custom functions to handle common Gearswap objectives](https://github.com/darkewaffle/YAGDRSL/tree/main/YAGDRSL/customize_helpers) like scaling cures and waltzes for the target's (estimated) HP, replacing Moonshade Earring when the TP bonus isn't necessary, calculating haste and equipping appropriate dual wield sets and conditionally equipping gear when dealing magic damage that matches the day or weather element. 
 
 
 ## Guides and Documentation
@@ -27,7 +29,7 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 4. Place the character file and any job-specific files in the Windower\addons\GearSwap\data folder.
 5. Rename charactername.lua to match the name of your character. For example if your character is John then change it to John.lua.
 
-**Important note regarding the order in which GearSwap searches for a file to load. It will search for files matching these names in this order and only load the first one it finds. SO if your Windower\addons\GearSwap\data folder contains any other files matching the Name_Job patterns (1 through 4) then they will be loaded first and the character name file will not be loaded.**
+**Important note regarding the order in which GearSwap searches for a file to load. It will search for files matching these names in this order and only load the first one it finds. So if your Windower\addons\GearSwap\data folder contains any other files matching the Name_Job patterns (1 through 4) then they will take priority and your character name file will not be loaded.**
 | Load Order | Pattern | Example |
 | --- | --- | --- |
 | 1 | Name_Job.lua | John_WAR.lua |
