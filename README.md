@@ -39,7 +39,7 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 | 7 | JobLong.lua | Warrior.lua |
 | 8 | default.lua | default.lua |
 
-6. When you have all the files in place then your [Windower\addons\GearSwap\libs folder should look like this](https://imgur.com/xhJqzRx) and your [Windower\addons\GearSwap\data folder should look like this](https://imgur.com/mBixUCk).
+6. When you have all the files in place then your Windower\addons\GearSwap\libs [folder should look like this](https://imgur.com/xhJqzRx) and your Windower\addons\GearSwap\data [folder should look like this](https://imgur.com/mBixUCk).
 5. The character file should be fairly complete already - however you may want to adjust or take note of the following items.
 
 | Name | Usage |
