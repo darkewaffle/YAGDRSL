@@ -18,7 +18,7 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 - Built in validation command that can evaluate gear for a single job or all jobs without requiring any changes to the files. [[1]](https://imgur.com/zj89dfF)
 - Built in demo command and comprehensive debug messages to test and understand how a gearset is put together through precast-midcast events. [[1]](https://imgur.com/IAZ55wV), [[2]](https://imgur.com/BhUOjxz)
 - [Hook functions in all major Gearswap and library events](https://github.com/darkewaffle/YAGDRSL/blob/main/documentation/resources/hooks.md) that users can override to implement custom logic.
-- [Custom functions to handle common Gearswap objectives](https://github.com/darkewaffle/YAGDRSL/tree/main/YAGDRSL/customize_helpers) like scaling cures and waltzes for the target's (estimated) HP, replacing Moonshade Earring when the TP bonus isn't necessary, calculating haste and equipping appropriate dual wield sets and conditionally equipping gear when dealing magic damage that matches the day or weather element. 
+- [Custom functions to help handle common Gearswap objectives](https://github.com/darkewaffle/YAGDRSL/tree/main/YAGDRSL/customize_helpers) like scaling cures and waltzes for the target's (estimated) HP, replacing Moonshade Earring when the TP bonus isn't necessary, calculating haste and equipping appropriate dual wield sets and conditionally equipping gear when dealing magic damage that matches the day or weather element. 
 
 
 ## Guides and Documentation
@@ -56,7 +56,7 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 | F12 | F12 is automatically bound to a 'gs c update' command which you can use to call a forced update to your status (idle/engaged/resting) set at any point. |
 
 6. Open the job_equipment.lua file and start filling out the gearsets. Many should be self-explanatory just from how they are named however there are also comments to help explain how and when some of the more unfamiliar ones will be used.
-7. Once your character file and job equipment files have been updated you should be able to run a 'gs reload' command and start using YAGDRSL. Good luck!
+7. Once your character file and job equipment files are in the appropriate folders and have been updated then you should be able to run a 'gs reload' command and start using YAGDRSL. Good luck!
 
 
 #### Full Documentation
