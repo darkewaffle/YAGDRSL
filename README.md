@@ -22,13 +22,24 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 ## Guides and Documentation
 #### Quick Start Guide Using YAGDRSL Templates
 1. Download the YAG_include.lua file and the entire YAGDRSL folder. These can also be found [in the zip file under 'Releases'](https://github.com/darkewaffle/YAGDRSL/releases).
-2. Place them in your Windower\addons\GearSwap\libs folder.<br>
-*Or if you want to test-drive YAGDRSL and keep the files for it separate from your existing Gearswap files you can also just put everything in the libs-dev folder*.
+2. Place them in your Windower\addons\GearSwap\libs folder.
 3. Download a copy of the [character file template](https://github.com/darkewaffle/YAGDRSL/blob/main/samples/templates/charactername.lua) and both the equipment and logic file from the [templates directory](https://github.com/darkewaffle/YAGDRSL/tree/main/samples/templates) for any job(s) that you want to configure with YAGDRSL.
-4. Place the character file and any job-specific files into the same directory as YAG_include.lua and the YAGDRSL folder.
-3. Rename charactername.lua to actually match the name of your character. (eg: If your character is John then change it to John.lua).<br>
-*If using libs-dev to test YAGDRSL, you can easily go back and forth between your current Gearswap setup and YAGDRSL. Just rename the libs-dev/charactername.lua file so gearswap won't recognize it, input a 'gs reload' command and you're back to your original gearswap. Then when you want to continue trying YAGDSRL just do the reverse - change the file name to match your character, 'gs reload' and you're back in YAGDRSL.*
-4. When you have all the files in place then your folder [should look something like this](https://imgur.com/a/H3WAsw2).
+4. Place the character file and any job-specific files in the Windower\addons\GearSwap\data folder.
+5. Rename charactername.lua to match the name of your character. For example if your character is John then change it to John.lua.<br>
+
+**Important note regarding the order in which GearSwap searches for a file to load. It will search for files matching these names in this order and only load the first one it finds. SO if your Windower\addons\GearSwap\data folder contains any other files matching the Name_Job patterns (1 through 4) then they will be loaded first and the character name file will not be loaded.**
+| Load Order | Pattern | Example |
+| --- | --- | --- |
+| 1 | Name_Job.lua | John_WAR.lua |
+| 2 | Name-Job.lua | John-WAR.lua |
+| 3 | Name_JobLong.lua | John_Warrior.lua |
+| 4 | Name-JobLong.lua | John-Warrior.lua |
+| 5 | Name.lua | John.lua |
+| 6 | Job.lua | WAR.lua |
+| 7 | JobLong.lua | Warrior.lua |
+| 8 | default.lua | default.lua |
+
+6. When you have all the files in place then your [Windower\addons\GearSwap\libs folder should look like this](https://imgur.com/xhJqzRx) and your [Windower\addons\GearSwap\data folder should look like this](https://imgur.com/mBixUCk).
 5. The character file should be fairly complete already - however you may want to adjust the following items.
 - macrobook, macroset, and lockstyle inside of 'JobControls' represent the in-game macros and lockstyle that are set when YAGDRSL is loaded or you change to a new job
 - ControlPanelX represents the horizontal position of the control panel
