@@ -53,7 +53,7 @@ function ScaleCure(SpellAttributes, CurePotency, CureReceived, DayWeatherMultipl
 			{name = "Cure VI",  cost = 227, id = 6, amount = 0}
 		}
 
-	if SpellAttributes["TargetFriendEnemy"] = SPELL_TARGET_ENEMY then
+	if SpellAttributes["TargetFriendEnemy"] == SPELL_TARGET_ENEMY then
 		CancelCurrentSpell = false
 		return CancelCurrentSpell, "ScaleCure does not apply when targeting an enemy"
 	end
