@@ -42,7 +42,7 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 | 8 | default.lua | default.lua |
 
 6. When you have all the files in place then your Windower\addons\GearSwap\libs [folder should look like this](https://imgur.com/xhJqzRx) and your Windower\addons\GearSwap\data [folder should look like this](https://imgur.com/mBixUCk).
-5. The character file should be fairly complete already - however you may want to adjust or take note of the following items.
+7. The character file should be fairly complete already - however you may want to adjust or take note of the following items.
 
 | Name | Usage |
 | --- | --- |
@@ -55,8 +55,8 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 | WeatherItems | Gear that will be automatically equipped when dealing magical damage that matches the current weather element. |
 | F12 | F12 is automatically bound to a 'gs c update' command which you can use to call a forced update to your status (idle/engaged/resting) set at any point. |
 
-6. Open the job_equipment.lua file and start filling out the gearsets. Many should be self-explanatory just from how they are named however there are also comments to help explain how and when some of the more unfamiliar ones will be used.
-7. Once your character file and job equipment files are in the appropriate folders and have been updated then you should be able to run a 'gs reload' command and start using YAGDRSL. Good luck!
+8. Open the job_equipment.lua file and start filling out the gearsets. Many should be self-explanatory just from how they are named however there are also comments to help explain how and when some of the more unfamiliar ones will be used.
+9. Once your character file and job equipment files are in the appropriate folders and have been updated then you should be able to run a 'gs reload' command and start using YAGDRSL. Good luck!
 
 
 #### Full Documentation
