@@ -181,7 +181,7 @@
 
 	sets.midcast.magic.singing.friend.carol =
 		{
-			--hands="Mousai Gages"
+			hands="Mousai Gages"
 		}
 
 	sets.midcast.magic.singing.friend.madrigal =
@@ -192,7 +192,7 @@
 
 	sets.midcast.magic.singing.friend.mambo = 
 		{
-			--feet="Mousai Crackows"
+			feet="Mousai Crackows"
 		}
 
 	sets.midcast.magic.singing.friend.march =
@@ -202,7 +202,7 @@
 
 	sets.midcast.magic.singing.friend.minne =
 		{
-			--legs="Mousai Seraweels"
+			legs="Mousai Seraweels"
 		}
 
 	sets.midcast.magic.singing.friend.minuet =
@@ -248,7 +248,7 @@
 
 	sets.midcast.magic.singing.enemy.threnody =
 		{
-			--body="Mousai Manteel"
+			body="Mousai Manteel"
 		}
 
 --
