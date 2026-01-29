@@ -6,10 +6,14 @@ require "YAGDRSL/get/mods/get_mod_value.lua"
 -- More importantly the SwapEarrings and SwapRings logic is a bugfix to address slots sometimes becoming 'locked' to GearSwap
 -- when ring A is equipped in Ring1 slot ingame but an equip request is sent that tells the game to put it in Ring2.
 
-function EquipSafe(GearSet, Message)
+function EquipSafe(GearSet, Message, IgnoreWeaponLock)
 	if next(GearSet) then
 		ChatCheckpointLogged("Equip Gear From", Message)
-		GearSet = WeaponLock(GearSet)
+
+		if not IgnoreWeaponLock then
+			GearSet = WeaponLock(GearSet)
+		end
+
 		GearSet = SwapEarrings(GearSet)
 		GearSet = SwapRings(GearSet)
 		equip(GearSet)
