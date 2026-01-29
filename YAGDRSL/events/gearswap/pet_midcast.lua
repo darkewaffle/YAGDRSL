@@ -6,7 +6,7 @@ function pet_midcast(spell)
 
 	local MidcastSet = MidcastContainer(SpellAttributes)
 	ChatGearSet(MidcastSet, EVENT_MIDCAST_PET)
-	EquipSafe(MidcastSet, EVENT_MIDCAST_PET)
+	EquipSafe(MidcastSet, EVENT_MIDCAST_PET, SpellAttributes["IgnoreWeaponLock"])
 
 	HookOnPetMidcast(SpellAttributes)
 

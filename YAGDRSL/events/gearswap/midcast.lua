@@ -16,7 +16,7 @@ function midcast(spell)
 
 	local MidcastSet = MidcastContainer(SpellAttributes)
 	ChatGearSet(MidcastSet, EVENT_MIDCAST)
-	EquipSafe(MidcastSet, EVENT_MIDCAST)
+	EquipSafe(MidcastSet, EVENT_MIDCAST, SpellAttributes["IgnoreWeaponLock"])
 
 	ChatCheckpointLogged("Midcast End")
 end

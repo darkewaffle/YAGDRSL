@@ -37,7 +37,7 @@ function precast(spell, position)
 
 	local PrecastSet = PrecastContainer(SpellAttributes)
 	ChatGearSet(PrecastSet, EVENT_PRECAST)
-	EquipSafe(PrecastSet, EVENT_PRECAST)
+	EquipSafe(PrecastSet, EVENT_PRECAST, SpellAttributes["IgnoreWeaponLock"])
 
 	ChatCheckpointLogged("Precast End")
 end
