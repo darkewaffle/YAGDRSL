@@ -55,6 +55,8 @@ function GetSpellAttributes(spell)
 		SpellAttributes["DamageType"] = GetSpellDamageType(SpellAttributes["Category"], SpellAttributes["Name"], SpellAttributes["Element"])
 		SpellAttributes["RecastID"] = GetSpellRecastID(spell)
 
+		SpellAttributes["IgnoreWeaponLock"] = GetSpellIgnoresWeaponLock(SpellAttributes["Name"])
+
 		SpellAttributes = RefineSpellAttributes(SpellAttributes)
 	end
 

@@ -120,6 +120,7 @@ function ChatSpellAttributes(SpellAttributes)
 	ChatDebugForced("Element=Day",           SpellAttributes["Element=Day"])
 	ChatDebugForced("ElementOpposesDay",     SpellAttributes["ElementOpposesDay"])
 
+	ChatDebugForced("SpellIgnoresWeaponLock", SpellAttributes["IgnoreWeaponLock"])
 end
 
 function ChatTableKeysAsMessage(ChatTable)
