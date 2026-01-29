@@ -8,6 +8,7 @@ function DeclareLibraryObjects()
 
 	-- Mode to handle locking weapon slots (implemented in EquipSafe)
 	_G[MOD_VALUES_ROOT_NAME][MOD_LOCK_WEAPONS] = M{MOD_DEFAULT_OFF, MOD_LOCK_ALL, MOD_LOCK_MAIN_SUB_RANGE, MOD_LOCK_MAIN_SUB, MOD_LOCK_RANGE_AMMO, ["description"]="Locked Weapons"}
+	_G[IGNORE_LOCK_SPELLS] = {}
 
 	-- Globals to track if a cycle command already has a ForceStatusUpdate scheduled.
 	STATE_CYCLE_UPDATE_PENDING = false

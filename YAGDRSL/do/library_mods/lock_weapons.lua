@@ -83,3 +83,30 @@ end
 function GetModWeaponLock()
 	return GetModValue(MOD_LOCK_WEAPONS, false)
 end
+
+function SetWeaponLockIgnoreSpells(...)
+	local IgnoreLockSpells = {...}
+
+	for _, SpellName in pairs(IgnoreLockSpells) do
+		if GetActionNameIsValid(SpellName) then
+			ChatDebug("Ignore weapon lock spell name is valid -", SpellName)
+			table.insert(_G[IGNORE_LOCK_SPELLS], SpellName)
+		else
+			ChatError("Ignore weapon lock spell is not valid -", SpellName)
+		end
+	end
+
+end
+
+function GetSpellIgnoresWeaponLock(SpellName)
+	local IgnoreLock = false
+
+	for _, IgnoreSpell in ipairs(_G[IGNORE_LOCK_SPELLS]) do
+		if SpellName == IgnoreSpell then
+			IgnoreLock = true
+			break
+		end
+	end
+
+	return IgnoreLock
+end
