@@ -1,4 +1,5 @@
-CreateMod("Debuff",   "ShF9  Debuff",  1.1, "~f9",   "MAcc",   "Duration")
+CreateMod("AutoDW",  "ShF9  DW", 1.1, "~f9", "On")
+CreateMod("Debuff",  "CtF9  Debuff",  1.2, "^f9",   "MAcc",   "Duration")
 CreateMod("Refresh", "ShF11 Refresh", 3.1, "~f11", "+Refresh")
 
 AppendModOrderMidcastMagicOffense("Debuff")
@@ -11,6 +12,13 @@ AssignWeaponLockOptions(MOD_LOCK_ALL, MOD_LOCK_MAIN_SUB, MOD_LOCK_MAIN_SUB_AMMO)
 SetWeaponLockMainSubAmmo()
 
 
+HasteDefinitions =
+	{
+		HasteSpell = 30,
+		March = 25,
+		GeoHaste = 20
+	}
+
 function HookPrecastTerminate(SpellAttributes)
 	local TerminateSpell = false
 	local TerminateReason = "Spell will not be terminated"
@@ -20,4 +28,17 @@ function HookPrecastTerminate(SpellAttributes)
 	end
 
 	return TerminateSpell, TerminateReason
+end
+
+function HookStatusCustomizeOffense(CharacterStatus, StatusSet)
+
+	if GetModValue("AutoDW") == "On" and CharacterStatus == STATUS_ENGAGED then
+
+		local CurrentHaste = GetCharacterHaste(HasteDefinitions)
+		local DualWieldToCap = GetDualWieldToCap(25, CurrentHaste)
+		StatusSet = CustomizeDualWield(StatusSet, DualWieldToCap)
+
+	end
+
+	return StatusSet
 end

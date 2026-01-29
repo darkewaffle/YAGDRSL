@@ -4,6 +4,44 @@
 	capes = {}
 	capes.bard = { name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}}
 
+	DualWield = {}
+	DualWield[0] = {}
+
+	DualWield[4] =
+		{
+			ear1="Eabani Earring"
+		}
+
+	DualWield[5] =
+		{
+			ear1="Suppanomimi"
+		}
+
+	DualWield[7] =
+		{
+			ear1="Reiki Yotai"
+		}
+
+	DualWield[9] =
+		{
+			ear1="Eabani Earring",
+			ear2="Suppanomimi"
+		}
+
+	DualWield[12] =
+		{
+			ear1="Suppanomimi",
+			waist="Reiki Yotai"
+		}
+
+
+	DualWield[16] =
+		{
+			ear1="Eabani Earring",
+			ear2="Suppanomimi",
+			waist="Reiki Yotai"
+		}
+
 	templates = {}
 
 	templates.fastcast =
