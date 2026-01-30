@@ -2,16 +2,16 @@ function aftercast(spell)
 	ChatBlankLine()
 	ChatCheckpointLogged("Aftercast Start")
 
-	AfterCastContainer(EVENT_AFTERCAST)
-
 	local SpellAttributes = GetSpellAttributes(spell)
+
+	AfterCastContainer(EVENT_AFTERCAST, SpellAttributes["IgnoreWeaponLock"])
 	HookOnAftercast(SpellAttributes) -- @Hook
 
 	ChatCheckpointLogged("Aftercast End", spell.name)
 end
 
 -- Isolated into function so that it can be re-used in pet_aftercast.
-function AfterCastContainer(EventName)
+function AfterCastContainer(EventName, IgnoreWeaponLock)
 
 	local CharacterStatus = GetCharacterStatus()
 	ChatDebug(EventName .. ", CharacterStatus =", CharacterStatus)
@@ -19,7 +19,7 @@ function AfterCastContainer(EventName)
 	StatusSet = GetStatusSet(CharacterStatus, EVENT_AFTERCAST)
 
 	ChatGearSet(StatusSet, EventName)
-	EquipSafe(StatusSet, EventName)
+	EquipSafe(StatusSet, EventName, IgnoreWeaponLock)
 
 end
 
