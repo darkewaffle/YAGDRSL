@@ -111,37 +111,12 @@
 			
 		})
 
-	sets.midcast.magic.enfeebling.black.bind =
-		{
-			
-		}
-
-	sets.midcast.magic.enfeebling.black.blind =
-		{
-			
-		}
-
-	sets.midcast.magic.enfeebling.black.petrify =
-		{
-			
-		}
-
 	sets.midcast.magic.enfeebling.black.dispel =
 		{
 			
 		}
 
-	sets.midcast.magic.enfeebling.black.distract =
-		{
-			
-		}
-
-	sets.midcast.magic.enfeebling.black.frazzle =
-		{
-			
-		}
-
-	sets.midcast.magic.enfeebling.black.gravity =
+	sets.midcast.magic.enfeebling.black.duration =
 		{
 			
 		}
@@ -151,7 +126,7 @@
 			
 		}
 
-	sets.midcast.magic.enfeebling.black.sleep =
+	sets.midcast.magic.enfeebling.black.potency =
 		{
 			
 		}
@@ -161,27 +136,17 @@
 			
 		})
 
-	sets.midcast.magic.enfeebling.white.addle =
-		{
-			
-		}
-
 	sets.midcast.magic.enfeebling.white.dia =
 		{
 			
 		}
 
-	sets.midcast.magic.enfeebling.white.paralyze =
+	sets.midcast.magic.enfeebling.white.duration =
 		{
 			
 		}
 
-	sets.midcast.magic.enfeebling.white.silence =
-		{
-			
-		}
-
-	sets.midcast.magic.enfeebling.white.slow =
+	sets.midcast.magic.enfeebling.white.potency =
 		{
 			
 		}
