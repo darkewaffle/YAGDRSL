@@ -22,6 +22,10 @@ MAP_DAMAGE_MAGICAL = "magical"
 MAP_DAMAGE_PHYSICAL = "physical"
 MAP_DAMAGE_NONE = "no_damage"
 
+-- Enfeebling spell classes
+MAP_ENFEEBLE_DURATION = "duration"
+MAP_ENFEEBLE_POTENCY = "potency"
+
 -- Mapping values to describe various attributes of game resources in the static mapping tables.
 MAP_JA_DEFAULT = "ungrouped_ja"
 MAP_JA_BLOODPACT = "bloodpact"
