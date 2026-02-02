@@ -200,7 +200,7 @@
 	InsertGearSet(sets.midcast.magic.singing,
 		{
 			ranged="Miracle Cheer",
-			neck="Moonbow Whistle",
+			neck="Moonbow Whistle +1",
 		})
 
 	sets.midcast.magic.singing.friend =
