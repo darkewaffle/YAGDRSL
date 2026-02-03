@@ -417,3 +417,13 @@
 --
 
 	mods.idle["+Refresh"] = templates.refresh
+
+--
+-- OVERRIDES
+--
+
+	overrides.idle["DynaNeck"] = {neck="Bard's Charm +1"}
+	overrides.resting["DynaNeck"] = {neck="Bard's Charm +1"}
+	overrides.engaged["DynaNeck"] = {neck="Bard's Charm +1"}
+	overrides.precast.ws["DynaNeck"] = {neck="Bard's Charm +1"}
+	overrides.precast.ja["DynaNeck"] = {neck="Bard's Charm +1"}

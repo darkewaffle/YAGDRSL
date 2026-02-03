@@ -2,6 +2,8 @@ CreateMod("AutoDW",  "ShF9  DW", 1.1, "~f9", "On")
 CreateMod("Debuff",  "CtF9  Debuff",  1.2, "^f9",   "MAcc",   "Duration")
 CreateMod("Refresh", "ShF11 Refresh", 3.1, "~f11", "+Refresh")
 
+ConfigureOverride("CtF12 Override", 5, "^f12", "DynaNeck")
+
 AppendModOrderMidcastMagicOffense("Debuff")
 AppendModOrderIdleOffense("Refresh")
 AppendModOrderRestingOffense("Refresh")
