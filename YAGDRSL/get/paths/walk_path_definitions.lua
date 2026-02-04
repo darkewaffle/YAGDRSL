@@ -79,7 +79,7 @@ function WalkPathMagic(RootName, EventSource, SpellAttributes)
 	if SpellAttributes["Skill"] == MAP_SKILL_SINGING then
 
 		-- Example: sets.precast.magic.singing.friendly.ballad or sets.precast.magic.enemy.lullaby
-		SetPaths, SetPathStrings = WalkPath(RootName, EventSource, SpellAttributes["Category"], SpellAttributes["Skill"], SpellAttributes["TargetFriendEnemy"], SpellAttributes["ParentGroup"])
+		SetPaths, SetPathStrings = WalkPath(RootName, EventSource, SpellAttributes["Category"], SpellAttributes["Skill"], SpellAttributes["TargetFriendEnemy"], SpellAttributes["ParentGroup"], SpellAttributes["ChildGroup"])
 
 		-- Example: sets.precast.magic.singing.friendly.ballad["Mage's Ballad II"] or sets.precast.magic["Foe Lullaby"]
 		AppendValidNamedPaths(SetPaths, SetPathStrings, SpellAttributes["Name"])

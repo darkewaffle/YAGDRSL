@@ -100,6 +100,14 @@ function RefineSpellAttributes(SpellAttributes)
 			RefinedSpellAttributes["ChildGroup"] = MAP_JA_WALTZ_CURE
 		end
 
+	elseif OriginalParentGroup == MAP_SPELL_LULLABY then
+		if OriginalName == "Foe Lullaby" or OriginalName == "Foe Lullaby II" then
+			RefinedSpellAttributes["ParentGroup"] = MAP_SPELL_LULLABY
+			RefinedSpellAttributes["ChildGroup"] = MAP_SPELL_LULLABY_FOE
+		else
+			RefinedSpellAttributes["ParentGroup"] = MAP_SPELL_LULLABY
+			RefinedSpellAttributes["ChildGroup"] = MAP_SPELL_LULLABY_HORDE
+		end
 
 	-- Blue Magic requires special handling since it all falls under the same skill and encompasses cures, enfeebles, buffs, physical damage, magical damage, etc.
 	-- This allows for sets.midcast.magic.blue.cure, sets.midcast.magic.blue.enfeebling and sets.midcast.magic.blue.physical to all be valid. And hopefully intuitive.
