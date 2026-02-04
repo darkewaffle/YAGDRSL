@@ -72,7 +72,8 @@ sets.precast.magic.enhancing.white
 sets.precast.magic.enhancing.white.barelement
 sets.precast.magic.enhancing.white.barstatus
 sets.precast.magic.enhancing.white.boost
-sets.precast.magic.enhancing.white.enspell
+sets.precast.magic.enhancing.white.enspell1
+sets.precast.magic.enhancing.white.enspell2
 sets.precast.magic.enhancing.white.flurry
 sets.precast.magic.enhancing.white.gain
 sets.precast.magic.enhancing.white.haste
