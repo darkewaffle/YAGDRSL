@@ -182,7 +182,22 @@
 			
 		}
 
-	sets.midcast.magic.singing.enemy.lullaby =
+	InsertGearSet(sets.midcast.magic.singing.enemy.lullaby,
+		{
+			
+		})
+
+	sets.midcast.magic.singing.enemy.lullaby.foe =
+		{
+			
+		}
+
+	sets.midcast.magic.singing.enemy.lullaby.horde =
+		{
+			
+		}
+
+	sets.midcast.magic.singing.enemy.lullaby["Horde Lullaby II"] =
 		{
 			
 		}
