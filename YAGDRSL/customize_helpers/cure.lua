@@ -39,6 +39,7 @@ function ScaleCure(SpellAttributes, CurePotency, CureReceived, DayWeatherMultipl
 	local MainJobLevel = GetCharacterJobLevel(GetCharacterJobShort())
 	local EstimatedCasterMND = math.floor(MainJobLevel * 1.5)
 	local EstimatedCasterVIT = math.floor(MainJobLevel * 1.5)
+	local EstimatedPlayerMaxHP = 2200
 	local HealingSkill = windower.ffxi.get_player()["skills"]["healing_magic"]
 	local CurePower = math.floor(EstimatedCasterMND/2) + math.floor(EstimatedCasterVIT/4) + HealingSkill
 	local CureBases = GetCureBases(CurePower)
@@ -101,7 +102,7 @@ function ScaleCure(SpellAttributes, CurePotency, CureReceived, DayWeatherMultipl
 		TargetMissingHP = GetPartyMemberMissingHP(SpellAttributes["TargetID"])
 
 	else
-		TargetMissingHP = math.floor(EstimatePlayerMaxHP - (EstimatePlayerMaxHP*SpellAttributes["TargetHPDecimal"]))
+		TargetMissingHP = math.floor(EstimatedPlayerMaxHP - (EstimatedPlayerMaxHP*SpellAttributes["TargetHPDecimal"]))
 	end
 
 	-- Iterate through each possible Cure and check if it can be cast and and does not overcure. The highest level cure that meets this criteria (and the player can use) will be recorded as NewSpell.
