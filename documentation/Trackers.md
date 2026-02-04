@@ -67,7 +67,7 @@ Now that we have a tracker in the mod orders, how do we use that to actually cha
 
 The flourish mods mean that anytime we use a melee, physical damage weaponskill and we have the Climactic Flourish or Striking Flourish buff then the gear corresponding to that buff will be equipped. And you'll note that for Climactic Flourish we've also included Charis Feather to increase critical hit damage and Etoile Gorget to provide more charisma - so the set you define for the buff can contain more than just items that are specifically related to the buff.
 
-Then the Fan Dance augments currently mean that Horos Bangles will be equipped anytime Fan Dance is active and the character's status is idle or engaged. However the lines that are commented out (the lines beginning with --) also provide an example of how you could instead have it equipped at all times. By defining it inside of just 'mods' rather than further down the path that means that it will affect all actions, all events and all statuses.
+Then the Fan Dance mods currently mean that Horos Bangles will be equipped anytime Fan Dance is active and the character's status is idle or engaged. However the lines that are commented out (the lines beginning with --) also provide an example of how you could instead have it equipped at all times. By defining it inside of just 'mods' rather than further down the path that means that it would affect all actions, all events and all statuses.
 
 ### Pet Name
 In order for your Pet Name to act as a tracker mod you only need to call one of these two functions. Similar to buff tracking these functions do the exact same thing except they determine whether or not the tracker is treated as an offense mod or a defense mod.
