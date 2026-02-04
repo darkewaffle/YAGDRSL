@@ -175,12 +175,12 @@
 			
 		}
 
-	sets.midcast.magic.enhancing.white.boost =
+	sets.midcast.magic.enhancing.white.enspell1 =
 		{
 			
 		}
 
-	sets.midcast.magic.enhancing.white.enspell =
+	sets.midcast.magic.enhancing.white.enspell2 =
 		{
 			
 		}
