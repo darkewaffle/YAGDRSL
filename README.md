@@ -12,7 +12,7 @@ However, YAGDRSL is not intended to provide any automatic 'reactions' to game ev
 - Gearsets that are put together through an additive process so that items don't need to be repeated as often, updates are easier to complete and gearset files are shorter overall.
 - Gearset "mods" that can quickly modify gearsets on the fly and .lua functions to easily define them.
 - Gearset "overrides" to create sets for unique situations that can easily be turned on and off without affecting regularly used sets.
-- Buff tracking that is straightforward to setup and that can be used to create buff-specific mods by simply naming the mod after the buff (eg: mods.engaged["Berserk"] or mods.precast.ws["Sneak Attack"])
+- Buff tracking that is straightforward to setup and that can be used to create buff-specific mods by simply naming the mod after the buff (eg: mods.status.engaged["Berserk"] or mods.precast.ws["Sneak Attack"])
 - Optional automatic tracking of other dynamic game elements like pet name, character movement and character-target facing that can all be used to apply mods.
 - A simple but clear Control Panel UI with customizable content and style to display both user mod and library mod values and options. [[1]](https://imgur.com/dYL9gml), [[2]](https://imgur.com/qTM9qvR)
 - Built in validation command that can evaluate gear for a single job or all jobs without requiring any changes to the files. [[1]](https://imgur.com/zj89dfF)

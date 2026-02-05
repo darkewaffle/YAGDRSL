@@ -185,7 +185,7 @@
 --
 -- ENGAGED SET
 --
-	sets.engaged = set_combine(collections.Malignance,
+	sets.status.engaged = set_combine(collections.Malignance,
 		{
 			ammo="Coiste Bodhar",
 			neck="Erudition Necklace",
@@ -202,7 +202,7 @@
 -- ENGAGED OFFENSE MODS
 --
 
-	mods.engaged["Acc"] =
+	mods.status.engaged["Acc"] =
 		{
 			ammo="Yamarang",
 			neck="Null Loop",
@@ -214,13 +214,13 @@
 		}
 
 	-- +Multiattack gear when engaged and the Offense mod = "Multi"
-	mods.engaged["Multi"] =
+	mods.status.engaged["Multi"] =
 		{
 			
 		}
 
 	-- +Treasure Hunter gear when engaged and the TH mod = "+TH"
-	mods.engaged["+TH"] =
+	mods.status.engaged["+TH"] =
 		{
 			ammo="Perfect Lucky Egg",
 			hands="Plunderer's Armlets +1",
@@ -229,13 +229,13 @@
 		}
 
 	-- Additional gear that will be equipped when engaged and Conspirator is active
-	mods.engaged["Conspirator"] =
+	mods.status.engaged["Conspirator"] =
 		{
 			
 		}
 
 	-- Additional gear that will be equipped when engaged and Feint is active
-	mods.engaged["Feint"] =
+	mods.status.engaged["Feint"] =
 		{
 			
 		}
@@ -244,7 +244,7 @@
 -- ENGAGED DEFENSE MODS
 --
 
-	mods.engaged["PDT"] = set_combine(collections.Malignance,
+	mods.status.engaged["PDT"] = set_combine(collections.Malignance,
 		{
 			neck="Null Loop",
 			ear1="Alabaster Earring",
@@ -252,37 +252,37 @@
 		})
 
 	-- Moderate PDT gear when the Physical Defense mod = "PDTHP"
-	mods.engaged["PDTHP"] =
+	mods.status.engaged["PDTHP"] =
 		{
 			
 		}
 
 	-- High PDT gear when the Physical Defense mod = "Eva"
-	mods.engaged["Eva"] =
+	mods.status.engaged["Eva"] =
 		{
 			
 		}
 
 	-- Moderate MDT/MEva gear when the Magical Defense mod = "MEvaLo"
-	mods.engaged["MEvaLo"] =
+	mods.status.engaged["MEvaLo"] =
 		{
 			
 		}
 
 	-- High MDT/MEva gear when the Magical Defense mod = "MEvaHi"
-	mods.engaged["MEvaHi"] =
+	mods.status.engaged["MEvaHi"] =
 		{
 			
 		}
 
 	-- Additional gear that will be equipped when engaged and Flee is active
-	mods.engaged["Flee"] =
+	mods.status.engaged["Flee"] =
 			{
 
 			}
 
 	-- Additional gear that will be equipped when engaged and Perfect Dodge is active
-	mods.engaged["Perfect Dodge"] =
+	mods.status.engaged["Perfect Dodge"] =
 			{
 				
 			}
@@ -291,9 +291,9 @@
 -- IDLE & RESTING SETS
 --
 
-	InsertGearSet(sets.idle, set_combine(collections.Gleti, {ring1="Karieyh Ring +1"}))
+	InsertGearSet(sets.status.idle, set_combine(collections.Gleti, {ring1="Karieyh Ring +1"}))
 
-	sets.idle.town =
+	sets.status.idle.town =
 		{
 			ring1="Warp Ring",
 			ring2="Trizek Ring",
@@ -301,13 +301,13 @@
 			feet="Skadi's Jambeaux +1"
 		}
 
-	sets.resting = collections.Gleti
+	sets.status.resting = collections.Gleti
 
 --
 -- IDLE & RESTING MODS
 --
 
-	mods.idle[STATE_MOVING] =
+	mods.status.idle[STATE_MOVING] =
 		{
 			feet="Skadi's Jambeaux +1"
 		}

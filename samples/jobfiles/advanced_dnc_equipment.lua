@@ -95,12 +95,12 @@
 	sets.precast.ja.jig =
 		{
 			legs="Horos Tights +3",
-			feet="Maxixi Toe Shoes +2"
+			feet="Maxixi Toe Shoes +3"
 		}
 
 	sets.precast.ja.samba =
 		{
-			head="Maxixi Tiara +2",
+			head="Maxixi Tiara +3",
 			back=capes.tp
 		}
 
@@ -145,7 +145,7 @@
 			ammo="Sapience Orb",
 			ear2="Cryptic Earring",
 			neck="Unmoving Collar +1",
-			hands="Horos Bangles +1",
+			hands="Horos Bangles +3",
 			ring2="Vengeful Ring"
 		}
 
@@ -177,7 +177,7 @@
 
 	sets.precast.ja["Trance"] =
 		{
-			hands="Horos Tiara +1"
+			hands="Horos Tiara +2"
 		}
 
 	sets.precast.ja["Violent Flourish"] =
@@ -321,7 +321,7 @@
 -- ENGAGED SET
 --
 
-	sets.engaged =
+	sets.status.engaged =
 		{
 			ammo="Yamarang",
 			head="Maculele Tiara +3",
@@ -342,7 +342,7 @@
 -- ENGAGED OFFENSE MODS
 --
 
-	mods.engaged["Acc"] =
+	mods.status.engaged["Acc"] =
 		{
 			ammo="Yamarang",
 			head="Maculele Tiara +3",
@@ -359,7 +359,7 @@
 			feet="Maculele Toe Shoes +3"
 		}
 
-	mods.engaged["Multi"] =
+	mods.status.engaged["Multi"] =
 		{
 			ammo="Coiste Bodhar",
 			neck="Lissome Necklace",
@@ -374,22 +374,22 @@
 			legs="Samnuha Tights"
 		}
 
-	mods.engaged["STP"] =
+	mods.status.engaged["STP"] =
 		{
 			
 		}
 	
-	mods.engaged["Subtle"] =
+	mods.status.engaged["Subtle"] =
 		{
 			
 		}
 
-	mods.engaged["TH2"] =
+	mods.status.engaged["TH2"] =
 		{
 			hands=gear.TH2_light_hands
 		}
 
-	mods.engaged["TH4"] =
+	mods.status.engaged["TH4"] =
 		{
 			ammo="Perfect Lucky Egg",
 			hands=gear.TH2_light_hands,
@@ -400,14 +400,14 @@
 -- ENGAGED DEFENSE MODS
 --
 
-	mods.engaged["PDT"] = set_combine(collections.Malignance,
+	mods.status.engaged["PDT"] = set_combine(collections.Malignance,
 		{
 			neck="Null Loop",
 			back=capes.tp,
 			feet="Maculele Toe Shoes +3"
 		})
 
-	mods.engaged["PDTHP"] =
+	mods.status.engaged["PDTHP"] =
 		{
 			neck="Null Loop",
 			ear1="Alabaster Earring",
@@ -418,20 +418,20 @@
 			feet="Maculele Toe Shoes +3"
 		}
 
-	mods.engaged["MEvaLo"] = set_combine(collections.Malignance,
+	mods.status.engaged["MEvaLo"] = set_combine(collections.Malignance,
 		{
 			ammo="Yamarang",
 			back="Null Shawl"
 		})
 
-	mods.engaged["MEvaHi"] = set_combine(mods.engaged["MEvaLo"],
+	mods.status.engaged["MEvaHi"] = set_combine(mods.status.engaged["MEvaLo"],
 		{
 			ear1="Eabani Earring",
 			waist="Null Belt",
 			ring1="Vengeful Ring"
 		})
 
-	mods.engaged["MEvaHP"] = set_combine(mods.engaged["MEvaHi"],
+	mods.status.engaged["MEvaHP"] = set_combine(mods.status.engaged["MEvaHi"],
 		{
 			neck="Inquisitor Bead Necklace",
 			ear2="Alabaster Earring",
@@ -442,7 +442,7 @@
 -- ENGAGED OVERRIDES
 --
 
-	overrides.engaged["BossTank"] =
+	overrides.status.engaged["BossTank"] =
 		{
 			ammo="Yamarang",
 			head="Malignance Chapeau",
@@ -459,7 +459,7 @@
 			feet="Maculele Toe Shoes +3"
 		}
 
-	overrides.engaged["Vagary"] = set_combine(collections.Malignance,
+	overrides.status.engaged["Vagary"] = set_combine(collections.Malignance,
 		{
 			ammo="Coiste Bodhar",
 			neck="Lissome Necklace",
@@ -475,9 +475,9 @@
 -- IDLE & RESTING SETS
 --
 
-	InsertGearSet(sets.idle, set_combine(collections.Gleti, {ring1="Karieyh Ring +1"}))
+	InsertGearSet(sets.status.idle, set_combine(collections.Gleti, {ring1="Karieyh Ring +1"}))
 
-	sets.idle.town =
+	sets.status.idle.town =
 		{
 			ring1="Warp Ring",
 			ring2="Trizek Ring",
@@ -485,18 +485,18 @@
 			feet="Skadi's Jambeaux +1"
 		}
 
-	sets.resting = collections.Gleti
+	sets.status.resting = collections.Gleti
 
 --
 -- IDLE & RESTING MODS
 --
 
-	mods.idle[STATE_MOVING] =
+	mods.status.idle[STATE_MOVING] =
 		{
 			feet="Skadi's Jambeaux +1"
 		}
 
-	mods.engaged[STATE_PLAYER_FACING_FRONT] =
+	mods.status.engaged[STATE_PLAYER_FACING_FRONT] =
 		{
 			feet="Horos Toe Shoes +4"
 		}

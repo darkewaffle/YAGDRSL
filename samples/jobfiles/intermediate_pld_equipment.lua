@@ -294,7 +294,7 @@
 -- ENGAGED SET
 --
 
-	sets.engaged = 
+	sets.status.engaged = 
 		{
 			ammo="Eluder's Sachet",
 			head="Chevalier's Armet +2",
@@ -315,7 +315,7 @@
 -- ENGAGED OFFENSE MODS
 --
 
-	mods.engaged["Hybrid"] = set_combine(collections.Sakpata,
+	mods.status.engaged["Hybrid"] = set_combine(collections.Sakpata,
 		{
 			ammo="Coiste Bodhar",
 			ear2="Cessance Earring",
@@ -326,14 +326,14 @@
 			waist="Sailfi Belt +1"
 		})
 	
-	mods.engaged["DPS"] = set_combine(mods.engaged["Hybrid"],
+	mods.status.engaged["DPS"] = set_combine(mods.status.engaged["Hybrid"],
 		{
 			neck="Lissome Necklace",
 			ear1="Brutal Earring",
 			waist="Sailfi Belt +1"
 		})
 
-	mods.engaged["+BlockTP"] =
+	mods.status.engaged["+BlockTP"] =
 		{
 			hands="Reverence Gauntlets +3"
 		}
@@ -342,7 +342,7 @@
 -- ENGAGED DEFENSE MODS
 --
 
-	mods.engaged["MEva"] = set_combine(collections.Sakpata,
+	mods.status.engaged["MEva"] = set_combine(collections.Sakpata,
 		{
 			ammo="Vanir Battery"
 		})
@@ -351,7 +351,7 @@
 -- IDLE & RESTING SETS
 --
 
-	InsertGearSet(sets.idle, 
+	InsertGearSet(sets.status.idle, 
 		{
 			ammo="Eluder's Sachet",
 			head="Chevalier's Armet +2",
@@ -368,7 +368,7 @@
 			feet="Chevalier's Sabatons +2"
 		})
 
-	sets.idle.town =
+	sets.status.idle.town =
 		{
 			ring1="Warp Ring",
 			ring2="Trizek Ring",
@@ -376,15 +376,15 @@
 			legs="Carmine Cuisses +1"
 		}
 
-	sets.resting = set_combine(sets.idle, templates.refresh)
+	sets.status.resting = set_combine(sets.status.idle, templates.refresh)
 
 --
 -- IDLE & RESTING MODS
 --
 
-	mods.idle[STATE_MOVING] =
+	mods.status.idle[STATE_MOVING] =
 		{
 			legs="Carmine Cuisses +1"
 		}
 
-	mods.idle["+Refresh"] = templates.refresh
+	mods.status.idle["+Refresh"] = templates.refresh

@@ -438,7 +438,7 @@
 -- ENGAGED SET
 --
 
-	sets.engaged =
+	sets.status.engaged =
 		{
 			
 		}
@@ -448,25 +448,25 @@
 --
 
 	-- Moderate PDT gear when the Physical Defense mod = "PDTLo"
-	mods.engaged["PDTLo"] =
+	mods.status.engaged["PDTLo"] =
 		{
 			
 		}
 
 	-- High PDT gear when the Physical Defense mod = "PDTHi"
-	mods.engaged["PDTHi"] =
+	mods.status.engaged["PDTHi"] =
 		{
 			
 		}
 
 	-- Moderate MDT/MEva gear when the Magical Defense mod = "MEvaLo"
-	mods.engaged["MEvaLo"] =
+	mods.status.engaged["MEvaLo"] =
 		{
 			
 		}
 
 	-- High MDT/MEva gear when the Magical Defense mod = "MEvaHi"
-	mods.engaged["MEvaHi"] =
+	mods.status.engaged["MEvaHi"] =
 		{
 			
 		}
@@ -475,17 +475,17 @@
 -- IDLE & RESTING SETS
 --
 
-	sets.idle =
+	sets.status.idle =
 		{
 			
 		}
 
-	sets.idle.town =
+	sets.status.idle.town =
 		{
 			
 		}
 
-	sets.resting =
+	sets.status.resting =
 		{
 			
 		}
@@ -494,46 +494,46 @@
 -- IDLE & RESTING MODS
 --
 
-	mods.idle["PDTLo"] =
+	mods.status.idle["PDTLo"] =
 		{
 			
 		}
 
-	mods.idle["PDTHi"] =
+	mods.status.idle["PDTHi"] =
 		{
 			
 		}
 
-	mods.idle["MEvaLo"] =
+	mods.status.idle["MEvaLo"] =
 		{
 			
 		}
 
-	mods.idle["MEvaHi"] =
+	mods.status.idle["MEvaHi"] =
 		{
 			
 		}
 
 	-- Additional gear that will be equipped when idle and the player is moving.
-	mods.idle["player_moving"] =
+	mods.status.idle["player_moving"] =
 		{
 			
 		}
 
 	-- Additional Refresh gear that will be equipped when idle and the Refresh mod = "+Refresh"
-	mods.idle["+Refresh"] =
+	mods.status.idle["+Refresh"] =
 		{
 			
 		}
 
 	-- Additional Refresh gear that will be equipped when resting and the Refresh mod = "+Refresh"
-	mods.resting["+Refresh"] =
+	mods.status.resting["+Refresh"] =
 		{
 			
 		}
 
 	-- Additional gear that will be equipped when idle and Sublimation is active
-	mods.idle["Sublimation: Activated"] =
+	mods.status.idle["Sublimation: Activated"] =
 		{
 			
 		}

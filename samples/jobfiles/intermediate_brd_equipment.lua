@@ -83,7 +83,7 @@
 
 	sets.precast.ja["Troubadour"] =
 		{
-			body="Bihu Justaucorps"
+			body="Bihu Justaucorps +1"
 		}
 
 	sets.precast.ja["Soul Voice"] =
@@ -153,9 +153,14 @@
 	InsertGearSet(sets.precast.magic, templates.fastcast)
 
 	-- sets.precast.magic currently provides 81% Fast Cast
-	sets.precast.magic.singing =
+	InsertGearSet(sets.precast.magic.singing,
 		{
 			ranged="Miracle Cheer"
+		})
+
+	sets.precast.magic.singing.enemy.lullaby.horde =
+		{
+			ranged="Blurred Harp"
 		}
 
 --
@@ -263,9 +268,9 @@
 			feet="Fili Cothurnes +2"
 		}
 
-	sets.midcast.magic.singing.enemy =
+	InsertGearSet(sets.midcast.magic.singing.enemy,
 		{
-			main="Daybreak",
+			main="Kali",
 			head="Brioso Roundlet +4",
 			ear1="Regal Earring",
 			ear2="Fili Earring",
@@ -275,13 +280,32 @@
 			ring2="Kishar Ring",
 			back=capes.bard,
 			waist="Null Belt",
-			legs="Fili Rhingrave +2",
+			legs="Inyanga Shalwar +2",
 			feet="Brioso Slippers +4"
-		}
+		})
 
-	sets.midcast.magic.singing.enemy.lullaby =
+	InsertGearSet(sets.midcast.magic.singing.enemy.lullaby,
 		{
 			hands="Brioso Cuffs +3"
+		})
+
+	sets.midcast.magic.singing.enemy.lullaby.foe =
+		{
+			-- Just wants to be full MAcc + Duration from sets.midcast.magic.singing.enemy
+		}
+
+	sets.midcast.magic.singing.enemy.lullaby.horde =
+		{
+			ranged="Blurred Harp"
+		}
+
+	sets.midcast.magic.singing.enemy.lullaby["Horde Lullaby II"] =
+		{
+			ear2="Gersemi Earring",
+			body="Brioso Justaucorps +2",
+			hands="Fili Manchettes +2",
+			waist="Harfner's Sash",
+			feet="Bihu Slippers +1"
 		}
 
 	sets.midcast.magic.singing.enemy.threnody =
@@ -315,7 +339,7 @@
 -- ENGAGED SET
 --
 
-	sets.engaged =
+	sets.status.engaged =
 		{
 			ranged="Linos",
 			head="Ayanmo Zucchetto +2",
@@ -337,19 +361,19 @@
 --
 
 	-- +Accuracy gear when engaged and the Offense mod = "Acc"
-	mods.engaged["Acc"] =
+	mods.status.engaged["Acc"] =
 		{
 			neck="Null Loop"
 		}
 
 	-- +Multiattack gear when engaged and the Offense mod = "Multi"
-	mods.engaged["Multi"] =
+	mods.status.engaged["Multi"] =
 		{
 			
 		}
 
 	-- +Treasure Hunter gear when engaged and the TH mod = "+TH"
-	mods.engaged["+TH"] =
+	mods.status.engaged["+TH"] =
 		{
 			waist="Chaac Belt"
 		}
@@ -359,25 +383,25 @@
 --
 
 	-- Moderate PDT gear when the Physical Defense mod = "PDTLo"
-	mods.engaged["PDTLo"] =
+	mods.status.engaged["PDTLo"] =
 		{
 			
 		}
 
 	-- High PDT gear when the Physical Defense mod = "PDTHi"
-	mods.engaged["PDTHi"] =
+	mods.status.engaged["PDTHi"] =
 		{
 			
 		}
 
 	-- Moderate MDT/MEva gear when the Magical Defense mod = "MEvaLo"
-	mods.engaged["MEvaLo"] =
+	mods.status.engaged["MEvaLo"] =
 		{
 			
 		}
 
 	-- High MDT/MEva gear when the Magical Defense mod = "MEvaHi"
-	mods.engaged["MEvaHi"] =
+	mods.status.engaged["MEvaHi"] =
 		{
 			
 		}
@@ -386,7 +410,7 @@
 -- IDLE & RESTING SETS
 --
 
-	InsertGearSet(sets.idle,
+	InsertGearSet(sets.status.idle,
 		{
 			main="Daybreak",
 			head="Fili Calot +2",
@@ -403,27 +427,25 @@
 			feet="Fili Cothurnes +2"
 		})
 
-	sets.idle.town =
+	sets.status.idle.town =
 		{
 			ring1="Warp Ring",
 			ring2="Trizek Ring",
 			back="Nexus Cape",
 		}
 
-	sets.resting = set_combine(sets.idle, templates.refresh)
+	sets.status.resting = set_combine(sets.status.idle, templates.refresh)
 
 --
 -- IDLE & RESTING MODS
 --
 
-	mods.idle["+Refresh"] = templates.refresh
+	mods.status.idle["+Refresh"] = templates.refresh
 
 --
 -- OVERRIDES
 --
 
-	overrides.idle["DynaNeck"] = {neck="Bard's Charm +1"}
-	overrides.resting["DynaNeck"] = {neck="Bard's Charm +1"}
-	overrides.engaged["DynaNeck"] = {neck="Bard's Charm +1"}
+	overrides.status["DynaNeck"] = {neck="Bard's Charm +1"}
 	overrides.precast.ws["DynaNeck"] = {neck="Bard's Charm +1"}
 	overrides.precast.ja["DynaNeck"] = {neck="Bard's Charm +1"}

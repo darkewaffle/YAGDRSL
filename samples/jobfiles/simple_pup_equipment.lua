@@ -160,7 +160,7 @@
 -- ENGAGED SET
 --
 
-	sets.engaged = set_combine(collections.Mpaca,
+	sets.status.engaged = set_combine(collections.Mpaca,
 		{
 			ear1="Brutal Earring",
 			ear2="Cessance Earring",
@@ -171,7 +171,7 @@
 			back="Null Shawl"
 		})
 
-	mods.engaged["automaton"] =
+	mods.status.engaged["automaton"] =
 		{
 			ear1="Sroda Earring",
 			ear2="Karagoz Earring +1",
@@ -185,31 +185,31 @@
 --
 
 	-- +Accuracy gear when engaged and the Offense mod = "Acc"
-	mods.engaged["Acc"] =
+	mods.status.engaged["Acc"] =
 		{
 			
 		}
 
 	-- +Multiattack gear when engaged and the Offense mod = "Multi"
-	mods.engaged["Multi"] =
+	mods.status.engaged["Multi"] =
 		{
 			
 		}
 
 	-- +Treasure Hunter gear when engaged and the TH mod = "+TH"
-	mods.engaged["+TH"] =
+	mods.status.engaged["+TH"] =
 		{
 			
 		}
 
 	-- -Pet DT gear when engaged and the Pet Mode mod = "PetDT"
-	mods.engaged["PetDT"] =
+	mods.status.engaged["PetDT"] =
 		{
 			
 		}
 
 	-- Additional gear that will be equipped when engaged and Overdrive is active
-	mods.engaged["Overdrive"] =
+	mods.status.engaged["Overdrive"] =
 		{
 			
 		}
@@ -219,25 +219,25 @@
 --
 
 	-- Moderate PDT gear when the Physical Defense mod = "PDTLo"
-	mods.engaged["PDTLo"] =
+	mods.status.engaged["PDTLo"] =
 		{
 			
 		}
 
 	-- High PDT gear when the Physical Defense mod = "PDTHi"
-	mods.engaged["PDTHi"] =
+	mods.status.engaged["PDTHi"] =
 		{
 			
 		}
 
 	-- Moderate MDT/MEva gear when the Magical Defense mod = "MEvaLo"
-	mods.engaged["MEvaLo"] =
+	mods.status.engaged["MEvaLo"] =
 		{
 			
 		}
 
 	-- High MDT/MEva gear when the Magical Defense mod = "MEvaHi"
-	mods.engaged["MEvaHi"] =
+	mods.status.engaged["MEvaHi"] =
 		{
 			
 		}
@@ -246,18 +246,18 @@
 -- ENGAGED OVERRIDES
 --
 
-	overrides.engaged["PetSolo"] = templates.petsolo
+	overrides.status.engaged["PetSolo"] = templates.petsolo
 
 --
 -- IDLE & RESTING SETS
 --
 
-	InsertGearSet(sets.idle, set_combine(sets.engaged,
+	InsertGearSet(sets.status.idle, set_combine(sets.status.engaged,
 		{
 			feet="Hermes' Sandals"
 		}))
 
-	sets.idle.town =
+	sets.status.idle.town =
 		{
 			ring1="Warp Ring",
 			ring2="Trizek Ring",
@@ -268,22 +268,22 @@
 -- IDLE & RESTING MODS
 --
 
-	mods.idle["PDTLo"] =
+	mods.status.idle["PDTLo"] =
 		{
 			
 		}
 
-	mods.idle["PDTHi"] =
+	mods.status.idle["PDTHi"] =
 		{
 			
 		}
 
-	mods.idle["MEvaLo"] =
+	mods.status.idle["MEvaLo"] =
 		{
 			
 		}
 
-	mods.idle["MEvaHi"] =
+	mods.status.idle["MEvaHi"] =
 		{
 			
 		}
@@ -292,5 +292,5 @@
 -- IDLE & RESTING OVERRIDES
 --
 
-	overrides.idle["PetSolo"] = templates.petsolo
-	overrides.resting["PetSolo"] = templates.petsolo
+	overrides.status.idle["PetSolo"] = templates.petsolo
+	overrides.status.resting["PetSolo"] = templates.petsolo

@@ -1,4 +1,4 @@
-This flowchart represents how 'precast' works but 'midcast' is essentially the exact same process - it just uses a different 'event' name in the paths. Equipping a status set is a similar process but simpler because the paths are basically just 'sets.engaged', 'mods.engaged.modvalue', and so on and so forth. 
+This flowchart represents how 'precast' works but 'midcast' is essentially the exact same process - it just uses a different 'event' name in the paths. Equipping a status set is a similar process but simpler because the paths are basically just 'sets.status.engaged', 'mods.status.engaged.modvalue', and so on and so forth. 
 
 
 But each one ultimately follows the same steps of 'get a set', 'apply the mods', 'apply the override' and 'equip the result'.

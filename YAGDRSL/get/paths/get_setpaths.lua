@@ -57,7 +57,6 @@ function GetPaths(RootName, EventOrStatus, SpellAttributes)
 		local ZoneClass = GetCharacterZoneClass()
 
 		SetPaths, SetPathStrings = WalkPathStatus(RootName, CharacterStatus, ZoneClass)
-		-- Example: sets.idle.town
 
 	else
 		ChatError("GetPaths received invalid event or status parameter", EventOrStatus)

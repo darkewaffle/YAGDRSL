@@ -8,7 +8,7 @@ ConfigureOverride is the function you use to define your override, we'll cover w
 
 Let's say you cycle the override to select "Vagary". What might this be for? Well in Vagary if we want to spawn Perfidien and Plouton we have to accomplish certain objectives - but if you wear all your normal, powerful gear you might deal too much damage and make it harder than it needs to be. So let's define some Vagary override sets. Just like 'sets' and 'mods' these sets will follow the same path definitions, they simply start from a different root table - 'overrides'.
 ```
-overrides.engaged.Vagary = {body="Malignance Tabard", legs="Malignance Tights"}
+overrides.status.engaged.Vagary = {body="Malignance Tabard", legs="Malignance Tights"}
 overrides.precast.ws.Vagary = {body="Malignance Tabard", hands="Malignance Gloves", legs="Malignance Tights", feet="Malignance Boots"}
 ```
 So in this scenario when the override is set to "Vagary" and you perform a weaponskill the weaponskill set will still be put together the exact same way as before. It'll go through the sets path, then it'll apply any mods. But then it will use the same path elements to also search for override sets. And just like a mod it will only pick up sets where the name (key) is equal to the value of the override. All that is to say - it will look for these sets.
@@ -29,8 +29,8 @@ overrides["+CP"] = {back="Aptitude Mantle"}
 But you could also define them like this so that it applies when you're idle or engaged - but it won't apply to your precast or midcast sets so your weapon skills and magic could still be used at full power. The choice is yours.
 
 ```
-overrides.idle["+CP"] = {back="Aptitude Mantle"}
-overrides.engaged["+CP"] = {back="Aptitude Mantle"}
+overrides.status.idle["+CP"] = {back="Aptitude Mantle"}
+overrides.status.engaged["+CP"] = {back="Aptitude Mantle"}
 ```
 
 

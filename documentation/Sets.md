@@ -1,5 +1,5 @@
 # How YAGDRSL Builds a GearSet
-Most players are probably familiar with the process of defining gearsets that correspond to game states and actions. When you're about to cast a spell then a Gearswap library will look for something like sets.precast.magic to find your fastcast gear, then when that spell reaches midcast it uses something like sets.midcast.magic.cure to find your midcast cure potency set and then when the cast is completed your sets.idle or sets.engaged gearset will be equipped. YAGDRSL generally follows the same path but how it gets there is a bit different.
+Most players are probably familiar with the process of defining gearsets that correspond to game states and actions. When you're about to cast a spell then a Gearswap library will look for something like sets.precast.magic to find your fastcast gear, then when that spell reaches midcast it uses something like sets.midcast.magic.cure to find your midcast cure potency set and then when the cast is completed your sets.status.idle or sets.status.engaged gearset will be equipped. YAGDRSL generally follows the same path but how it gets there is a bit different.
 
 ## Sets are additive, mappings are intuitive
 

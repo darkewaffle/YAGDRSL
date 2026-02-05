@@ -2,7 +2,7 @@
 Here are some sample gearsets and scenarios to try to illustrate the full process of composing a gearset from sets, mods and overrides.
 
 ```
-sets.engaged = {body="Scorpion Harness"}
+sets.status.engaged = {body="Scorpion Harness"}
 sets.precast.magic = {neck="Voltsurge Torque"}
 sets.precast.ws = {neck="Fotia Gorget"}
 sets.precast.ws.melee.physical = {ring1="Rajas Ring"}
@@ -11,8 +11,8 @@ sets.precast.ws.melee.magical = {ear1="Friomisi Earring"}
 mods.precast.Acc = {neck="Peacock Charm"}
 mods.precast.ws.melee.Acc = {ring1="Sniper's Ring"}
 mods.DT = {ear1="Alabaster Earring", ring1="Defending Ring"}
-mods.engaged.DT = {back="Mollusca Mantle", ring2="Murky Ring"}
-mods.engaged.Acc = {neck="Peacock Charm"}
+mods.status.engaged.DT = {back="Mollusca Mantle", ring2="Murky Ring"}
+mods.status.engaged.Acc = {neck="Peacock Charm"}
 
 overrides["+CP"] = {back="Aptitude Mantle"}
 ```
@@ -69,6 +69,6 @@ Mods active: "Acc", "DT"<br>
 Defense Priority = true<br>
 Override value = "+CP"
 ```
-sets.engaged + mods.engaged.Acc + mods.DT + mods.engaged.DT + overrides["+CP"] = 
+sets.status.engaged + mods.status.engaged.Acc + mods.DT + mods.status.engaged.DT + overrides["+CP"] = 
 {body="Scorpion Harness", neck="Peacock Charm", ear1="Alabaster Earring", ring1="Defending Ring", ring2="Murky Ring", back="Aptitude Mantle"}
 ```

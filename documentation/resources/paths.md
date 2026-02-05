@@ -1,12 +1,13 @@
 # Status Paths
 - Table Name (sets, mods, overrides)
+- Status String Value (status)
 - Character Status (engaged, idle, resting)
 - Zone Class (field, town)
 ```
-sets.engaged
-sets.idle.field
-sets.idle.town
-sets.resting
+sets.status.engaged
+sets.status.idle.field
+sets.status.idle.town
+sets.status.resting
 ```
 
 # Action Paths

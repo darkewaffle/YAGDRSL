@@ -180,14 +180,14 @@
 -- ENGAGED SET
 --
 
-	-- Engaged gear that would be appropriate even if the GEO has no luopan. Define mods.engaged["luopan"] below to create your set for when a pet is present.
-	sets.engaged =
+	-- Engaged gear that would be appropriate even if the GEO has no luopan. Define mods.status.engaged["luopan"] below to create your set for when a pet is present.
+	sets.status.engaged =
 		{
 			
 		}
 
 	-- Anytime a pet is present this mod will be active and it will be the first offense mod applied. Essentially it is your 'engaged with a pet' set.
-	mods.engaged["luopan"] =
+	mods.status.engaged["luopan"] =
 		{
 			
 		}
@@ -197,25 +197,25 @@
 --
 
 	-- Moderate PDT gear when the Physical Defense mod = "PDTLo"
-	mods.engaged["PDTLo"] =
+	mods.status.engaged["PDTLo"] =
 		{
 			
 		}
 
 	-- High PDT gear when the Physical Defense mod = "PDTHi"
-	mods.engaged["PDTHi"] =
+	mods.status.engaged["PDTHi"] =
 		{
 			
 		}
 
 	-- Moderate MDT/MEva gear when the Magical Defense mod = "MEvaLo"
-	mods.engaged["MEvaLo"] =
+	mods.status.engaged["MEvaLo"] =
 		{
 			
 		}
 
 	-- High MDT/MEva gear when the Magical Defense mod = "MEvaHi"
-	mods.engaged["MEvaHi"] =
+	mods.status.engaged["MEvaHi"] =
 		{
 			
 		}
@@ -224,31 +224,31 @@
 -- IDLE & RESTING SETS
 --
 
-	-- Idle gear that would be appropriate even if the GEO has no luopan. Define mods.idle["luopan"] below to create your set for when a pet is present.
-	sets.idle =
+	-- Idle gear that would be appropriate even if the GEO has no luopan. Define mods.status.idle["luopan"] below to create your set for when a pet is present.
+	sets.status.idle =
 		{
 			
 		}
 
 	-- Anytime a pet is present this mod will be active and it will be the first offense mod applied. Essentially it is your 'idle with a pet' set.
-	mods.idle["luopan"] =
+	mods.status.idle["luopan"] =
 		{
 			
 		}
 
-	sets.idle.town =
+	sets.status.idle.town =
 		{
 			
 		}
 
-	-- Resting gear that would be appropriate even if the GEO has no luopan. Define mods.resting["luopan"] below to create your set for when a pet is present.
-	sets.resting =
+	-- Resting gear that would be appropriate even if the GEO has no luopan. Define mods.status.resting["luopan"] below to create your set for when a pet is present.
+	sets.status.resting =
 		{
 			
 		}
 
 	-- Anytime a pet is present this mod will be active and it will be the first offense mod applied. Essentially it is your 'resting with a pet' set.
-	mods.resting["luopan"] =
+	mods.status.resting["luopan"] =
 		{
 			
 		}
@@ -257,40 +257,40 @@
 -- IDLE & RESTING MODS
 --
 
-	mods.idle["PDTLo"] =
+	mods.status.idle["PDTLo"] =
 		{
 			
 		}
 
-	mods.idle["PDTHi"] =
+	mods.status.idle["PDTHi"] =
 		{
 			
 		}
 
-	mods.idle["MEvaLo"] =
+	mods.status.idle["MEvaLo"] =
 		{
 			
 		}
 
-	mods.idle["MEvaHi"] =
+	mods.status.idle["MEvaHi"] =
 		{
 			
 		}
 
 	-- Additional gear that will be equipped when idle and the player is moving.
-	mods.idle["player_moving"] =
+	mods.status.idle["player_moving"] =
 		{
 			
 		}
 
 	-- Additional Refresh gear that will be equipped when idle and the Refresh mod = "+Refresh"
-	mods.idle["+Refresh"] =
+	mods.status.idle["+Refresh"] =
 		{
 			
 		}
 
 	-- Additional Refresh gear that will be equipped when resting and the Refresh mod = "+Refresh"
-	mods.resting["+Refresh"] =
+	mods.status.resting["+Refresh"] =
 		{
 			
 		}

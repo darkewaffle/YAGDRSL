@@ -118,8 +118,8 @@ function WalkPathStatus(RootName, CharacterStatus, ZoneClass)
 	local SetPaths = {}
 	local SetPathStrings = {}
 
-	-- Example: sets.idle.town
-	SetPaths, SetPathStrings = WalkPath(RootName, CharacterStatus, ZoneClass)
+	-- Example: sets.status.idle.town
+	SetPaths, SetPathStrings = WalkPath(RootName, STATUS_CLASS, CharacterStatus, ZoneClass)
 
 	return SetPaths, SetPathStrings
 end

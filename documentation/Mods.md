@@ -1,6 +1,6 @@
 # How YAGDRSL Modifies a Gearset
 
-Most libraries have some kind of support for variations of a gearset. Maybe you've seen sets.precast.ws.acc or sets.accuracy or sets.engaged.lowacc and sets.engaged.DT. These all represent variations of a base set that is conditionally selected when we want to change our gear for certain situations. Maybe you want to equip gear with more accuracy, more magic evasion, Treasure Hunter etc. YAGDRSL supports these kinds of changes through 'mods'. 
+Most libraries have some kind of support for variations of a gearset. Maybe you've seen sets.precast.ws.acc or sets.accuracy or sets.status.engaged.lowacc and sets.status.engaged.DT. These all represent variations of a base set that is conditionally selected when we want to change our gear for certain situations. Maybe you want to equip gear with more accuracy, more magic evasion, Treasure Hunter etc. YAGDRSL supports these kinds of changes through 'mods'. 
 
 ## From modes, mods. From mods, flexibility. In flexibility, control.
 

@@ -1,10 +1,10 @@
 This is a copy of the tables dumped from 'gs c tables' with no player tables loaded. This same structure exists for both precast and midcast events in sets, mods and overrides.
 
-sets.engaged
-sets.idle
-sets.idle.field
-sets.idle.town
-sets.resting
+sets.status.engaged
+sets.status.idle
+sets.status.idle.field
+sets.status.idle.town
+sets.status.resting
 sets.precast
 sets.precast.item
 sets.precast.ja

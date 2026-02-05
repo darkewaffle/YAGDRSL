@@ -131,14 +131,14 @@
 -- ENGAGED SET
 --
 
-	-- Engaged gear that would be appropriate even if the DRG has no pet. Define mods.engaged["wyvern"] below to create your set for when a pet is present.
-	sets.engaged =
+	-- Engaged gear that would be appropriate even if the DRG has no pet. Define mods.status.engaged["wyvern"] below to create your set for when a pet is present.
+	sets.status.engaged =
 		{
 			
 		}
 
 	-- Anytime a pet is present this mod will be active and it will be the first offense mod applied. Essentially it is your 'engaged with a pet' set.
-	mods.engaged["wyvern"] =
+	mods.status.engaged["wyvern"] =
 		{
 			
 		}
@@ -148,19 +148,19 @@
 --
 
 	-- +Accuracy gear when engaged and the Offense mod = "Acc"
-	mods.engaged["Acc"] =
+	mods.status.engaged["Acc"] =
 		{
 			
 		}
 
 	-- +Multiattack gear when engaged and the Offense mod = "Multi"
-	mods.engaged["Multi"] =
+	mods.status.engaged["Multi"] =
 		{
 			
 		}
 
 	-- +Treasure Hunter gear when engaged and the TH mod = "+TH"
-	mods.engaged["+TH"] =
+	mods.status.engaged["+TH"] =
 		{
 			
 		}
@@ -170,25 +170,25 @@
 --
 
 	-- Moderate PDT gear when the Physical Defense mod = "PDTLo"
-	mods.engaged["PDTLo"] =
+	mods.status.engaged["PDTLo"] =
 		{
 			
 		}
 
 	-- High PDT gear when the Physical Defense mod = "PDTHi"
-	mods.engaged["PDTHi"] =
+	mods.status.engaged["PDTHi"] =
 		{
 			
 		}
 
 	-- Moderate MDT/MEva gear when the Magical Defense mod = "MEvaLo"
-	mods.engaged["MEvaLo"] =
+	mods.status.engaged["MEvaLo"] =
 		{
 			
 		}
 
 	-- High MDT/MEva gear when the Magical Defense mod = "MEvaHi"
-	mods.engaged["MEvaHi"] =
+	mods.status.engaged["MEvaHi"] =
 		{
 			
 		}
@@ -197,17 +197,17 @@
 -- IDLE & RESTING SETS
 --
 
-	sets.idle =
+	sets.status.idle =
 		{
 			
 		}
 
-	sets.idle.town =
+	sets.status.idle.town =
 		{
 			
 		}
 
-	sets.resting =
+	sets.status.resting =
 		{
 			
 		}
@@ -216,28 +216,28 @@
 -- IDLE & RESTING MODS
 --
 
-	mods.idle["PDTLo"] =
+	mods.status.idle["PDTLo"] =
 		{
 			
 		}
 
-	mods.idle["PDTHi"] =
+	mods.status.idle["PDTHi"] =
 		{
 			
 		}
 
-	mods.idle["MEvaLo"] =
+	mods.status.idle["MEvaLo"] =
 		{
 			
 		}
 
-	mods.idle["MEvaHi"] =
+	mods.status.idle["MEvaHi"] =
 		{
 			
 		}
 
 	-- Additional gear that will be equipped when idle and the player is moving.
-	mods.idle["player_moving"] =
+	mods.status.idle["player_moving"] =
 		{
 			
 		}

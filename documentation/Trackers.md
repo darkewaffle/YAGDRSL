@@ -49,12 +49,12 @@ Now that we have a tracker in the mod orders, how do we use that to actually cha
 			body="Maculele Casaque +2"
 		}
 
-	mods.engaged["Fan Dance"] =
+	mods.status.engaged["Fan Dance"] =
 		{
 			hands="Horos Bangles +3"
 		}
 
-	mods.idle["Fan Dance"] =
+	mods.status.idle["Fan Dance"] =
 		{
 			hands="Horos Bangles +3"
 		}
@@ -79,7 +79,7 @@ TrackPetNameAsDefenseMod()
 Then anytime your pet changes the pet tracker will change from "off" to the name of your pet (or "wyvern" for DRG and "automaton" for PUP). This allows you to define mod sets that can be specific to your pet. For instance if you are a Summoner and you want to make sure that specific gear is equipped for Carbuncle then you might define your mod sets like this.
 
 ```
-	mods.idle["Carbuncle"] = 
+	mods.status.idle["Carbuncle"] = 
 		{
 			hands="Asteria Mitts +1"
 		}
@@ -104,12 +104,12 @@ TickEvaluateMovement = true
 Once these settings are enabled YAGDRSL will begin to track when you are moving and/or when you are engaged and facing your target's front or back. You can then use this information to define mod sets corresponding to values of "player_moving", "facing_front", or "facing_back". Mods that take advantage of this information might look like this.
 
 ```
-	mods.idle["player_moving"] = 
+	mods.status.idle["player_moving"] = 
 		{
 			legs="Carmine Cuisses +1"
 		}
 
-	mods.engaged["facing_front"] =
+	mods.status.engaged["facing_front"] =
 		{
 			feet="Horos Toe Shoes +4"
 		}

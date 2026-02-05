@@ -1,4 +1,5 @@
 -- Values used to describe/map the character's status.
+STATUS_CLASS = "status"
 STATUS_CHOCOBO = "chocobo"
 STATUS_ENGAGED = "engaged"
 STATUS_IDLE = "idle"
