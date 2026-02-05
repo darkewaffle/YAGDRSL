@@ -19,15 +19,27 @@ end
 -- Wrapper for ForceStatusUpdate that is only called by a cycle command update.
 -- Sets STATE_CYCLE_UPDATE_PENDING to to false to indicate the update has been completed and is no longer pending.
 function ForceStatusUpdateFromCycle()
-	ForceStatusUpdateCommand(EVENT_CYCLE_UPDATE)
+	ForceStatusUpdateCommand(EVENT_CYCLE_UPDATE, false)
 	STATE_CYCLE_UPDATE_PENDING = false
 end
 
-function ForceStatusUpdateCommand()
+function ForceStatusUpdateFromCycleNoLock()
+	ForceStatusUpdateCommand(EVENT_CYCLE_UPDATE, true)
+	STATE_CYCLE_UPDATE_PENDING = false
+end
+
+function ForceStatusUpdateCommand(Source, IgnoreLock)
 	-- GearSwap's equip function will/may not respond if called through coroutine or a Windower event.
 	-- Sending a self_command to update is an acceptable workaround.
-	send_command('gs c update')
+
+	local Source = Source or "ForceStatusUpdateCommand"
+	local IgnoreLock = IgnoreLock or "false"
+	local UpdateCommand = "gs c update " .. Source .. " " .. tostring(IgnoreLock)
+
+	send_command(UpdateCommand)
 end
+
+
 
 function ForceStatusUpdateTick()
 	-- GearSwap's equip function will/may not respond if called through coroutine or a Windower event.
