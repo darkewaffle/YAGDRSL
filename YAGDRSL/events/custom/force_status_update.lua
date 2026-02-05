@@ -1,4 +1,4 @@
-function ForceStatusUpdate(Source)
+function ForceStatusUpdate(Source, IgnoreWeaponLock)
 	ChatCheckpoint("ForceStatusUpdate Start")
 
 	local UpdateSource = Source or EVENT_FORCED_UPDATE
@@ -9,7 +9,7 @@ function ForceStatusUpdate(Source)
 	StatusSet = GetStatusSet(CharacterStatus, UpdateSource)
 
 	ChatGearSet(StatusSet, UpdateSource)
-	EquipSafe(StatusSet, UpdateSource)
+	EquipSafe(StatusSet, UpdateSource, IgnoreWeaponLock)
 
 	ChatCheckpoint("ForceStatusUpdate End")
 	ChatBlankLine()
