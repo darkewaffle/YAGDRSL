@@ -2,8 +2,10 @@
 @User
 This function can be used to conditionally include equipment when the magical damage element of an action is equal to the element of the weather.
 When the element matches then the equipment in the WeatherItems table will be equipped. WeatherItems can be defined in the character or job files.
+WeatherItems.Universal represents gear that should be equipped when any weather is matched.
 
 	WeatherItems = {}
+	WeatherItems.Universal = { }
 	WeatherItems.Fire =      { }
 	WeatherItems.Ice =       { }
 	WeatherItems.Wind =      { }
@@ -25,7 +27,7 @@ function CustomizeGearForWeatherElement(SpellAttributes, GearSet)
 			-- Equip if WeatherIntensity = 2
 			-- Or if WeatherIntensity = 1 and element does not oppose the day (typical behavior for Hachirin-no-obi)
 			if WeatherIntensity == 2 or (WeatherIntensity == 1 and not SpellAttributes["ElementOpposesDay"]) then
-				GearSet = set_combine(GearSet, WeatherItems[SpellAttributes["Element"]])
+				GearSet = set_combine(GearSet, WeatherItems["Universal"], WeatherItems[SpellAttributes["Element"]])
 			end
 		end
 	end

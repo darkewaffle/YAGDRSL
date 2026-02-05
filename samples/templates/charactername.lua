@@ -77,6 +77,7 @@ function GetPlayerSettings()
 
 	-- Gear that should be equipped when dealing magic damage that matches the game weather element
 		WeatherItems = {}
+		WeatherItems.Universal = { }
 		WeatherItems.Fire =      { }
 		WeatherItems.Ice =       { }
 		WeatherItems.Wind =      { }
@@ -89,6 +90,7 @@ function GetPlayerSettings()
 
 	-- Gear that should be equipped when dealing magic damage that matches the game day element
 		DayItems = {}
+		DayItems.Universal = { }
 		DayItems.Fire =      { }
 		DayItems.Ice =       { }
 		DayItems.Wind =      { }
