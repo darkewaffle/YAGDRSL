@@ -23,24 +23,33 @@ function SelfCommandCycle(CommandInputs)
 
 	if _G[YAG_SETTINGS]["ForceUpdateAfterCycle"] then
 
+		-- Determine if the mod is configured to ignore the lock when it triggers a cycle update
+		-- If so call the NoLock update, if not call the normal update
+		local CycleFunction = ""
+		if GetModIgnoresLockOnCycle(ModName) then
+			CycleFunction = ForceStatusUpdateFromCycleNoLock
+		else
+			CycleFunction = ForceStatusUpdateFromCycle
+		end
+
 		-- Setting enforces a delay on the update after a cycle.
 		-- This allows a mod to be cycled within the delay window without triggering an update on every cycle.
 		if _G[YAG_SETTINGS]["ForceUpdateAfterCycleDelay"] and _G[YAG_SETTINGS]["ForceUpdateAfterCycleDelay"] > 0 then
 
 			-- If there is no update pending then schedule the update and set STATE_CYCLE_UPDATE_PENDING to true.
-			-- When ForceStatusUpdateFromCycle runs it will set STATE_CYCLE_UPDATE_PENDING back to false.
+			-- When CycleFunction runs it will set STATE_CYCLE_UPDATE_PENDING back to false.
 			if not STATE_CYCLE_UPDATE_PENDING then
-				_G[CYCLE_UPDATE_COROUTINE] = coroutine.schedule(ForceStatusUpdateFromCycle, ForceUpdateAfterCycleDelay)
+				_G[CYCLE_UPDATE_COROUTINE] = coroutine.schedule(CycleFunction, ForceUpdateAfterCycleDelay)
 				STATE_CYCLE_UPDATE_PENDING = true
 
 			-- If there is an update pending then close the scheduled coroutine containing the update and reschedule a new one.
 			else
 				coroutine.close(_G[CYCLE_UPDATE_COROUTINE])
-				_G[CYCLE_UPDATE_COROUTINE] = coroutine.schedule(ForceStatusUpdateFromCycle, ForceUpdateAfterCycleDelay)
+				_G[CYCLE_UPDATE_COROUTINE] = coroutine.schedule(CycleFunction, ForceUpdateAfterCycleDelay)
 			end
 
 		else
-			ForceStatusUpdateFromCycle()
+			CycleFunction()
 		end
 	end
 end
