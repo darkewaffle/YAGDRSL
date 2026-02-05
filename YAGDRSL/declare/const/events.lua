@@ -6,7 +6,7 @@ EVENT_AFTERCAST = "aftercast"
 EVENT_AFTERCAST_PET = "pet_aftercast"
 EVENT_STATUS_CHANGE = "status_change"
 EVENT_FORCED_UPDATE = "ForceStatusUpdate"
-EVENT_CYCLE_UPDATE = "Cycle Update"
+EVENT_CYCLE_UPDATE = "CycleUpdate"
 EVENT_SELF_COMMAND_UPDATE = "SelfCommandUpdate"
 EVENT_TICK_UPDATE = "Tick Update"
 
