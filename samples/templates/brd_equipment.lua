@@ -177,10 +177,10 @@
 		}
 
 	-- Midcast gear for all songs (debuffs) that target an enemy unit
-	sets.midcast.magic.singing.enemy =
+	InsertGearSet(sets.midcast.magic.singing.enemy,
 		{
 			
-		}
+		})
 
 	InsertGearSet(sets.midcast.magic.singing.enemy.lullaby,
 		{

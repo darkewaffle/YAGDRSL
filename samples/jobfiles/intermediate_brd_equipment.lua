@@ -208,14 +208,14 @@
 			neck="Moonbow Whistle +1",
 		})
 
-	sets.midcast.magic.singing.friend =
+	InsertGearSet(sets.midcast.magic.singing.friend,
 		{
 			head="Fili Calot +2",
 			body="Fili Hongreline +2",
 			hands="Fili Manchettes +2",
 			legs="Fili Rhingrave +2",
 			feet="Fili Cothurnes +2"
-		}
+		})
 
 	sets.midcast.magic.singing.friend.ballad =
 		{
