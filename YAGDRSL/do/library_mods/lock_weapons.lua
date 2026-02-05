@@ -84,6 +84,8 @@ function GetModWeaponLock()
 	return GetModValue(MOD_LOCK_WEAPONS, false)
 end
 
+-- @User
+-- Creates a list of spells that will bypass the weaponlock
 function SetWeaponLockIgnoreSpells(...)
 	local IgnoreLockSpells = {...}
 
@@ -98,6 +100,8 @@ function SetWeaponLockIgnoreSpells(...)
 
 end
 
+-- @User
+-- Creates a list of mods that will bypass the weaponlock when they are cycled
 function SetWeaponLockIgnoreCycleMods(...)
 	local IgnoreLockCycles = {...}
 

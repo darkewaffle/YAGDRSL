@@ -109,6 +109,18 @@ function SetModValue(ModName, Value)
 SetModValue("MagicBurst", "MB Low")
 ```
 
+## SetWeaponLockIgnoreCycleMods
+```
+function SetWeaponLockIgnoreCycleMods(...)
+SetWeaponLockIgnoreCycleMods("MainHand", "OffHand")
+```
+
+## SetWeaponLockSetWeaponLockIgnoreSpells
+```
+function SetWeaponLockIgnoreSpells(...)
+SetWeaponLockIgnoreSpells("Phalanx", "Temper")
+```
+
 ## TrackDefenseBuffs
 ```
 function TrackDefenseBuffs(...)
