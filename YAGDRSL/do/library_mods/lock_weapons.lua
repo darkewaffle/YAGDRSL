@@ -98,11 +98,37 @@ function SetWeaponLockIgnoreSpells(...)
 
 end
 
+function SetWeaponLockIgnoreCycleMods(...)
+	local IgnoreLockCycles = {...}
+
+	for _, ModName in pairs(IgnoreLockCycles) do
+		if GetModExists(ModName) then
+			ChatDebug("Ignore weapon on cycle Mod Name is valid -", ModName)
+			table.insert(_G[IGNORE_LOCK_CYCLE_MODS], ModName)
+		else
+			ChatError("Ignore weapon on cycle Mod Name is not valid -", ModName)
+		end
+	end
+end
+
 function GetSpellIgnoresWeaponLock(SpellName)
 	local IgnoreLock = false
 
 	for _, IgnoreSpell in ipairs(_G[IGNORE_LOCK_SPELLS]) do
 		if SpellName == IgnoreSpell then
+			IgnoreLock = true
+			break
+		end
+	end
+
+	return IgnoreLock
+end
+
+function GetModIgnoresLockOnCycle(ModName)
+	local IgnoreLock = false
+
+	for _, IgnoreMod in ipairs(_G[IGNORE_LOCK_CYCLE_MODS]) do
+		if ModName == IgnoreMod then
 			IgnoreLock = true
 			break
 		end

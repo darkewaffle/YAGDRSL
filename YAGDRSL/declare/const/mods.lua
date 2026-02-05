@@ -10,6 +10,7 @@ MOD_DEFAULT_ON = "On"
 -- Build-in mod that can control what weapon slots EquipSafe will pass to equip
 MOD_LOCK_WEAPONS = "mod_lock_weapons"
 IGNORE_LOCK_SPELLS = "ignore_lock_spells"
+IGNORE_LOCK_CYCLE_MODS = "ignore_lock_cycle_mods"
 MOD_LOCK_ALL = "LockAll"
 MOD_LOCK_MAIN_SUB_AMMO = "LockMSA"
 MOD_LOCK_MAIN_SUB_RANGE = "LockMSR"
