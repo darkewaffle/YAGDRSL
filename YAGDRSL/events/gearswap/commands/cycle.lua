@@ -25,11 +25,11 @@ function SelfCommandCycle(CommandInputs)
 
 		-- Determine if the mod is configured to ignore the lock when it triggers a cycle update
 		-- If so call the NoLock update, if not call the normal update
-		local CycleFunction = ""
+		local CycleUpdateFunction = ""
 		if GetModIgnoresLockOnCycle(ModName) then
-			CycleFunction = ForceStatusUpdateFromCycleNoLock
+			CycleUpdateFunction = ForceStatusUpdateFromCycleNoLock
 		else
-			CycleFunction = ForceStatusUpdateFromCycle
+			CycleUpdateFunction = ForceStatusUpdateFromCycle
 		end
 
 		-- Setting enforces a delay on the update after a cycle.
@@ -37,21 +37,23 @@ function SelfCommandCycle(CommandInputs)
 		if _G[YAG_SETTINGS]["ForceUpdateAfterCycleDelay"] and _G[YAG_SETTINGS]["ForceUpdateAfterCycleDelay"] > 0 then
 
 			-- If there is no update pending then schedule the update and set STATE_CYCLE_UPDATE_PENDING to true.
-			-- When CycleFunction runs it will set STATE_CYCLE_UPDATE_PENDING back to false.
+			-- When CycleUpdateFunction runs it will set STATE_CYCLE_UPDATE_PENDING back to false.
 			if not STATE_CYCLE_UPDATE_PENDING then
-				_G[CYCLE_UPDATE_COROUTINE] = coroutine.schedule(CycleFunction, ForceUpdateAfterCycleDelay)
+				_G[CYCLE_UPDATE_COROUTINE] = coroutine.schedule(CycleUpdateFunction, ForceUpdateAfterCycleDelay)
 				STATE_CYCLE_UPDATE_PENDING = true
 
 			-- If there is an update pending then close the scheduled coroutine containing the update and reschedule a new one.
 			else
 				coroutine.close(_G[CYCLE_UPDATE_COROUTINE])
-				_G[CYCLE_UPDATE_COROUTINE] = coroutine.schedule(CycleFunction, ForceUpdateAfterCycleDelay)
+				_G[CYCLE_UPDATE_COROUTINE] = coroutine.schedule(CycleUpdateFunction, ForceUpdateAfterCycleDelay)
 			end
 
 		else
-			CycleFunction()
+			CycleUpdateFunction()
 		end
 	end
+
+	HookOnModChange(ModName, ModToCycle.current) -- @Hook
 end
 
 function CycleConstructModName(CommandParameters)
@@ -63,4 +65,8 @@ function CycleConstructModName(CommandParameters)
 		ModName = ModName .. " " .. CommandParameters[i]
 	end
 	return ModName
+end
+
+function HookOnModChange(ModName, NewModValue) -- @Hook
+	-- This is a function the user can override to implement custom logic.
 end

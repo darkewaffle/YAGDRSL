@@ -27,6 +27,7 @@ end
 
 function SetModValue(ModName, Value)
 	_G[MOD_VALUES_ROOT_NAME][ModName]:set(Value)
+	HookOnModChange(ModName, Value) -- @Hook
 end
 
 

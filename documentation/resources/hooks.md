@@ -16,6 +16,7 @@ Additionally if you plan to override these by defining them in your character fi
 | HookOnFilteredAction(SpellAttributes) | none | filtered_action.lua |
 | HookOnIndiChange(indi_table, gain) | none | indi_change.lua |
 | HookOnLoad() | none | on_load.lua |
+| HookOnModChange(ModName, NewModValue) | none | create_mod.lua<br>cycle.lua | 
 | HookOnPartyBuffChange(member_table, name, gain, buffid) | none | party_buff_change.lua |
 | HookOnPetAftercast(SpellAttributes) | none | pet_aftercast.lua |
 | HookOnPetChange(pet, gain) | none | pet_change.lua |
