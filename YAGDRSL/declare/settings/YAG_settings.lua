@@ -112,7 +112,7 @@ function ApplyPlayerSettings()
 	for SettingName, _ in pairs(_G[YAG_SETTINGS][SETTINGS_DEFAULT]) do
 
 		-- If the user has specified a value for any of the settings in their character/job files then overwrite the value in the settings table.
-		if _G[SettingName] then
+		if _G[SettingName] ~= nil then
 			_G[YAG_SETTINGS][SettingName] = _G[SettingName]
 		end
 	end
