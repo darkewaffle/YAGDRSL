@@ -19,8 +19,6 @@ function SelfCommandCycle(CommandInputs)
 		ChatError("SelfCommandCycle: " .. ModName .. " mod not found")
 	end
 
-	UpdateControlPanel()
-
 	if _G[YAG_SETTINGS]["ForceUpdateAfterCycle"] then
 
 		-- Determine if the mod is configured to ignore the lock when it triggers a cycle update
@@ -54,6 +52,7 @@ function SelfCommandCycle(CommandInputs)
 	end
 
 	HookOnModChange(ModName, ModToCycle.current) -- @Hook
+	UpdateControlPanel()
 end
 
 function CycleConstructModName(CommandParameters)
