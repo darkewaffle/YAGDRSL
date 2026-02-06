@@ -3,16 +3,20 @@ require "YAGDRSL/display/format_mod.lua"
 require "YAGDRSL/display/display_modorders.lua"
 
 local ControlPanel = {}
+local ControlPanelCreated = false
 
 function InitializeControlPanel()
 	local CPContents = GetControlPanelContents()
 	ControlPanel = texts.new(CPContents, GetControlPanelSettings())
 	ControlPanel:visible(_G[YAG_SETTINGS]["ControlPanelVisible"])
+	ControlPanelCreated = true
 end
 
 function UpdateControlPanel()
-	local CPContents = GetControlPanelContents()
-	ControlPanel:text(CPContents)
+	if ControlPanelCreated then
+		local CPContents = GetControlPanelContents()
+		ControlPanel:text(CPContents)
+	end
 
 	if STATE_DISPLAY_ORDER_DEBUG then
 		UpdateDisplayModOrders()
