@@ -1,3 +1,4 @@
+require "YAGDRSL/declare/const/elements.lua"
 require "YAGDRSL/declare/const/events.lua"
 require "YAGDRSL/declare/const/gearsets.lua"
 require "YAGDRSL/declare/const/job_controls.lua"
