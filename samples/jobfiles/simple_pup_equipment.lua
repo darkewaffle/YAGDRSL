@@ -2,8 +2,11 @@
 -- CUSTOMIZATIONS
 --
 
-	gear.petlegs = {name="Taeon Tights", augments={'Pet: Attack+20 Pet: Rng.Atk.+20','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}}
+	capes = {}
+	capes.pet = { name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: Haste+10','Pet: Magic dmg. taken-10%',}}
+	capes.ws_da = { name="Visucius's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 
+	gear.petlegs = {name="Taeon Tights", augments={'Pet: Attack+20 Pet: Rng.Atk.+20','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}}
 
 	templates = {}
 
@@ -31,11 +34,11 @@
 			neck="Shulmanu Collar",
 			ear1="Enmerkar Earring",
 			ear2="Karagoz Earring +1",
-			body="Pitre Tobe +2",
+			body="Pitre Tobe +3",
 			hands="Mpaca's Gloves",
 			--ring1="Thurandaut Ring +1",
 			ring2="Varar Ring",
-			back="Visucius's Mantle",
+			back=capes.pet,
 			waist="Incarnation Sash",
 			legs=gear.petlegs,
 			feet="Mpaca's Boots"
@@ -47,7 +50,7 @@
 
 	sets.precast.ja["Overdrive"] =
 		{
-			body="Pitre Tobe +2"
+			body="Pitre Tobe +3"
 		}
 
 	sets.precast.ja["Repair"] =
@@ -75,7 +78,7 @@
 		{
 			body="Karagoz Farsetto",
 			hands="Foire Dastanas +3",
-			back="Visucius's Mantle"
+			back=capes.pet
 		}
 
 --
@@ -85,12 +88,13 @@
 	InsertGearSet(sets.precast.ws, set_combine(collections.Mpaca,
 		{
 			neck="Fotia Gorget",
-			ear1="Sroda Earring",
+			ear1="Schere Earring",
 			ear2="Moonshade Earring",
 			body="Foire Tobe +4",
+			hands="Pitre Dastanas +3",
 			ring1="Epona's Ring",
 			ring2="Karieyh Ring +1",
-			back="Null Shawl",
+			back=capes.ws_da,
 			waist="Fotia Belt"
 		}))
 
@@ -138,6 +142,11 @@
 -- PRECAST WS MODS
 --
 
+	mods.precast.ws.melee.physical["automaton"] =
+		{
+			ear2="Sroda Earring"
+		}
+
 	-- +Accuracy gear for melee, physical weaponskills when the Offense mod = "Acc"
 	mods.precast.ws.melee.physical["Acc"] =
 		{
@@ -162,7 +171,7 @@
 
 	sets.status.engaged = set_combine(collections.Mpaca,
 		{
-			ear1="Brutal Earring",
+			ear1="Schere Earring",
 			ear2="Cessance Earring",
 			neck="Shulmanu Collar",
 			ring1="Epona's Ring",
@@ -175,7 +184,7 @@
 		{
 			ear1="Sroda Earring",
 			ear2="Karagoz Earring +1",
-			back="Visucius's Mantle",		-- 10% Haste
+			back=capes.pet,					-- 10% Haste
 			waist="Klouskap Sash",			--  8% Haste
 			feet="Tali'ah Crackows +2"		--  7% Haste
 		}

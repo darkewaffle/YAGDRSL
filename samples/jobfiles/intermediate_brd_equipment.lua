@@ -2,7 +2,8 @@
 -- CUSTOMIZATIONS
 --
 	capes = {}
-	capes.bard = { name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}}
+	capes.bard = { name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}
+	capes.wsd = { name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 
 	DualWield = {}
 	DualWield[0] = {}
@@ -70,11 +71,14 @@
 
 	templates.wsd =
 		{
+			neck="Republican Platinum Medal",
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
-			neck="Republican Platinum Medal",
+			body="Bihu Justaucorps +3",
 			ring1="Karieyh Ring +1",
-			ring2="Ilabrat Ring"
+			ring2="Ilabrat Ring",
+			back=capes.wsd,
+			waist="Sailfi Belt +1"
 		}
 
 --
@@ -83,7 +87,7 @@
 
 	sets.precast.ja["Troubadour"] =
 		{
-			body="Bihu Justaucorps +1"
+			body="Bihu Justaucorps +3"
 		}
 
 	sets.precast.ja["Soul Voice"] =
@@ -93,7 +97,7 @@
 
 	sets.precast.ja["Nightingale"] =
 		{
-			feet="Bihu Slippers"
+			feet="Bihu Slippers +4"
 		}
 
 --
@@ -106,19 +110,17 @@
 			waist="Fotia Belt"
 		})
 
-	sets.precast.ws.melee.physical =
+	sets.precast.ws.melee.physical = set_combine(collections.Nyame,
 		{
-			head="Fili Calot +2",
+			ranged="Linos",
 			ear1="Brutal Earring",
 			ear2="Cessance Earring",
-			body="Fili Hongreline +2",
-			hands="Fili Manchettes +2",
+			body="Bihu Justaucorps +3",
 			ring1="Ilabrat Ring",
 			ring2="Lehko's Ring",
 			back="Null Shawl",
-			legs="Fili Rhingrave +2",
-			feet="Fili Cothurnes +2"
-		}
+			feet="Bihu Slippers +4"
+		})
 
 	sets.precast.ws["Evisceration"] =
 		{
@@ -140,9 +142,10 @@
 			neck="Null Loop",
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
+			body="Bihu Justaucorps +3",
 			ring1="Etana Ring",
 			ring2="Lehko's Ring",
-			back="Null Shawl",
+			back=capes.wsd,
 			waist="Null Belt"
 		})
 
@@ -303,9 +306,10 @@
 		{
 			ear2="Gersemi Earring",
 			body="Brioso Justaucorps +2",
-			hands="Fili Manchettes +2",
+			hands="Inyanga Dastanas +2",
+			--hands="Fili Manchettes +2",
 			waist="Harfner's Sash",
-			feet="Bihu Slippers +1"
+			feet="Bihu Slippers +4"
 		}
 
 	sets.midcast.magic.singing.enemy.threnody =
@@ -410,22 +414,23 @@
 -- IDLE & RESTING SETS
 --
 
-	InsertGearSet(sets.status.idle,
+	InsertGearSet(sets.status.idle, set_combine(collections.Bunzi,
 		{
 			main="Daybreak",
 			head="Fili Calot +2",
-			neck="Null Loop",
+			neck="Warder's Charm +1",
 			ear1="Alabaster Earring",
 			ear2="Eabani Earring",
-			body="Fili Hongreline +2",
-			hands="Fili Manchettes +2",
+			--body="Fili Hongreline +2",
+			--hands="Fili Manchettes +2",
 			ring1="Murky Ring",
-			ring2="Defending Ring",
+			--ring2="Defending Ring",
+			ring2="Vengeful Ring",
 			back="Null Shawl",
 			waist="Carrier's Sash",
 			legs="Fili Rhingrave +2",
 			feet="Fili Cothurnes +2"
-		})
+		}))
 
 	sets.status.idle.town =
 		{
@@ -449,3 +454,19 @@
 	overrides.status["DynaNeck"] = {neck="Bard's Charm +1"}
 	overrides.precast.ws["DynaNeck"] = {neck="Bard's Charm +1"}
 	overrides.precast.ja["DynaNeck"] = {neck="Bard's Charm +1"}
+
+	overrides.status["Cat"] =
+		{
+			ranged="Linos",
+			head="Fili Calot +2",
+			neck="Null Loop",
+			ear1="Suppanomimi",
+			ear2="Brutal Earring",
+			body="Fili Hongreline +2",
+			hands="Bunzi's Gloves",
+			ring1="Ilabrat Ring",
+			ring2="Lehko's Ring",
+			waist="Sailfi Belt +1",
+			legs="Fili Rhingrave +2",
+			feet="Fili Cothurnes +2"
+		}
