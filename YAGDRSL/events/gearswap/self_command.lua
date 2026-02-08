@@ -21,7 +21,6 @@ function self_command(CommandInputs)
 end
 
 function HookUserSelfCommand(CommandInputs) -- @Hook
-	ChatError("Test1")
 	-- Do nothing. User can override this in order to process their own commands.
 end
 
