@@ -9,9 +9,10 @@ function self_command(CommandInputs)
 		end
 	end
 
-	local PrimaryCommand = table.remove(CommandInputs, 1)
+	local PrimaryCommand = CommandInputs[1]
 
 	if CommandMap[PrimaryCommand] then
+		table.remove(CommandInputs, 1)
 		CommandMap[PrimaryCommand](CommandInputs)
 	else
 		ChatDebug("Command not recognized. Sending to HookUserSelfCommand.")
@@ -20,6 +21,7 @@ function self_command(CommandInputs)
 end
 
 function HookUserSelfCommand(CommandInputs) -- @Hook
+	ChatError("Test1")
 	-- Do nothing. User can override this in order to process their own commands.
 end
 
