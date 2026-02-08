@@ -7,6 +7,8 @@ MAP_EQUIPMENT_NAMES_POPULATED = false
 -- Names of static mapping tables included with the library.
 MAP_JA = "custom_map_ja"
 MAP_ELEMENT_OPPOSITES = "custom_map_elements"
+MAP_SKILLCHAIN_ELEMENTS = "custom_map_skillchain_elements"
+MAP_SKILLCHAIN_MESSAGES = "custom_map_skillchain_messages"
 MAP_SKILLS = "custom_map_skills"
 MAP_SPELLS = "custom_map_spells"
 MAP_WS = "custom_map_ws"
