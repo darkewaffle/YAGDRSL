@@ -1,0 +1,9 @@
+ELEMENT_FIRE = "Fire"
+ELEMENT_LIGHTNING = "Lightning"
+ELEMENT_WIND = "Wind"
+ELEMENT_LIGHT = "Light"
+
+ELEMENT_EARTH = "Earth"
+ELEMENT_ICE = "Ice"
+ELEMENT_WATER = "Water"
+ELEMENT_DARK = "Dark"
