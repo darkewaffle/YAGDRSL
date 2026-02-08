@@ -1,8 +1,10 @@
 require "YAGDRSL/mappings/constructed/items.lua"
 require "YAGDRSL/mappings/constructed/buffs.lua"
 
+require "YAGDRSL/mappings/static/action_messages.lua"
 require "YAGDRSL/mappings/static/element_opposites.lua"
 require "YAGDRSL/mappings/static/ja.lua"
+require "YAGDRSL/mappings/static/skillchain_elements.lua"
 require "YAGDRSL/mappings/static/skills.lua"
 require "YAGDRSL/mappings/static/spells.lua"
 require "YAGDRSL/mappings/static/ws.lua"
