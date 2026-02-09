@@ -17,9 +17,7 @@ function EquipSafe(GearSet, Message, IgnoreWeaponLock)
 		end
 
 		if _G[YAG_SETTINGS]["ProtectRangeFromWrongAmmo"] then
-			ChatGearSet(GearSet)
 			GearSet = EvaluateAmmo(GearSet)
-			ChatGearSet(GearSet)
 		end
 
 		GearSet = SwapEarrings(GearSet)
