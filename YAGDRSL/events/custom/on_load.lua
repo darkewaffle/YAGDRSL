@@ -80,10 +80,11 @@ function InitializeJobData()
 end
 
 function RegisterCustomEvents()
-	-- Registers functions with Windower events 'prerender' and 'zone change'
+	-- Registers functions with Windower events - each Register function that corresponds to an optional function should contain conditionals to define if they are active or not
 	RegisterOnTick()
 	RegisterOnZoneChange()
 	RegisterOnLogOut()
+	RegisterOnChunk()
 end
 
 function ApplyTrackers()

@@ -1,4 +1,5 @@
 require "YAGDRSL/events/custom/force_status_update.lua"
+require "YAGDRSL/events/custom/on_chunk.lua"
 require "YAGDRSL/events/custom/on_load.lua"
 require "YAGDRSL/events/custom/on_logout.lua"
 require "YAGDRSL/events/custom/on_tick.lua"
