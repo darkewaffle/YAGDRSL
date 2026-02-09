@@ -55,3 +55,55 @@ function GetItemIsRare(ItemID)
 		return false
 	end
 end
+
+function GetItemAmmoType(ItemID)
+	local AmmoType = WINDOWER_RESOURCES.items[ItemID]["ammo_type"]
+
+	local AutomatonOils =
+		{
+			[18731] = true,
+			[18732] = true,
+			[18733] = true,
+			[19185] = true
+		}
+
+	if AmmoType then
+		return AmmoType
+	elseif AutomatonOils[ItemID] then
+		return "Oil"
+	else
+		return nil
+	end
+
+end
+
+function GetItemRangeType(ItemID)
+	local RangeType = WINDOWER_RESOURCES.items[ItemID]["range_type"]
+
+	local Animators =
+		{
+			[17857] = true,
+			[17858] = true,
+			[17859] = true,
+			[17923] = true,
+			[21392] = true,
+			[21433] = true,
+			[21453] = true,
+			[21454] = true,
+			[21456] = true,
+			[21457] = true,
+			[21458] = true,
+			[21459] = true,
+			[22260] = true,
+			[21375] = true
+		}
+
+	if RangeType then
+		return RangeType
+	elseif Animators[ItemID] then
+		return "Animator"
+	else
+		return nil
+	end
+
+end
