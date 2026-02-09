@@ -29,7 +29,7 @@
 		{
 			main="Ohtas",
 			ranged="Animator P",
-			ammo="Automaton Oil +3",
+			ammo="Automat. Oil +3",
 			head="Anwig Salade",
 			neck="Shulmanu Collar",
 			ear1="Enmerkar Earring",
