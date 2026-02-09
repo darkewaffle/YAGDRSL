@@ -5,6 +5,8 @@ require "YAGDRSL/get/mods/get_mod_value.lua"
 -- Equip probably already does this but better safe than sorry.
 -- More importantly the SwapEarrings and SwapRings logic is a bugfix to address slots sometimes becoming 'locked' to GearSwap
 -- when ring A is equipped in Ring1 slot ingame but an equip request is sent that tells the game to put it in Ring2.
+-- EvaluateAmmo will check if the ammo in the gearset is compatible with the ranged weapon in the gearset or equipped by the character with priority given to the gearset.
+-- If the ammo would cause the range item to be unequipped then the ammo will be removed from the gearset.
 
 function EquipSafe(GearSet, Message, IgnoreWeaponLock)
 	if next(GearSet) then
@@ -12,6 +14,12 @@ function EquipSafe(GearSet, Message, IgnoreWeaponLock)
 
 		if not IgnoreWeaponLock then
 			GearSet = WeaponLock(GearSet)
+		end
+
+		if _G[YAG_SETTINGS]["ProtectRangeFromWrongAmmo"] then
+			ChatGearSet(GearSet)
+			GearSet = EvaluateAmmo(GearSet)
+			ChatGearSet(GearSet)
 		end
 
 		GearSet = SwapEarrings(GearSet)
@@ -117,6 +125,66 @@ function WeaponLock(GearSet)
 			GearSet[SlotName] = nil
 		end
 	end
+
+	return GearSet
+end
+
+function EvaluateAmmo(GearSet)
+	local MapAmmoToRange =
+	{
+		["Arrow"]    = "Bow",
+		["Bait"]     = "Fishing Rod",
+		["Bolt"]     = "Crossbow",
+		["Bullet"]   = "Gun",
+		["Oil"]      = "Animator",
+		["Shell"]    = "Cannon"
+	}
+
+	local MapRangeToAmmo =
+	{
+		["Animator"]    = "Oil",
+		["Bow"]         = "Arrow",
+		["Cannon"]      = "Shell",
+		["Crossbow"]    = "Bolt",
+		["Gun"]         = "Bullet",
+		["Fishing Rod"] = "Bait"
+	}
+
+
+	-- If the gearset does not contain ammo then return.
+	if not GearSet["ammo"] then
+		return GearSet
+	end
+
+
+	local RangeID = 0
+	local ItemsEquipped = GetCharacterEquipment()
+	local GearsetRangeName = GearSet["range"] or GearSet["ranged"]
+
+
+	-- Gearset contains a range item
+	if GearsetRangeName then
+		RangeID = GetItemID(RangeName)
+
+	-- Character has range item equipped
+	elseif ItemsEquipped["range"] > 0 then
+		RangeID = windower.ffxi.get_items(ItemsEquipped["range_bag"], ItemsEquipped["range"])["id"]
+
+	-- Gearset has no range item and a range item is not equipped, return as ammo cannot have side effects
+	else
+		return GearSet
+	end
+
+
+	local RangeType = GetItemRangeType(RangeID)
+	local AmmoName = GearSet["ammo"]
+	local AmmoID = GetItemID(AmmoName)
+	local AmmoType = GetItemAmmoType(AmmoID)
+
+	if not MapRangeToAmmo[RangeType] or MapRangeToAmmo[RangeType] ~= AmmoType then
+		GearSet["ammo"] = nil
+	end
+
 
 	return GearSet
 end

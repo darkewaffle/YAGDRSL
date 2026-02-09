@@ -26,6 +26,7 @@ _G[YAG_SETTINGS][SETTINGS_DEFAULT] =
 	AutomaticPrecastTermination = false,
 	AutomaticUpdateTermination = false,
 
+	ProtectRangeFromWrongAmmo = true,
 	MonitorMagicBurstState = false,
 
 	TickEnable = false,
