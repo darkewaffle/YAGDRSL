@@ -96,3 +96,10 @@ function GetCharacterHasTarget()
 		return false
 	end
 end
+
+function GetCharacterEquipment()
+	local PlayerItems = windower.ffxi.get_items()
+	if PlayerItems then
+		return PlayerItems.equipment
+	end
+end
