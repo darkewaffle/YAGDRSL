@@ -26,6 +26,8 @@ _G[YAG_SETTINGS][SETTINGS_DEFAULT] =
 	AutomaticPrecastTermination = false,
 	AutomaticUpdateTermination = false,
 
+	MonitorMagicBurstState = false,
+
 	TickEnable = false,
 	TickInterval = 60,
 	TickForceUpdateCooldown = 5,
