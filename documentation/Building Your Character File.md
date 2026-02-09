@@ -158,6 +158,7 @@ ApplyKeybindScripts = false
 | AutomaticPrecastTermination | false | Precast has some checks in place that will cancel an action (and will not change gear) if the action is on recast, if the action is a Weaponskill and the character has <1000 TP or if the character is already in midcast for another action. This may be expanded in the future. Midcast update termination may not be 100% reliable due to networking shenanigans. |
 | AutomaticUpdateTermination | false | Prevents status set updates when the character is not in a valid status (such as in a cutscene or speaking to an NPC) or when the character is already in the midcast of an action. Midcast update termination may not be 100% reliable due to networking shenanigans. |
 | MonitorMagicBurstState | false | Enables incoming packets to be monitored to identify if a target has been skillchained and if the element of a magic spell matches the elements that can be magic bursted. The result of this monitoring is found in SpellAttributes["MagicBurstLikely"] |
+| ProtectRangeFromWrongAmmo | true | Checks if the ammo in a gearset is compatible with the range item in the same gearset or the ranged item equipped. If the ammo is not compatible (and therefore would cause the range item to be unequipped) then it is removed from the gearset. |
 
 
 ### Tick Settings
