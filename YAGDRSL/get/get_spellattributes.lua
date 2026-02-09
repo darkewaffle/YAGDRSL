@@ -52,6 +52,8 @@ function GetSpellAttributes(spell)
 		SpellAttributes["Element=Day"] = GetDayMatchesSpell(SpellAttributes["Element"])
 		SpellAttributes["ElementOpposesDay"] = GetDayOpposesSpell(SpellAttributes["Element"])
 
+		SpellAttributes["MagicBurstLikely"] = GetMagicBurstLikely(SpellAttributes["Category"], SpellAttributes["TargetID"], SpellAttributes["Element"])
+
 		SpellAttributes["DamageType"] = GetSpellDamageType(SpellAttributes["Category"], SpellAttributes["Name"], SpellAttributes["Element"])
 		SpellAttributes["RecastID"] = GetSpellRecastID(spell)
 
