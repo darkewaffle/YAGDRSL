@@ -2,7 +2,7 @@ function ParseActionPacketNPC(ActionPacket)
 	local ActionID = ActionPacket["Param"]
 	local TargetID = ActionPacket["Target 1 ID"]
 	
-	if GetNPCAbilityHasSC(ActionID) then
+	if GetNPCAbilityCanSkillchain(ActionID) then
 		if ActionPacket["Target 1 Action 1 Has Added Effect"] then
 			local ActionMessage = ActionPacket["Target 1 Action 1 Added Effect Message"]
 			local Skillchain = _G[MAP_SKILLCHAIN_MESSAGES][ActionMessage]
