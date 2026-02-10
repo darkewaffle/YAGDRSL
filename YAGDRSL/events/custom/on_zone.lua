@@ -14,4 +14,8 @@ function OnZoneChange()
 		coroutine.schedule(ForceStatusUpdateCommand, _G[YAG_SETTINGS]["ForceUpdateAfterZoneDelay"])
 	end
 
+	if _G[YAG_SETTINGS]["MonitorMagicBurstState"] then
+		ResetMagicBurstTracking()
+	end
+
 end
