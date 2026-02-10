@@ -1,6 +1,6 @@
 function GetWeatherElement()
 	if world.weather_element then
-		return world.weather_element
+		return string.lower(world.weather_element)
 	else
 		return nil
 	end

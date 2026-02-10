@@ -1,6 +1,6 @@
 function GetDayElement()
 	if world.day_element then
-		return world.day_element
+		return string.lower(world.day_element)
 	else
 		return nil
 	end

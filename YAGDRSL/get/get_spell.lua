@@ -82,13 +82,13 @@ function GetSpellDamageType(SpellCategory, SpellName, SpellElement)
 end
 
 function GetSpellElementName(spell)
-	return spell.element
+	return string.lower(spell.element)
 end
 
 function GetSpellElementID(spell)
 	local ElementName = GetSpellElementName(spell)
 	for Index, ElementData in pairs(WINDOWER_RESOURCES.elements) do
-		if ElementData["en"] == ElementName then
+		if string.lower(ElementData["en"]) == ElementName then
 			return Index
 		end
 	end
