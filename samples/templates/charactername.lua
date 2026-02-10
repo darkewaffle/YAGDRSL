@@ -76,29 +76,27 @@ function GetPlayerSettings()
 
 
 	-- Gear that should be equipped when dealing magic damage that matches the game weather element
-		WeatherItems = {}
-		WeatherItems.Universal = { }
-		WeatherItems.Fire =      { }
-		WeatherItems.Ice =       { }
-		WeatherItems.Wind =      { }
-		WeatherItems.Earth =     { }
-		WeatherItems.Lightning = { }
-		WeatherItems.Water =     { }
-		WeatherItems.Light =     { }
-		WeatherItems.Dark =      { }
+		WeatherItems.universal = { }
+		WeatherItems.fire =      { }
+		WeatherItems.ice =       { }
+		WeatherItems.wind =      { }
+		WeatherItems.earth =     { }
+		WeatherItems.lightning = { }
+		WeatherItems.water =     { }
+		WeatherItems.light =     { }
+		WeatherItems.dark =      { }
 
 
 	-- Gear that should be equipped when dealing magic damage that matches the game day element
-		DayItems = {}
-		DayItems.Universal = { }
-		DayItems.Fire =      { }
-		DayItems.Ice =       { }
-		DayItems.Wind =      { }
-		DayItems.Earth =     { }
-		DayItems.Lightning = { }
-		DayItems.Water =     { }
-		DayItems.Light =     { }
-		DayItems.Dark =      { }
+		DayItems.universal = { }
+		DayItems.fire =      { }
+		DayItems.ice =       { }
+		DayItems.wind =      { }
+		DayItems.earth =     { }
+		DayItems.lightning = { }
+		DayItems.water =     { }
+		DayItems.light =     { }
+		DayItems.dark =      { }
 
 
 	function HookPrecastCustomizeOffense(SpellAttributes, PrecastSet) -- @Hook
