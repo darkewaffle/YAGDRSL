@@ -1,11 +1,11 @@
 _G[MAP_ELEMENT_OPPOSITES] =
 	{
-		["Fire"] =      "Water",
-		["Ice"] =       "Fire",
-		["Wind"] =      "Ice",
-		["Earth"] =     "Wind",
-		["Lightning"] = "Earth",
-		["Water"] =     "Lightning",
-		["Light"] =     "Dark",
-		["Dark"] =      "Light"
+		[ELEMENT_FIRE] =      ELEMENT_WATER,
+		[ELEMENT_ICE] =       ELEMENT_FIRE,
+		[ELEMENT_WIND] =      ELEMENT_ICE,
+		[ELEMENT_EARTH] =     ELEMENT_WIND,
+		[ELEMENT_LIGHTNING] = ELEMENT_EARTH,
+		[ELEMENT_WATER] =     ELEMENT_LIGHTNING,
+		[ELEMENT_LIGHT] =     ELEMENT_DARK,
+		[ELEMENT_DARK] =      ELEMENT_LIGHT
 	}
