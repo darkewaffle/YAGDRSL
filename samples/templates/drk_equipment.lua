@@ -138,32 +138,32 @@
 			
 		}))
 
-	InsertGearSet(sets.midcast.magic.dark,
+	InsertGearSet(sets.midcast.magic.darkmagic,
 		{
 			
 		})
 
-	sets.midcast.magic.dark.absorb =
+	sets.midcast.magic.darkmagic.absorb =
 		{
 			
 		}
 
-	sets.midcast.magic.dark.aspir =
+	sets.midcast.magic.darkmagic.aspir =
 		{
 			
 		}
 
-	sets.midcast.magic.dark.bio =
+	sets.midcast.magic.darkmagic.bio =
 		{
 			
 		}
 
-	sets.midcast.magic.dark.drain =
+	sets.midcast.magic.darkmagic.drain =
 		{
 			
 		}
 
-	sets.midcast.magic.dark.endark =
+	sets.midcast.magic.darkmagic.endark =
 		{
 			
 		}
@@ -183,19 +183,19 @@
 --
 	
 	-- Additional gear that will be equipped when casting dark magic and and Dark Seal is active
-	mods.midcast.magic.dark["Dark Seal"] =
+	mods.midcast.magic.darkmagic["Dark Seal"] =
 		{
 			
 		}
 
 	-- Additional gear that will be equipped when casting an Absorb spell and Nether Void is active
-	mods.midcast.magic.dark.absorb["Nether Void"] =
+	mods.midcast.magic.darkmagic.absorb["Nether Void"] =
 		{
 			
 		}
 
 	-- Additional gear that will be equipped when casting a Dragin spell and Nether Void is active
-	mods.midcast.magic.dark.drain["Nether Void"] =
+	mods.midcast.magic.darkmagic.drain["Nether Void"] =
 		{
 			
 		}

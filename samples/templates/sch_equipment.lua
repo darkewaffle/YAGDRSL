@@ -86,7 +86,7 @@
 --
 
 	-- Additional gear that will be equipped when casting a dark magic spell and Dark Arts is active
-	mods.precast.magic.dark["Dark Arts"] =
+	mods.precast.magic.darkmagic["Dark Arts"] =
 		{
 			
 		}
@@ -273,7 +273,7 @@
 --
 
 	-- +Magic Accuracy gear when casting a dark spell and Offense mod = "MAcc"
-	mods.midcast.magic.dark["MAcc"] =
+	mods.midcast.magic.darkmagic["MAcc"] =
 		{
 			
 		}
@@ -308,7 +308,7 @@
 --
 
 	-- Additional gear that will be equipped when casting a dark magic spell and Dark Arts is active
-	mods.midcast.magic.dark["Dark Arts"] =
+	mods.midcast.magic.darkmagic["Dark Arts"] =
 		{
 			
 		}
@@ -329,7 +329,7 @@
 		}
 
 	-- Additional gear that will be equipped when casting a dark magic spell and Parsimony is active
-	mods.midcast.magic.dark["Parsimony"] =
+	mods.midcast.magic.darkmagic["Parsimony"] =
 		{
 			
 		}
@@ -350,7 +350,7 @@
 		}
 
 	-- Additional gear that will be equipped when casting a dark magic spell and Ebullience is active
-	mods.midcast.magic.dark["Ebullience"] =
+	mods.midcast.magic.darkmagic["Ebullience"] =
 		{
 			
 		}

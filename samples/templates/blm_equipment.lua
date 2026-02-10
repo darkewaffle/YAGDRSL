@@ -74,22 +74,22 @@
 			
 		}))
 
-	InsertGearSet(sets.midcast.magic.dark,
+	InsertGearSet(sets.midcast.magic.darkmagic,
 		{
 			
 		})
 
-	sets.midcast.magic.dark.aspir =
+	sets.midcast.magic.darkmagic.aspir =
 		{
 			
 		}
 
-	sets.midcast.magic.dark.bio =
+	sets.midcast.magic.darkmagic.bio =
 		{
 			
 		}
 
-	sets.midcast.magic.dark.drain =
+	sets.midcast.magic.darkmagic.drain =
 		{
 			
 		}
