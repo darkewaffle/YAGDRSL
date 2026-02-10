@@ -36,5 +36,16 @@ function OnChunk(id, original, modified, injected, blocked)
 			-- if ready/sic then check for SC message but do not reset _G[TRACK_MAGIC_BURST] if message is not present
 			ParseActionPacketPet(ActionPacket)
 		end
+	
+	elseif id == 0x00E then
+
+		local NPCUpdatePacket = LIBRARY_PACKETS.parse('incoming', original)
+		local NPCStatus = NPCUpdatePacket["Status"]
+
+		-- NPC status is dead
+		if NPCStatus == 2 or NPCStatus == 3 then
+			local NPCID = NPCUpdatePacket["NPC"]
+			DeleteMagicBurstTracking(NPCID)
+		end
 	end
 end
