@@ -90,6 +90,9 @@ function WalkPathMagic(RootName, EventSource, SpellAttributes)
 		-- ChildGroup is usually nil and has no effect. However for Enhancing and Enfeebling spells ParentGroup = black/white and ChildGroup = potency/duration/dispel/etc.
 		SetPaths, SetPathStrings = WalkPath(RootName, EventSource, SpellAttributes["Category"], SpellAttributes["Skill"], SpellAttributes["ParentGroup"], SpellAttributes["ChildGroup"])
 
+		-- Example: sets.precast.magic.elemental.earth, sets.precast.magic.darkmagic.dark and sets.precast.magic.enfeebling.white.potency.ice
+		AppendValidNamedPaths(SetPaths, SetPathStrings, SpellAttributes["Element"])
+
 		-- Example: sets.precast.magic.enhancing["Phalanx II"], sets.precast.magic["Burn"] and sets.precast.magic.elemental.debuff["Burn"]
 		AppendValidNamedPaths(SetPaths, SetPathStrings, SpellAttributes["Name"])
 

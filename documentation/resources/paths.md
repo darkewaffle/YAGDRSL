@@ -60,10 +60,17 @@ sets.midcast.ready.physical
 
 ## Magic
 - Skill (enfeebling, healing, etc.)
-- Parent Group (absorb, cure, paralyze, etc.)
+- Parent Group (absorb, cure, black, white, etc.)
+- Child Group (phalanx, protect, potency, duration, etc.)
+- Optional: Spell Element (fire, dark, light, etc.)
+- Optional: Spell Name ("Cure V", "Aero II", etc.)
+- Optional: Target Type (self, friend, enemy)
 ```
 sets.precast.magic
+sets.midcast.magic.healing
 sets.midcast.magic.healing.cure
+sets.midcast.magic.elemental.fire
+sets.midcast.magic["Phalanx"].self
 ```
 
 ### Blue Magic
