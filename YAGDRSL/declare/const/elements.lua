@@ -7,3 +7,6 @@ ELEMENT_EARTH = "Earth"
 ELEMENT_ICE = "Ice"
 ELEMENT_WATER = "Water"
 ELEMENT_DARK = "Dark"
+
+ELEMENT_PHYSICAL = "Physical"
+ELEMENT_NONE = "None"
