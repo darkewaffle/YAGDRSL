@@ -22,6 +22,10 @@ function UpdateMagicBurstTracking(TargetID, Elements)
 	_G[TRACK_MAGIC_BURST][TargetID][TRACK_SKLLCHAIN_COUNT] = _G[TRACK_MAGIC_BURST][TargetID][TRACK_SKLLCHAIN_COUNT] + 1
 end
 
+function ResetMagicBurstTracking()
+	_G[TRACK_MAGIC_BURST] = {}
+end
+
 function DeleteMagicBurstTracking(TargetID)
 	_G[TRACK_MAGIC_BURST][TargetID] = nil
 end
