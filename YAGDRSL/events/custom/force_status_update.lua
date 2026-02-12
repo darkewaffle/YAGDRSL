@@ -31,7 +31,6 @@ function ForceStatusUpdateTerminate(UpdateSource)
 
 	local TerminateUpdate = false
 	local TerminateReason = ""
-	local TerminateOnPetMidactionDefault = true
 
 	local TerminationFunctions =
 		{
