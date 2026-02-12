@@ -21,7 +21,7 @@ function precast(spell, position)
 	end
 
 	-- Evaluate user defined termination of using the spell
-	TerminateStatus, TerminateReason = HookPrecastTerminate(SpellAttributes) -- @Hook
+	TerminateStatus, TerminateReason = HookPrecastTerminateSpell(SpellAttributes) -- @Hook
 	if TerminateStatus then
 		TerminateReason = TerminateReason or "TerminateReason Undefined"
 		ChatWarning("User defined precast termination: " .. TerminateReason, SpellAttributes["Name"])
@@ -154,7 +154,7 @@ function PrecastTerminateSwap(SpellAttributes)
 	return TerminateSwap, TerminateReason
 end
 
-function HookPrecastTerminate(SpellAttributes) -- @Hook
+function HookPrecastTerminateSpell(SpellAttributes) -- @Hook
 	-- This is a function the user can override to implement custom logic.
 	-- If it returns true then the spell will be terminated and it will not be cast.
 	return false, "Spell will not be terminated"

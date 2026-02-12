@@ -29,7 +29,7 @@ Additionally if you plan to override these by defining them in your character fi
 | HookPrecastCustomizeDefense(SpellAttributes, PrecastSet) | PrecastSet | precast.lua |
 | HookPrecastCustomizeFinal(SpellAttributes, PrecastSet) | PrecastSet | precast.lua |
 | HookPrecastCustomizeOffense(SpellAttributes, PrecastSet) | PrecastSet | precast.lua |
-| HookPrecastTerminate(SpellAttributes) | TerminateSpell boolean<br>TerminateReason string| precast.lua |
+| HookPrecastTerminateSpell(SpellAttributes) | TerminateSpell boolean<br>TerminateReason string| precast.lua |
 | HookStatusCustomizeDefense(SpellAttributes, StatusSet) | StatusSet | get_set_status.lua |
 | HookStatusCustomizeFinal(SpellAttributes, StatusSet) | StatusSet | get_set_status.lua |
 | HookStatusCustomizeOffense(SpellAttributes, StatusSet) | StatusSet | get_set_status.lua |

@@ -41,7 +41,7 @@
 		return PrecastSet
 	end
 
-	function HookPrecastTerminate(SpellAttributes)
+	function HookPrecastTerminateSpell(SpellAttributes)
 		local TerminateSpell = false
 		local TerminateReason = "Spell will not be terminated"
 

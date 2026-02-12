@@ -21,7 +21,7 @@ HasteDefinitions =
 		GeoHaste = 20
 	}
 
-function HookPrecastTerminate(SpellAttributes)
+function HookPrecastTerminateSpell(SpellAttributes)
 	local TerminateSpell = false
 	local TerminateReason = "Spell will not be terminated"
 
