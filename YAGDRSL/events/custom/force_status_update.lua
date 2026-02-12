@@ -5,14 +5,49 @@ function ForceStatusUpdate(Source, IgnoreWeaponLock)
 
 	local CharacterStatus = GetCharacterStatus()
 	ChatDebug("CharacterStatus", CharacterStatus)
+
 	local StatusSet = {}
-	StatusSet = GetStatusSet(CharacterStatus, UpdateSource)
+
+	local TerminateStatus = false
+	local TerminateReason = ""
+	TerminateStatus, TerminateReason = ForceStatusUpdateTerminate(UpdateSource)
+	if TerminateStatus then
+		ChatWarning("ForceStatusUpdate from " .. UpdateSource .. " Terminating: ", TerminateReason)
+		WriteDevLog("ForceStatusUpdate from " .. UpdateSource .. " Terminating: ", TerminateReason)
+		return
+	else
+		StatusSet = GetStatusSet(CharacterStatus, UpdateSource)
+	end
 
 	ChatGearSet(StatusSet, UpdateSource)
 	EquipSafe(StatusSet, UpdateSource, IgnoreWeaponLock)
 
 	ChatCheckpoint("ForceStatusUpdate End")
 	ChatBlankLine()
+end
+
+function ForceStatusUpdateTerminate(UpdateSource)
+	ChatCheckpointLogged("ForceStatusUpdate Termination Start")
+
+	local TerminateUpdate = false
+	local TerminateReason = ""
+	local TerminateOnPetMidactionDefault = true
+
+	local TerminationFunctions =
+		{
+			TerminateUpdateOnPlayerMidaction,
+			TerminateUpdateOnPetMidaction
+		}
+
+	for _, TerminationCheck in ipairs(TerminationFunctions) do
+		TerminateUpdate, TerminateReason = TerminationCheck(UpdateSource)
+		if TerminateUpdate then
+			break
+		end
+	end
+
+	ChatCheckpointLogged("ForceStatusUpdate Termination End")
+	return TerminateUpdate, TerminateReason
 end
 
 
