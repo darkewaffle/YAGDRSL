@@ -59,7 +59,7 @@ function MidcastTerminate(SpellAttributes)
 
 	local TerminateMidcast = false
 	local TerminateReason = ""
-	local TerminateOnPetMidactionDefault = true
+	local TerminateSwapOnPetMidactionDefault = true
 
 	local TerminationFunctions =
 		{
@@ -68,7 +68,7 @@ function MidcastTerminate(SpellAttributes)
 		}
 
 	for _, TerminationCheck in ipairs(TerminationFunctions) do
-		TerminateMidcast, TerminateReason = TerminationCheck(SpellAttributes, EVENT_PRECAST, TerminateOnPetMidactionDefault)
+		TerminateMidcast, TerminateReason = TerminationCheck(SpellAttributes, EVENT_PRECAST, TerminateSwapOnPetMidactionDefault)
 		if TerminateMidcast then
 			break
 		end
