@@ -1,6 +1,6 @@
 require "YAGDRSL/debug/chat.lua"
 
-require "YAGDRSL/events/gearswap/terminations/terminate_update.lua"
+require "YAGDRSL/events/gearswap/terminations/YAG_terminations.lua"
 require "YAGDRSL/get/sets/build_set.lua"
 require "YAGDRSL/get/mods/get_mod_total.lua"
 require "YAGDRSL/get/mods/get_mod_value.lua"
@@ -70,8 +70,7 @@ function GetStatusSetTerminate(CharacterStatus)
 
 	local TerminationFunctions =
 		{
-			UpdateTerminateMidaction,
-			UpdateTerminateStatus
+			TerminateUpdateOnInvalidCharacterStatus,
 		}
 
 	if _G[YAG_SETTINGS]["AutomaticUpdateTermination"] == true then
