@@ -1,4 +1,4 @@
-require "YAGDRSL/events/gearswap/terminations/terminate_precast.lua"
+require "YAGDRSL/events/gearswap/terminations/YAG_terminations.lua"
 
 function precast(spell, position)
 	-- Every precast-to-aftercast sequence is logged by entries made in each ChatCheckpointLogged call.
@@ -9,16 +9,18 @@ function precast(spell, position)
 
 	local SpellAttributes = GetSpellAttributes(spell)
 
+	-- Evaluate automatic termination of using the spell
 	local TerminateStatus = false
 	local TerminateReason = ""
-	TerminateStatus, TerminateReason = PrecastTerminate(SpellAttributes)
+	TerminateStatus, TerminateReason = PrecastTerminateSpell(SpellAttributes)
 	if TerminateStatus then
-		ChatWarning("Precast Terminating: ", TerminateReason)
-		WriteDevLog("Precast Terminating: ", TerminateReason)
+		ChatWarning("Precast Terminating:", TerminateReason)
+		WriteDevLog("Precast Terminating:", TerminateReason)
 		cancel_spell()
 		return
 	end
 
+	-- Evaluate user defined termination of using the spell
 	TerminateStatus, TerminateReason = HookPrecastTerminate(SpellAttributes) -- @Hook
 	if TerminateStatus then
 		TerminateReason = TerminateReason or "TerminateReason Undefined"
@@ -27,6 +29,7 @@ function precast(spell, position)
 		return
 	end
 
+	-- Evaluate if the spell should be delayed
 	local DelayAmount = 0
 	DelayAmount = PrecastDelay(SpellAttributes)
 	if DelayAmount > 0 then
@@ -55,7 +58,7 @@ function precast(spell, position)
 end
 
 -- Precast logic wrapped in PrecastContainer that only requires SpellAttributes and does not call equip to support the demo command.
-function PrecastContainer(SpellAttributes, EventName)
+function PrecastContainer(SpellAttributes)
 	local PrecastSet = {}
 	local PrecastModOffense = {}
 	local PrecastModDefense = {}
