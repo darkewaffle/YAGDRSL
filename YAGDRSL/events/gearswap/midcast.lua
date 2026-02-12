@@ -1,4 +1,4 @@
-require "YAGDRSL/events/gearswap/terminations/terminate_midcast.lua"
+require "YAGDRSL/events/gearswap/terminations/YAG_terminations.lua"
 
 function midcast(spell)
 	ChatBlankLine()
@@ -11,6 +11,7 @@ function midcast(spell)
 	TerminateStatus, TerminateReason = MidcastTerminate(SpellAttributes)
 	if TerminateStatus then
 		ChatWarning("Midcast Terminating: ", TerminateReason)
+		WriteDevLog("Midcast Terminating: ", TerminateReason)
 		return
 	end
 
@@ -58,15 +59,16 @@ function MidcastTerminate(SpellAttributes)
 
 	local TerminateMidcast = false
 	local TerminateReason = ""
-
+	local TerminateOnPetMidactionDefault = true
 
 	local TerminationFunctions =
 		{
-			MidcastTerminateCategory
+			TerminateMidcastOnInvalidSpellCategory,
+			TerminateSpellOnPetMidaction
 		}
 
 	for _, TerminationCheck in ipairs(TerminationFunctions) do
-		TerminateMidcast, TerminateReason = TerminationCheck(SpellAttributes)
+		TerminateMidcast, TerminateReason = TerminationCheck(SpellAttributes, EVENT_PRECAST, TerminateOnPetMidactionDefault)
 		if TerminateMidcast then
 			break
 		end
