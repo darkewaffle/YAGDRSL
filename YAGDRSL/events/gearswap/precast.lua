@@ -35,7 +35,19 @@ function precast(spell, position)
 		cast_delay(DelayAmount)
 	end
 
-	local PrecastSet = PrecastContainer(SpellAttributes)
+	local PrecastSet = {}
+	local TerminateSwap = false
+	local TerminateSwapReason = ""
+
+	-- Evaluate if the swap should take place
+	TerminateSwap, TerminateSwapReason = PrecastTerminateSwap(SpellAttributes)
+	if TerminateSwap then
+		ChatWarning("Precast Swap Terminated: ", TerminateSwapReason)
+		WriteDevLog("Precast Swap Terminated: ", TerminateReason)
+	else
+		PrecastSet = PrecastContainer(SpellAttributes)
+	end
+
 	ChatGearSet(PrecastSet, EVENT_PRECAST)
 	EquipSafe(PrecastSet, EVENT_PRECAST, SpellAttributes["IgnoreWeaponLock"])
 
@@ -83,22 +95,24 @@ function PrecastDelay(SpellAttributes)
 	return DelayAmount
 end
 
-function PrecastTerminate(SpellAttributes)
-	ChatCheckpointLogged("PrecastTerminate Start")
+function PrecastTerminateSpell(SpellAttributes)
+	ChatCheckpointLogged("PrecastTerminateSpell Start")
 	local TerminateSpell = false
 	local TerminateReason = ""
+	local TerminateOnPetMidactionDefault = true
 
 	local TerminationFunctions =
 		{
-			PrecastTerminateMidaction,
-			PrecastTerminateAilments,
-			PrecastTerminateRecasts,
-			PrecastTerminateTP
+			TerminateSpellOnPlayerMidaction,
+			TerminateSpellOnAilments,
+			TerminateSpellOnRecast,
+			TerminateSpellOnTP,
+			TerminateSpellOnPetMidaction
 		}
 
 	if _G[YAG_SETTINGS]["AutomaticPrecastTermination"] == true then
 		for _, TerminationCheck in ipairs(TerminationFunctions) do
-			TerminateSpell, TerminateReason = TerminationCheck(SpellAttributes)
+			TerminateSpell, TerminateReason = TerminationCheck(SpellAttributes, EVENT_PRECAST, TerminateOnPetMidactionDefault)
 			if TerminateSpell then
 				break
 			end
@@ -109,8 +123,31 @@ function PrecastTerminate(SpellAttributes)
 		TerminateReason = nil
 	end
 
-	ChatCheckpointLogged("PrecastTerminate End")
+	ChatCheckpointLogged("PrecastTerminateSpell End")
 	return TerminateSpell, TerminateReason
+end
+
+function PrecastTerminateSwap(SpellAttributes)
+	ChatCheckpointLogged("PrecastTerminateSwap Start")
+	local TerminateSwap = false
+	local TerminateReason = ""
+
+	local TerminationFunctions =
+		{
+			TerminateSpellOnPetMidaction
+		}
+
+	if _G[YAG_SETTINGS]["AutomaticPrecastTermination"] == true then
+		for _, TerminationCheck in ipairs(TerminationFunctions) do
+			TerminateSwap, TerminateReason = TerminationCheck(SpellAttributes, EVENT_PRECAST, true)
+			if TerminateSwap then
+				break
+			end
+		end
+	end
+
+	ChatCheckpointLogged("PrecastTerminateSwap End")
+	return TerminateSwap, TerminateReason
 end
 
 function HookPrecastTerminate(SpellAttributes) -- @Hook
