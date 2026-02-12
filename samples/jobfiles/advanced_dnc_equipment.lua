@@ -177,7 +177,7 @@
 
 	sets.precast.ja["Trance"] =
 		{
-			hands="Horos Tiara +2"
+			hands="Horos Tiara +3"
 		}
 
 	sets.precast.ja["Violent Flourish"] =
