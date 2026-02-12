@@ -1,0 +1,7 @@
+require "YAGDRSL/events/gearswap/terminations/midcast_category.lua"
+require "YAGDRSL/events/gearswap/terminations/pet_midaction.lua"
+require "YAGDRSL/events/gearswap/terminations/player_ailments.lua"
+require "YAGDRSL/events/gearswap/terminations/player_midaction.lua"
+require "YAGDRSL/events/gearswap/terminations/player_recast.lua"
+require "YAGDRSL/events/gearswap/terminations/player_tp.lua"
+require "YAGDRSL/events/gearswap/terminations/update_status.lua"
