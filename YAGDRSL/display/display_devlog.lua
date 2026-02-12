@@ -46,7 +46,7 @@ end
 function WriteDevLog(Label, Message)
 	Label = tostring(Label) or ""
 	Message = tostring(Message) or ""
-	table.insert(_G[DEVELOPER_LOG], Label .. Message)
+	table.insert(_G[DEVELOPER_LOG], Label .. " " .. Message)
 
 	if STATE_DISPLAY_DEV_LOG then
 		UpdateDisplayDevLog()
