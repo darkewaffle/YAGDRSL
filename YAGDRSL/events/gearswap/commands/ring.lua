@@ -56,7 +56,7 @@ function SelfCommandRing(CommandInputs)
 	local EquipSlot = MapRingSlot[CommandInputs[2]] or "left_ring"
 
 	if buffactive[BuffToCheck] then
-		ChatDebug("XP/CP buff found. Canceling ring use.")
+		ChatNotice(BuffToCheck .. " is already active. Canceling ring use.")
 		return
 	end
 
@@ -170,11 +170,10 @@ function EquipRingAndScheduleUse(RingName, RingSlot)
 
 	EquipSafe(RingSet, "Automatic XP/CP Ring Usage")
 	disable(UseRingSlot)
-	coroutine.schedule(RingUsage, 6)
+	coroutine.schedule(RingUsage, 7)
 end
 
 function RingUsage()
-	local Command = '/item "' .. UseRing .. '" <me>'
 	SendGameItem(UseRing, "<me>")
 	coroutine.schedule(RingUsageCleanup, 3)
 end
