@@ -102,7 +102,7 @@ function PrecastTerminateSpell(SpellAttributes)
 	ChatCheckpointLogged("PrecastTerminateSpell Start")
 	local TerminateSpell = false
 	local TerminateReason = ""
-	local TerminateOnPetMidactionDefault = true
+	local TerminateSpellOnPetMidactionDefault = true
 
 	local TerminationFunctions =
 		{
@@ -115,7 +115,7 @@ function PrecastTerminateSpell(SpellAttributes)
 
 	if _G[YAG_SETTINGS]["AutomaticPrecastTermination"] == true then
 		for _, TerminationCheck in ipairs(TerminationFunctions) do
-			TerminateSpell, TerminateReason = TerminationCheck(SpellAttributes, EVENT_PRECAST, TerminateOnPetMidactionDefault)
+			TerminateSpell, TerminateReason = TerminationCheck(SpellAttributes, EVENT_PRECAST, TerminateSpellOnPetMidactionDefault)
 			if TerminateSpell then
 				break
 			end
@@ -134,6 +134,7 @@ function PrecastTerminateSwap(SpellAttributes)
 	ChatCheckpointLogged("PrecastTerminateSwap Start")
 	local TerminateSwap = false
 	local TerminateReason = ""
+	local TerminateSwapOnPetMidactionDefault = false
 
 	local TerminationFunctions =
 		{
@@ -142,7 +143,7 @@ function PrecastTerminateSwap(SpellAttributes)
 
 	if _G[YAG_SETTINGS]["AutomaticPrecastTermination"] == true then
 		for _, TerminationCheck in ipairs(TerminationFunctions) do
-			TerminateSwap, TerminateReason = TerminationCheck(SpellAttributes, EVENT_PRECAST, true)
+			TerminateSwap, TerminateReason = TerminationCheck(SpellAttributes, EVENT_PRECAST, TerminateSwapOnPetMidactionDefault)
 			if TerminateSwap then
 				break
 			end
