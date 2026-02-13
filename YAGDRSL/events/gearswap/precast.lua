@@ -102,7 +102,7 @@ function PrecastTerminateSpell(SpellAttributes)
 	ChatCheckpointLogged("PrecastTerminateSpell Start")
 	local TerminateSpell = false
 	local TerminateReason = ""
-	local TerminateSpellOnPetMidactionDefault = true
+	local TerminateSpellOnPetMidactionDefault = false
 
 	local TerminationFunctions =
 		{
@@ -134,7 +134,7 @@ function PrecastTerminateSwap(SpellAttributes)
 	ChatCheckpointLogged("PrecastTerminateSwap Start")
 	local TerminateSwap = false
 	local TerminateReason = ""
-	local TerminateSwapOnPetMidactionDefault = false
+	local TerminateSwapOnPetMidactionDefault = true
 
 	local TerminationFunctions =
 		{
