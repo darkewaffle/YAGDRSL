@@ -31,7 +31,6 @@ function SetModValue(ModName, Value)
 	UpdateControlPanel()
 end
 
-
 -- @User
 -- Redefines the options in a mod. This can be useful when creating mods in the character file but then re-defining the options in a job file.
 
@@ -70,4 +69,16 @@ function DeleteMod(ModName)
 		end
 	end
 
+end
+
+function SetModParent(ModName, ParentValue)
+	_G[MOD_VALUES_ROOT_NAME][ModName]["parent"] = ParentValue
+end
+
+function GetModParent(ModName)
+	if _G[MOD_VALUES_ROOT_NAME][ModName]["parent"] then
+		return _G[MOD_VALUES_ROOT_NAME][ModName]["parent"]
+	else
+		return nil
+	end
 end
