@@ -31,6 +31,7 @@ function UpdatePetNameTracker(NewPet)
 
 	elseif CharacterJob == "SMN" then
 		PetName = NewPet
+--		SetPetTrackerParent("avatar")
 	
 	else
 		PetName = MOD_DEFAULT_OFF
@@ -52,3 +53,8 @@ end
 function TrackPetNameAsDefenseMod()
 	TrackPetNameAsMod(MOD_CLASS_DEFENSE)
 end
+
+--function SetPetTrackerParent(ParentName)
+--	local PetTrackerName = FormatTrackerName(TRACK_PET_NAME)
+--	SetModParent(PetTrackerName, ParentName)
+--end
