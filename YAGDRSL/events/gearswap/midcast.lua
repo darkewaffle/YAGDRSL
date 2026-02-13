@@ -68,7 +68,7 @@ function MidcastTerminate(SpellAttributes)
 		}
 
 	for _, TerminationCheck in ipairs(TerminationFunctions) do
-		TerminateMidcast, TerminateReason = TerminationCheck(SpellAttributes, EVENT_PRECAST, TerminateSwapOnPetMidactionDefault)
+		TerminateMidcast, TerminateReason = TerminationCheck(SpellAttributes, EVENT_MIDCAST, TerminateSwapOnPetMidactionDefault)
 		if TerminateMidcast then
 			break
 		end
