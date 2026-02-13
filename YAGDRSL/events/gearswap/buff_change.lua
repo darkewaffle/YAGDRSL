@@ -8,6 +8,7 @@ function buff_change(name,gain,buff_details)
 
 	if BuffIsTracked then
 		OnTrackedBuffChange(BuffName, BuffState)
+		ForceStatusUpdate(EVENT_BUFF_CHANGE)
 	end
 
 	HookOnBuffChange(BuffName, BuffState) -- @Hook

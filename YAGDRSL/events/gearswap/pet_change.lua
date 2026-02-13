@@ -10,6 +10,8 @@ function pet_change(pet, gain)
 		end
 	end
 
+	ForceStatusUpdate(EVENT_PET_CHANGE)
+
 	HookOnPetChange(pet, gain) -- @Hook
 
 	ChatCheckpoint("pet_change end")
