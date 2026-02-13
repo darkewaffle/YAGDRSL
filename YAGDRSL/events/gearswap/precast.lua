@@ -45,8 +45,8 @@ function precast(spell, position)
 	-- Evaluate if the swap should take place
 	TerminateSwap, TerminateSwapReason = PrecastTerminateSwap(SpellAttributes)
 	if TerminateSwap then
-		ChatWarning("Precast Swap Terminated: ", TerminateSwapReason)
-		WriteDevLog("Precast Swap Terminated: ", TerminateReason)
+		ChatWarning("Precast Swap Terminated:", TerminateSwapReason)
+		WriteDevLog("Precast Swap Terminated:", TerminateReason)
 	else
 		PrecastSet = PrecastContainer(SpellAttributes)
 	end

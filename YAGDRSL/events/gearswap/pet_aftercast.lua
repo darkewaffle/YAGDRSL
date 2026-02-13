@@ -9,8 +9,8 @@ function pet_aftercast(spell)
 
 	TerminateStatus, TerminateReason = PetAftercastTerminate()
 	if TerminateStatus then
-		ChatWarning("pet_aftercast Terminating: ", TerminateReason)
-		WriteDevLog("pet_aftercast Terminating: ", TerminateReason)
+		ChatWarning("pet_aftercast Terminating:", TerminateReason)
+		WriteDevLog("pet_aftercast Terminating:", TerminateReason)
 		return
 	else
 		AfterCastContainer(EVENT_AFTERCAST_PET)

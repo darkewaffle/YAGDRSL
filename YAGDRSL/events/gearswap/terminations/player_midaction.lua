@@ -9,7 +9,7 @@ function TerminateSpellOnPlayerMidaction(SpellAttributes, Source)
 	-- If player is midaction then terminate starting a new action.
 	if PlayerMidactionState then
 		TerminateSpell = true
-		TerminateReason = "TSOPMA Player: " .. PlayerActionInProgress["name"] .. " is in progress. Terminating " .. SpellAttributes["Name"] .. " " .. Source .. "."
+		TerminateReason = "Player: " .. PlayerActionInProgress["name"] .. " is in progress. Terminating " .. SpellAttributes["Name"] .. " " .. Source .. "."
 	end
 
 	return TerminateSpell, TerminateReason
@@ -26,7 +26,7 @@ function TerminateUpdateOnPlayerMidaction(Source)
 	-- If player is midaction then terminate a status set update.
 	if PlayerMidactionState then
 		TerminateUpdate = true
-		TerminateReason = "TUOPMA Player: " .. PlayerActionInProgress["name"] .. " is in progress. Terminating status set update from " .. Source .. "."
+		TerminateReason = "Player: " .. PlayerActionInProgress["name"] .. " is in progress. Terminating status set update from " .. Source .. "."
 	end
 
 	return TerminateUpdate, TerminateReason

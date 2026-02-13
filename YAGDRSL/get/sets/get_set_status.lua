@@ -14,8 +14,8 @@ function GetStatusSet(CharacterStatus, Source)
 	local TerminateReason = ""
 	TerminateStatus, TerminateReason = GetStatusSetTerminate(CharacterStatus)
 	if TerminateStatus then
-		ChatWarning(Source .. " GetStatusSet Terminating: ", TerminateReason)
-		WriteDevLog(Source .. " GetStatusSet Terminating: ", TerminateReason)
+		ChatWarning(Source .. " GetStatusSet Terminating:", TerminateReason)
+		WriteDevLog(Source .. " GetStatusSet Terminating:", TerminateReason)
 		return {}
 	end
 

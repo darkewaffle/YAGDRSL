@@ -6,8 +6,8 @@ function aftercast(spell)
 
 	TerminateStatus, TerminateReason = AftercastTerminate()
 	if TerminateStatus then
-		ChatWarning("aftercast Terminating: ", TerminateReason)
-		WriteDevLog("aftercast Terminating: ", TerminateReason)
+		ChatWarning("aftercast Terminating:", TerminateReason)
+		WriteDevLog("aftercast Terminating:", TerminateReason)
 		return
 	else
 		AfterCastContainer(EVENT_AFTERCAST, SpellAttributes["IgnoreWeaponLock"])
