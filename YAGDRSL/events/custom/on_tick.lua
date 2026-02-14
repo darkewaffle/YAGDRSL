@@ -48,9 +48,9 @@ function OnTick()
 
 	end
 
-	local SecondsSinceLastTickUpdate = os.time() - LastTickUpdate
+	local SecondsSinceLastTickUpdate = os.clock() - LastTickUpdate
 	if UpdateStatus and SecondsSinceLastTickUpdate >= TickForceUpdateCooldown then
-		LastTickUpdate = os.time()
+		LastTickUpdate = os.clock()
 
 		-- ForceStatusUpdate leads to an equip call which will not work if called outside of a GearSwap event.
 		-- OnTick is not a gearswap event, therefore we need to call update from a command instead.

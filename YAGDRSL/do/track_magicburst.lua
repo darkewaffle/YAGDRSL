@@ -17,7 +17,7 @@ function UpdateMagicBurstTracking(TargetID, Elements)
 	local MagicBurstDuration = FullMagicBurstWindowWindow - (MagicBurstWindowReductionPerChain * _G[TRACK_MAGIC_BURST][TargetID][TRACK_SKLLCHAIN_COUNT])
 	MagicBurstDuration = Clamp(MagicBurstDuration, MinimumWindow, FullMagicBurstWindowWindow)
 
-	_G[TRACK_MAGIC_BURST][TargetID][TRACK_BURST_CLOSE] = os.time() + MagicBurstDuration
+	_G[TRACK_MAGIC_BURST][TargetID][TRACK_BURST_CLOSE] = os.clock() + MagicBurstDuration
 	_G[TRACK_MAGIC_BURST][TargetID][TRACK_BURST_ELEMENTS] = Elements
 	_G[TRACK_MAGIC_BURST][TargetID][TRACK_SKLLCHAIN_COUNT] = _G[TRACK_MAGIC_BURST][TargetID][TRACK_SKLLCHAIN_COUNT] + 1
 end
@@ -33,7 +33,7 @@ end
 function GetMagicBurstIsOpen(TargetID)
 	if _G[TRACK_MAGIC_BURST][TargetID] then
 		local BurstCloseTime = _G[TRACK_MAGIC_BURST][TargetID][TRACK_BURST_CLOSE]
-		local BurstTimeRemaining = BurstCloseTime - os.time()
+		local BurstTimeRemaining = BurstCloseTime - os.clock()
 		
 		if BurstTimeRemaining > 0 then
 			return true
