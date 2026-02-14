@@ -162,7 +162,7 @@ function EvaluateAmmo(GearSet)
 
 	-- Gearset contains a range item
 	if GearsetRangeName then
-		RangeID = GetItemID(RangeName)
+		RangeID = GetItemID(GearsetRangeName)
 
 	-- Character has range item equipped
 	elseif ItemsEquipped["range"] > 0 then
