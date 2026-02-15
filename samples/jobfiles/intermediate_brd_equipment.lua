@@ -466,6 +466,7 @@
 			hands="Bunzi's Gloves",
 			ring1="Ilabrat Ring",
 			ring2="Lehko's Ring",
+			back="Null Shawl",
 			waist="Sailfi Belt +1",
 			legs="Fili Rhingrave +2",
 			feet="Fili Cothurnes +2"
