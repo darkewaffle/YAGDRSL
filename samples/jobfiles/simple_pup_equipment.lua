@@ -36,7 +36,7 @@
 			ear2="Karagoz Earring +1",
 			body="Pitre Tobe +3",
 			hands="Mpaca's Gloves",
-			--ring1="Thurandaut Ring +1",
+			ring1="Cath Palug Ring",
 			ring2="Varar Ring",
 			back=capes.pet,
 			waist="Incarnation Sash",
