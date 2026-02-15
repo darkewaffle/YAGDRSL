@@ -3,88 +3,137 @@
 --
 
 	capes = {}
-	capes.fcsird = { name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','"Fast Cast"+10','Spell interruption rate down-10%',}}
+	capes.fcsird = { name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','"Fast Cast"+10','Spell interruption rate down-10%',}, priority=80}
 	capes.tank = { name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
 	capes.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 
-	gear.feet_fc = { name="Odyssean Greaves", augments={'INT+8','AGI+9','"Fast Cast"+7','Mag. Acc.+4 "Mag.Atk.Bns."+4',}}
-	gear.feet_sird = { name="Odyssean Greaves", augments={'MND+9','Spell interruption rate down -9%','"Fast Cast"+4','Accuracy+14 Attack+14','Mag. Acc.+3 "Mag.Atk.Bns."+3',}}
+	gear.feet_fc = { name="Odyssean Greaves", augments={'INT+8','AGI+9','"Fast Cast"+7','Mag. Acc.+4 "Mag.Atk.Bns."+4',}, priority=20}
+	gear.feet_sird = { name="Odyssean Greaves", augments={'MND+9','Spell interruption rate down -9%','"Fast Cast"+4','Accuracy+14 Attack+14','Mag. Acc.+3 "Mag.Atk.Bns."+3',}, priority=20}
 
+	gear.carmine_legs = {name="Carmine Cuisses +1", priority=130}
+	gear.founder_hose = {name="Founder's Hose", priority=54}
+	gear.jumalik_head = {name="Jumalik Helm", priority=45}
+	gear.jumalik_body = {name="Jumalik Mail", priority=116}
+	gear.loess = {name="Loess Barbuta +1", priority=105}
+	gear.macabre = {name="Macabre Gauntlets +1", priority=70}
+	gear.sakpata_sword = {name="Sakpata's Sword", priority=100}
+	gear.souveran_hands = {name="Souveran Handschuhs", priority=164}
+	gear.souveran_feet = {name="Souveran Schuhs", priority=152}
+
+	af =
+		{
+			head = {name="Reverence Coronet", priority=19},
+			body = {name="Reverence Surcoat +4", priority=264},
+			hands = {name="Reverence Gauntlets +3", priority=113},
+			legs = {},
+			feet = {name="Reverence Leggings", priority=38}
+		}
+
+	relic =
+		{
+			head = {name="Caballarius Coronet", priority=59},
+			body = {name="Caballarius Surcoat", priority=70},
+			hands = {name="Caballarius Gauntlets +2", priority=114},
+			legs = {name="Caballarius Breeches", priority=24},
+			feet = {name="Caballarius Leggings +3", priority=63},
+		}
+
+	empy =
+		{
+			head = {name="Chevalier's Armet +2", priority=135},
+			body = {name="Chevalier's Cuirass +3", priority=151},
+			hands = {name="Chevalier's Gauntlets +2", priority=54},
+			legs = {name="Chevalier's Cuisses +2", priority=117},
+			feet = {name="Chevalier's Sabatons +2", priority=42},
+		}
 
 	templates = {}
 	templates.enmityhp =
 		{
 			ammo="Sapience Orb",
-			head="Loess Barbuta +1",
-			neck="Unmoving Collar +1",
-			ear1="Alabaster Earring",
-			ear2="Cryptic Earring",
-			body="Reverence Surcoat +4",
-			hands="Caballarius Gauntlets +2",
+			head=gear.loess,
+			neck=gear.unmoving,
+			ear1=gear.alabaster,
+			ear2={name="Cryptic Earring", priority=40},
+			body=af.body,
+			hands=relic.hands,
 			--ring1="",
-			ring2="Vengeful Ring",
+			ring2={name="Vengeful Ring", priority=20},
 			back=capes.tank,
-			waist="Platinum Moogle Belt",
+			waist=gear.pmb,
 			--legs="",
-			feet="Chevalier's Sabatons +2"
+			feet=empy.feet
 		}
 
 	templates.fastcast =
 		{
 			ammo="Sapience Orb",
-			head="Carmine Mask",
+			head={name="Carmine Mask", priority=38},
 			neck="Voltsurge Torque",
-			ear1="Etiolation Earring",
-			ear2="Loquacious Earring",
-			body="Reverence Surcoat +4",
-			hands="Leyline Gloves",
+			ear1="Loquacious Earring",
+			ear2=gear.etiolation,
+			body=af.body,
+			hands=gear.leyline,
 			ring1="Prolix Ring",
 			ring2="Kishar Ring",
 			back=capes.fcsird,
-			legs="Enif Cosciales",
-			feet="Chevalier's Sabatons +2",
+			legs={name="Enif Cosciales", priority=40},
 			feet=gear.feet_fc
 		}
 
 	templates.hphi =
 		{
-			neck="Unmoving Collar +1",
-			ear1="Alabaster Earring",
-			ring1="Etana Ring",
-			ring2="Meridian Ring",
-			waist="Platinum Moogle Belt"
+			neck=gear.unmoving,
+			ear1=gear.alabaster,
+			ring1=gear.etana,
+			ring2=gear.meridian,
+			waist=gear.pmb
 		}
 
 	templates.hplo =
 		{
-			neck="Unmoving Collar +1",
-			ear1="Alabaster Earring",
-			waist="Platinum Moogle Belt"
+			neck=gear.unmoving,
+			ear1=gear.alabaster,
+			waist=gear.pmb
 		}
 
 	templates.refresh =
 		{
 			ammo="Homiliary",
-			head="Jumalik Helm",
+			head=gear.jumalik_head,
 			neck="Sibyl Scarf",
-			body="Jumalik Mail"
+			body=gear.jumalik_body
 		}
 
 	templates.sird =
 		{
-			ammo="Impatiens",					-- 10% SIRD
-			head="Chevalier's Armet +2",		--				10% DT
-			ear1="Alabaster Earring", 			--				 5% DT
-			ear2="Knightly Earring",			--  9% SIRD
-			body="Chevalier's Cuirass +2",		-- 15% SIRD
-			hands="Chevalier's Gauntlets +2",	--				10% DT
-			ring1="Murky Ring",					--  3% SIRD		10% DT
+			ammo="Staunch Tathlum +1",			-- 11% SIRD		 3% DT
+			head=empy.head,						--				10% DT
+			ear1=gear.alabaster, 				-- 				 5% DT
+			body=empy.body,						-- 20% SIRD
+			hands=empy.hands,					--				10% DT
+			ring1="Murky Ring",					--	3% SIRD		10% DT
 			back=capes.fcsird,					-- 10% SIRD
-			waist="Platinum Moogle Belt",		--				 3% DT
-			legs="Founder's Hose",				-- 30% SIRD
+			waist=gear.pmb,						--				 3% DT
+			legs=gear.founder_hose,				-- 30% SIRD
 			feet=gear.feet_sird					-- 29% SIRD
 		}
 
+	templates.sirdcure =
+		{
+			ammo="Staunch Tathlum +1",			-- 11% SIRD		 3% DT
+			head=empy.head,						--				10% DT
+			ear1=gear.alabaster, 				--				 5% DT
+			ear2="Chevalier's Earring",			--						10% CPot
+			body=empy.body,						-- 20% SIRD
+			hands=gear.macabre,					--						11% CPot
+			ring1="Murky Ring",					--	3% SIRD		10% DT
+			ring2="Defending Ring",				--				10% DT
+			back=capes.fcsird,					-- 10% SIRD
+			waist=gear.pmb,						--				 3% DT
+			legs=gear.founder_hose,				-- 30% SIRD
+			feet=gear.feet_sird					-- 29% SIRD
+		}
 --
 -- PRECAST JA SETS
 --
@@ -93,47 +142,47 @@
 
 	sets.precast.ja["Chivalry"] =
 		{
-			hands="Caballarius Gauntlets +2"
+			hands=relic.hands
 		}
 
 	sets.precast.ja["Cover"] =
 		{
-			head="Reverence Coronet"
+			head=af.head
 		}
 
 	sets.precast.ja["Divine Emblem"] =
 		{
-			feet="Chevalier's Sabatons +2"
+			feet=empy.feet
 		}
 
 	sets.precast.ja["Fealty"] =
 		{
-			body="Caballarius Surcoat"
+			body=relic.body
 		}
 
 	sets.precast.ja["Holy Circle"] =
 		{
-			feet="Reverence Leggings"
+			feet=af.feet
 		}
 
 	sets.precast.ja["Invincible"] =
 		{
-			legs="Caballarius Breeches"
+			legs=relic.legs
 		}
 
 	sets.precast.ja["Rampart"] =
 		{
-			head="Caballarius Coronet"
+			head=relic.head
 		}
 
 	sets.precast.ja["Sentinel"] =
 		{
-			feet="Caballarius Leggings +3"
+			feet=relic.feet
 		}
 
 	sets.precast.ja["Shield Bash"] =
 		{
-			hands="Caballarius Gauntlets +2"
+			hands=relic.hands
 		}
 --
 -- PRECAST WS SETS
@@ -183,7 +232,7 @@
 			neck="Null Loop",
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
-			ring1="Etana Ring",
+			ring1=gear.etana,
 			ring2="Lehko's Ring",
 			back="Null Shawl",
 			waist="Null Belt"
@@ -208,10 +257,11 @@
 
 	mods.precast.magic["HPLo"] =
 		{
-			neck="Unmoving Collar +1",
-			ear2="Alabaster Earring",
-			ring1="Meridian Ring",
-			waist="Platinum Moogle Belt"
+			neck=gear.unmoving,
+			ear1=gear.alabaster,
+			ear2=gear.etiolation,
+			ring1=gear.meridian,
+			waist=gear.pmb
 		}
 
 	mods.precast.magic["HPHi"] = mods.precast.magic["HPLo"]
@@ -221,27 +271,44 @@
 --
 	InsertGearSet(sets.midcast.magic, templates.fastcast)
 
-	sets.midcast.magic.divine["Flash"] =
+	sets.midcast.magic.divine["Flash"] = set_combine(collections.Gleti,
 		{
-			
-		}
+			main="Brilliance",
+			ammo="Sapience Orb",
+			neck=gear.unmoving,
+			head=gear.loess,
+			body=af.body,
+			feet=empy.feet
+		})
 
 	sets.midcast.magic.divine.enlight =
 		{
-			
+			main="Archduke's Sword",
+			head=gear.jumalik_head,
+			body=af.body
 		}
 
-	sets.midcast.magic.enhancing.white.phalanx = 
+	sets.midcast.magic.enhancing.white.phalanx =
 		{
-			hands="Souveran Handschuhs",
+			main=gear.sakpata_sword,
+			hands=gear.souveran_hands,
 			legs="Sakpata's Cuisses",
-			feet="Souveran Schuhs",
-			back="Weard Mantle"
+			feet=gear.souveran_feet,
+			back={name="Weard Mantle", priority=40}
 		}
 
-	sets.midcast.magic.healing.cure = 
+	sets.midcast.magic.enhancing.white.protect =
 		{
-			hands="Macabre Gauntlets +1"
+			sub="Duban"
+		}
+
+	sets.midcast.magic.healing.cure =
+		{
+			ear2="Chevalier's Earring",
+			body=gear.jumalik_body,
+			hands=gear.macabre,
+			ring2="Naji's Loop",
+			feet=gear.feet_fc
 		}
 
 --
@@ -251,33 +318,37 @@
 	mods.midcast.magic["HPLo"] = mods.precast.magic["HPLo"]
 	mods.midcast.magic["HPHi"] = mods.precast.magic["HPHi"]
 
-	mods.midcast.magic.healing["SIRD"] = templates.sird
+
 	mods.midcast.magic.blue["SIRD"] = templates.sird
+	mods.midcast.magic.healing.cure["SIRD"] = templates.sirdcure
+
 
 	mods.midcast.magic["FullSIRD"] = templates.sird
+	mods.midcast.magic.healing.cure["FullSIRD"] = templates.sirdcure
+
 
 	mods.midcast.magic["Flash"] = {}
-	mods.midcast.magic["Flash"]["FullSIRD"] = set_combine(templates.fastcast, {ear2="Alabaster Earring", ring1="Meridian Ring", waist="Platinum Moogle Belt"})
+	mods.midcast.magic["Flash"]["FullSIRD"] = set_combine(templates.fastcast, {ear2=gear.alabaster, ring1=gear.meridian, waist=gear.pmb})
 
 	mods.midcast.magic["Reprisal"] = {}
-	mods.midcast.magic["Reprisal"]["FullSIRD"] = set_combine(templates.fastcast, {ear2="Alabaster Earring", ring1="Meridian Ring", waist="Platinum Moogle Belt"})
+	mods.midcast.magic["Reprisal"]["FullSIRD"] = set_combine(templates.fastcast, {ear2=gear.alabaster, ring1=gear.meridian, waist=gear.pmb})
 
 	mods.midcast.magic.divine.banish["+MBurst"] = set_combine(collections.Nyame, collections.Null,
 		{
-			helm="Jumalik Helm",
+			head=gear.jumalik_head,
 			ear1="Friomisi Earring",
 			ear2="Hecate's Earring",
 			ring1="Kishar Ring",
-			ring2="Etana Ring"
+			ring2=gear.etana
 		})
 
 	mods.midcast.magic.divine.holy["+MBurst"] = set_combine(collections.Nyame, collections.Null,
 		{
-			helm="Jumalik Helm",
+			head=gear.jumalik_head,
 			ear1="Friomisi Earring",
 			ear2="Hecate's Earring",
 			ring1="Kishar Ring",
-			ring2="Etana Ring"
+			ring2=gear.etana
 		})
 
 	mods.midcast.magic.enhancing.white.protect["Shelter"] = 
@@ -297,18 +368,18 @@
 	sets.status.engaged = 
 		{
 			ammo="Eluder's Sachet",
-			head="Chevalier's Armet +2",
-			neck="Unmoving Collar +1",
-			ear1="Alabaster Earring",
+			head=empy.head,
+			neck=gear.unmoving,
+			ear1=gear.alabaster,
 			ear2="Chevalier's Earring",
-			body="Reverence Surcoat +4",
-			hands="Chevalier's Gauntlets +2",
+			body=af.body,
+			hands=empy.hands,
 			ring1="Murky Ring",
 			ring2="Lehko's Ring",
 			back=capes.tank,
-			waist="Platinum Moogle Belt",
-			legs="Chevalier's Cuisses +2",
-			feet="Chevalier's Sabatons +2"
+			waist=gear.pmb,
+			legs=empy.legs,
+			feet=empy.feet
 		}
 
 --
@@ -319,7 +390,7 @@
 		{
 			ammo="Coiste Bodhar",
 			ear2="Cessance Earring",
-			hands="Chevalier's Gauntlets +2",
+			hands=empy.hands,
 			ring1="Rajas Ring",
 			ring2="Lehko's Ring",
 			back="Null Shawl",
@@ -335,7 +406,7 @@
 
 	mods.status.engaged["+BlockTP"] =
 		{
-			hands="Reverence Gauntlets +3"
+			hands=af.hands
 		}
 
 --
@@ -354,18 +425,18 @@
 	InsertGearSet(sets.status.idle, 
 		{
 			ammo="Eluder's Sachet",
-			head="Chevalier's Armet +2",
-			neck="Unmoving Collar +1",
-			ear1="Alabaster Earring",
+			head=empy.head,
+			neck=gear.unmoving,
+			ear1=gear.alabaster,
 			ear2="Chevalier's Earring",
-			body="Chevalier's Cuirass +2",
-			hands="Chevalier's Gauntlets +2",
+			body=empy.body,
+			hands=empy.hands,
 			ring1="Murky Ring",
 			ring2="Shadow Ring",
 			back="Shadow Mantle",
-			waist="Platinum Moogle Belt",
-			legs="Chevalier's Cuisses +2",
-			feet="Chevalier's Sabatons +2"
+			waist=gear.pmb,
+			legs=empy.legs,
+			feet=empy.feet
 		})
 
 	sets.status.idle.town =
@@ -373,7 +444,7 @@
 			ring1="Warp Ring",
 			ring2="Trizek Ring",
 			back="Nexus Cape",
-			legs="Carmine Cuisses +1"
+			legs=gear.carmine_legs
 		}
 
 	sets.status.resting = set_combine(sets.status.idle, templates.refresh)
@@ -382,9 +453,18 @@
 -- IDLE & RESTING MODS
 --
 
+	mods.status["Sak"] = {main=gear.sakpata_sword}
+	mods.status["Naeg"] = {main="Naegling"}
+	mods.status["Malig"] = {main="Malignance Sword"}
+
+	mods.status["Aegis"] = {sub="Aegis"}
+	mods.status["Duban"] = {sub="Duban"}
+	mods.status["Ochain"] = {sub="Ochain"}
+
+
 	mods.status.idle[STATE_MOVING] =
 		{
-			legs="Carmine Cuisses +1"
+			legs=gear.carmine_legs
 		}
 
 	mods.status.idle["+Refresh"] = templates.refresh

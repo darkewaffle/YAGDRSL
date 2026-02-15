@@ -1,3 +1,8 @@
+	CreateMod("MainHand", "PgUp  MH", .9, "$%pageup", "Sak", "Naeg", "Malig")
+	CreateMod("OffHand", "PgDn  OH", .91, "$%pagedown", "Aegis", "Duban", "Ochain")
+	SetModValue("MainHand", "Sak")
+	SetModValue("OffHand", "Ochain")
+
 	AssignModOptions("Offense", "Hybrid", "DPS")
 	CreateMod("BlockTP",         "ShF9  BlockTP", 1.1, "~f9",   "+BlockTP")
 
@@ -16,6 +21,14 @@
 	CreateMod("ShelteredRing", "n/a", 0, nil, "Shelter")
 	SetModValue("ShelteredRing", "Shelter")
 
+	SetWeaponLockIgnoreSpells("Protect V")
+
+	AssignWeaponLockOptions(MOD_LOCK_MAIN_SUB)
+	SetWeaponLockMainSub()
+
+	SetModOrderEngagedOffense ("MainHand", "OffHand", "Offense", "BlockTP")
+	SetModOrderIdleOffense ("MainHand", "OffHand", "Refresh")
+
 	SetModOrderPrecastMagicDefense("PreserveHP")
 
 	SetModOrderMidcastMagicOffense("MagicBurst")
@@ -23,7 +36,4 @@
 
 	SetModOrderPrecastWSDefense("PreserveHP")
 
-	AppendModOrderEngagedOffense("BlockTP")
-	
-	SetModOrderIdleOffense    ("Refresh")
 	SetModOrderRestingOffense ("Refresh")
