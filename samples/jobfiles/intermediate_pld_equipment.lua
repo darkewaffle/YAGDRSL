@@ -54,11 +54,11 @@
 			head=gear.loess,
 			neck=gear.unmoving,
 			ear1=gear.alabaster,
-			ear2={name="Cryptic Earring", priority=40},
+			ear2=gear.cryptic,
 			body=af.body,
 			hands=relic.hands,
 			--ring1="",
-			ring2={name="Vengeful Ring", priority=20},
+			ring2=gear.vengeful,
 			back=capes.tank,
 			waist=gear.pmb,
 			--legs="",
@@ -199,7 +199,7 @@
 			ammo="Coiste Bodhar",
 			ear1="Cessance Earring",
 			ear2="Brutal Earring",
-			ring1="Rajas Ring",
+			ring1=gear.regalring,
 			ring2="Karieyh Ring +1",
 			back=capes.wsd,
 			waist="Sailfi Belt +1",
@@ -226,16 +226,13 @@
 			feet="Sulevia's Leggings +2"
 		}
 
-	sets.precast.ws.melee.magical = set_combine(collections.Nyame,
+	sets.precast.ws.melee.magical = set_combine(collections.Null, collections.Nyame,
 		{
 			ammo="Oshasha's Treatise",
-			neck="Null Loop",
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
 			ring1=gear.etana,
-			ring2="Lehko's Ring",
-			back="Null Shawl",
-			waist="Null Belt"
+			ring2="Karieyh Ring +1",
 		})
 
 --
@@ -255,16 +252,9 @@
 -- PRECAST MAGIC MODS
 --
 
-	mods.precast.magic["HPLo"] =
-		{
-			neck=gear.unmoving,
-			ear1=gear.alabaster,
-			ear2=gear.etiolation,
-			ring1=gear.meridian,
-			waist=gear.pmb
-		}
+	mods.precast.magic["HPLo"] = templates.hplo
 
-	mods.precast.magic["HPHi"] = mods.precast.magic["HPLo"]
+	mods.precast.magic["HPHi"] = templates.hphi
 
 --
 -- MIDCAST MAGIC SETS
@@ -283,7 +273,6 @@
 
 	sets.midcast.magic.divine.enlight =
 		{
-			main="Archduke's Sword",
 			head=gear.jumalik_head,
 			body=af.body
 		}
@@ -315,8 +304,8 @@
 -- MIDCAST MAGIC MODS
 --
 
-	mods.midcast.magic["HPLo"] = mods.precast.magic["HPLo"]
-	mods.midcast.magic["HPHi"] = mods.precast.magic["HPHi"]
+	mods.midcast.magic["HPLo"] = templates.hplo
+	mods.midcast.magic["HPHi"] = templates.hphi
 
 
 	mods.midcast.magic.blue["SIRD"] = templates.sird
@@ -333,7 +322,7 @@
 	mods.midcast.magic["Reprisal"] = {}
 	mods.midcast.magic["Reprisal"]["FullSIRD"] = set_combine(templates.fastcast, {ear2=gear.alabaster, ring1=gear.meridian, waist=gear.pmb})
 
-	mods.midcast.magic.divine.banish["+MBurst"] = set_combine(collections.Nyame, collections.Null,
+	mods.midcast.magic.divine.banish["+MBurst"] = set_combine(collections.Null, collections.Nyame,
 		{
 			head=gear.jumalik_head,
 			ear1="Friomisi Earring",
@@ -342,7 +331,7 @@
 			ring2=gear.etana
 		})
 
-	mods.midcast.magic.divine.holy["+MBurst"] = set_combine(collections.Nyame, collections.Null,
+	mods.midcast.magic.divine.holy["+MBurst"] = set_combine(collections.Null, collections.Nyame,
 		{
 			head=gear.jumalik_head,
 			ear1="Friomisi Earring",
@@ -400,8 +389,7 @@
 	mods.status.engaged["DPS"] = set_combine(mods.status.engaged["Hybrid"],
 		{
 			neck="Lissome Necklace",
-			ear1="Brutal Earring",
-			waist="Sailfi Belt +1"
+			ear1="Brutal Earring"
 		})
 
 	mods.status.engaged["+BlockTP"] =

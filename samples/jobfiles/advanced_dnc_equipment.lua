@@ -6,6 +6,36 @@
 	capes.wsd = { name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 	capes.tp = { name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%'}}
 
+	gear.adhemar = {name="Adhemar Wristbands +1", priority=22}
+	gear.ibn = {name="Inquisitor Bead Necklace", priority=55}
+
+	af =
+		{
+			head = {name="Maxixi Tiara +3", priority=64},
+			body = {name="Maxixi Casaque +4", priority=108},
+			hands = {name="Maxixi Bangles +4", priority=87},
+			legs = {name="Maxixi Tights +4", priority=90},
+			feet = {name="Maxixi Toe Shoes +3", priority=59}
+		}
+
+	relic =
+		{
+			head = {name="Horos Tiara +3", priority=86},
+			body = {name="Horos Casaque +3", priority=79},
+			hands = {name="Horos Bangles +3", priority=85},
+			legs = {name="Horos Tights +3", priority=67},
+			feet = {name="Horos Toe Shoes +4", priority=83},
+		}
+
+	empy =
+		{
+			head = {name="Maculele Tiara +3", priority=71},
+			body = {name="Maculele Casaque +2", priority=83},
+			hands = {name="Maculele Bangles +3", priority=57},
+			legs = {name="Maculele Tights +3", priority=80},
+			feet = {name="Maculele Toe Shoes +3", priority=45},
+		}
+
 	MoonshadeAlternates = {"Ishvara Earring", "Sherida Earring"}
 
 	DualWield = {}
@@ -13,34 +43,34 @@
 
 	DualWield[4] =
 		{
-			ear1="Eabani Earring"
+			ear1=gear.eabani
 		}
 
 	DualWield[9] =
 		{
-			ear1="Eabani Earring",
+			ear1=gear.eabani,
 			waist="Patentia Sash"
 		}
 
 	DualWield[14] =
 		{
-			ear1="Eabani Earring",
+			ear1=gear.eabani,
 			ear2="Suppanomimi",
 			waist="Patentia Sash"
 		}
 
 	DualWield[20] =
 		{
-			ear1="Eabani Earring",
-			body="Maculele Casaque +2",
+			ear1=gear.eabani,
+			body=empy.body,
 			waist="Patentia Sash"
 		}
 
 	DualWield[25] =
 		{
-			ear1="Eabani Earring",
+			ear1=gear.eabani,
 			ear2="Suppanomimi",
-			body="Maculele Casaque +2",
+			body=empy.body,
 			waist="Patentia Sash"
 		}
 
@@ -48,29 +78,29 @@
 	
 	templates.maxhp =
 		{
-			head="Maculele Tiara +3",
-			neck="Inquisitor Bead Necklace",
-			ear1="Alabaster Earring",
-			ear2="Eabani Earring",
-			body="Maxixi Casaque +4",
-			hands="Maxixi Bangles +4",
-			ring1="Meridian Ring",
-			ring2="Etana Ring",
-			waist="Platinum Moogle Belt",
-			legs="Maxixi Tights +4",
-			feet="Horos Toe Shoes +4"
+			head=empy.head,
+			neck=gear.ibn,
+			ear1=gear.alabaster,
+			ear2=gear.eabani,
+			body=af.body,
+			hands=af.hands,
+			ring1=gear.meridian,
+			ring2=gear.etana,
+			waist=gear.pmb,
+			legs=af.legs,
+			feet=relic.feet
 		}
 
 	templates.wsd =
 		{
 			ammo="Oshasha's Treatise",
-			head="Maculele Tiara +3",
+			head=empy.head,
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
-			hands="Maxixi Bangles +4",
+			hands=af.hands,
 			ring1="Karieyh Ring +1",
 			back=capes.wsd,
-			legs="Horos Tights +3"
+			legs=relic.legs
 		}
 
 	templates.fastcast =
@@ -78,10 +108,10 @@
 			ammo="Sapience Orb",
 			head=gear.fastcast_light_head,
 			neck="Voltsurge Torque",
-			ear1="Etiolation Earring",
+			ear1=gear.etiolation,
 			ear2="Loquacious Earring",
 			body=gear.fastcast_light_body,
-			hands=gear.fastcast_light_hands,
+			hands=gear.leyline,
 			ring1="Prolix Ring",
 			ring2="Naji's Loop",
 			legs=gear.fastcast_light_legs,
@@ -94,37 +124,34 @@
 
 	sets.precast.ja.jig =
 		{
-			legs="Horos Tights +3",
-			feet="Maxixi Toe Shoes +3"
+			legs=relic.legs,
+			feet=af.feet
 		}
 
 	sets.precast.ja.samba =
 		{
-			head="Maxixi Tiara +3",
+			head=af.head,
 			back=capes.tp
 		}
 
-	sets.precast.ja.step =
+	sets.precast.ja.step = set_combine(collections.Null,
 		{
 			ammo="Yamarang",
-			head="Maculele Tiara +3",
-			neck="Null Loop",
+			head=empy.head,
 			ear1="Odr Earring",
 			ear2="Maculele Earring +1",
-			body="Maxixi Casaque +4",
-			hands="Maxixi Bangles +4",
+			body=af.body,
+			hands=af.hands,
 			ring1="Mummu Ring",
 			ring2="Lehko's Ring",
-			back="Null Shawl",
-			waist="Null Belt",
-			legs="Maculele Tights +3",
-			feet="Horos Toe Shoes +4"
-		}
+			legs=empy.legs,
+			feet=relic.feet
+		})
 
 	sets.precast.ja.waltz =
 		{
 			head="Anwig Salade",		-- 2 delay
-			body="Maxixi Casaque +4",	-- 19%, 2 delay
+			body=af.body,				-- 19%, 2 delay
 			legs="Dashing Subligar",	-- 10%, blink
 		}
 
@@ -132,9 +159,9 @@
 		{
 			ammo="Yamarang",			-- 5%
 			neck="Etoile Gorget +1",	-- 7%
-			ear1="Alabaster Earring",
+			ear1=gear.alabaster,
 			ear2="Roundel Earring",		-- 5%
-			ring1="Meridian Ring",
+			ring1=gear.meridian,
 			ring2="Asklepian Ring",		-- 3% received
 			back="Toetapper Mantle"		-- 5%
 		})
@@ -143,59 +170,55 @@
 	sets.precast.ja["Animated Flourish"] =
 		{
 			ammo="Sapience Orb",
-			ear2="Cryptic Earring",
-			neck="Unmoving Collar +1",
-			hands="Horos Bangles +3",
-			ring2="Vengeful Ring"
+			ear2=gear.cryptic,
+			neck=gear.unmoving,
+			hands=relic.hands,
+			ring2=gear.vengeful
 		}
 
 	sets.precast.ja["Climactic Flourish"] =
 		{
-			head="Maculele Tiara +3"
+			head=empy.head
 		}
 
 	sets.precast.ja["Feather Step"] =
 		{
-			feet="Maculele Toe Shoes +3"
+			feet=empy.feet
 		}
 
 	sets.precast.ja["No Foot Rise"] =
 		{
-			body="Horos Casaque +3"
+			body=relic.body
 		}
 
 	sets.precast.ja["Reverse Flourish"] =
 		{
-			hands="Maculele Bangles +3",
+			hands=empy.hands,
 			back="Toetapper Mantle"
 		}
 
 	sets.precast.ja["Saber Dance"] =
 		{
-			hands="Horos Tights +3"
+			legs=relic.legs
 		}
 
 	sets.precast.ja["Trance"] =
 		{
-			hands="Horos Tiara +3"
+			head=relic.head
 		}
 
-	sets.precast.ja["Violent Flourish"] =
+	sets.precast.ja["Violent Flourish"] = set_combine(collections.Null, collections.Malignance, 
 		{
 			ammo="Yamarang",
-			head="Maculele Tiara +3",
-			neck="Null Loop",
+			head=empy.head,
 			ear1="Odr Earring",
 			ear2="Maculele Earring +1",
-			body="Horos Casaque +3",
-			hands="Maxixi Bangles +4",
+			body=relic.body,
+			hands=af.hands,
 			ring1="Mummu Ring",
 			ring2="Lehko's Ring",
-			back="Null Shawl",
-			waist="Null Belt",
-			legs="Malignance Tights",
-			feet="Maculele Toe Shoes +3"
-		}
+			feet=empy.feet
+		})
 
 --
 -- PRECAST WS SETS
@@ -209,30 +232,29 @@
 
 	sets.precast.ws.melee.physical =
 		{
-			ammo="Charis Feather",
-			head="Maculele Tiara +3",
+			ammo="Cath Palug Stone",
+			head=empy.head,
 			ear1="Sherida Earring",
-			ear2="Maculele Earring +1",
-			body="Horos Casaque +3",
-			hands="Maculele Bangles +3",
-			ring1="Karieyh Ring +1",
-			ring2="Ilabrat Ring",
+			ear2="Odr Earring",
+			--ear2="Maculele Earring +1",
+			body=relic.body,
+			hands=empy.hands,
+			ring1=gear.ilabrat,
+			ring2=gear.regalring,
 			back=capes.tp,
-			legs="Maculele Tights +3",
-			feet="Maculele Toe Shoes +3"
+			legs=empy.legs,
+			feet=empy.feet
 		}
 
 	sets.precast.ws["Evisceration"] = set_combine(collections.Gleti,
 		{
-			ear2="Odr Earring",
 			ammo="Charis Feather",
 			ring1="Lehko's Ring"
 		})
 
 	sets.precast.ws["Pyrrhic Kleos"] =
 		{
-			ear2="Odr Earring",
-			ring1="Rajas Ring"
+
 		}
 
 	sets.precast.ws["Rudra's Storm"] = set_combine(templates.wsd,
@@ -247,19 +269,17 @@
 			waist="Sailfi Belt +1"
 		})
 
-	sets.precast.ws.melee.magical = set_combine(collections.Nyame,
+	sets.precast.ws.melee.magical = set_combine(collections.Null, collections.Nyame, 
 		{
 			ammo="Oshasha's Treatise",
-			head="Maculele Tiara +3",
-			neck="Null Loop",
+			head=empy.head,
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
-			body="Samnuha Coat",
-			hands="Maxixi Bangles +4",
+			body={name="Samnuha Coat", priority=63},
+			hands=af.hands,
 			ring1="Karieyh Ring +1",
-			ring2="Etana Ring",
-			back=capes.wsd,
-			waist="Null Belt"
+			ring2="Beithir Ring",
+			back=capes.wsd
 		})
 
 --
@@ -268,25 +288,24 @@
 
 	mods.precast.ws.melee.physical["Acc"] =
 		{
-			ammo="Yamarang",
 			ear1="Odr Earring",
 			ear2="Maculele Earring +1",
-			body="Maxixi Casaque +4",
-			hands="Maxixi Bangles +4",
+			body=af.body,
+			hands=af.hands,
 			back="Null Shawl",
-			legs="Maculele Tights +3"
+			legs=empy.legs
 		}
 
 	mods.precast.ws.melee.physical["Climactic Flourish"] =
 		{
 			ammo="Charis Feather",
-			head="Maculele Tiara +3",
+			head=empy.head,
 			neck="Etoile Gorget +1"
 		}
 
 	mods.precast.ws.melee.physical["Striking Flourish"] =
 		{
-			body="Maculele Casaque +2"
+			body=empy.body
 		}
 
 --
@@ -321,43 +340,37 @@
 -- ENGAGED SET
 --
 
-	sets.status.engaged =
+	sets.status.engaged = set_combine(collections.Malignance,
 		{
 			ammo="Yamarang",
-			head="Maculele Tiara +3",
+			head=empy.head,
 			neck="Anu Torque",
 			ear1="Cessance Earring",
 			ear2="Sherida Earring",
-			body="Malignance Tabard",
-			hands="Adhemar Wristbands +1",
+			hands=gear.adhemar,
 			ring1="Epona's Ring",
 			ring2="Lehko's Ring",
 			back=capes.tp,
 			waist="Sailfi Belt +1",
-			legs="Malignance Tights",
-			feet="Horos Toe Shoes +4"
-		}
+			feet=relic.feet
+		})
 
 --
 -- ENGAGED OFFENSE MODS
 --
 
-	mods.status.engaged["Acc"] =
+	mods.status.engaged["Acc"] = set_combine(collections.Null, collections.Malignance,
 		{
 			ammo="Yamarang",
-			head="Maculele Tiara +3",
-			neck="Null Loop",
+			head=empy.head,
 			ear1="Cessance Earring",
 			ear2="Odr Earring",
-			body="Malignance Tabard",
-			hands="Malignance Gloves",
 			ring1="Rajas Ring",
 			ring2="Lehko's Ring",
 			back=capes.tp,
-			waist="Null Belt",
-			legs="Maculele Tights +3",
-			feet="Maculele Toe Shoes +3"
-		}
+			legs=empy.legs,
+			feet=empy.feet
+		})
 
 	mods.status.engaged["Multi"] =
 		{
@@ -365,13 +378,13 @@
 			neck="Lissome Necklace",
 			ear1="Brutal Earring",
 			ear2="Sherida Earring",
-			body="Horos Casaque +3",
-			hands="Adhemar Wristbands +1",
+			body=relic.body,
+			hands=gear.adhemar,
 			ring1="Epona's Ring",
 			ring2="Lehko's Ring",
 			back=capes.tp,
 			waist="Sailfi Belt +1",
-			legs="Samnuha Tights"
+			legs={name="Samnuha Tights", priority=41}
 		}
 
 	mods.status.engaged["STP"] =
@@ -402,20 +415,20 @@
 
 	mods.status.engaged["PDT"] = set_combine(collections.Malignance,
 		{
-			neck="Null Loop",
+			neck=collections.Null.neck,
 			back=capes.tp,
-			feet="Maculele Toe Shoes +3"
+			feet=empy.feet
 		})
 
 	mods.status.engaged["PDTHP"] =
 		{
-			neck="Null Loop",
-			ear1="Alabaster Earring",
-			body="Malignance Tabard",
+			neck=collections.Null.neck,
+			ear1=gear.alabaster,
+			body=collections.Malignance.body,
 			back=capes.tp,
-			waist="Platinum Moogle Belt",
-			legs="Malignance Tights",
-			feet="Maculele Toe Shoes +3"
+			waist=gear.pmb,
+			legs=collections.Malignance.legs,
+			feet=empy.feet
 		}
 
 	mods.status.engaged["MEvaLo"] = set_combine(collections.Malignance,
@@ -426,40 +439,35 @@
 
 	mods.status.engaged["MEvaHi"] = set_combine(mods.status.engaged["MEvaLo"],
 		{
-			ear1="Eabani Earring",
+			ear1=gear.eabani,
 			waist="Null Belt",
-			ring1="Vengeful Ring"
+			ring1=gear.vengeful
 		})
 
 	mods.status.engaged["MEvaHP"] = set_combine(mods.status.engaged["MEvaHi"],
 		{
-			neck="Inquisitor Bead Necklace",
-			ear2="Alabaster Earring",
-			waist="Platinum Moogle Belt"
+			neck=gear.ibn,
+			ear2=gear.alabaster,
+			waist=gear.pmb
 		})
 
 --
 -- ENGAGED OVERRIDES
 --
 
-	overrides.status.engaged["BossTank"] =
+	overrides.status["BossTank"] = set_combine(collections.Null, collections.Malignance,
 		{
 			ammo="Yamarang",
-			head="Malignance Chapeau",
-			neck="Null Loop",
-			ear1="Alabaster Earring",
+			ear1=gear.alabaster,
 			ear2="Sherida Earring",
-			body="Malignance Tabard",
-			hands="Malignance Gloves",
 			ring1="Rajas Ring",
 			ring2="Lehko's Ring",
 			back=capes.tp,
-			waist="Null Belt",
-			legs="Maculele Tights +3",
-			feet="Maculele Toe Shoes +3"
-		}
+			legs=empy.legs,
+			feet=empy.feet
+		})
 
-	overrides.status.engaged["Vagary"] = set_combine(collections.Malignance,
+	overrides.status["Vagary"] = set_combine(collections.Malignance,
 		{
 			ammo="Coiste Bodhar",
 			neck="Lissome Necklace",
@@ -475,7 +483,14 @@
 -- IDLE & RESTING SETS
 --
 
-	InsertGearSet(sets.status.idle, set_combine(collections.Gleti, {ring1="Karieyh Ring +1"}))
+	InsertGearSet(sets.status.idle, set_combine(collections.Null, collections.Gleti,
+		{
+			ear1=gear.alabaster,
+			ring1="Karieyh Ring +1",
+			ring2="Murky Ring",
+			back=capes.tp,
+			waist=gear.pmb
+		}))
 
 	sets.status.idle.town =
 		{
@@ -498,5 +513,5 @@
 
 	mods.status.engaged[STATE_PLAYER_FACING_FRONT] =
 		{
-			feet="Horos Toe Shoes +4"
+			feet=relic.feet
 		}

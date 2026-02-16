@@ -10,7 +10,7 @@
 	CreateMod("SIRD",            "F10   SIRD",    2, "f10",   "SIRD", "FullSIRD")
 	SetModValue("SIRD", "SIRD")
 	CreateMod("PreserveHP",      "ShF10 HP",      2.1, "~f10",  "HPHi", "HPLo")
-	SetModValue("PreserveHP", "HPHi")
+	SetModValue("PreserveHP", "HPLo")
 
 	AssignModOptions("MagicalDefense", "MEva")
 	CreateMod("Refresh", "ShF11 Refresh", 3.1, "~f11", "+Refresh")

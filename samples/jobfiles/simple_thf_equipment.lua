@@ -19,10 +19,10 @@
 			ammo="Sapience Orb",
 			head=gear.fastcast_light_head,
 			neck="Voltsurge Torque",
-			ear1="Etiolation Earring",
+			ear1=gear.etiolation,
 			ear2="Loquacious Earring",
 			body=gear.fastcast_light_body,
-			hands=gear.fastcast_light_hands,
+			hands=gear.leyline,
 			ring1="Prolix Ring",
 			ring2="Naji's Loop",
 			legs=gear.fastcast_light_legs,
@@ -84,9 +84,9 @@
 	sets.precast.ja.waltz.cure = 
 		{
 			ammo="Yamarang",			-- 5%
-			ear1="Alabaster Earring",
+			ear1=gear.alabaster,
 			ear2="Roundel Earring",		-- 5%
-			ring1="Meridian Ring",
+			ring1=gear.meridian,
 			ring2="Asklepian Ring",		-- 3% received
 			back="Toetapper Mantle"		-- 5%
 		}
@@ -103,11 +103,11 @@
 
 	sets.precast.ws.melee.physical = set_combine(collections.Gleti,
 		{
-			ammo="Oshasha's Treatise",
+			ammo="Cath Palug Stone",
 			ear1="Odr Earring",
 			ear2="Sherida Earring",
-			ring1="Karieyh Ring +1",
-			ring2="Ilabrat Ring",
+			ring1=gear.ilabrat,
+			ring2=gear.regalring,
 			back=capes.thf,
 			feet="Skulker's Poulaines +2"
 		})
@@ -116,7 +116,6 @@
 		{
 			ear1="Odr Earring",
 			ear2="Sherida Earring",
-			ammo="Charis Feather",
 			ring1="Lehko's Ring"
 		})
 
@@ -125,7 +124,6 @@
 			neck="Republican Platinum Medal",
 			waist="Sailfi Belt +1"
 		})
-
 
 	sets.precast.ws["Rudra's Storm"] = set_combine(templates.wsd,
 		{
@@ -139,17 +137,14 @@
 			waist="Sailfi Belt +1"
 		})
 
-	sets.precast.ws.melee.magical = set_combine(collections.Nyame,
+	sets.precast.ws.melee.magical = set_combine(collections.Null, collections.Nyame,
 		{
 			ammo="Oshasha's Treatise",
-			neck="Null Loop",
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
 			body="Samnuha Coat",
 			ring1="Karieyh Ring +1",
-			ring2="Etana Ring",
-			back="Null Shawl",
-			waist="Null Belt"
+			ring2=gear.etana
 		})
 
 --
@@ -202,16 +197,14 @@
 -- ENGAGED OFFENSE MODS
 --
 
-	mods.status.engaged["Acc"] =
+	mods.status.engaged["Acc"] = set_combine(collections.Null,
 		{
 			ammo="Yamarang",
-			neck="Null Loop",
+			head=collections.Malignance.head,
 			ear1="Cessance Earring",
 			ring1="Rajas Ring",
 			ring2="Lehko's Ring",
-			back="Null Shawl",
-			waist="Null Belt",
-		}
+		})
 
 	-- +Multiattack gear when engaged and the Offense mod = "Multi"
 	mods.status.engaged["Multi"] =
@@ -246,8 +239,8 @@
 
 	mods.status.engaged["PDT"] = set_combine(collections.Malignance,
 		{
-			neck="Null Loop",
-			ear1="Alabaster Earring",
+			neck=collections.Null.neck,
+			ear1=gear.alabaster,
 			feet="Skulker's Poulaines +2"
 		})
 
