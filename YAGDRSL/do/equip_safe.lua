@@ -42,7 +42,11 @@ function SwapEarrings(GearSet)
 	for Index, EarSlotLabel in ipairs(Ear1SlotLabels) do
 		if GearSet[EarSlotLabel] then
 			GearSetEar1["Label"] = EarSlotLabel
-			GearSetEar1["Name"] = GearSet[EarSlotLabel]
+			if type(GearSet[EarSlotLabel]) == "string" then
+				GearSetEar1["Name"] = GearSet[EarSlotLabel]
+			else
+				GearSetEar1["Name"] = GearSet[EarSlotLabel]["name"]
+			end
 		end
 	end
 
@@ -50,7 +54,11 @@ function SwapEarrings(GearSet)
 	for Index, EarSlotLabel in ipairs(Ear2SlotLabels) do
 		if GearSet[EarSlotLabel] then
 			GearSetEar2["Label"] = EarSlotLabel
-			GearSetEar2["Name"] = GearSet[EarSlotLabel]
+			if type(GearSet[EarSlotLabel]) == "string" then
+				GearSetEar2["Name"] = GearSet[EarSlotLabel]
+			else
+				GearSetEar2["Name"] = GearSet[EarSlotLabel]["name"]
+			end
 		end
 	end
 
@@ -83,14 +91,22 @@ function SwapRings(GearSet)
 	for Index, RingSlotLabel in ipairs(Ring1SlotLabels) do
 		if GearSet[RingSlotLabel] then
 			GearSetRing1["Label"] = RingSlotLabel
-			GearSetRing1["Name"] = GearSet[RingSlotLabel]
+			if type(GearSet[RingSlotLabel]) == "string" then
+				GearSetRing1["Name"] = GearSet[RingSlotLabel]
+			else
+				GearSetRing1["Name"] = GearSet[RingSlotLabel]["name"]
+			end
 		end
 	end
 
 	for Index, RingSlotLabel in ipairs(Ring2SlotLabels) do
 		if GearSet[RingSlotLabel] then
 			GearSetRing2["Label"] = RingSlotLabel
-			GearSetRing2["Name"] = GearSet[RingSlotLabel]
+			if type(GearSet[RingSlotLabel]) == "string" then
+				GearSetRing2["Name"] = GearSet[RingSlotLabel]
+			else
+				GearSetRing2["Name"] = GearSet[RingSlotLabel]["name"]
+			end
 		end
 	end
 
