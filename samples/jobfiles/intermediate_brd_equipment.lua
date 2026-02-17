@@ -16,6 +16,9 @@
 	gear.kaykaus_body = {name="Kaykaus Bliaut", priority=124}
 	gear.kaykaus_hands = {name="Kaykaus Cuffs", priority=80}
 
+	gear.kali1 = {name="Kali", bag="Wardrobe 1"}
+	gear.kali2 = {name="Kali", bag="Wardrobe 2"}
+
 	gear.mousai_head = {name="Mousai Turban", priority=102}
 	gear.mousai_body = {name="Mousai Manteel", priority=171}
 	gear.mousai_hands = {name="Mousai Gages", priority=68}
@@ -261,6 +264,7 @@
 
 	InsertGearSet(sets.midcast.magic.singing.friend,
 		{
+			ear2="Fili Earring",
 			head=empy.head,
 			body=empy.body,
 			hands=empy.hands,

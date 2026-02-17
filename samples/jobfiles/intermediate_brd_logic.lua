@@ -10,8 +10,8 @@ AppendModOrderRestingOffense("Refresh")
 
 TrackOffenseBuffs("Troubadour")
 
-AssignWeaponLockOptions(MOD_LOCK_ALL, MOD_LOCK_MAIN_SUB, MOD_LOCK_MAIN_SUB_AMMO)
-SetWeaponLockMainSubAmmo()
+AssignWeaponLockOptions(MOD_LOCK_MAIN_SUB)
+SetWeaponLockMainSub()
 
 
 HasteDefinitions =
@@ -43,4 +43,20 @@ function HookStatusCustomizeOffense(CharacterStatus, StatusSet)
 	end
 
 	return StatusSet
+end
+
+function HookMidcastCustomizeOffense(SpellAttributes, MidcastSet)
+
+	local HordeLullabyDualWield =
+		{
+			main=gear.kali1,
+			sub=gear.kali2,
+			hands=af.hands
+		}
+
+	if GetCharacterSubJobShort() == "NIN" and SpellAttributes["Name"] == "Horde Lullaby II" then
+		MidcastSet = set_combine(MidcastSet, HordeLullabyDualWield)
+	end
+
+	return MidcastSet
 end
