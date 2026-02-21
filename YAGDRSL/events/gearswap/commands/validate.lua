@@ -125,15 +125,23 @@ end
 function GetGearSetItemsNotFound()
 	ChatCheckpoint("GetGearSetItemsNotFound")
 	local CharacterEquipmentIDs =            _G[VALIDATION_ROOT_NAME][VALIDATION_CHARACTER_EQUIPMENT_IDS]
+	local CharacterEquipmentNames =          _G[VALIDATION_ROOT_NAME][VALIDATION_CHARACTER_EQUIPMENT_NAMES]
 	local GearSetIDs =                       _G[VALIDATION_ROOT_NAME][VALIDATION_GEARSET_IDS]
 	local GearSetItemsNotFound =             _G[VALIDATION_ROOT_NAME][VALIDATION_GEARSET_ITEMS_NOT_FOUND]
 	local GearSetItemsInsufficientAugments = _G[VALIDATION_ROOT_NAME][VALIDATION_GEARSET_UNDEFINED_AUGMENTS]
 
 	for GearSetID, GearSetAugmentData in pairs(GearSetIDs) do
 		if not CharacterEquipmentIDs[GearSetID] then
+			local GearsetItemName = GetItemName(GearSetID)
+
+			-- Since some items have identical names across multiple IDs, double-check the gearset item name against the compiled list of equipment names
+			-- If that fails to match then record item as not found
+				if not CharacterEquipmentNames[GearsetItemName] then
+					table.insert(GearSetItemsNotFound, {[VALIDATION_ITEM_NAME] = GetItemName(GearSetID)})
+				end
 
 			-- GearSetItemID not found in CharacterEquipmentIDs, record the result.
-			table.insert(GearSetItemsNotFound, {[VALIDATION_ITEM_NAME] = GetItemName(GearSetID)})
+			--table.insert(GearSetItemsNotFound, {[VALIDATION_ITEM_NAME] = GetItemName(GearSetID)})
 		else
 			
 			-- GearSetItemID found in CharacterEquipmentIDs. Evaluate augments.
