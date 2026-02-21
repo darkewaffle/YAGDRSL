@@ -3,6 +3,7 @@ VALIDATION_ROOT_NAME = "validation_root"
 
 -- Child tables for validation data
 VALIDATION_CHARACTER_EQUIPMENT_IDS = "validation_character_equipment_ids"
+VALIDATION_CHARACTER_EQUIPMENT_NAMES = "validation_character_equipment_names"
 VALIDATION_CHARACTER_EQUIPMENT_NOT_USED = "validation_character_equipment_not_used"
 VALIDATION_GEARSET_IDS = "validation_gearset_ids"
 VALIDATION_GEARSET_INVALID_NAMES = "validation_invalid_names"
