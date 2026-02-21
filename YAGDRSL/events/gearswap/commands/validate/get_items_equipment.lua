@@ -31,6 +31,7 @@ function GetEquipmentIDsInContainer(ContainerName)
 
 	local ContainerObject = windower.ffxi.get_items(ContainerIndex)
 	local ContainerIDList = _G[VALIDATION_ROOT_NAME][VALIDATION_CHARACTER_EQUIPMENT_IDS]
+	local ContainerNameList = _G[VALIDATION_ROOT_NAME][VALIDATION_CHARACTER_EQUIPMENT_NAMES]
 
 	for Index, Item in ipairs(ContainerObject) do
 
@@ -39,6 +40,8 @@ function GetEquipmentIDsInContainer(ContainerName)
 		-- GetItemEquippable returns true only for Weapons and Armor
 		if Item.id > 0 and GetItemEquippable(Item.id) then
 			local ItemID = Item.id
+			local ItemName = GetItemName(Item.id)
+			local ItemNameLong = GetItemNameLong(Item.id)
 			local ItemAugment = GetAugmentString(Item)
 			local ItemAugmentCode = EncodeAugmentString(ItemAugment)
 
@@ -57,6 +60,13 @@ function GetEquipmentIDsInContainer(ContainerName)
 				ContainerIDList[ItemID] = {[VALIDATION_ITEM_AUGMENTS]={ItemAugment}, [VALIDATION_ITEM_AUGMENT_CODES]={ItemAugmentCode}}
 			end
 
+			if not ContainerNameList[ItemName] then
+				ContainerNameList[ItemName] = true
+			end
+
+			if not ContainerNameList[ItemNameLong] then
+				ContainerNameList[ItemNameLong] = true
+			end
 		end
 	end
 end
