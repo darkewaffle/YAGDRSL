@@ -77,7 +77,7 @@
 
 	sets.precast.ja.waltz =
 		{
-			head="Anwig Salade",		-- 2 delay
+			--head="Anwig Salade",		-- 2 delay
 			legs="Dashing Subligar",	-- 10%, blink
 		}
 

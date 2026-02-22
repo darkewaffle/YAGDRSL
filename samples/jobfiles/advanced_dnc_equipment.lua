@@ -82,12 +82,12 @@
 			neck=gear.ibn,
 			ear1=gear.alabaster,
 			ear2=gear.eabani,
-			body=af.body,
+			--body=af.body,
 			hands=af.hands,
 			ring1=gear.meridian,
 			ring2=gear.etana,
 			waist=gear.pmb,
-			legs=af.legs,
+			--legs=af.legs,
 			feet=relic.feet
 		}
 
@@ -150,7 +150,7 @@
 
 	sets.precast.ja.waltz =
 		{
-			head="Anwig Salade",		-- 2 delay
+			--head="Anwig Salade",		-- 2 delay
 			body=af.body,				-- 19%, 2 delay
 			legs="Dashing Subligar",	-- 10%, blink
 		}
