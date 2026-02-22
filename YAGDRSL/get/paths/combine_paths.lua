@@ -7,6 +7,11 @@ function CombinePathsToSet(SetPaths, SetPathStrings)
 	local CombinedSet = {}
 
 	for i = 1, NumberOfSets do
+		--if SetPaths[i]["reset"] then
+		--	ChatError("Reset", SetPathStrings[i])
+		--	CombinedSet = {}
+		--end
+
 		CombinedSet = set_combine(CombinedSet, SetPaths[i])
 		ChatDebug("Component set:", SetPathStrings[i])
 	end
