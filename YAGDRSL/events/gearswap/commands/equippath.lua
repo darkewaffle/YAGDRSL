@@ -73,8 +73,40 @@ function GetFullSet(InputElements)
 	return GearCollection
 end
 
+local SlotMap =
+	{
+		main = "main",
+		sub = "sub",
+		range = "range",
+		ranged = "range",
+		ammo = "ammo",
+		head = "head",
+		neck = "neck",
+		left_ear = "left_ear",
+		ear1 = "left_ear",
+		lear = "left_ear",
+		learring = "left_ear",
+		right_ear = "right_ear",
+		ear2 = "right_ear",
+		rear = "right_ear",
+		rearring = "right_ear",
+		body = "body",
+		hands = "hands",
+		left_ring = "left_ring",
+		ring1 = "left_ring",
+		lring = "left_ring",
+		right_ring = "right_ring",
+		ring2 = "right_ring",
+		rring = "right_ring",
+		back = "back",
+		waist = "waist",
+		legs = "legs",
+		feet = "feet"
+	}
+
 function GetGear(Gearset, Results)
 	for Slot, Item in pairs(Gearset) do
+		Slot = SlotMap[Slot]
 		if type(Item) == "string" then
 			Results[Slot] = Item
 		elseif type(Item) == "table" and Item["name"] then
