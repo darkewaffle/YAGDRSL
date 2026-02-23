@@ -17,10 +17,10 @@ function CommandInputsToSetPathElements(CommandInputs)
 		end
 	end
 
-	-- Replace [ with ." and replace ] with "
-	-- ws["Rudra's Storm"] -> ws."Rudra's Storm"
-	StringPath = string.gsub(StringPath, '%[', '."')
-	StringPath = string.gsub(StringPath, '%]', '"')
+	-- Replace [ with . and remove ]
+	-- ws[Rudra's Storm] -> ws.Rudra's Storm
+	StringPath = string.gsub(StringPath, '%[', '.')
+	StringPath = string.gsub(StringPath, '%]', '')
 
 
 	local PathElements = {}
