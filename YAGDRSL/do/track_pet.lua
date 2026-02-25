@@ -58,3 +58,11 @@ end
 --	local PetTrackerName = FormatTrackerName(TRACK_PET_NAME)
 --	SetModParent(PetTrackerName, ParentName)
 --end
+
+function ConstructAutomatonType()
+	local PupData = windower.ffxi.get_mjob_data()
+	local AutoHead = GetAutomatonAbbreviation(GetItemName(PupData["head"]))
+	local AutoFrame = GetAutomatonAbbreviation(GetItemName(PupData["frame"]))
+
+	return AutoHead .. "_" .. AutoFrame
+end

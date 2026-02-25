@@ -2,6 +2,7 @@ require "YAGDRSL/mappings/constructed/items.lua"
 require "YAGDRSL/mappings/constructed/buffs.lua"
 
 require "YAGDRSL/mappings/static/action_messages.lua"
+require "YAGDRSL/mappings/static/automaton_abbreviations.lua"
 require "YAGDRSL/mappings/static/element_opposites.lua"
 require "YAGDRSL/mappings/static/ja.lua"
 require "YAGDRSL/mappings/static/skillchain_elements.lua"
@@ -87,5 +88,13 @@ end
 function MapGetOppositeElement(ElementName)
 	if ElementName then
 		return _G[MAP_ELEMENT_OPPOSITES][ElementName]
+	end
+end
+
+function GetAutomatonAbbreviation(ItemName)
+	if ItemName then
+		return _G[MAP_AUTOMATON_ABBREVIATIONS][ItemName]
+	else
+		return nil
 	end
 end
