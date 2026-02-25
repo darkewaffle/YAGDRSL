@@ -76,15 +76,17 @@ TrackPetNameAsOffenseMod()
 TrackPetNameAsDefenseMod()
 ```
 
-Then anytime your pet changes the pet tracker will change from "off" to the name of your pet (or "wyvern" for DRG and "automaton" for PUP). This allows you to define mod sets that can be specific to your pet. For instance if you are a Summoner and you want to make sure that specific gear is equipped for Carbuncle then you might define your mod sets like this.
+Then anytime your pet changes the pet tracker will change from "off" to the name of your pet (or "wyvern" for DRG and "luopan" for GEO). This allows you to define mod sets that can be specific to your pet that are only active when the pet is present. Summoner pets and Puppetmaster pets are handled slightly differently though because the mod contains not just a name value but also groups them under 'avatar' or 'automaton' respectively. Further, automatons are not described by their name but rather by an abbreviated form of their head and frame to create a descriptive label - for instance mods.status.engaged.automaton["ve_ss"] when the Valoredge Head is being used with a Sharpshot frame. Summoners simply have the name of their avatar grouped within .avatar. For instance if you want to make sure that specific gear is equipped for Carbuncle then you might define your mod sets like this.
 
 ```
-	mods.status.idle["Carbuncle"] = 
+	mods.status.idle.avatar = {}
+	mods.status.idle.avatar["Carbuncle"] = 
 		{
 			hands="Asteria Mitts +1"
 		}
 
-	mods.midcast.ja.bloodpact["Carbuncle"] = 
+	mods.midcast.ja.bloodpact.avatar = {}
+	mods.midcast.ja.bloodpact.avatar["Carbuncle"] = 
 		{
 			hands="Asteria Mitts +1"
 		}
