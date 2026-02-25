@@ -17,7 +17,8 @@ function GetEventModBase(SpellAttributes, EventSource, ModClass)
 			-- Each set found for each mod value is combined into the final returned EventMod.
 			local ModifierValue = GetModValue(ModName, false)
 			if ModifierValue then
-				EventMod = set_combine(EventMod, BuildEventMod(SpellAttributes, EventSource, ModifierValue))
+				--EventMod = set_combine(EventMod, BuildEventModv1(SpellAttributes, EventSource, ModifierValue))
+				EventMod = set_combine(EventMod, BuildEventMod(SpellAttributes, EventSource, ModName))
 			end
 		end
 	end
@@ -35,7 +36,8 @@ function GetStatusModBase(CharacterStatus, ModClass)
 		for Index, ModName in ipairs(ModOrder) do
 			local ModifierValue = GetModValue(ModName, false)
 			if ModifierValue then
-				StatusMod = set_combine(StatusMod, BuildStatusMod(CharacterStatus, ModifierValue))
+				--StatusMod = set_combine(StatusMod, BuildStatusModv1(CharacterStatus, ModifierValue))
+				StatusMod = set_combine(StatusMod, BuildStatusMod(CharacterStatus, ModName))
 			end
 		end
 	end

@@ -13,11 +13,19 @@ function BuildEventSet(SpellAttributes, EventSource)
 	return EventSet
 end
 
-function BuildEventMod(SpellAttributes, EventSource, ModifierName)
+function BuildEventModv1(SpellAttributes, EventSource, ModifierName)
 	local EventMod = {}
-	local ModPaths, ModPathStrings = GetEventModPaths(SpellAttributes, EventSource, ModifierName)
+	local ModPaths, ModPathStrings = GetEventModPathsv1(SpellAttributes, EventSource, ModifierName)
 
 	ChatSet("Building mod for", EventSource .. " - " .. ModifierName)
+
+	EventMod = CombinePathsToSet(ModPaths, ModPathStrings)
+	return EventMod
+end
+
+function BuildEventMod(SpellAttributes, EventSource, ModifierObject)
+	local EventMod = {}
+	local ModPaths, ModPathStrings = GetEventModPaths(SpellAttributes, EventSource, ModifierObject)
 
 	EventMod = CombinePathsToSet(ModPaths, ModPathStrings)
 	return EventMod
@@ -43,11 +51,19 @@ function BuildStatusSet(CharacterStatus)
 	return StatusSet
 end
 
-function BuildStatusMod(CharacterStatus, ModifierName)
+function BuildStatusModv1(CharacterStatus, ModifierName)
 	local StatusMod = {}
-	local ModPaths, ModPathStrings = GetStatusModPaths(CharacterStatus, ModifierName)
+	local ModPaths, ModPathStrings = GetStatusModPathsv1(CharacterStatus, ModifierName)
 
 	ChatSet("Building mod for", CharacterStatus .. " - " .. ModifierName)
+
+	StatusMod = CombinePathsToSet(ModPaths, ModPathStrings)
+	return StatusMod
+end
+
+function BuildStatusMod(CharacterStatus, ModifierObject)
+	local StatusMod = {}
+	local ModPaths, ModPathStrings = GetStatusModPaths(CharacterStatus, ModifierObject)
 
 	StatusMod = CombinePathsToSet(ModPaths, ModPathStrings)
 	return StatusMod

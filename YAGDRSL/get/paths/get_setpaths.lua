@@ -69,9 +69,24 @@ function GetEventSetPaths(SpellAttributes, EventSource)
 	return GetPaths(SETS_ROOT_NAME, EventSource, SpellAttributes)
 end
 
-function GetEventModPaths(SpellAttributes, EventSource, ModifierName)
+function GetEventModPathsv1(SpellAttributes, EventSource, ModifierName)
 	local ModPaths, ModPathStrings = GetPaths(MOD_SETS_ROOT_NAME, EventSource, SpellAttributes)
 	return CreateNamedPaths(ModPaths, ModPathStrings, ModifierName)
+end
+
+function GetEventModPaths(SpellAttributes, EventSource, ModifierObject)
+	local ModParent = GetModParent(ModifierObject)
+	local ModValue = GetModValue(ModifierObject)
+	local ModPaths, ModPathStrings = GetPaths(MOD_SETS_ROOT_NAME, EventSource, SpellAttributes)
+
+	if not ModParent then
+		ModPaths, ModPathStrings = CreateNamedPaths(ModPaths, ModPathStrings, ModValue)
+	else
+		ModPaths, ModPathStrings = CreateNamedPaths(ModPaths, ModPathStrings, ModParent)
+		AppendValidNamedPaths(ModPaths, ModPathStrings, ModValue)
+	end
+
+	return ModPaths, ModPathStrings
 end
 
 function GetEventOverridePaths(SpellAttributes, EventSource, OverrideName)
@@ -83,9 +98,24 @@ function GetStatusSetPaths(CharacterStatus)
 	return GetPaths(SETS_ROOT_NAME, CharacterStatus)
 end
 
-function GetStatusModPaths(CharacterStatus, ModifierName)
+function GetStatusModPathsv1(CharacterStatus, ModifierName)
 	local ModPaths, ModPathStrings = GetPaths(MOD_SETS_ROOT_NAME, CharacterStatus)
 	return CreateNamedPaths(ModPaths, ModPathStrings, ModifierName)
+end
+
+function GetStatusModPaths(CharacterStatus, ModifierObject)
+	local ModParent = GetModParent(ModifierObject)
+	local ModValue = GetModValue(ModifierObject)
+	local ModPaths, ModPathStrings = GetPaths(MOD_SETS_ROOT_NAME, CharacterStatus)
+
+	if not ModParent then
+		ModPaths, ModPathStrings = CreateNamedPaths(ModPaths, ModPathStrings, ModValue)
+	else
+		ModPaths, ModPathStrings = CreateNamedPaths(ModPaths, ModPathStrings, ModParent)
+		AppendValidNamedPaths(ModPaths, ModPathStrings, ModValue)
+	end
+
+	return ModPaths, ModPathStrings
 end
 
 function GetStatusOverridePaths(CharacterStatus, OverrideName)
