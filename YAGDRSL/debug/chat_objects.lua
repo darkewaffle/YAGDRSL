@@ -23,7 +23,7 @@ local GearIndex = {
 function ChatGearSet(GearSet, Source, ShowEmptySlots)
 
 	if not next(GearSet) then
-		ChatSet(Source, "set is empty")
+		--ChatSet(Source, "set is empty")
 
 	else
 		ChatDashLine(Source)
@@ -80,7 +80,7 @@ function ChatGearSet(GearSet, Source, ShowEmptySlots)
 				FoundSlots = 0
 			end
 		end
-	ChatDashLine()
+	--ChatDashLine()
 	end
 end
 

@@ -10,7 +10,7 @@ function GetModValue(ModName, ReturnDefaultValue)
 	local ModObject = _G[MOD_VALUES_ROOT_NAME][ModName]
 
 	if ModObject["value"] == nil then
-		ChatWarning("MOD: " .. ModName, "exists but has no value")
+		--ChatWarning("MOD: " .. ModName, "exists but has no value")
 		return nil
 	end
 

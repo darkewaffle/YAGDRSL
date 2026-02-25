@@ -7,7 +7,7 @@ function BuildEventSet(SpellAttributes, EventSource)
 	local EventSet = {}
 	local SetPaths, SetPathStrings = GetEventSetPaths(SpellAttributes, EventSource)
 
-	ChatSet("Building set for", EventSource)
+	--ChatSet("Building set for", EventSource)
 
 	EventSet = CombinePathsToSet(SetPaths, SetPathStrings)
 	return EventSet
@@ -17,7 +17,7 @@ function BuildEventModv1(SpellAttributes, EventSource, ModifierName)
 	local EventMod = {}
 	local ModPaths, ModPathStrings = GetEventModPathsv1(SpellAttributes, EventSource, ModifierName)
 
-	ChatSet("Building mod for", EventSource .. " - " .. ModifierName)
+	--ChatSet("Building mod for", EventSource .. " - " .. ModifierName)
 
 	EventMod = CombinePathsToSet(ModPaths, ModPathStrings)
 	return EventMod
@@ -35,7 +35,7 @@ function BuildEventOverride(SpellAttributes, EventSource, OverrideName)
 	local EventOverride = {}
 	local OverridePaths, OverridePathStrings = GetEventOverridePaths(SpellAttributes, EventSource, OverrideName)
 
-	ChatSet("Building override for", EventSource .. " - " .. OverrideName)
+	--ChatSet("Building override for", EventSource .. " - " .. OverrideName)
 
 	EventOverride = CombinePathsToSet(OverridePaths, OverridePathStrings)
 	return EventOverride
@@ -45,7 +45,7 @@ function BuildStatusSet(CharacterStatus)
 	local StatusSet = {}
 	local SetPaths, SetPathStrings = GetStatusSetPaths(CharacterStatus)
 
-	ChatSet("Building set for", CharacterStatus)
+	--ChatSet("Building set for", CharacterStatus)
 
 	StatusSet = CombinePathsToSet(SetPaths, SetPathStrings)
 	return StatusSet
@@ -55,7 +55,7 @@ function BuildStatusModv1(CharacterStatus, ModifierName)
 	local StatusMod = {}
 	local ModPaths, ModPathStrings = GetStatusModPathsv1(CharacterStatus, ModifierName)
 
-	ChatSet("Building mod for", CharacterStatus .. " - " .. ModifierName)
+	--ChatSet("Building mod for", CharacterStatus .. " - " .. ModifierName)
 
 	StatusMod = CombinePathsToSet(ModPaths, ModPathStrings)
 	return StatusMod
@@ -73,7 +73,7 @@ function BuildStatusOverride(CharacterStatus, OverrideName)
 	local StatusOverride = {}
 	local OverridePaths, OverridePathStrings = GetStatusOverridePaths(CharacterStatus, OverrideName)
 
-	ChatSet("Building override for", CharacterStatus .. " - " .. OverrideName)
+	--ChatSet("Building override for", CharacterStatus .. " - " .. OverrideName)
 
 	StatusOverride = CombinePathsToSet(OverridePaths, OverridePathStrings)
 	return StatusOverride

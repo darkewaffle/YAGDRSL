@@ -23,7 +23,7 @@ function GetEventModBase(SpellAttributes, EventSource, ModClass)
 		end
 	end
 
-	ChatGearSet(EventMod, EventSource .. " " .. ModClass .. " mod")
+	ChatGearSet(EventMod, EventSource .. " " .. ModClass)
 	return EventMod
 end
 
@@ -42,7 +42,7 @@ function GetStatusModBase(CharacterStatus, ModClass)
 		end
 	end
 
-	ChatGearSet(StatusMod, CharacterStatus .. " " .. ModClass .. " mod")
+	ChatGearSet(StatusMod, CharacterStatus .. " " .. ModClass)
 
 	return StatusMod
 end
