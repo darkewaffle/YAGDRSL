@@ -80,8 +80,10 @@ function MapGetZoneClass(ZoneName)
 end
 
 function MapGetSkillShortName(SkillName)
-	if SkillName and SkillName ~= "" then
-		return _G[MAP_SKILLS][SkillName]["shortname"] or ""
+	if _G[MAP_SKILLS][SkillName] then
+		return _G[MAP_SKILLS][SkillName]["shortname"] or "None"
+	else
+		return "None"
 	end
 end
 
