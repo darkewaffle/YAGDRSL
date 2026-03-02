@@ -1,6 +1,6 @@
 require "YAGDRSL/do/modify_strings.lua"
 
-local LogFilePath = windower.addon_path .. "data/export/YAG_log.txt"
+local LOG_FILE_PATH = windower.addon_path .. "data/export/YAG_log.txt"
 local LogSequence = 1
 
 function AddToLogFile(Reason, Message)
@@ -19,7 +19,7 @@ function AddToLogFile(Reason, Message)
 		LogMessage = SequenceLabel .. tostring(Message) .. "\n"
 	end
 
-	local LogFile = io.open(LogFilePath, "a+")
+	local LogFile = io.open(LOG_FILE_PATH, "a+")
 	LogFile:write(LogStart)
 	LogFile:write(LogReason)
 	LogFile:write(LogMessage)
