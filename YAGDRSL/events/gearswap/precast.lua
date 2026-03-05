@@ -7,6 +7,13 @@ function precast(spell, position)
 	ChatBlankLine()
 	ChatCheckpointLogged("Precast Start", spell.name)
 
+	-- The client has received an 'unable to cast/use' message. This can sometimes lead to invalid midaction() responses.
+	-- If the message we received within the last two seconds then set midaction = false. This is a 'failsafe' to try to prevent users getting 'stuck' behind midaction termination.
+	if STATE_UNABLE_TO_CAST_TIMESTAMP and os.clock() - STATE_UNABLE_TO_CAST_TIMESTAMP <= 2 then
+		WriteDevLog("Unable To Cast message recently received, calling midaction(false)")
+		midaction(false)
+	end
+
 	local SpellAttributes = GetSpellAttributes(spell)
 
 	-- Evaluate automatic termination of using the spell

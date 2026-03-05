@@ -26,6 +26,8 @@ function DeclareLibraryObjects()
 	STATE_DISPLAY_DEV_LOG = false
 	STATE_TRACK_PET = false
 
+	STATE_UNABLE_TO_CAST_TIMESTAMP = 0
+
 	DEVELOPER_LOG = "developer_log"
 	_G[DEVELOPER_LOG] = {}
 
