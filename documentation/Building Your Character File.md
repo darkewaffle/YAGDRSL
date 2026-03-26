@@ -2,7 +2,7 @@
 Most Gearswap libraries will start with a job file - but YAGDRSL takes a step back from that and instead starts with a character file. This is so that you can more easily define gear, functions and settings that may be used across multiple jobs and so that there is a single, central location to easily update and change your JobControls. The JobControls table is the central feature of your character file, but before we talk about how it works we first need to cover some important structural elements of the character file.
 
 ## File Location
-Your character file should be in the Windower\addons\GearSwap\libs folder. However if you would rather test-drive YAGDRSL and keep the files for it separate from your existing Gearswap files you can also just put it in the libs-dev folder.
+Your character file should be in the Windower\addons\GearSwap\data folder. However if you would rather test-drive YAGDRSL and keep the files for it separate from your existing Gearswap files you can also just put it in the libs-dev folder.
 
 ## File Name
 In order for Gearswap to recognize and load your character file we have to make sure that Gearswap finds it. The best way to do this is to just name the file after your character. So if your character name is "Merlin" then just name the file "Merlin.lua". The name is not case sensitive.
@@ -83,7 +83,7 @@ As you can see each job represents a row in the table and each row contains seve
 | script_binds_sub | When the job is set to your sub job this script will be executed. This is an optional setting and will only be applied if the library setting ApplyKeybindScripts = true. |
 
 
-Now here's how a JobControls table with some data in it may look. Keep in mind that you don't have to fill out anything for a job that you don't use. Also note that the file path for the file_equipment and file_logic files should be relative to your Windower\addons\GearSwap\libs (or libs-dev) folder while the file path for the script_binds_main and script_binds_sub files will be relative to your Windower\scripts folder.
+Now here's how a JobControls table with some data in it may look. Keep in mind that you don't have to fill out anything for a job that you don't use. Also note that the file path for the file_equipment and file_logic files should be relative to your Windower\addons\GearSwap\data (or libs-dev) folder while the file path for the script_binds_main and script_binds_sub files will be relative to your Windower\scripts folder.
 
 ```
 	JobControls = 
