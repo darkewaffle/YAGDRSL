@@ -8,7 +8,7 @@ function GetWeaponskillCanSkillchain(WeaponskillID)
 		end
 	else
 		ChatError("Unknown WeaponskillID", WeaponskillID)
-		AddToLogFile("Unknown WeaponskillID", WeaponskillID)
+		--AddToLogFile("Unknown WeaponskillID", WeaponskillID)
 		return false
 	end
 end
@@ -23,7 +23,7 @@ function GetJobAbilityCanSkillchain(JobAbilityID)
 		end
 	else
 		ChatError("Unknown JobAbilityID", JobAbilityID)
-		AddToLogFile("Unknown JobAbilityID", JobAbilityID)
+		--AddToLogFile("Unknown JobAbilityID", JobAbilityID)
 		return false
 	end
 end
@@ -38,7 +38,7 @@ function GetNPCAbilityCanSkillchain(AbilityID)
 		end
 	else
 		ChatError("Unknown NPC AbilityID", AbilityID)
-		AddToLogFile("Unknown NPC AbilityID", AbilityID)
+		--AddToLogFile("Unknown NPC AbilityID", AbilityID)
 		return false
 	end
 end
