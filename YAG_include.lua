@@ -1,3 +1,5 @@
+-- YAG Version 1.2.0
+
 WINDOWER_RESOURCES = require "resources"
 require "YAGDRSL/libraries/modes.lua"
 require "YAGDRSL/declare/YAG_declarations.lua"
