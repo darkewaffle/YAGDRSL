@@ -7,5 +7,6 @@ end
 function OnLogOut()
 	ChatCheckpoint("OnLogOut entered")
 
+	HideControlPanel()
 	UnregisterWindowerEvents()
 end
