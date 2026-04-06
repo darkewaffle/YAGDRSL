@@ -12,6 +12,14 @@ function InitializeControlPanel()
 	ControlPanelCreated = true
 end
 
+function HideControlPanel()
+	ControlPanel:visible(false)
+end
+
+function ShowControlPanel()
+	ControlPanel:visible(true)
+end
+
 function UpdateControlPanel()
 	if ControlPanelCreated then
 		local CPContents = GetControlPanelContents()
