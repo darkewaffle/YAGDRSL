@@ -183,6 +183,7 @@ function GetEquipmentItemsNotUsed(SkipWeapons)
 	ChatCheckpoint("GetEquipmentItemsNotUsed")
 	local CharacterEquipmentIDs = _G[VALIDATION_ROOT_NAME][VALIDATION_CHARACTER_EQUIPMENT_IDS]
 	local GearSetIDs =            _G[VALIDATION_ROOT_NAME][VALIDATION_GEARSET_IDS]
+	local GearSetNames =          _G[VALIDATION_ROOT_NAME][VALIDATION_GEARSET_ITEMS]
 	local UnusedEquipment =       _G[VALIDATION_ROOT_NAME][VALIDATION_CHARACTER_EQUIPMENT_NOT_USED]
 
 	for CharacterEquipmentID, EquipmentAugmentData in pairs(CharacterEquipmentIDs) do
@@ -195,7 +196,15 @@ function GetEquipmentItemsNotUsed(SkipWeapons)
 
 			-- CharacterEquipmentID not found in GearSetIDs.
 			if not GearSetIDs[CharacterEquipmentID] then
-				table.insert(UnusedEquipment, {[VALIDATION_ITEM_NAME] = GetItemName(CharacterEquipmentID)})
+
+				-- Double check the Item Name against names found in Gearsets to handle cases where the IDs may not match (such as Aegis which has the same name across multiple item IDs)
+				local CharacterEquipmentName = string.lower(GetItemName(CharacterEquipmentID))
+				if GearSetNames[CharacterEquipmentName] then
+					-- Do nothing, the name exists in both inventory and gearset
+				else
+					table.insert(UnusedEquipment, {[VALIDATION_ITEM_NAME] = GetItemName(CharacterEquipmentID)})
+				end
+
 			else
 
 				-- CharacterEquipmentID found in GearSetIDs. Evaluate augments.
