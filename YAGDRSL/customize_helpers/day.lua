@@ -29,12 +29,16 @@ DayItems[ELEMENT_WATER] =     {}
 DayItems[ELEMENT_LIGHT] =     {}
 DayItems[ELEMENT_DARK] =      {}
 
-function CustomizeGearForDayElement(SpellAttributes, GearSet)
+function CustomizeGearForDayElement(SpellAttributes, GearSet, IgnoreOpposition)
 
-	if SpellAttributes["DamageType"] == MAP_DAMAGE_MAGICAL then
-		-- Day gear will only be equipped if element and day match and the element does not oppose the weather (typical behavior for Hachirin-no-obi)
-		if SpellAttributes["Element=Day"] and not SpellAttributes["ElementOpposesWeather"] then
-			GearSet = set_combine(GearSet, DayItems["universal"], DayItems[SpellAttributes["Element"]])
+	if SpellAttributes["DamageType"] == MAP_DAMAGE_MAGICAL or SpellAttributes["DamageType"] == MAP_DAMAGE_HYBRID then
+		if SpellAttributes["Element=Day"] then
+			if SpellAttributes["ElementOpposesWeather"] and not IgnoreOpposition then
+				-- Day gear will only be equipped if element and day match and the element does not oppose the weather (typical behavior for Hachirin-no-obi)
+				-- IgnoreOpposition = true can be used to bypass this
+			else
+				GearSet = set_combine(GearSet, DayItems["universal"], DayItems[SpellAttributes["Element"]])
+			end
 		end
 	end
 
