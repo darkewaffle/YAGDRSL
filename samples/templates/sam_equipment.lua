@@ -7,11 +7,6 @@
 			
 		}
 
-	sets.precast.ja["Sengikori"] =
-		{
-			
-		}
-
 	sets.precast.ja["Shikikoyo"] =
 		{
 			
@@ -22,7 +17,7 @@
 			
 		}
 
-	sets.precast.ja["Weapon Bash"] =
+	sets.precast.ja["Blade Bash"] =
 		{
 			
 		}
@@ -99,6 +94,12 @@
 
 	-- Additional gear that will be equipped when using a melee weaponskill and Sekkanoki is active
 	mods.precast.ws.melee["Sekkanoki"] =
+		{
+			
+		}
+
+	-- Additional gear that will be equipped when using a melee weaponskill and Sengikori is active
+	mods.precast.ws.melee["Sengikori"] =
 		{
 			
 		}
