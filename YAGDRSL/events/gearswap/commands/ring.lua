@@ -31,18 +31,32 @@ local Rings_CP =
 		{id=28563, name="Vocation Ring"}
 	}
 
+local Rings_Warp =
+	{
+		{id=28540, name="Warp Ring"}
+	}
+
+local Rings_Teleport =
+	{
+		{id=26176, name="Dim. Ring (Holla)"},
+		{id=26177, name="Dim. Ring (Dem)"},
+		{id=26178, name="Dim. Ring (Mea)"}
+	}
 
 function SelfCommandRing(CommandInputs)
 	ChatCheckpoint("Auto-ring starting")
 
-	local CPFeatures = {["list"]=Rings_CP, ["buff"]="Commitment"}
-	local XPFeatures = {["list"]=Rings_XP, ["buff"]="Dedication"}
+	local CPFeatures = {["list"]=Rings_CP, ["buff"]="Commitment", ["cooldown"]=7}
+	local XPFeatures = {["list"]=Rings_XP, ["buff"]="Dedication", ["cooldown"]=7}
+	local WarpFeatures = {["list"]=Rings_Warp, ["buff"]="null", ["cooldown"]=10}
+	local TeleFeatures = {["list"]=Rings_Teleport, ["buff"]="null", ["cooldown"]=10}
 
 	local MapRingType =
 	{
 		["c"] = CPFeatures, ["cp"] = CPFeatures, ["cap"] = CPFeatures,
-		["x"] = XPFeatures, ["xp"] = XPFeatures, ["exp"] = XPFeatures
-		
+		["x"] = XPFeatures, ["xp"] = XPFeatures, ["exp"] = XPFeatures,
+		["w"] = WarpFeatures, ["warp"] = WarpFeatures,
+		["t"] = TeleFeatures, ["tele"] = TeleFeatures
 	}
 
 	local MapRingSlot =
@@ -53,6 +67,7 @@ function SelfCommandRing(CommandInputs)
 	
 	local RingsToFind = MapRingType[CommandInputs[1]].list
 	local BuffToCheck = MapRingType[CommandInputs[1]].buff
+	local RingUseCooldown = MapRingType[CommandInputs[1]].cooldown
 	local EquipSlot = MapRingSlot[CommandInputs[2]] or "left_ring"
 
 	if buffactive[BuffToCheck] then
@@ -65,7 +80,7 @@ function SelfCommandRing(CommandInputs)
 		
 		if UsableRing then
 			local UsableRingName = GetItemName(UsableRing)
-			EquipRingAndScheduleUse(UsableRingName, EquipSlot)
+			EquipRingAndScheduleUse(UsableRingName, EquipSlot, RingUseCooldown)
 		else
 			ChatNotice("No rings can be used right now.")
 			return
@@ -161,7 +176,7 @@ function GetRingStatus(Item)
 	return StatusTable
 end
 
-function EquipRingAndScheduleUse(RingName, RingSlot)
+function EquipRingAndScheduleUse(RingName, RingSlot, UsageDelay)
 	ChatNotice("Using ring", RingName)
 	UseRing = RingName
 	UseRingSlot = RingSlot
@@ -170,7 +185,7 @@ function EquipRingAndScheduleUse(RingName, RingSlot)
 
 	EquipSafe(RingSet, "Automatic XP/CP Ring Usage")
 	disable(UseRingSlot)
-	coroutine.schedule(RingUsage, 7)
+	coroutine.schedule(RingUsage, UsageDelay)
 end
 
 function RingUsage()
