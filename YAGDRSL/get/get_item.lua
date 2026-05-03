@@ -78,7 +78,7 @@ function GetItemAmmoType(ItemID)
 end
 
 function GetItemRangeType(ItemID)
-	local RangeType = WINDOWER_RESOURCES.items[ItemID]["range_type"]
+	local RangeType = ""
 
 	local Animators =
 		{
@@ -97,6 +97,12 @@ function GetItemRangeType(ItemID)
 			[22260] = true,
 			[21375] = true
 		}
+
+	if ItemID > 0 then
+		RangeType = WINDOWER_RESOURCES.items[ItemID]["range_type"]
+	else
+		return nil
+	end
 
 	if RangeType then
 		return RangeType
