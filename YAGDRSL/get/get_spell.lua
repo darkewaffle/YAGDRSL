@@ -27,6 +27,10 @@ function GetSpellCategory(spell)
 	elseif spell.prefix == PREFIX_WS then
 		return CATEGORY_WS
 
+	-- Midcast BST pet abilities do not include a prefix, so we use the action type instead
+	elseif spell.action_type == "Monster Move" then
+		return CATEGORY_JA
+	
 	else
 		return spell.prefix
 	end
