@@ -57,7 +57,7 @@ function SelfCommandDemo(CommandInputs)
 				local DemoPrecastSet = PrecastContainer(DemoSpellAttributes, EVENT_PRECAST_DEMO)
 				ChatGearSet(DemoPrecastSet, EVENT_PRECAST_DEMO)
 
-				if DemoSpellAttributes["Category"] == CATEGORY_MAGIC or DemoSpellAttributes["Category"] == CATEGORY_RA or DemoSpellAttributes["ParentGroup"] == MAP_JA_BLOODPACT then
+				if DemoSpellAttributes["Category"] == CATEGORY_MAGIC or DemoSpellAttributes["Category"] == CATEGORY_RA or DemoSpellAttributes["ParentGroup"] == MAP_JA_BLOODPACT or DemoSpellAttributes["ParentGroup"] == MAP_JA_PET_READY then
 					local DemoMidcastSet = MidcastContainer(DemoSpellAttributes, EVENT_MIDCAST_DEMO)
 					ChatGearSet(DemoMidcastSet, EVENT_MIDCAST_DEMO)
 				end
