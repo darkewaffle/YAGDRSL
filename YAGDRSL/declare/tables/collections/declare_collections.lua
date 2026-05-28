@@ -68,7 +68,8 @@ function DeclareCollectionsTable()
 
 	_G[COLLECTIONS_SETS_ROOT_NAME]["Null"] =
 		{
-		head={name="Null Masque", priority=100},
+		--head={name="Null Masque", priority=100},
+		mask={name="Null Masque", priority=100},
 		neck={name="Null Loop", priority=50},
 		waist={name="Null Belt", priority=0},
 		back={name="Null Shawl", priority=0}
