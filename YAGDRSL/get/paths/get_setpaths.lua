@@ -55,8 +55,9 @@ function GetPaths(RootName, EventOrStatus, SpellAttributes)
 		
 		local CharacterStatus = EventOrStatus
 		local ZoneClass = GetCharacterZoneClass()
+		local CurrentZone = GetCharacterZone()
 
-		SetPaths, SetPathStrings = WalkPathStatus(RootName, CharacterStatus, ZoneClass)
+		SetPaths, SetPathStrings = WalkPathStatus(RootName, CharacterStatus, ZoneClass, CurrentZone)
 
 	else
 		ChatError("GetPaths received invalid event or status parameter", EventOrStatus)

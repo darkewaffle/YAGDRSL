@@ -117,12 +117,12 @@ function WalkPathItem(RootName, EventSource, SpellAttributes)
 	return SetPaths, SetPathStrings
 end
 
-function WalkPathStatus(RootName, CharacterStatus, ZoneClass)
+function WalkPathStatus(RootName, CharacterStatus, ZoneClass, CurrentZone)
 	local SetPaths = {}
 	local SetPathStrings = {}
 
 	-- Example: sets.status.idle.town
-	SetPaths, SetPathStrings = WalkPath(RootName, STATUS_CLASS, CharacterStatus, ZoneClass)
+	SetPaths, SetPathStrings = WalkPath(RootName, STATUS_CLASS, CharacterStatus, ZoneClass, CurrentZone)
 
 	return SetPaths, SetPathStrings
 end
