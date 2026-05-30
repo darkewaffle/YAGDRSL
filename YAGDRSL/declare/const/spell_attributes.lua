@@ -14,7 +14,7 @@ CATEGORY_NINJUTSU = "magic"
 PREFIX_PET = "/pet"
 CATEGORY_PET = "ja"
 
-PREFIX_RA = "/ra"
+PREFIX_RA = "/range"
 CATEGORY_RA = "ra"
 NAME_RA = "Ranged Attack"
 
