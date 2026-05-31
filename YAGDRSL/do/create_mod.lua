@@ -82,3 +82,19 @@ function GetModParent(ModName)
 		return nil
 	end
 end
+
+-- @User
+-- Deletes the default "Off" value of a mod. This can be useful when creating mods that have no 'off' state like a weapon selection mod jobs that do not cast.
+
+function DeleteModDefault(ModName)
+	local ModToAlter = _G[MOD_VALUES_ROOT_NAME][ModName]
+
+	local NonDefaultOptions = {}
+	local NumberOfOptions = #ModToAlter
+
+	for i = 2, NumberOfOptions do
+		NonDefaultOptions[i-1] = ModToAlter[i]
+	end
+
+	ModToAlter:options(table.unpack(NonDefaultOptions))
+end
