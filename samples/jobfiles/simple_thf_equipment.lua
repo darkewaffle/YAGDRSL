@@ -1,8 +1,8 @@
 --
 -- CUSTOMIZATIONS
 --
-	capes = {}
-	capes.thf = { name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+	capes.tp = { name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+	capes.wsd = { name="Toutatis's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Weapon skill damage +10%',}}
 
 	templates = {}
 
@@ -25,6 +25,7 @@
 			hands=gear.leyline,
 			ring1="Prolix Ring",
 			ring2="Naji's Loop",
+			waist="Sailfi Belt +1",
 			legs=gear.fastcast_light_legs,
 			feet=gear.fastcast_light_feet
 		}
@@ -85,9 +86,9 @@
 		{
 			ammo="Yamarang",			-- 5%
 			ear1=gear.alabaster,
-			ear2="Roundel Earring",		-- 5%
+			--ear2="Roundel Earring",		-- 5%
 			ring1=gear.meridian,
-			ring2="Asklepian Ring",		-- 3% received
+			--ring2="Asklepian Ring",		-- 3% received
 			back="Toetapper Mantle"		-- 5%
 		}
 
@@ -108,7 +109,7 @@
 			ear2="Sherida Earring",
 			ring1=gear.ilabrat,
 			ring2=gear.regalring,
-			back=capes.thf,
+			back=capes.tp,
 			feet="Skulker's Poulaines +2"
 		})
 
@@ -116,25 +117,25 @@
 		{
 			ear1="Odr Earring",
 			ear2="Sherida Earring",
-			ring1="Lehko's Ring"
+			--ring1="Lehko's Ring"
 		})
 
 	sets.precast.ws["Mandalic Stab"] = set_combine(templates.wsd,
 		{
 			neck="Republican Platinum Medal",
-			waist="Sailfi Belt +1"
+			waist="Kentarch Belt +1"
 		})
 
 	sets.precast.ws["Rudra's Storm"] = set_combine(templates.wsd,
 		{
 			neck="Republican Platinum Medal",
-			waist="Sailfi Belt +1"
+			waist="Kentarch Belt +1"
 		})
 
 	sets.precast.ws["Shark Bite"] = set_combine(templates.wsd,
 		{
 			neck="Republican Platinum Medal",
-			waist="Sailfi Belt +1"
+			waist="Kentarch Belt +1"
 		})
 
 	sets.precast.ws.melee.magical = set_combine(collections.Null, collections.Nyame,
@@ -142,9 +143,9 @@
 			ammo="Oshasha's Treatise",
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
-			body="Samnuha Coat",
 			ring1="Karieyh Ring +1",
-			ring2=gear.etana
+			ring2="Dingir Ring",
+			back=capes.wsd
 		})
 
 --
@@ -161,13 +162,15 @@
 
 	mods.precast.ws.melee.physical["Sneak Attack"] =
 		{
-			back=capes.thf
+			back=capes.tp
 		}
 
 	mods.precast.ws.melee.physical["Trick Attack"] =
 		{
 			
 		}
+
+
 
 --
 -- PRECAST MAGIC SETS
@@ -177,6 +180,7 @@
 -- MIDCAST MAGIC SETS
 --
 	InsertGearSet(sets.midcast.magic, templates.fastcast)
+
 --
 -- ENGAGED SET
 --
@@ -184,12 +188,14 @@
 		{
 			ammo="Coiste Bodhar",
 			neck="Erudition Necklace",
-			ear1="Sherida Earring",
+			--ear1="Sherida Earring",
+			ear1="Suppanomimi",
 			ear2="Skulker's Earring +1",
 			hands="Adhemar Wristbands +1",
 			ring1="Epona's Ring",
-			ring2="Lehko's Ring",
-			back=capes.thf,
+			ring2="Fickblix's Ring",
+			--ring2="Lehko's Ring",
+			back=capes.tp,
 			waist="Sailfi Belt +1",
 		})
 
@@ -199,11 +205,7 @@
 
 	mods.status.engaged["Acc"] = set_combine(collections.Null,
 		{
-			ammo="Yamarang",
-			head=collections.Malignance.head,
-			ear1="Cessance Earring",
-			ring1="Rajas Ring",
-			ring2="Lehko's Ring",
+			head=collections.Malignance.head
 		})
 
 	-- +Multiattack gear when engaged and the Offense mod = "Multi"
@@ -284,7 +286,18 @@
 -- IDLE & RESTING SETS
 --
 
-	InsertGearSet(sets.status.idle, set_combine(collections.Gleti, {ring1="Karieyh Ring +1"}))
+	InsertGearSet(sets.status.idle, set_combine(collections.Null, collections.Gleti,
+		{
+			ammo="Staunch Tathlum +1",
+			head=collections.Null.mask,
+			ear1=gear.alabaster,
+			ear2=gear.eabani,
+			ring1="Karieyh Ring +1",
+			ring2="Murky Ring",
+			back=capes.tp,
+			waist=gear.pmb
+		}))
+
 
 	sets.status.idle.town =
 		{
@@ -304,3 +317,45 @@
 		{
 			feet="Skadi's Jambeaux +1"
 		}
+
+	mods.status.idle["+TH"] =
+		{
+			feet="Skadi's Jambeaux +1"
+		}
+
+
+
+--
+-- SPHERE FARM OVERRIDE
+--
+
+	overrides.status["Spheres"] = set_combine(sets.status.idle, sets.craft, {main="Taming Sari", feet="Skadi's Jambeaux +1"})
+
+	overrides.midcast.magic.elemental["Spheres"] =
+		{
+			body=collections.Nyame.body,
+			feet="Skulker's Poulaines +2"
+		}
+
+--
+-- TREASURE HUNTER AOE
+--
+
+	mods.status.idle["THAoE"] =
+		{
+			feet="Skadi's Jambeaux +1"
+		}
+
+	mods.precast.ws.melee.magical["THAoE"] =
+		{
+			neck="Fotia Gorget",
+			--neck="Sibyl Scarf",
+			waist="Fotia Belt",
+			feet="Skulker's Poulaines +2"
+		}
+
+--
+-- CP OVERRIDE
+--
+
+	overrides["+CP"] = {back = capes.cp}

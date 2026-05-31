@@ -2,7 +2,6 @@
 -- CUSTOMIZATIONS
 --
 
-	capes = {}
 	capes.fcsird = { name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','"Fast Cast"+10','Spell interruption rate down-10%',}, priority=80}
 	capes.tank = { name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
 	capes.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
@@ -24,7 +23,7 @@
 		{
 			head = {name="Reverence Coronet", priority=19},
 			body = {name="Reverence Surcoat +4", priority=264},
-			hands = {name="Reverence Gauntlets +3", priority=113},
+			hands = {name="Reverence Gauntlets +4", priority=123},
 			legs = {},
 			feet = {name="Reverence Leggings", priority=38}
 		}
@@ -50,6 +49,8 @@
 	templates = {}
 	templates.enmityhp =
 		{
+			main="Brilliance",
+			sub="Nibiru Shield",
 			ammo="Sapience Orb",
 			head=gear.loess,
 			neck=gear.unmoving,
@@ -77,6 +78,7 @@
 			ring1="Prolix Ring",
 			ring2="Kishar Ring",
 			back=capes.fcsird,
+			waist="Sailfi Belt +1",
 			legs={name="Enif Cosciales", priority=40},
 			feet=gear.feet_fc
 		}
@@ -100,7 +102,7 @@
 	templates.refresh =
 		{
 			ammo="Homiliary",
-			head=gear.jumalik_head,
+			head=collections.Null.mask,
 			neck="Sibyl Scarf",
 			body=gear.jumalik_body
 		}
@@ -214,7 +216,8 @@
 	sets.precast.ws["Chant Du Cygne"] =
 		{
 			back="Null Shawl",
-			ring1="Lehko's Ring"
+			ring2="Fickblix's Ring"
+			--ring1="Lehko's Ring"
 		}
 
 	sets.precast.ws["Savage Blade"] =
@@ -222,8 +225,7 @@
 			ammo="Oshasha's Treatise",
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
-			neck="Republican Platinum Medal",
-			feet="Sulevia's Leggings +2"
+			neck="Republican Platinum Medal"
 		}
 
 	sets.precast.ws.melee.magical = set_combine(collections.Null, collections.Nyame,
@@ -261,9 +263,10 @@
 --
 	InsertGearSet(sets.midcast.magic, templates.fastcast)
 
-	sets.midcast.magic.divine["Flash"] = set_combine(collections.Gleti,
+	sets.midcast.magic.divine["Flash"] = set_combine(templates.fastcast,
 		{
 			main="Brilliance",
+			sub="Nibiru Shield",
 			ammo="Sapience Orb",
 			neck=gear.unmoving,
 			head=gear.loess,
@@ -326,18 +329,18 @@
 		{
 			head=gear.jumalik_head,
 			ear1="Friomisi Earring",
-			ear2="Hecate's Earring",
-			ring1="Kishar Ring",
-			ring2=gear.etana
+			--ear2="Hecate's Earring",
+			ring1=gear.stik1,
+			ring2=gear.stik2
 		})
 
 	mods.midcast.magic.divine.holy["+MBurst"] = set_combine(collections.Null, collections.Nyame,
 		{
 			head=gear.jumalik_head,
 			ear1="Friomisi Earring",
-			ear2="Hecate's Earring",
-			ring1="Kishar Ring",
-			ring2=gear.etana
+			--ear2="Hecate's Earring",
+			ring1=gear.stik1,
+			ring2=gear.stik2
 		})
 
 	mods.midcast.magic.enhancing.white.protect["Shelter"] = 
@@ -364,7 +367,8 @@
 			body=af.body,
 			hands=empy.hands,
 			ring1="Murky Ring",
-			ring2="Lehko's Ring",
+			--ring2="Lehko's Ring",
+			ring2="Fickblix's Ring",
 			back=capes.tank,
 			waist=gear.pmb,
 			legs=empy.legs,
@@ -378,17 +382,18 @@
 	mods.status.engaged["Hybrid"] = set_combine(collections.Sakpata,
 		{
 			ammo="Coiste Bodhar",
-			ear2="Cessance Earring",
+			ear2="Telos Earring",
 			hands=empy.hands,
 			ring1="Rajas Ring",
-			ring2="Lehko's Ring",
+			--ring2="Lehko's Ring",
+			ring2="Fickblix's Ring",
 			back="Null Shawl",
 			waist="Sailfi Belt +1"
 		})
 	
 	mods.status.engaged["DPS"] = set_combine(mods.status.engaged["Hybrid"],
 		{
-			neck="Lissome Necklace",
+			--neck="Lissome Necklace",
 			ear1="Brutal Earring"
 		})
 

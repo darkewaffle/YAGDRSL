@@ -1,12 +1,13 @@
 --
 -- CUSTOMIZATIONS
 --
-	capes = {}
 	capes.bard = { name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}
 	capes.wsd = { name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+	capes.tp = { name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}}
 
 	gear.ayanmo_head = {name="Ayanmo Zucchetto +2", priority=45}
 	gear.ayanmo_body = {name="Ayanmo Corazza +2", priority=57}
+	gear.ayanmo_hands = {name="Ayanmo Manopolas +2", priority=22}
 	gear.ayanmo_legs = {name="Ayanmo Cosciales +2", priority=45}
 
 	gear.inyanga_body = {name="Inyanga Jubbah +2", priority=85}
@@ -18,6 +19,9 @@
 
 	gear.kali1 = {name="Kali", bag="Wardrobe 1"}
 	gear.kali2 = {name="Kali", bag="Wardrobe 2"}
+
+	gear.linos_tp = { name="Linos", augments={'Accuracy+11 Attack+11','"Store TP"+4','Quadruple Attack +3',}}
+	gear.linos_ws = { name="Linos", augments={'Attack+15','Weapon skill damage +3%','STR+6 DEX+6',}}
 
 	gear.mousai_head = {name="Mousai Turban", priority=102}
 	gear.mousai_body = {name="Mousai Manteel", priority=171}
@@ -32,8 +36,8 @@
 	af =
 		{
 			head = {name="Brioso Roundlet +4", priority=74},
-			body = {name="Brioso Justaucorps +2", priority=81},
-			hands = {name="Brioso Cuffs +3", priority=43},
+			body = {name="Brioso Justaucorps +4", priority=101},
+			hands = {name="Brioso Cuffs +4", priority=53},
 			legs = {name="Brioso Cannions +1", priority=43},
 			feet = {name="Brioso Slippers +4", priority=84}
 		}
@@ -68,10 +72,10 @@
 		{
 			ear1="Suppanomimi"
 		}
-
+--[[
 	DualWield[7] =
 		{
-			ear1="Reiki Yotai"
+			waist="Reiki Yotai"
 		}
 
 	DualWield[9] =
@@ -93,6 +97,7 @@
 			ear2="Suppanomimi",
 			waist="Reiki Yotai"
 		}
+]]
 
 	templates = {}
 
@@ -116,7 +121,9 @@
 	templates.refresh =
 		{
 			main="Daybreak",
+			head=collections.Null.mask,
 			neck="Sibyl Scarf",
+			body="Kaykaus Bliaut",
 			legs="Lengo Pants"
 		}
 
@@ -160,34 +167,38 @@
 
 	sets.precast.ws.melee.physical = set_combine(collections.Nyame,
 		{
-			ranged="Linos",
+			ranged=gear.linos_ws,
 			ear1="Brutal Earring",
 			ear2="Cessance Earring",
 			body=relic.body,
-			ring1=gear.ilabrat,
-			ring2="Lehko's Ring",
+			--ring1="Lehko's Ring",
+			ring1="Fickblix's Ring",
+			ring2=gear.ilabrat,
 			back="Null Shawl",
 			feet=relic.feet
 		})
 
 	sets.precast.ws["Evisceration"] =
 		{
-			ring1="Lehko's Ring"
+			--ring1="Lehko's Ring"
+			waist="Kentarch Belt +1",
 		}
 
-	sets.precast.ws["Mordant Rime"] =
+	sets.precast.ws["Mordant Rime"] = set_combine(templates.wsd,
 		{
-			
-		}
+			neck="Bard's Charm +1",
+			waist="Kentarch Belt +1"
+		})
 
 	sets.precast.ws["Rudra's Storm"] = set_combine(templates.wsd,
 		{
-			neck="Republican Platinum Medal",
-			waist="Sailfi Belt +1"
+			neck="Bard's Charm +1",
+			waist="Kentarch Belt +1"
 		})
 
 	sets.precast.ws["Savage Blade"] = set_combine(templates.wsd,
 		{
+			head=collections.Null.mask,
 			neck="Republican Platinum Medal",
 			waist="Sailfi Belt +1"
 		})
@@ -198,7 +209,7 @@
 			ear2="Moonshade Earring",
 			body=relic.body,
 			ring1="Karieyh Ring +1",
-			ring2=gear.etana,
+			ring2=gear.stik1,
 			back=capes.wsd
 		})
 
@@ -219,6 +230,11 @@
 			ranged="Blurred Harp"
 		}
 
+	sets.precast.magic.singing.friend["Honor March"] =
+		{
+			ranged="Marsyas"
+		}
+
 --
 -- MIDCAST MAGIC SETS
 --
@@ -228,14 +244,15 @@
 	InsertGearSet(sets.midcast.magic.enfeebling, set_combine(collections.Null,
 		{
 			main="Daybreak",
+			sub="Ammurapi Shield",
+			ranged="Nibiru Harp",
 			head=af.head,
 			ear1="Regal Earring",
-			ear2="Fili Earring",
-			body=empy.body,
-			hands=empy.hands,
-			ring1=gear.etana,
-			ring2="Kishar Ring",
-			back=capes.bard,
+			ear2="Fili Earring +1",
+			body=af.body,
+			hands=gear.inyanga_hands,
+			ring1=gear.stik1,
+			ring2=gear.stik2,
 			legs=empy.legs,
 			feet=af.feet
 		}))
@@ -243,7 +260,8 @@
 	sets.midcast.magic.healing.cure =
 		{
 			main="Daybreak",
-			head=gear.vanya_head,
+			--head=gear.vanya_head,
+			head=collections.Null.mask,
 			ear2="Mendicant's Earring",
 			body=gear.kaykaus_body,
 			hands=gear.kaykaus_hands,
@@ -264,7 +282,7 @@
 
 	InsertGearSet(sets.midcast.magic.singing.friend,
 		{
-			ear2="Fili Earring",
+			ear2="Fili Earring +1",
 			head=empy.head,
 			body=empy.body,
 			hands=empy.hands,
@@ -282,6 +300,11 @@
 			hands=gear.mousai_hands
 		}
 
+	sets.midcast.magic.singing.friend.etude =
+		{
+			hands=gear.mousai_head
+		}
+
 	sets.midcast.magic.singing.friend.madrigal =
 		{
 			head=empy.head,
@@ -296,6 +319,15 @@
 	sets.midcast.magic.singing.friend.march =
 		{
 			hands=empy.hands
+		}
+
+	sets.midcast.magic.singing.friend.march["Honor March"] =
+		{
+			main=gear.kali1,
+			sub=gear.kali2,
+			ranged="Marsyas",
+			legs=gear.inyanga_legs,
+			feet=af.feet
 		}
 
 	sets.midcast.magic.singing.friend.minne =
@@ -325,14 +357,15 @@
 
 	InsertGearSet(sets.midcast.magic.singing.enemy,
 		{
-			main="Kali",
+			main="Daybreak",
+			sub="Ammurapi Shield",
 			head=af.head,
 			ear1="Regal Earring",
-			ear2="Fili Earring",
+			ear2="Fili Earring +1",
 			body=empy.body,
 			hands=empy.hands,
-			ring1=gear.etana,
-			ring2="Kishar Ring",
+			ring1=gear.stik1,
+			ring2=gear.stik2,
 			back=capes.bard,
 			waist="Null Belt",
 			legs=gear.inyanga_legs,
@@ -354,13 +387,15 @@
 			ranged="Blurred Harp"
 		}
 
-	sets.midcast.magic.singing.enemy.lullaby["Horde Lullaby II"] =
+	sets.midcast.magic.singing.enemy.lullaby.horde["Horde Lullaby II"] =
 		{
-			ear2="Gersemi Earring",
+			--ear2="Gersemi Earring",
 			body=af.body,
-			hands=gear.inyanga_hands,
+			hands=af.hands,
+			--hands=gear.inyanga_hands,
 			--hands=empy.hands,
-			waist="Harfner's Sash",
+			--waist="Harfner's Sash",
+			waist="Null Belt",
 			feet=relic.feet
 		}
 
@@ -395,22 +430,23 @@
 -- ENGAGED SET
 --
 
-	sets.status.engaged =
+	sets.status.engaged = set_combine(collections.Nyame, 
 		{
-			ranged="Linos",
+			ranged=gear.linos_tp,
 			head=gear.ayanmo_head,
 			neck="Bard's Charm +1",
-			ear1="Brutal Earring",
+			ear1="Telos Earring",
 			ear2="Cessance Earring",
 			body=gear.ayanmo_body,
 			hands=collections.Bunzi.hands,
-			ring1="Rajas Ring",
-			ring2="Lehko's Ring",
+			ring1=gear.ilabrat,
+			ring2="Fickblix's Ring",
+			--ring2="Lehko's Ring",
 			back="Null Shawl",
 			waist="Sailfi Belt +1",
 			legs=empy.legs,
-			feet=empy.feet
-		}
+			--feet=empy.feet
+		})
 
 --
 -- ENGAGED OFFENSE MODS
@@ -469,6 +505,7 @@
 	InsertGearSet(sets.status.idle, set_combine(collections.Bunzi,
 		{
 			main="Daybreak",
+			sub="Genmei Shield",
 			head=empy.head,
 			neck="Warder's Charm +1",
 			ear1=gear.alabaster,
@@ -497,6 +534,13 @@
 -- IDLE & RESTING MODS
 --
 
+	mods.status["Naeg"] = {main="Naegling"}
+	mods.status["Dayb"] = {main="Daybreak"}
+
+	mods.status["Dem"] = {sub="Demersal Degen +1"}
+	mods.status["TP"] = {sub="Centovente"}
+	mods.status["Ammu"] = {sub="Ammurapi Shield"}
+
 	mods.status.idle["+Refresh"] = templates.refresh
 
 --
@@ -507,19 +551,23 @@
 	overrides.precast.ws["DynaNeck"] = {neck="Bard's Charm +1"}
 	overrides.precast.ja["DynaNeck"] = {neck="Bard's Charm +1"}
 
-	overrides.status["Cat"] =
+	overrides.status.engaged["Odin"] =
 		{
-			ranged="Linos",
-			head=empy.head,
-			neck=collections.Null.neck,
+			main="Norgish Dagger",
+			sub="Esoteric Athame",
+			ranged=gear.linos_tp,
+			head=af.head,
 			ear1="Suppanomimi",
 			ear2="Brutal Earring",
-			body=empy.body,
-			hands=collections.Bunzi.hands,
-			ring1=gear.ilabrat,
-			ring2="Lehko's Ring",
+			--hands=collections.Bunzi.hands,
+			hands=gear.ayanmo_hands,
+			ring1=gear.etana,
+			ring2="Fickblix's Ring",
 			back="Null Shawl",
 			waist="Sailfi Belt +1",
 			legs=empy.legs,
-			feet=empy.feet
+			feet=af.feet
 		}
+
+sets.precast.magic.singing["Army's Paeon"] = {range="Daurdabla"}
+sets.midcast.magic.singing["Army's Paeon"] = {range="Daurdabla"}

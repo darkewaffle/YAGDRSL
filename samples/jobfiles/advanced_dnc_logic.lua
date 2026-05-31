@@ -2,10 +2,15 @@
 -- LIBRARY SETTINGS
 --
 
-	AssignModOptions("Offense", "Acc", "Multi", "STP", "Subtle")
-	AssignModOptions("PhysicalDefense", "PDT", "PDTHP", "Eva")
+	AssignModOptions("Offense", "Acc", "Multi") --, "STP", "Subtle")
+	AssignModOptions("PhysicalDefense", "PDT", "PDTHP") --, "Eva")
 	AssignModOptions("MagicalDefense", "MEvaLo", "MEvaHi", "MEvaHP")
-	AssignModOptions("TH", "TH4", "TH2")
+	AssignModOptions("TH", "+TH")
+
+	AppendModOrderIdleOffense("TH")
+	AppendModOrderPrecastWSOffense("TH")
+
+	AssignWeaponLockOptions(MOD_LOCK_ALL)
 
 	CreateMod("AutoDW", "ShF9  DW", 1.1, "~f9", "On")
 	ConfigureOverride("CtF12 Override", 5, "^f12", "BossTank", "Vagary")
@@ -34,8 +39,22 @@
 
 	function HookPrecastCustomizeOffense(SpellAttributes, PrecastSet)
 
-		if SpellAttributes["Category"] == CATEGORY_WS and GetCharacterTP() > 2850 then
+		local TPThreshold = 2800
+		if player.equipment.main == "Aeneas" then
+			TPThreshold = TPThreshold - 500
+		end
+
+		if player.equipment.sub == "Centovente" then
+			TPThreshold = TPThreshold - 1000
+		end
+
+		if SpellAttributes["Category"] == CATEGORY_WS and GetCharacterTP() > TPThreshold then
 			PrecastSet = ReplaceMoonshade(PrecastSet, MoonshadeAlternates)
+		end
+
+		if SpellAttributes["Category"] == "ws" then
+			PrecastSet = CustomizeGearForDayElement(SpellAttributes, PrecastSet, true)
+			PrecastSet = CustomizeGearForWeatherElement(SpellAttributes, PrecastSet, true)
 		end
 
 		return PrecastSet
