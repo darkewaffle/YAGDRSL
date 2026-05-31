@@ -5,8 +5,8 @@ function TerminateSpellOnRecast(SpellAttributes)
 	if SpellAttributes["Category"] == CATEGORY_JA then
 		local JARecast = GetRecastJobAbility(SpellAttributes["RecastID"])
 
-		-- 255 = ready, 233 = stratagems, 231 = stratagem abilities. Temporary fix until implementation of 'get charges' logic.
-		if GetRecastJobAbility(SpellAttributes["RecastID"]) > 0 and SpellAttributes["RecastID"] ~= 255 and SpellAttributes["RecastID"] ~= 233 and SpellAttributes["RecastID"] ~= 231 then
+		-- 255 = ready, 233 = stratagems, 231 = stratagem abilities, 194 = quick draw, 195 = quick draw shots. Temporary fix until implementation of 'get charges' logic.
+		if GetRecastJobAbility(SpellAttributes["RecastID"]) > 0 and SpellAttributes["RecastID"] ~= 255 and SpellAttributes["RecastID"] ~= 233 and SpellAttributes["RecastID"] ~= 231 and SpellAttributes["RecastID"] ~= 194 and SpellAttributes["RecastID"] ~= 195 then
 			TerminateSpell = true
 			TerminateReason = "Job ability is still on recast = " .. SpellAttributes["Name"]
 		end
