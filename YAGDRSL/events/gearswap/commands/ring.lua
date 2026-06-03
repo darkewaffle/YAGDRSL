@@ -31,6 +31,11 @@ local Rings_CP =
 		{id=28563, name="Vocation Ring"}
 	}
 
+local Rings_Cap =
+	{
+		{id=28546, name="Capacity Ring"}
+	}
+
 local Rings_Warp =
 	{
 		{id=28540, name="Warp Ring"}
@@ -47,13 +52,15 @@ function SelfCommandRing(CommandInputs)
 	ChatCheckpoint("Auto-ring starting")
 
 	local CPFeatures = {["list"]=Rings_CP, ["buff"]="Commitment", ["cooldown"]=7}
+	local CapFeatures = {["list"]=Rings_Cap, ["buff"]="Commitment", ["cooldown"]=7}
 	local XPFeatures = {["list"]=Rings_XP, ["buff"]="Dedication", ["cooldown"]=7}
 	local WarpFeatures = {["list"]=Rings_Warp, ["buff"]="null", ["cooldown"]=10}
 	local TeleFeatures = {["list"]=Rings_Teleport, ["buff"]="null", ["cooldown"]=10}
 
 	local MapRingType =
 	{
-		["c"] = CPFeatures, ["cp"] = CPFeatures, ["cap"] = CPFeatures,
+		["c"] = CPFeatures, ["cp"] = CPFeatures, 
+		["cap"] = CapFeatures,
 		["x"] = XPFeatures, ["xp"] = XPFeatures, ["exp"] = XPFeatures,
 		["w"] = WarpFeatures, ["warp"] = WarpFeatures,
 		["t"] = TeleFeatures, ["tele"] = TeleFeatures
