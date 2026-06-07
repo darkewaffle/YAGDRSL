@@ -35,7 +35,7 @@ function CustomizeGearForWeatherElement(SpellAttributes, GearSet, IgnoreOppositi
 		if SpellAttributes["Element=Weather"] then
 
 			local WeatherIntensity = GetWeatherIntensity()
-			if (WeatherIntensity == 1 and not SpellAttributes["ElementOpposesDay"]) and not IgnoreOpposition then
+			if (WeatherIntensity == 1 and SpellAttributes["ElementOpposesDay"]) and not IgnoreOpposition then
 				-- Weather gear will not be equipped if weather intensity is 1 and the element opposes the day (typical behavior for Hachirin-no-obi)
 				-- IgnoreOpposition = true can be used to bypass this
 			else
