@@ -4,7 +4,6 @@ SetModOrderMidcastRAOffense("RangedOffense", "TH")
 ConfigureOverride("CtF12 Override", 5, "^f12", "+CP")
 
 AssignModOptions("TH", "+TH", "THAoE")
-AppendModOrderIdleOffense("TH")
 AppendModOrderPrecastWSOffense("TH")
 
 SetModValue("TH", "THAoE")

@@ -6,7 +6,7 @@
 	capes.tank = { name="Rudianos's Mantle", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
 	capes.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 
-	gear.feet_fc = { name="Odyssean Greaves", augments={'INT+8','AGI+9','"Fast Cast"+7','Mag. Acc.+4 "Mag.Atk.Bns."+4',}, priority=20}
+	gear.feet_fc = { name="Odyssean Greaves", augments={'AGI+10','Pet: Accuracy+21 Pet: Rng. Acc.+21','"Fast Cast"+8','Accuracy+6 Attack+6','Mag. Acc.+8 "Mag.Atk.Bns."+8',}, priority=20}
 	gear.feet_sird = { name="Odyssean Greaves", augments={'MND+9','Spell interruption rate down -9%','"Fast Cast"+4','Accuracy+14 Attack+14','Mag. Acc.+3 "Mag.Atk.Bns."+3',}, priority=20}
 
 	gear.carmine_legs = {name="Carmine Cuisses +1", priority=130}

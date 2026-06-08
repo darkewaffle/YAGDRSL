@@ -39,7 +39,7 @@
 
 	sets.precast.ja["Wild Card"] =
 		{
-			feet="Lanun Bottes +3"
+			feet="Lanun Bottes +4"
 		}
 
 	sets.precast.ja.corsairshot =
@@ -93,8 +93,7 @@
 			ear2="Moonshade Earring",
 			ring1="Karieyh Ring +1",
 			ring2="Dingir Ring",
-			legs=collections.rse.legs,
-			feet="Lanun Bottes +3"
+			feet="Lanun Bottes +4"
 		})
 
 	-- Gear that should apply to all ranged weapon weaponskills
