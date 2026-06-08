@@ -7,6 +7,12 @@ function AssignModOptions(ModName, ...)
 AssignModOptions("Offense", "Acc", "Multi", "STP", "Subtle")
 ```
 
+## AssignOverrideOptions
+```
+function AssignOverrideOptions(...)
+AssignOverrideOptions("BossTank", "Crafting", "Fishing")
+```
+
 ## BindKey
 ```
 function BindKey(KeyCode, CommandText, AutomaticUnbind)
@@ -61,6 +67,12 @@ function DeleteMod(ModName)
 DeleteMod("MagicBurst")
 ```
 
+## DeleteModDefault
+```
+function DeleteModDefault(ModName)
+DeleteModDefault("MainHand")
+```
+
 ## GetCharacterHaste
 ```
 function GetCharacterHaste(HasteDefinitions)
@@ -107,6 +119,12 @@ SetAutoCancelBuff({"Curing Waltz", "Healing Waltz}, {"Saber Dance"})
 ```
 function SetModValue(ModName, Value)
 SetModValue("MagicBurst", "MB Low")
+```
+
+## SetOverrideValue
+```
+function SetOverrideValue(Value)
+SetOverrideValue("BossTank")
 ```
 
 ## SetWeaponLockIgnoreCycleMods

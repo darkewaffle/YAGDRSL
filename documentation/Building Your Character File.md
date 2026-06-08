@@ -45,28 +45,28 @@ JobControls is the most important part of your character file because it's how y
 ```
 	JobControls = 
 	{
-		["WAR"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["MNK"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["WHM"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["BLM"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["RDM"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["THF"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["WAR"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["MNK"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["WHM"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["BLM"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["RDM"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["THF"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
 		["PLD"] = {macrobook=1, macroset=1, lockstyle=3, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["DRK"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["BST"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["BRD"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["RNG"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["SAM"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["NIN"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["DRG"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["SMN"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["BLU"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["COR"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["PUP"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["DNC"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["SCH"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["GEO"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["RUN"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""}
+		["DRK"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["BST"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["BRD"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["RNG"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["SAM"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["NIN"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["DRG"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["SMN"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["BLU"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["COR"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["PUP"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["DNC"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["SCH"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["GEO"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["RUN"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""}
 	}
 ```
 
@@ -76,7 +76,7 @@ As you can see each job represents a row in the table and each row contains seve
 | --- | --- |
 | macrobook | The number of the in-game macro book that will be automatically selected for the job. |
 | macroset | The number of the in-game macro set that will be automatically selected for the job. |
-| lockstyle | The number of the in-game equipment set lockstyle that will be automatically set for the job. |
+| lockstyle | The number of the in-game equipment set lockstyle that will be automatically set for the job. If the value is 0 then it will be ignored and YAGDRSL will not send a /setlockstyle command.|
 | file_equipment | The name of the file that contains the all the gearsets for the job. |
 | file_logic | The name of the file that contains any library function calls or custom code for the job. Technically this is optional as you could put everything into the equipment file - or vice versa - but I suggest separating them into two files to stay organized.|
 | script_binds_main | When the job is set to your main job this script will be executed. This is an optional setting and will only be applied if the library setting ApplyKeybindScripts = true. |
@@ -88,28 +88,28 @@ Now here's how a JobControls table with some data in it may look. Keep in mind t
 ```
 	JobControls = 
 	{
-		["WAR"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub="binds/sub_war.txt"},
-		["MNK"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["WHM"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["BLM"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["RDM"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["WAR"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub="binds/sub_war.txt"},
+		["MNK"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["WHM"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["BLM"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["RDM"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
 		["THF"] = {macrobook=4, macroset=1, lockstyle=4, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
 		["PLD"] = {macrobook=3, macroset=1, lockstyle=3, file_equipment="samples/jobfiles/intermediate_pld_equipment.lua", file_logic="samples/jobfiles/intermediate_pld_logic.lua", script_binds_main="binds/pld.txt", script_binds_sub=""},
-		["DRK"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["BST"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["BRD"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="samples/jobfiles/intermediate_brd_equipment.lua", file_logic="samples/jobfiles/intermediate_brd_logic.lua", script_binds_main="", script_binds_sub=""},
-		["RNG"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["SAM"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub="binds/sub_sam.txt"},
-		["NIN"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub="binds/sub_nin.txt"},
-		["DRG"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["SMN"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["BLU"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub="binds/sub_blu.txt"},
-		["COR"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["DRK"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["BST"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["BRD"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="samples/jobfiles/intermediate_brd_equipment.lua", file_logic="samples/jobfiles/intermediate_brd_logic.lua", script_binds_main="", script_binds_sub=""},
+		["RNG"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["SAM"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub="binds/sub_sam.txt"},
+		["NIN"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub="binds/sub_nin.txt"},
+		["DRG"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["SMN"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["BLU"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub="binds/sub_blu.txt"},
+		["COR"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
 		["PUP"] = {macrobook=1, macroset=1, lockstyle=5, file_equipment="samples/jobfiles/simple_pup_equipment.lua", file_logic="samples/jobfiles/simple_pup_logic.lua", script_binds_main="binds/pup.txt", script_binds_sub=""},
-		["DNC"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="samples/jobfiles/advanced_dnc_equipment.lua", file_logic="samples/jobfiles/advanced_dnc_logic.lua", script_binds_main="binds/dnc.txt", script_binds_sub="binds/sub_dnc.txt"},
-		["SCH"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["GEO"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
-		["RUN"] = {macrobook=1, macroset=1, lockstyle=1, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""}
+		["DNC"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="samples/jobfiles/advanced_dnc_equipment.lua", file_logic="samples/jobfiles/advanced_dnc_logic.lua", script_binds_main="binds/dnc.txt", script_binds_sub="binds/sub_dnc.txt"},
+		["SCH"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["GEO"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""},
+		["RUN"] = {macrobook=1, macroset=1, lockstyle=0, file_equipment="", file_logic="", script_binds_main="", script_binds_sub=""}
 	}
 ```
 

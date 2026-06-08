@@ -101,6 +101,13 @@ DeleteMod("MagicBurst")
 ```
 Likewise DeleteMod exactly what it says. Simply give it the name of a mod and that mod will be deleted. This can be useful if you are customizing your mods in a job file and want to delete a mod you created in the character file that doesn't apply to the job.
 
+### DeleteModDefault
+```
+function DeleteMod(ModName)
+DeleteMod("MagicBurst")
+```
+All mods are created with a default value of "Off". This may not be desirable for some mods where an 'off' state may not make sense, such as a mod used to select a MainHand weapon. This function can be used to remove the "Off" value so that you do not have to cycle through it.
+
 ### AssignModOptions
 ```
 function AssignModOptions(ModName, ...)

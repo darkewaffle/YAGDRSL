@@ -68,6 +68,8 @@ function DeclareCollectionsTable()
 
 	_G[COLLECTIONS_SETS_ROOT_NAME]["Null"] =
 		{
+		-- Refer to Null Masque with collections.Null.mask, it was not assigned to 'head' since it has substantially different use cases than the accessories
+		-- and likely is not desirable in most scenarios when using, for example, collections.Null in a set_combine function.
 		--head={name="Null Masque", priority=100},
 		mask={name="Null Masque", priority=100},
 		neck={name="Null Loop", priority=50},

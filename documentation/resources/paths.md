@@ -3,10 +3,13 @@
 - Status String Value (status)
 - Character Status (engaged, idle, resting)
 - Zone Class (field, town)
+- Zone Name
 ```
 sets.status.engaged
+sets.status.engaged.field["Valkurm Dunes"]
 sets.status.idle.field
 sets.status.idle.town
+sets.status.idle.town["Eastern Adoulin"]
 sets.status.resting
 ```
 

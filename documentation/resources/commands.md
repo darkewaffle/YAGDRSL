@@ -33,10 +33,17 @@ Displays a debugging window that will show the mods that are part of each mod or
 
 ## ring
 ```
-gs c ring (xp, cp) (left, right)
+gs c ring (ring code) (left, right)
 gs c ring cp
 ```
-Attempts to find and use a CP or XP ring depending on the parameter provided. It will use rings in order of largest to smallest bonus.
+Attempts to find and use a ring depending on the parameter provided. Left/right are optional. For CP and XP rings it will use them in order of largest to smallest bonus. Supports the following ring codes.
+| Ring Codes | Description |
+| --- | --- |
+| c, cp | Capacity point bonus rings |
+| cap | Capacity Ring only |
+| t, tele | Dimensional Rings for Holla / Mea / Dem |
+| w, warp | Warp Ring |
+| x, xp, exp | Experience point bonus rings |
 
 ## showlog
 ```
