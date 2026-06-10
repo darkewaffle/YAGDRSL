@@ -3,13 +3,14 @@ require "YAGDRSL/get/get_spell.lua"
 require "YAGDRSL/get/get_weather.lua"
 require "YAGDRSL/mappings/YAG_mappings.lua"
 
-function GetSpellAttributes(spell)
+function GetSpellAttributes(spell, SpellSource)
 
 	local SpellAttributes = {}
 	
 	-- Creates a copy of the original spell that can be accessed via SpellAttributes.spell if any user logic relies on it.
 	SpellAttributes["spell"] = spell
 
+	SpellAttributes["Source"] = SpellSource or SPELL_SOURCE_SELF
 	SpellAttributes["Name"] = GetSpellName(spell)
 	SpellAttributes["Category"] = GetSpellCategory(spell)
 

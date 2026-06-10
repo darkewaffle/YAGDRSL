@@ -8,6 +8,7 @@ function DemoConstructSpellAttributes(SpellCategory, SpellName)
 
 	local SpellAttributes = {}
 
+	SpellAttributes["Source"] = SPELL_SOURCE_SELF
 	SpellAttributes["Name"] = SpellName
 	SpellAttributes["Category"] = SpellCategory
 	SpellAttributes["ParentGroup"] = MapGetParentGroup(SpellAttributes["Category"], SpellAttributes["Name"])
