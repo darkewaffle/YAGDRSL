@@ -91,6 +91,7 @@ function ChatGearSetCrude(GearSet)
 end
 
 function ChatSpellAttributes(SpellAttributes)
+	ChatDebugForced("Source",      SpellAttributes["Source"])
 	ChatDebugForced("Name",        SpellAttributes["Name"])
 	ChatDebugForced("Category",    SpellAttributes["Category"])
 	ChatDebugForced("Class",       SpellAttributes["Class"])
