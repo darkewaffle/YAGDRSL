@@ -2,7 +2,14 @@ function pet_midcast(spell)
 	ChatBlankLine()
 	ChatCheckpointLogged("pet_midcast Start", spell.name)
 
-	local SpellAttributes = GetSpellAttributes(spell)
+	local SpellSource = ""
+	if GetCharacterJobShort() == "PUP" then
+		SpellSource = SPELL_SOURCE_AUTOMATON
+	else
+		SpellSource = nil
+	end
+
+	local SpellAttributes = GetSpellAttributes(spell, SpellSource)
 
 	local MidcastSet = MidcastContainer(SpellAttributes)
 	ChatGearSet(MidcastSet, EVENT_MIDCAST_PET)

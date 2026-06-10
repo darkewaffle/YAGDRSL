@@ -16,7 +16,14 @@ function pet_aftercast(spell)
 		AfterCastContainer(EVENT_AFTERCAST_PET)
 	end
 
-	local SpellAttributes = GetSpellAttributes(spell)
+	local SpellSource = ""
+	if GetCharacterJobShort() == "PUP" then
+		SpellSource = SPELL_SOURCE_AUTOMATON
+	else
+		SpellSource = nil
+	end
+
+	local SpellAttributes = GetSpellAttributes(spell, SpellSource)
 	HookOnPetAftercast(SpellAttributes) -- @Hook
 
 	ChatCheckpointLogged("pet_aftercast End", spell.name)
