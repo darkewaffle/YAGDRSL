@@ -27,6 +27,9 @@ CATEGORY_WS = "ws"
 -- Not a true category but necessary to process the Demo command for character status.
 CATEGORY_STATUS = "characterstatus"
 
+SPELL_SOURCE_SELF = "self"
+SPELL_SOURCE_AUTOMATON = "automaton"
+
 SPELL_TARGET_SELF = "self"
 SPELL_TARGET_PARTY = "party"
 SPELL_TARGET_ALLY = "ally"
