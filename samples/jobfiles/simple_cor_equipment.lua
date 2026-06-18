@@ -91,7 +91,7 @@
 			ammo="Animikii Bullet",
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
-			ring1="Karieyh Ring +1",
+			ring1=gear.epa,
 			ring2="Dingir Ring",
 			feet="Lanun Bottes +4"
 		})

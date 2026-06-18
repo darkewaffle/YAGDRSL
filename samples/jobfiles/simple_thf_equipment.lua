@@ -11,7 +11,7 @@
 			ammo="Oshasha's Treatise",
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
-			ring1="Karieyh Ring +1"
+			ring1=gear.epa
 		}
 
 	templates.fastcast =
@@ -143,7 +143,7 @@
 			ammo="Oshasha's Treatise",
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
-			ring1="Karieyh Ring +1",
+			ring1=gear.epa,
 			ring2="Dingir Ring",
 			back=capes.wsd
 		})
@@ -292,7 +292,7 @@
 			head=collections.Null.mask,
 			ear1=gear.alabaster,
 			ear2=gear.eabani,
-			ring1="Karieyh Ring +1",
+			ring1=gear.etana,
 			ring2="Murky Ring",
 			back=capes.tp,
 			waist=gear.pmb

@@ -76,7 +76,7 @@
 			ear1="Moonshade Earring",
 			ear2="Ishvara Earring",
 			hands="Jhakri Cuffs +2",
-			ring1="Karieyh Ring +1",
+			ring1=gear.epa,
 			ring2=gear.ilabrat,
 			waist="Sailfi Belt +1"
 		}
@@ -88,7 +88,7 @@
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
 			hands="Jhakri Cuffs +2",
-			ring1="Karieyh Ring +1",
+			ring1=gear.epa,
 			ring2="Jhakri Ring"
 		})
 

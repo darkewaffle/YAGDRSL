@@ -277,7 +277,7 @@
 			ammo="Staunch Tathlum +1",
 			ear1=gear.alabaster,
 			ear2=gear.eabani,
-			ring1="Karieyh Ring +1",
+			ring1=gear.etana,
 			ring2="Murky Ring",
 			waist=gear.pmb,
 			legs="Carmine Cuisses +1"

@@ -34,7 +34,7 @@
 			body = {name="Caballarius Surcoat", priority=70},
 			hands = {name="Caballarius Gauntlets +2", priority=114},
 			legs = {name="Caballarius Breeches", priority=24},
-			feet = {name="Caballarius Leggings +3", priority=63},
+			feet = {name="Caballarius Leggings +4", priority=73},
 		}
 
 	empy =
@@ -202,7 +202,7 @@
 			ear1="Cessance Earring",
 			ear2="Brutal Earring",
 			ring1=gear.regalring,
-			ring2="Karieyh Ring +1",
+			ring2=gear.epa,
 			back=capes.wsd,
 			waist="Sailfi Belt +1",
 		})
@@ -234,7 +234,7 @@
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
 			ring1=gear.etana,
-			ring2="Karieyh Ring +1",
+			ring2=gear.epa
 		})
 
 --

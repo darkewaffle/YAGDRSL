@@ -132,7 +132,7 @@
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
 			body=relic.body,
-			ring1="Karieyh Ring +1",
+			ring1=gear.epa,
 			back=capes.wsd
 		}
 
@@ -208,7 +208,7 @@
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
 			body=relic.body,
-			ring1="Karieyh Ring +1",
+			ring1=gear.epa,
 			ring2=gear.stik1,
 			back=capes.wsd
 		})

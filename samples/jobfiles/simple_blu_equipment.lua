@@ -75,10 +75,9 @@
 			neck="Republican Platinum Medal",
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
-			ring1="Karieyh Ring +1",
+			ring1=gear.epa,
 			ring2="Beithir Ring",
 			waist="Sailfi Belt +1"
-
 		}
 
 --

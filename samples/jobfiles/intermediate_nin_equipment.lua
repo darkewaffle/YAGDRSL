@@ -36,7 +36,7 @@
 			head=af.head,
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
-			ring1="Karieyh Ring +1",
+			ring1=gear.epa,
 			back=capes.wsd,
 			legs=relic.legs,
 			feet=empy.feet
@@ -368,7 +368,6 @@
 
 	mods.status.idle["THAoE"] = set_combine(collections.Mpaca,
 		{
-			ring1="Karieyh Ring +1",
 			feet="Danzo Sune-Ate"
 		})
 

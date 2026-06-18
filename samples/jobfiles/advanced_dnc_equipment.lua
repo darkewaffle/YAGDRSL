@@ -124,7 +124,7 @@
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
 			hands=af.hands,
-			ring1="Karieyh Ring +1",
+			ring1=gear.epa,
 			back=capes.wsd,
 			legs=relic.legs
 		}
@@ -295,14 +295,14 @@
 			waist="Kentarch Belt +1"
 		})
 
-	sets.precast.ws.melee.magical = set_combine(collections.Null, collections.Nyame, 
+	sets.precast.ws.melee.magical = set_combine(collections.Null, collections.Nyame,
 		{
 			ammo="Oshasha's Treatise",
 			head=empy.head,
 			ear1="Friomisi Earring",
 			ear2="Moonshade Earring",
 			hands=af.hands,
-			ring1="Karieyh Ring +1",
+			ring1=gear.epa,
 			ring2=gear.regalring,
 			back=capes.wsd
 		})
@@ -528,7 +528,7 @@
 			head=collections.Null.mask,
 			ear1=gear.alabaster,
 			ear2=gear.eabani,
-			ring1="Karieyh Ring +1",
+			ring1=gear.etana,
 			ring2="Murky Ring",
 			back=capes.tp,
 			waist=gear.pmb
