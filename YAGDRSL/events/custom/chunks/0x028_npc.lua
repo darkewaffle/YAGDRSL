@@ -1,8 +1,25 @@
 function ParseActionPacketNPC(ActionPacket)
 	local ActionID = ActionPacket["Param"]
+	local ActorID = ActionPacket["Actor"]
 	local TargetID = ActionPacket["Target 1 ID"]
 	
-	if GetNPCAbilityCanSkillchain(ActionID) then
+	local ActorMob = windower.ffxi.get_mob_by_id(ActorID)
+	local ActorType = ""
+	if ActorMob then
+		ActorType = ActorMob.spawn_type
+	else
+		ActorType = nil
+	end
+	local ActorIsNotMonster = (ActorType and ActorType ~= 16)
+
+	local TargetMob = windower.ffxi.get_mob_by_id(TargetID)
+	local TargetType = ""
+	if TargetMob then
+		TargetType = TargetMob.spawn_type
+	end
+	local TargetIsMonster = TargetType == 16
+
+	if ActorIsNotMonster and TargetIsMonster and GetNPCAbilityCanSkillchain(ActionID) then
 		if ActionPacket["Target 1 Action 1 Has Added Effect"] then
 			local ActionMessage = ActionPacket["Target 1 Action 1 Added Effect Message"]
 			local Skillchain = _G[MAP_SKILLCHAIN_MESSAGES][ActionMessage]
