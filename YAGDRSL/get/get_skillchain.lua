@@ -37,8 +37,6 @@ function GetNPCAbilityCanSkillchain(AbilityID)
 			return false
 		end
 	else
-		ChatError("Unknown NPC AbilityID", AbilityID)
-		--AddToLogFile("Unknown NPC AbilityID", AbilityID)
 		return false
 	end
 end
