@@ -32,7 +32,7 @@
 		{
 			head = {name="Caballarius Coronet", priority=59},
 			body = {name="Caballarius Surcoat", priority=70},
-			hands = {name="Caballarius Gauntlets +2", priority=114},
+			hands = {name="Caballarius Gauntlets +4", priority=134},
 			legs = {name="Caballarius Breeches", priority=24},
 			feet = {name="Caballarius Leggings +4", priority=73},
 		}
